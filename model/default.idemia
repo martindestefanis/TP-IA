@@ -1,2 +1,24 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<idemia:AgentModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:idemia="utn.frsf.cidisi"/>
+<idemia:AgentModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:idemia="utn.frsf.cidisi">
+  <Environment name="CityEnviroment">
+    <EnvironmentState name="CityState">
+      <DataStructure name="mundo" type="Other"/>
+      <DataStructure name="negocio" type="Other"/>
+      <DataStructure name="cortesCalle" type="Other"/>
+    </EnvironmentState>
+  </Environment>
+  <Agent name="CarAgent">
+    <Strategy xsi:type="idemia:Search" searchStrategy="AStarSearch"/>
+    <Goal name="CarGoal" value=" ProductosComprar.isEmpty()==true"/>
+    <AgentState name="CarState">
+      <DataStructure name="posicionInicial" type="Other"/>
+      <DataStructure name="mundo" type="Other"/>
+      <DataStructure name="productosComprar" type="Other"/>
+      <DataStructure name="posicionActual" type="Other"/>
+    </AgentState>
+  </Agent>
+  <Actions execute_by="//@Agent" executed_on="//@Environment" name="Comprar_producto"/>
+  <Actions execute_by="//@Agent" executed_on="//@Environment" name="Avanzar"/>
+  <Perceptions perceived_on="//@Environment" perceived_by="//@Agent" name="negocio_cerrado"/>
+  <Perceptions perceived_on="//@Environment" perceived_by="//@Agent" name="congestion_transito"/>
+</idemia:AgentModel>
