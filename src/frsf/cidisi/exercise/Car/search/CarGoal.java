@@ -1,6 +1,6 @@
 
 
-package frsf.cidisi.exercise.default.search;
+package frsf.cidisi.exercise.Car.search;
 
 import frsf.cidisi.faia.agent.search.GoalTest;
 import frsf.cidisi.faia.state.AgentState;

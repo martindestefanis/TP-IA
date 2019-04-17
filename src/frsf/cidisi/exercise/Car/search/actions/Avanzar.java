@@ -1,6 +1,6 @@
-package frsf.cidisi.exercise.default.search.actions;
+package frsf.cidisi.exercise.Car.search.actions;
 
-import frsf.cidisi.exercise.default.search.*;
+import frsf.cidisi.exercise.Car.search.*;
 import frsf.cidisi.faia.agent.search.SearchAction;
 import frsf.cidisi.faia.agent.search.SearchBasedAgentState;
 import frsf.cidisi.faia.state.AgentState;

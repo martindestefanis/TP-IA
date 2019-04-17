@@ -1,4 +1,4 @@
-package frsf.cidisi.exercise.default.search;
+package frsf.cidisi.exercise.Car.search;
 
 import frsf.cidisi.faia.solver.search.IStepCostFunction;
 import frsf.cidisi.faia.solver.search.NTree;
