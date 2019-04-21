@@ -3,8 +3,7 @@
   <Environment name="CityEnviroment">
     <EnvironmentState name="CityState">
       <DataStructure name="mundo" type="Other"/>
-      <DataStructure name="negocio" type="Other"/>
-      <DataStructure name="cortesCalle" type="Other"/>
+      <DataStructure name="posicionAgente" type="Other"/>
     </EnvironmentState>
   </Environment>
   <Agent name="CarAgent">
@@ -15,10 +14,11 @@
       <DataStructure name="mundo" type="Other"/>
       <DataStructure name="productosComprar" type="Other"/>
       <DataStructure name="posicionActual" type="Other"/>
+      <DataStructure name="productosComprados" type="Other"/>
     </AgentState>
   </Agent>
   <Actions execute_by="//@Agent" executed_on="//@Environment" name="Comprar_producto"/>
   <Actions execute_by="//@Agent" executed_on="//@Environment" name="Avanzar"/>
-  <Perceptions perceived_on="//@Environment" perceived_by="//@Agent" name="negocio_cerrado"/>
+  <Perceptions perceived_on="//@Environment" perceived_by="//@Agent" name="cortes_calles"/>
   <Perceptions perceived_on="//@Environment" perceived_by="//@Agent" name="congestion_transito"/>
 </idemia:AgentModel>

@@ -1,4 +1,4 @@
-package frsf.cidisi.exercise.Car.search;
+package frsf.cidisi.exercise.car.search;
 
 import frsf.cidisi.faia.agent.Action;
 import frsf.cidisi.faia.agent.Perception;

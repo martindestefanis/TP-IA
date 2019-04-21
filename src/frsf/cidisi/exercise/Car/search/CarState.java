@@ -1,4 +1,4 @@
-package frsf.cidisi.exercise.Car.search;
+package frsf.cidisi.exercise.car.search;
 
 import frsf.cidisi.faia.agent.Perception;
 import frsf.cidisi.faia.agent.search.SearchBasedAgentState;
@@ -13,6 +13,7 @@ public class CarState extends SearchBasedAgentState {
     //private Other mundo;
     //private Other productosComprar;
     //private Other posicionActual;
+    //private Other productosComprados;
 	
 
     public CarState() {
@@ -23,6 +24,7 @@ public class CarState extends SearchBasedAgentState {
 			// mundo = initData1;
 			// productosComprar = initData2;
 			// posicionActual = initData3;
+			// productosComprados = initData4;
         */
         this.initState();
     }
@@ -109,6 +111,12 @@ public class CarState extends SearchBasedAgentState {
 //     }
 //     public void setposicionActual(Other arg){
 //        posicionActual = arg;
+//     }
+//     public Other getproductosComprados(){
+//        return productosComprados;
+//     }
+//     public void setproductosComprados(Other arg){
+//        productosComprados = arg;
 //     }
 	
 }

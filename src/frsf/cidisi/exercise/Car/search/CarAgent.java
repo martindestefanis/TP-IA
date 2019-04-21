@@ -1,7 +1,7 @@
-package frsf.cidisi.exercise.Car.search;
+package frsf.cidisi.exercise.car.search;
 
-import frsf.cidisi.exercise.Car.search.actions.Comprar_producto;
-import frsf.cidisi.exercise.Car.search.actions.Avanzar;
+import frsf.cidisi.exercise.car.actions.Comprar_producto;
+import frsf.cidisi.exercise.car.actions.Avanzar;
 
 import frsf.cidisi.faia.agent.Perception;
 import frsf.cidisi.faia.agent.search.Problem;

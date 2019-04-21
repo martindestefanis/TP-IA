@@ -1,4 +1,4 @@
-package frsf.cidisi.exercise.Car.search;
+package frsf.cidisi.exercise.car.search;
 
 import frsf.cidisi.faia.state.EnvironmentState;
 
@@ -9,16 +9,14 @@ public class CityState extends EnvironmentState {
 	
 	//TODO: Setup Variables
     //private Other mundo;
-    //private Other negocio;
-    //private Other cortesCalle;
+    //private Other posicionAgente;
 	
     public CityState() {
         
         //TODO: Complete Method
     	/*
 			// mundo = initData0;
-			// negocio = initData1;
-			// cortesCalle = initData2;
+			// posicionAgente = initData1;
         */
         this.initState();
     }
@@ -53,17 +51,11 @@ public class CityState extends EnvironmentState {
 //     public void setmundo(Other arg){
 //        mundo = arg;
 //     }
-//     public Other getnegocio(){
-//        return negocio;
+//     public Other getposicionAgente(){
+//        return posicionAgente;
 //     }
-//     public void setnegocio(Other arg){
-//        negocio = arg;
-//     }
-//     public Other getcortesCalle(){
-//        return cortesCalle;
-//     }
-//     public void setcortesCalle(Other arg){
-//        cortesCalle = arg;
+//     public void setposicionAgente(Other arg){
+//        posicionAgente = arg;
 //     }
 	
 

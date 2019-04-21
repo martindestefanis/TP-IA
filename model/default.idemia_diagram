@@ -52,20 +52,20 @@
             <element xmi:type="idemia:DataStructure" href="default.idemia#//@Agent/@AgentState/@DataStructure.3"/>
             <layoutConstraint xmi:type="notation:Bounds" xmi:id="_Y--ooWEcEemtyNMwCreFzg"/>
           </children>
-          <children xmi:type="notation:Shape" xmi:id="_AVloEGQ9Eemdiv0oImrV_Q" type="3002" fontName="Segoe UI">
-            <children xmi:type="notation:DecorationNode" xmi:id="_AVloEmQ9Eemdiv0oImrV_Q" type="5001"/>
-            <children xmi:type="notation:DecorationNode" xmi:id="_AVloE2Q9Eemdiv0oImrV_Q" type="5002">
-              <styles xmi:type="notation:DescriptionStyle" xmi:id="_AVloFGQ9Eemdiv0oImrV_Q"/>
+          <children xmi:type="notation:Shape" xmi:id="_6Bh58GRFEemFKIGFRpxz0Q" type="3002" fontName="Segoe UI">
+            <children xmi:type="notation:DecorationNode" xmi:id="_6Bh58mRFEemFKIGFRpxz0Q" type="5001"/>
+            <children xmi:type="notation:DecorationNode" xmi:id="_6Bh582RFEemFKIGFRpxz0Q" type="5002">
+              <styles xmi:type="notation:DescriptionStyle" xmi:id="_6Bh59GRFEemFKIGFRpxz0Q"/>
             </children>
-            <children xmi:type="notation:DecorationNode" xmi:id="_AVloFWQ9Eemdiv0oImrV_Q" type="5003"/>
+            <children xmi:type="notation:DecorationNode" xmi:id="_6Bh59WRFEemFKIGFRpxz0Q" type="5003"/>
             <element xmi:type="idemia:DataStructure" href="default.idemia#//@Agent/@AgentState/@DataStructure.4"/>
-            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_AVloEWQ9Eemdiv0oImrV_Q"/>
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_6Bh58WRFEemFKIGFRpxz0Q"/>
           </children>
           <styles xmi:type="notation:SortingStyle" xmi:id="_qnPcomEYEemtyNMwCreFzg"/>
           <styles xmi:type="notation:FilteringStyle" xmi:id="_qnPco2EYEemtyNMwCreFzg"/>
         </children>
         <element xmi:type="idemia:State" href="default.idemia#//@Agent/@AgentState"/>
-        <layoutConstraint xmi:type="notation:Bounds" xmi:id="_qnO1kWEYEemtyNMwCreFzg" x="19" y="8" width="193" height="160"/>
+        <layoutConstraint xmi:type="notation:Bounds" xmi:id="_qnO1kWEYEemtyNMwCreFzg" x="19" y="8" width="217" height="173"/>
       </children>
     </children>
     <children xmi:type="notation:BasicCompartment" xmi:id="_pMiZNGEYEemtyNMwCreFzg" type="7003">
@@ -84,23 +84,32 @@
   <children xmi:type="notation:Shape" xmi:id="_7_pykGEbEemtyNMwCreFzg" type="2002" fontName="Segoe UI">
     <children xmi:type="notation:DecorationNode" xmi:id="_7_qZoGEbEemtyNMwCreFzg" type="5018"/>
     <children xmi:type="notation:BasicCompartment" xmi:id="_7_qZoWEbEemtyNMwCreFzg" type="7005">
-      <children xmi:type="notation:Shape" xmi:id="_D4sycGEcEemtyNMwCreFzg" type="3008" fontName="Segoe UI">
-        <children xmi:type="notation:DecorationNode" xmi:id="_D4tZgGEcEemtyNMwCreFzg" type="5017"/>
-        <children xmi:type="notation:BasicCompartment" xmi:id="_D4tZgWEcEemtyNMwCreFzg" type="7006">
-          <children xmi:type="notation:Shape" xmi:id="_F8aWoGEcEemtyNMwCreFzg" type="3009" fontName="Segoe UI">
-            <children xmi:type="notation:DecorationNode" xmi:id="_F8a9sWEcEemtyNMwCreFzg" type="5014"/>
-            <children xmi:type="notation:DecorationNode" xmi:id="_F8a9smEcEemtyNMwCreFzg" type="5015">
-              <styles xmi:type="notation:DescriptionStyle" xmi:id="_F8a9s2EcEemtyNMwCreFzg"/>
+      <children xmi:type="notation:Shape" xmi:id="_r79GYGRFEemFKIGFRpxz0Q" type="3008" fontName="Segoe UI">
+        <children xmi:type="notation:DecorationNode" xmi:id="_r79GYmRFEemFKIGFRpxz0Q" type="5017"/>
+        <children xmi:type="notation:BasicCompartment" xmi:id="_r79GY2RFEemFKIGFRpxz0Q" type="7006">
+          <children xmi:type="notation:Shape" xmi:id="_tvsU4GRFEemFKIGFRpxz0Q" type="3009" fontName="Segoe UI">
+            <children xmi:type="notation:DecorationNode" xmi:id="_tvsU4mRFEemFKIGFRpxz0Q" type="5014"/>
+            <children xmi:type="notation:DecorationNode" xmi:id="_tvsU42RFEemFKIGFRpxz0Q" type="5015">
+              <styles xmi:type="notation:DescriptionStyle" xmi:id="_tvsU5GRFEemFKIGFRpxz0Q"/>
             </children>
-            <children xmi:type="notation:DecorationNode" xmi:id="_F8a9tGEcEemtyNMwCreFzg" type="5016"/>
+            <children xmi:type="notation:DecorationNode" xmi:id="_tvsU5WRFEemFKIGFRpxz0Q" type="5016"/>
             <element xmi:type="idemia:DataStructure" href="default.idemia#//@Environment/@EnvironmentState/@DataStructure.0"/>
-            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_F8a9sGEcEemtyNMwCreFzg"/>
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_tvsU4WRFEemFKIGFRpxz0Q"/>
           </children>
-          <styles xmi:type="notation:SortingStyle" xmi:id="_D4tZgmEcEemtyNMwCreFzg"/>
-          <styles xmi:type="notation:FilteringStyle" xmi:id="_D4tZg2EcEemtyNMwCreFzg"/>
+          <children xmi:type="notation:Shape" xmi:id="_vxd_YGRFEemFKIGFRpxz0Q" type="3009" fontName="Segoe UI">
+            <children xmi:type="notation:DecorationNode" xmi:id="_vxd_YmRFEemFKIGFRpxz0Q" type="5014"/>
+            <children xmi:type="notation:DecorationNode" xmi:id="_vxd_Y2RFEemFKIGFRpxz0Q" type="5015">
+              <styles xmi:type="notation:DescriptionStyle" xmi:id="_vxd_ZGRFEemFKIGFRpxz0Q"/>
+            </children>
+            <children xmi:type="notation:DecorationNode" xmi:id="_vxd_ZWRFEemFKIGFRpxz0Q" type="5016"/>
+            <element xmi:type="idemia:DataStructure" href="default.idemia#//@Environment/@EnvironmentState/@DataStructure.1"/>
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_vxd_YWRFEemFKIGFRpxz0Q"/>
+          </children>
+          <styles xmi:type="notation:SortingStyle" xmi:id="_r79GZGRFEemFKIGFRpxz0Q"/>
+          <styles xmi:type="notation:FilteringStyle" xmi:id="_r79GZWRFEemFKIGFRpxz0Q"/>
         </children>
         <element xmi:type="idemia:State" href="default.idemia#//@Environment/@EnvironmentState"/>
-        <layoutConstraint xmi:type="notation:Bounds" xmi:id="_D4sycWEcEemtyNMwCreFzg" x="15" y="19" width="176" height="179"/>
+        <layoutConstraint xmi:type="notation:Bounds" xmi:id="_r79GYWRFEemFKIGFRpxz0Q" x="19" y="33" width="181" height="168"/>
       </children>
     </children>
     <element xmi:type="idemia:Environment" href="default.idemia#//@Environment"/>

@@ -1,4 +1,4 @@
-package frsf.cidisi.exercise.Car.search;
+package frsf.cidisi.exercise.car.search;
 
 import frsf.cidisi.faia.agent.Agent;
 import frsf.cidisi.faia.agent.Perception;
@@ -11,7 +11,7 @@ public class CarAgentPerception extends Perception {
 	
 	
 	//TODO: Setup Sensors
-	private int negocio_cerrado;
+	private int cortes_calles;
 	private int congestion_transito;
 	
  
@@ -52,11 +52,11 @@ public class CarAgentPerception extends Perception {
     // The following methods are agent-specific:
     //TODO: Complete this section with the agent-specific methods
 	
-     public int getnegocio_cerrado(){
-        return negocio_cerrado;
+     public int getcortes_calles(){
+        return cortes_calles;
      }
-     public void setnegocio_cerrado(int arg){
-        this.negocio_cerrado = arg;
+     public void setcortes_calles(int arg){
+        this.cortes_calles = arg;
      }
      public int getcongestion_transito(){
         return congestion_transito;
