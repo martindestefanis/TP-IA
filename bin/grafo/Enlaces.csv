@@ -1,0 +1,34 @@
+Nodo Origen;Nodo Destino;Distancia
+Pedro de Vega y Av. Almte. Brown;Pedro de Vega y Cngo. Echagüe;100
+Pedro de Vega y Cngo. Echagüe;Pedro de Vega y Patrio Cullen;100
+Pedro de Vega y Patricio Cullen;Ricardo Aldao y Patricio Cullen;100
+Pedro de Vega y Patricio Cullen;Pedro de Vega y Antonia Godoy;100
+Pedro de Vega y Antonia Godoy;Pedro de Vega y Piedras;100
+Pedro de Vega y Piedras;Ricardo Aldao y Piedras;100
+Pedro de Vega y Piedras;Pedro de Vega y Tacuarí;100
+Pedro de Vega y Tacuarí;Pedro de Vega y Velez Sarsfield;100
+Pedro de Vega y Velez Sarsfield;Ricardo Aldao y Velez Sarsfield;100
+Pedro de Vega y Calle R. M. Pizzorno;Pedro de Vega y Dorrego;100
+Pedro de Vega y Dorrego;Pedro de Vega y Av. Gral. Paz;100
+Pedro de Vega y Av. Gral. Paz;Ricardo Aldao y Av. Gral. Paz;100
+Ricardo Aldao y Av. Gral. Paz;Pedro de Vega y Av. Gral. Paz;100
+Ricardo Aldao y Av. Gral. Paz;Ricardo Aldao y Dorrego;100
+Ricardo Aldao y Dorrego;Pedro de Vega y Dorrego;100
+Ricardo Aldao y Av. Gral. Paz;Angel Cassanello y Av. Gral. Paz;100
+Angel Cassanello y Av. Gral. Paz;Ricardo Aldao y Av. Gral. Paz;100
+Angel Cassanello y Av. Gral. Paz;J. P. López y Av. Gral. Paz;100
+J. P. López y Av. Gral. Paz;Angel Cassanello y Av. Gral. Paz;100
+J. P. López y Av. Gral. Paz;Hernandarias y Av. Gral. Paz;100
+Hernandarias y Av. Gral. Paz;J. P. López y Av. Gral. Paz;100
+Hernandarias y Av. Gral. Paz;Juan Castelli y Av. Gral. Paz;100
+Juan Castelli y Av. Gral. Paz;Hernandarias y Av. Gral. Paz;100
+Juan Castelli y Av. Gral. Paz;Juan Castelli y Velez Sarsfield;100
+Juan Castelli y Velez Sarsfield;Juan Castelli y Tacuarí;100
+Juan Castelli y Tacuarí;Juan Castelli y Piedras;100
+Juan Castelli y Piedras;Juan Castelli y Antonia Godoy;100
+Juan Castelli y Antonia Godoy;Juan Castelli y Patricio Cullen;100
+Juan Castelli y Patricio Cullen;Juan Castelli y Cngo. Echagüe;100
+Juan Castelli y Cngo. Echagüe;Juan Castelli y Talcahuano;100
+Juan Castelli y Talcahuano;Juan Castelli y Defensa;100
+Juan Castelli y Defensa;Juan Castelli y Riobamba;100
+Juan Castelli y Riobamba;Juan Castelli y Av. Almte. Brown;100

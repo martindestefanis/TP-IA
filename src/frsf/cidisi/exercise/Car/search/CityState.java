@@ -1,6 +1,10 @@
 package frsf.cidisi.exercise.car.search;
 
+import java.util.ArrayList;
+
 import frsf.cidisi.faia.state.EnvironmentState;
+import grafo.GestorNodo;
+import grafo.Nodo;
 
 /**
  * This class represents the real world state.
@@ -8,11 +12,12 @@ import frsf.cidisi.faia.state.EnvironmentState;
 public class CityState extends EnvironmentState {
 	
 	//TODO: Setup Variables
-    //private Other mundo;
+    private ArrayList<Nodo> mundo = new ArrayList();
     //private Other posicionAgente;
 	
     public CityState() {
         
+    	mundo = GestorNodo.getNodosExistentes();
         //TODO: Complete Method
     	/*
 			// mundo = initData0;
