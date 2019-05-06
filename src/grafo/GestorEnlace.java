@@ -38,4 +38,50 @@ public class GestorEnlace {
 		
 		return existe;
 	}
+	
+	public static void agregarNegocio(Enlace enlace, Negocio negocio){
+		for(int i=0; i<enlacesExistentes.size();i++){
+			if(enlacesExistentes.get(i).getNombre().equalsIgnoreCase(enlace.getNombre())){
+				enlacesExistentes.get(i).setNegocios(negocio);
+				i = enlacesExistentes.size();
+			}
+		}
+	}
+	
+	public static void agregarEvento(Enlace enlace, Evento evento){
+		for(int i=0; i<enlacesExistentes.size();i++){
+			if(enlacesExistentes.get(i).getNombre().equalsIgnoreCase(enlace.getNombre())){
+				enlacesExistentes.get(i).setEventos(evento);
+				i = enlacesExistentes.size();
+			}
+		}
+	}
+	
+	public static void cambiarDisponibilidad(Enlace enlace, Boolean disponibilidad){
+		for(int i=0; i<enlacesExistentes.size(); i++){
+			if(enlacesExistentes.get(i).getNombre().equalsIgnoreCase(enlace.getNombre())){
+				enlacesExistentes.get(i).setDisponible(disponibilidad);
+				i = enlacesExistentes.size();
+			}
+		}
+	}
+	
+	public static boolean existeEvento(Enlace enlace, String nombreEvento){
+		boolean existe = false;
+		for(int i=0; i<enlacesExistentes.size(); i++){
+			if(enlacesExistentes.get(i).getNombre().equalsIgnoreCase(enlace.getNombre())){
+				for(int j=0; j<enlacesExistentes.get(i).getEventos().size(); j++){
+					if(enlacesExistentes.get(i).getEventos().get(j).getNombre().equalsIgnoreCase(nombreEvento)){
+						existe = true;
+						j = enlacesExistentes.get(i).getEventos().size();
+						i = enlacesExistentes.size();
+					}
+				}
+			}
+		}
+		return existe;
+	}
+	
 }
+
+

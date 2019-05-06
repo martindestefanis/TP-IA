@@ -6,9 +6,13 @@ import java.util.ArrayList;
 public class GestorNodo {
 
 	private static ArrayList<Nodo> nodosExistentes = new ArrayList<Nodo>();
+	
+	
+	
 
 	public static ArrayList<Nodo> getNodosExistentes() {
 		return nodosExistentes;
+		
 	}
 
 	public static void setNodosExistentes(ArrayList<Nodo> existentes) {
@@ -57,7 +61,7 @@ public class GestorNodo {
 					if(nodosExistentes.get(i).getEnlaces().get(j).getNombre().equalsIgnoreCase(enlace.getNombre())){
 						nodosExistentes.get(i).getEnlaces().get(j).setNegocios(negocio);
 						i = nodosExistentes.size();
-						j = nodosExistentes.get(i).getEnlaces().size();
+						break;
 					}
 				}
 			}
@@ -71,7 +75,7 @@ public class GestorNodo {
 					if(nodosExistentes.get(i).getEnlaces().get(j).getNombre().equalsIgnoreCase(enlace.getNombre())){
 						nodosExistentes.get(i).getEnlaces().get(j).setEventos(evento);
 						i = nodosExistentes.size();
-						j = nodosExistentes.get(i).getEnlaces().size();
+						break;
 					}
 				}
 			}

@@ -8,6 +8,7 @@ public class Nodo {
 	private String nombre;
 	private ArrayList<Enlace> enlaces = new ArrayList<Enlace>();
 	
+	
 	public String getNombre() {
 		return nombre;
 	}

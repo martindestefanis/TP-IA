@@ -4,6 +4,7 @@ import java.io.File;
 import java.io.FileReader;
 import java.io.Serializable;
 import java.util.ArrayList;
+import java.util.HashMap;
 
 
 import com.csvreader.CsvReader;
@@ -14,9 +15,13 @@ public class Csv implements Serializable{
 	    private String nodoOrigen;
 	    private String nodoDestino;
 	    private String nombreEvento;
+	    private String nombreNegocio;
+	    private String producto;
+	    private Double precioProducto;
+	    private Boolean negocioAbierto;
 	    private String esquina1;
 	    private String esquina2;
-	    private String costo;
+	    private Double costo;
 	    
 	    public String getNodoOrigen() {
 	        return nodoOrigen;
@@ -34,10 +39,10 @@ public class Csv implements Serializable{
 	    	    
 	    
 	    
-	    public String getCosto() {
+	    public Double getCosto() {
 			return costo;
 		}
-		public void setCosto(String costo) {
+		public void setCosto(Double costo) {
 			this.costo = costo;
 		}
 		public String getNombreEvento() {
@@ -58,7 +63,37 @@ public class Csv implements Serializable{
 		public void setEsquina2(String esquina2) {
 			this.esquina2 = esquina2;
 		}
-		public ArrayList<Csv> leer(String pathFichero, String delimitador) throws Exception {  
+		
+		
+		public String getNombreNegocio() {
+			return nombreNegocio;
+		}
+		public void setNombreNegocio(String nombreNegocio) {
+			this.nombreNegocio = nombreNegocio;
+		}
+				
+		public String getProducto() {
+			return producto;
+		}
+		public void setProducto(String producto) {
+			this.producto = producto;
+		}
+		public Double getPrecioProducto() {
+			return precioProducto;
+		}
+		public void setPrecioProducto(Double precioProducto) {
+			this.precioProducto = precioProducto;
+		}
+			
+		public Boolean getNegocioAbierto() {
+			return negocioAbierto;
+		}
+		public void setNegocioAbierto(boolean negocioAbierto) {
+			this.negocioAbierto = negocioAbierto;
+		}
+		
+		
+		public ArrayList<Csv> leerEnlaces(String pathFichero, String delimitador) throws Exception {  
 	    
 	       CsvReader cvsReader = null;
 	 
@@ -76,37 +111,23 @@ public class Csv implements Serializable{
 	    	   
 	    	   String nodoInicial;
 	    	   String nodoFinal;
-	    	   String evento;
-	    	   String esquina1;
-	    	   String esquina2;
-	    	   String costo;
+	    	   String costoDistancia;
 	    	   
 	    	   while(cvsReader.readRecord()) {
 	    		  // Podemos usar get con el nombre de la cabecera o por posición
 	    		   
 	    		   //PARA LA LECTURA DE ENLACES SE UTILIZAN ESTAS VARIABLES
-	    		   nodoInicial = cvsReader.get(headers[0]);
-	    		   nodoFinal = cvsReader.get(headers[1]);
-	    		   costo = cvsReader.get(headers[2]);
+	    		   nodoInicial = cvsReader.get("Nodo Origen");
+	    		   nodoFinal = cvsReader.get("Nodo Destino");
+	    		   costoDistancia = cvsReader.get("Distancia");
 	    		   
-	    		   //PARA LA LECTURA DE EVENTOS SE UTILIZAN ESTAS VARIABLES
-	    		   evento = cvsReader.get(headers[0]);
-	    		   esquina1 = cvsReader.get(headers[1]);
-	    		   esquina2 = cvsReader.get(headers[2]);
-	    		   costo = cvsReader.get(headers[3]);
 	    		   
 	    		   Csv fila = new Csv();  		      		   	                                
 	    		 
 	    		   //SETEO DE VARIABLES PARA CUANDO SE LEE EL ARCHIVO ENLACES
 	               fila.setNodoOrigen(nodoInicial);
 	               fila.setNodoDestino(nodoFinal);
-	               fila.setCosto(costo);
-	               
-	               //SETEO DE VARIABLES PARA CUANDO SE LEE EL ARCHIVO EVENTOS
-	               fila.setNombreEvento(evento);
-	               fila.setEsquina1(esquina1);
-	               fila.setEsquina2(esquina2);
-	               
+	               fila.setCosto(Double.parseDouble(costoDistancia));
 	               
 	               listaRegistros.add(fila);
 	         
@@ -122,4 +143,119 @@ public class Csv implements Serializable{
 	        }
 	    }
 	  }
+		
+		public ArrayList<Csv> leerEventos(String pathFichero, String delimitador) throws Exception {  
+		    
+		       CsvReader cvsReader = null;
+		 
+		       try {
+		    	   File fichero = new File(pathFichero);
+		    	   FileReader freader = new FileReader(fichero);        
+		    	   cvsReader = new CsvReader(freader,delimitador.charAt(0));       
+		    	   String[] headers = null;            
+		    	   ArrayList<Csv> listaRegistros = new ArrayList();
+		     
+		    	   if(cvsReader.readHeaders()) {
+		    		   headers = cvsReader.getHeaders(); 
+		    	   }            
+		    	   	// Leemos los registros
+		    	   	    	   
+		    	   String evento;
+		    	   String esquina1;
+		    	   String esquina2;
+		    	   String costoEvento;	    	   
+		    	   
+		    	   while(cvsReader.readRecord()) {
+		    		  // Podemos usar get con el nombre de la cabecera o por posición	    		   
+		    		   
+		    		   //PARA LA LECTURA DE EVENTOS SE UTILIZAN ESTAS VARIABLES
+		    		   evento = cvsReader.get("Evento");
+		    		   esquina1 = cvsReader.get("Esquina1");
+		    		   esquina2 = cvsReader.get("Esquina2");
+		    		   costoEvento = cvsReader.get("Costo");
+		    		   
+		    		   Csv fila = new Csv();  		      		   	                                
+		               
+		               //SETEO DE VARIABLES PARA CUANDO SE LEE EL ARCHIVO EVENTOS
+		               fila.setNombreEvento(evento);
+		               fila.setEsquina1(esquina1);
+		               fila.setEsquina2(esquina2);
+		               fila.setCosto(Double.parseDouble(costoEvento));	               
+		               
+		               listaRegistros.add(fila);
+		         
+		    	   }            
+		  
+		        return listaRegistros;
+		      
+		    } catch(Exception e) {
+		            throw e;
+		    }  finally {
+		        if(cvsReader!=null) {
+		            cvsReader.close();
+		        }
+		    }
+		  }
+		
+		public ArrayList<Csv> leerNegocios(String pathFichero, String delimitador) throws Exception {  
+		    
+		       CsvReader cvsReader = null;
+		 
+		       try {
+		    	   File fichero = new File(pathFichero);
+		    	   FileReader freader = new FileReader(fichero);        
+		    	   cvsReader = new CsvReader(freader,delimitador.charAt(0));       
+		    	   String[] headers = null;            
+		    	   ArrayList<Csv> listaRegistros = new ArrayList();
+		     
+		    	   if(cvsReader.readHeaders()) {
+		    		   headers = cvsReader.getHeaders(); 
+		    	   }            
+		    	   	// Leemos los registros
+		    	   
+		    	   String nombreNegocio;
+		    	   String producto;
+		    	   String precioProducto;
+		    	   String negocioAbierto;
+		    	   String esquina1;
+		    	   String esquina2;
+		    	   
+		    	   while(cvsReader.readRecord()) {
+		    		  // Podemos usar get con el nombre de la cabecera o por posición
+	    		   
+		    		   //PARA LA LECTURA DE NEGOCIOS SE UTILIZAN ESTAS VARIABLES
+		    		   nombreNegocio = cvsReader.get("Nombre");
+		    		   esquina1 = cvsReader.get("Esquina1");
+		    		   esquina2 = cvsReader.get("Esquina2");
+		    		   producto = cvsReader.get("Producto");
+		    		   precioProducto = cvsReader.get("Precio");
+		    		   negocioAbierto = cvsReader.get("Abierto");
+		    		   
+		    		   Csv fila = new Csv();  		      		   	                                
+		               
+		               //SETEO DE VARIABLES PARA CUANDO SE LEE EL ARCHIVO NEGOCIOS
+		               fila.setNombreNegocio(nombreNegocio);
+		               fila.setEsquina1(esquina1);
+		               fila.setEsquina2(esquina2);
+		               fila.setProducto(producto);
+		               fila.setPrecioProducto(Double.parseDouble(precioProducto));
+		               fila.setNegocioAbierto(Boolean.parseBoolean(negocioAbierto));
+		               
+		               
+		               listaRegistros.add(fila);
+		         
+		    	   }            
+		  
+		        return listaRegistros;
+		      
+		    } catch(Exception e) {
+		            throw e;
+		    }  finally {
+		        if(cvsReader!=null) {
+		            cvsReader.close();
+		        }
+		    }
+		  }
+		
+		
 }

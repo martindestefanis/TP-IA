@@ -11,8 +11,7 @@ public class CarAgentMain {
     	//LEVANTA TODO EL MUNDO
     	Grafo.iniciarMundo();
     	
-    	
-        CarAgent agent = new CarAgent();
+    	CarAgent agent = new CarAgent();
 
         CityEnviroment environment = new CityEnviroment();
 

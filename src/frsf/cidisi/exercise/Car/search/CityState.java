@@ -14,10 +14,44 @@ public class CityState extends EnvironmentState {
 	//TODO: Setup Variables
     private ArrayList<Nodo> mundo = new ArrayList();
     //private Other posicionAgente;
+    
 	
     public CityState() {
         
     	mundo = GestorNodo.getNodosExistentes();
+    	
+    	//MUESTRO TODOS LOS DATOS CARGADOS
+    	
+    	System.out.println("------- Nodos y sus enlaces -------");
+    	for(int i=0; i< mundo.size(); i++){
+	    	   for(int j=0; j<mundo.get(i).getEnlaces().size(); j++){
+	    		   System.out.println(mundo.get(i).getNombre() + " ---> " + mundo.get(i).getEnlaces().get(j).getNombre());
+	    	   }
+	    	   System.out.println("FINALIZAN LOS ENLACES DEL NODO " + mundo.get(i).getNombre());
+	       }
+    	
+    	System.out.println("------- Negocios --------");
+    	for(int i=0; i<mundo.size(); i++){
+    		for(int k = 0; k<mundo.get(i).getEnlaces().size(); k++){
+    			for(int j=0; j<mundo.get(i).getEnlaces().get(k).getNegocios().size(); j++){
+    				System.out.println(mundo.get(i).getEnlaces().get(k).getNegocios().get(j).getNombre() +
+    		    	"----> Calle: " + mundo.get(i).getEnlaces().get(k).getNombre());
+    			}
+    		}
+    		
+    	}
+    	
+    	System.out.println("------- Eventos --------");
+    	
+    	for(int i=0; i<mundo.size(); i++){
+    		for(int k = 0; k<mundo.get(i).getEnlaces().size(); k++){
+    			for(int j=0; j<mundo.get(i).getEnlaces().get(k).getEventos().size(); j++){
+    				System.out.println(mundo.get(i).getEnlaces().get(k).getEventos().get(j).getNombre() +
+    		    	"----> Calle: " + mundo.get(i).getEnlaces().get(k).getNombre());
+    			}
+    		}
+    		
+    	}
         //TODO: Complete Method
     	/*
 			// mundo = initData0;

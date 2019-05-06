@@ -9,8 +9,9 @@ public class Grafo {
    	
 	public static void iniciarMundo(){    
 		//DIRECTORIO DEL FICHERO Y DELIMITADOR DE LECTURA
-	    String csvEnlaces = "..\\grafo\\src\\Enlaces.csv";
-	    String csvEventos = "..\\grafo\\src\\Eventos.csv";
+	    String csvEnlaces = "..\\TP-IA\\src\\grafo\\Enlaces.csv";
+	    String csvEventos = "..\\TP-IA\\src\\grafo\\Eventos.csv";
+	    String csvNegocios = "..\\TP-IA\\src\\grafo\\Negocios.csv";
 	    String delimitador = ";";
 	    
 	    ArrayList<Csv> registrosLeidos = null;
@@ -28,21 +29,21 @@ public class Grafo {
 	    try {
 	    	
 	    	//LEO ARCHIVO DE ENLACES
-	    	registrosLeidos = fila.leer(csvEnlaces,delimitador);
+	    	registrosLeidos = fila.leerEnlaces(csvEnlaces,delimitador);
 	    	for(int i=0 ; i < registrosLeidos.size(); i++){
 	    	   
 	    	   nodoOrigen = GestorNodo.crearNodo(registrosLeidos.get(i).getNodoOrigen());
 	    	   nodoDestino = GestorNodo.crearNodo(registrosLeidos.get(i).getNodoDestino());
-	    	   costo = Double.parseDouble(registrosLeidos.get(i).getCosto());
+	    	   costo = registrosLeidos.get(i).getCosto();
 	    	   
-	    	   enlace = GestorEnlace.crearEnlace(nodoOrigen, nodoDestino);
-	    	   enlace.setDisponible();
+	    	   enlace = GestorEnlace.crearEnlace(nodoOrigen,nodoDestino);
+	    	   enlace.setDisponible(true);
 	    	   enlace.setCosto(costo);
 	    
 	  /*VERIFICO SI EL NODO YA SE ENCUENTRA REGISTRADO
 	   * SI SE ENCUENTRA REGISTRADO LO QUE HAGO ES AGREGARLE EL NUEVO ENLACE A SU LISTA YA EXISTENTE DE 
 	   * ENLACES.
-	   * SI NO SE ENCUENTRA REGISTRADO LO REGISTRO.
+	   * SI NO SE ENCUENTRA REGISTRADO, LO REGISTRO.
 	   * 
 	   * ESTO SE HACE YA QUE PUEDE HABER MAS DE UN ENLACE POR NODO Y SI NO SE VERIFICA LA EXISTENCIA DEL
 	   * NODO SE CREARAN COMO SI FUERAN DOS NODOS DISTINTOS Y NO LO SON
@@ -59,71 +60,104 @@ public class Grafo {
 	    	   GestorEnlace.agregarEnlace(enlace); 	   
 	    	   
 	       }
-	       
-	     /* ESTO SIRVE PARA MOSTRAR LOS NODOS CARGADOS CON SUS ENLACES 
-	      * 
-	      * ArrayList<Nodo> nodosCargados = GestorNodo.getNodosExistentes();
-	       
-	       System.out.println("---- Nodos y sus enlaces ----");
-	       for(int i=0; i< nodosCargados.size(); i++){
-	    	   for(int j=0; j<nodosCargados.get(i).getEnlaces().size(); j++){
-	    		   System.out.println(nodosCargados.get(i).getNombre() + " ---> " + nodosCargados.get(i).getEnlaces().get(j).getNombre());
-	    	   }
-	    	   System.out.println("FINALIZAN LOS ENLACES DEL NODO " + nodosCargados.get(i).getNombre());
-	       }*/
-	     
+	       	     
 	       //LEO ARCHIVO DE EVENTOS
-	    	registrosLeidos = fila.leer(csvEventos,delimitador);
+	    	registrosLeidos = fila.leerEventos(csvEventos,delimitador);
 	    	
 	    	for(int i=0; i< registrosLeidos.size(); i++){
 	    		
 	    		evento.setNombre(registrosLeidos.get(i).getNombreEvento());
 	    		nodoOrigen = GestorNodo.crearNodo(registrosLeidos.get(i).getEsquina1());
 	    		nodoDestino = GestorNodo.crearNodo(registrosLeidos.get(i).getEsquina2());
-	    		costo = Double.parseDouble(registrosLeidos.get(i).getCosto());
+	    		costo = registrosLeidos.get(i).getCosto();
+	    		
 	    		
 	    		/*PRIMERO CREO UN ENLACE SUPONIENDO QUE EL SENTIDO DE LAS ESQUINAS ES ORIGEN-DESTINO
 	    		 * DESPUES VERIFICO SI EXISTE UN ENLACE CON ESE SENTIDO
 	    		 * SI NO EXISTE ES PORQUE LA ORIENTACION ES DESTINO-ORIGEN
+	    		 * 
 	    		 * */
 	    		enlace = GestorEnlace.crearEnlace(nodoOrigen, nodoDestino);
+	    		
 	    		if(!GestorEnlace.existeEnlace(enlace)){
 	    			/*CREO UN ENLACE CON EL SENTIDO INVERSO Y SE LO MANDO AL GESTOR PARA QUE
 	    			 * A ESE ENLACE LE CAMBIE LA DISPONIBILIDAD.
 	    			 * LUEGO CREO EL ENCALE QUE LE CORRESPONDA AL NODO EVENTO
 	    			 * */
 	    			enlace = GestorEnlace.crearEnlace(nodoDestino, nodoOrigen);
-	    			
-	    			GestorEnlace.agregarNegocio(enlace,negocio);
+	    		}
+	    		
+	    		evento.setEsquina1(enlace.getNodoOrigen());
+	    		evento.setEsquina2(enlace.getNodoDestino());
+	    		evento.setCosto(costo);
+	    		
+	    		//VERIFICO QUE NO EXISTA UN EVENTO YA EN EL ENLACE (PROBLEMA EN LAS CALLES DE DOBLE SENTIDO)
+	    		if(!GestorEnlace.existeEvento(enlace,evento.getNombre())){
+	    			//VERIFICO QUE NO SE TRATE DE UN EVENTO DE CORTE DE CALLE
+	    			if(evento.getNombre().equalsIgnoreCase("Corte Calle")){
+		    			GestorEnlace.cambiarDisponibilidad(enlace,false);
+		    		}
 	    			GestorEnlace.agregarEvento(enlace,evento);
 	    			
-	    			GestorNegocio.agregarNegocio(negocio);
-	    			
-	    			GestorNodo.agregarNegocio(enlace,negocio);
 	    			GestorNodo.agregarEvento(enlace,evento);
 	    		}
 	    		else{
-	    			GestorEnlace.cambiarDisponibilidad(enlace, false);
-	    			enlace = GestorEnlace.crearEnlace(evento, nodoDestino);
-	    			enlaceEntrante = GestorEnlace.crearEnlace(nodoOrigen,evento);
+	    			System.out.println("Ya existe el evento: " + evento.getNombre() + " en la calle " +
+	    					enlace.getNombre());
 	    		}
-	   //TENER EN CUENTA QUE DE AQUI EN MAS SE TRABAJA CON EL ENLACE CON ORIGEN EL EVENTO Y DESTINO UNA ESQUINA
-	    		enlace.setDisponible(false);
-	    		enlace.setCosto(10000); //PODRIA NO SETEARLE EL COSTO YA QUE NO SE UTILIZARA CUANDO SE ELIJA EL CAMINO
-	    		
-	    		//AGREGAR EL ENLACE A LA LISTA DE ENLACES DEL NODO
-	    		evento.setEnlaces(enlace);
-	    		
-	    		//AGREGA EL NODO NUEVO A LOS YA EXISTENTES
-	    		GestorNodo.agregarNodo(evento);
-	    		//AGREGAR EL ENLACE A LA LISTA DE ENLACES
-	    		GestorEnlace.agregarEnlace(enlace);
-	    		
-	    		//AGREGA EL ENLACE NODO-EVENTO AL NODO QUE CORRESPONDE
-	    		GestorNodo.agregarEnlaceANodo(enlaceEntrante.getNodoOrigen(),enlaceEntrante);
-	    		//FALTA TERMINAR
-	    		
 	    	}
+	    		
+    		//LEO ARCHIVO DE NEGOCIOS
+    			registrosLeidos = fila.leerNegocios(csvNegocios,delimitador);
+    	    	String producto;
+    	    	Double precio;
+    	    	
+    	    	for(int i=0; i< registrosLeidos.size(); i++){
+    	    		
+    	    		negocio.setNombre(registrosLeidos.get(i).getNombreNegocio());
+    	    		nodoOrigen = GestorNodo.crearNodo(registrosLeidos.get(i).getEsquina1());
+    	    		nodoDestino = GestorNodo.crearNodo(registrosLeidos.get(i).getEsquina2());
+    	    		producto = registrosLeidos.get(i).getProducto();
+    	    		precio = registrosLeidos.get(i).getPrecioProducto();
+    	    		
+    	    		System.out.println("Producto: " + producto + " con precio: " + precio.toString());
+    	    		
+    	   
+      	    		/*PRIMERO CREO UN ENLACE SUPONIENDO QUE EL SENTIDO DE LAS ESQUINAS ES ORIGEN-DESTINO
+    	    		 * DESPUES VERIFICO SI EXISTE UN ENLACE CON ESE SENTIDO
+    	    		 * SI NO EXISTE ES PORQUE LA ORIENTACION ES DESTINO-ORIGEN
+    	    		 * */
+    	    		enlace = GestorEnlace.crearEnlace(nodoOrigen, nodoDestino);
+    	    		
+    	    		if(!GestorEnlace.existeEnlace(enlace)){
+    	    			/*CREO UN ENLACE CON EL SENTIDO INVERSO Y SE LO MANDO AL GESTOR PARA QUE
+    	    			 * A ESE ENLACE LE CAMBIE LA DISPONIBILIDAD.
+    	    			 * LUEGO CREO EL ENCALE QUE LE CORRESPONDA AL NODO EVENTO
+    	    			 * */
+    	    			enlace = GestorEnlace.crearEnlace(nodoDestino, nodoOrigen);
+    	    		}
+    	    		
+    	    		negocio.setEsquina1(enlace.getNodoOrigen());
+    	    		negocio.setEsquina2(enlace.getNodoDestino());
+    	    		
+    	    	//VERIFICO QUE NO EXISTA EL NEGOCIO EN ESA CALLE (PROBLEMA CON LAS CALLES DOBLE SENTIDO)
+    	    		if(!GestorNegocio.existeNegocio(negocio)){
+    	    			System.out.println("P: " + producto + " PR: " + precio);
+    	    			negocio.agregarProductoPrecio(producto,precio);
+    	    			
+    	    			negocio.setAbierto(registrosLeidos.get(i).getNegocioAbierto());
+    	    			
+    	    			GestorNegocio.agregarNegocio(negocio);
+    	    			GestorEnlace.agregarNegocio(enlace, negocio);
+    	    			GestorNodo.agregarNegocio(enlace, negocio);
+    	    		}
+    	    		else{
+    	    			System.out.println("Esquina1: "+ negocio.getEsquina1().getNombre());
+    	    			System.out.println("Esquina2: "+ negocio.getEsquina2().getNombre());
+    	    			GestorNegocio.agregarProducto(negocio,producto,precio);
+    	    		}
+    	    		
+    	    	}
 	       
 	    } catch (Exception e) {            
 	        e.printStackTrace();

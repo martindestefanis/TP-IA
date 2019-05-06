@@ -55,7 +55,7 @@ public class Enlace {
 	public void setDisponible(boolean disponible) {
 		this.disponible = disponible;
 	}
-
+	
 	public ArrayList<Negocio> getNegocios() {
 		return negocios;
 	}

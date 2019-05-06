@@ -6,7 +6,7 @@ import java.util.HashMap;
 public class Negocio {
 
 	private String nombre;
-	private HashMap<String,Double> productoPrecio;
+	private HashMap<String,Double> productoPrecio = new HashMap<String,Double>();
 	private Nodo esquina1, esquina2;
 	private boolean abierto;
 	
@@ -25,6 +25,9 @@ public class Negocio {
 		return this.productoPrecio.get(producto);
 	}
 	
+	public void agregarProductoPrecio(String producto, Double precioProducto){
+		this.productoPrecio.put(producto, precioProducto);
+	}
 	
 	public void setProductoPrecio(HashMap<String, Double> productoPrecio) {
 		this.productoPrecio = productoPrecio;
