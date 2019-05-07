@@ -23,9 +23,7 @@ public class GestorNodo {
 		Nodo nodo = new Nodo();
 		for(int i=0; i< nodosExistentes.size(); i++){
 			if(nodosExistentes.get(i).getNombre().equalsIgnoreCase(nombreNodo)){
-				for(int j=0; j<nodosExistentes.get(i).getEnlaces().size(); j++){
-					nodo = nodosExistentes.get(i);
-	 	    	   }
+				nodo = nodosExistentes.get(i);
 				}
 	       }
 		

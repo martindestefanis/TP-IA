@@ -96,6 +96,19 @@ public class GestorEnlace {
 			
 		}
 	}
+
+	public static double calcularCosto(Enlace enlace){
+	//CALCULA EL COSTO TOTAL DEL ENLACE. EL COSTO DE LOS EVENTOS SON UN FACTOR DE TIEMPO DE DEMORA.
+	//Y EL COSTO DEL ENLACE ES EL TIEMPO PROMEDIO QUE LE LLEVA AL AGENTE DE RECORRER UNA CUADRA.
+		double costo = 0;
+		
+		for(int i=0; i< enlace.getEventos().size(); i++){
+			costo = costo + enlace.getEventos().get(i).getCosto();
+		}
+		costo = enlace.getCosto() + enlace.getCosto()*costo;
+		
+		return costo;
+	}
 	
 }
 

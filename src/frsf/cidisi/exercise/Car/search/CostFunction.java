@@ -16,6 +16,7 @@ public class CostFunction implements IStepCostFunction {
     public double calculateCost(NTree node) {
         
         //TODO: Complete Method
+    	
         
         return 0;
     }

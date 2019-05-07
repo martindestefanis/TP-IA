@@ -18,9 +18,29 @@ public class CityState extends EnvironmentState {
 	
     public CityState() {
         
-    	mundo = GestorNodo.getNodosExistentes();
     	
-    	//MUESTRO TODOS LOS DATOS CARGADOS
+    	
+    	
+        //TODO: Complete Method
+    	/*
+			// mundo = initData0;
+			// posicionAgente = initData1;
+        */
+        this.initState();
+    }
+    
+    public Object clone() {
+        return mundo.clone();
+    }
+
+    /**
+     * This method is used to setup the initial real world.
+     */
+    @Override
+    public void initState() {
+    	
+    	mundo = GestorNodo.getNodosExistentes();
+//MUESTRO TODOS LOS DATOS CARGADOS
     	
     	System.out.println("\t\t\t\t------- Nodos y sus enlaces -------");
     	for(int i=0; i< mundo.size(); i++){
@@ -72,20 +92,7 @@ public class CityState extends EnvironmentState {
     				String.valueOf(mundo.get(i).getEnlaces().get(j).isDisponible()));
     		}
     	}
-        //TODO: Complete Method
-    	/*
-			// mundo = initData0;
-			// posicionAgente = initData1;
-        */
-        this.initState();
-    }
-
-    /**
-     * This method is used to setup the initial real world.
-     */
-    @Override
-    public void initState() {
-
+    	
         //TODO: Complete Method
     }
 

@@ -7,14 +7,17 @@ import frsf.cidisi.faia.agent.search.SearchAction;
 import frsf.cidisi.faia.agent.search.SearchBasedAgentState;
 import frsf.cidisi.faia.state.AgentState;
 import frsf.cidisi.faia.state.EnvironmentState;
+import grafo.Enlace;
+import grafo.GestorEnlace;
 import grafo.Nodo;
 
 public class Avanzar extends SearchAction {
 	
-	private Nodo nodoD;
+	private Nodo nodoDestino;
+	private Enlace enlace = new Enlace();
 	
-	public Avanzar(Nodo nodoD){
-		this.nodoD = nodoD;
+	public Avanzar(Nodo nodoDestino){
+		this.nodoDestino = nodoDestino;
 	}
 
     /**
@@ -24,10 +27,16 @@ public class Avanzar extends SearchAction {
     @Override
     public SearchBasedAgentState execute(SearchBasedAgentState s) {
         CarAgentState agState = (CarAgentState) s;
-        //Ver si es necesario lo de posiciones visitadas o si el algoritmo lo hace, sino iría acá    
         
-        ArrayList<Nodo> nodosExistentes = new ArrayList<Nodo>();
-        
+        for(int i=0; i<agState.getPosicionActual().getNodoActual().getEnlaces().size(); i++){
+        	if(agState.getPosicionActual().getNodoActual().getEnlaces().get(i).isDisponible() && 
+        		agState.getPosicionActual().getNodoActual().getEnlaces().get(i).getNodoDestino().getNombre().equalsIgnoreCase(nodoDestino.getNombre())){
+        		
+        		this.enlace = agState.getPosicionActual().getNodoActual().getEnlaces().get(i);
+        		agState.setPosicionActual(agState.getPosicionActual().getNodoActual().getEnlaces().get(i),nodoDestino);
+        		return agState;
+        	}
+        }       		
         
         return null;
     }
@@ -40,19 +49,13 @@ public class Avanzar extends SearchAction {
         CityState environmentState = (CityState) est;
         CarAgentState agState = ((CarAgentState) ast);
 
+        this.execute((SearchBasedAgentState) ast);
+
+        return null;
+        
         // TODO: Use this conditions
         // PreConditions: null
         // PostConditions: null
-        
-        if (true) {
-            // Update the real world
-            
-            // Update the agent state
-            
-            return environmentState;
-        }
-
-        return null;
     }
 
     /**
@@ -60,7 +63,7 @@ public class Avanzar extends SearchAction {
      */
     @Override
     public Double getCost() {
-        return new Double(0);
+        return new Double(GestorEnlace.calcularCosto(this.enlace));
     }
 
     /**

@@ -9,9 +9,13 @@ import frsf.cidisi.faia.agent.search.SearchAction;
 import frsf.cidisi.faia.agent.search.SearchBasedAgent;
 import frsf.cidisi.faia.agent.Action;
 import frsf.cidisi.faia.solver.search.*;
+import grafo.GestorNegocio;
+import grafo.GestorNodo;
+
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import java.util.Vector;
+
 
 public class CarAgent extends SearchBasedAgent {
 
@@ -26,8 +30,16 @@ public class CarAgent extends SearchBasedAgent {
 
         // Create the operators
         Vector<SearchAction> operators = new Vector<SearchAction>();
-        operators.addElement(new Comprar_producto());	
-        operators.addElement(new Avanzar(null));	
+        
+        for(int i=0; i<agState.getproductosComprar().size(); i++){
+        	operators.addElement(new Comprar_producto(agState.getproductosComprar().get(i)));
+        }
+                
+        
+        for(int i =0; i<GestorNodo.getNodosExistentes().size();i++){
+        	operators.addElement(new Avanzar(GestorNodo.getNodosExistentes().get(i)));
+        }
+        	
 
         // Create the Problem which the agent will resolve
         Problem problem = new Problem(agGoal, agState, operators);

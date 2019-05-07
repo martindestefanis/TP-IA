@@ -1,9 +1,11 @@
 package frsf.cidisi.exercise.car.search;
 
 import java.util.ArrayList;
+import java.util.Vector;
 
 import frsf.cidisi.faia.agent.Perception;
 import frsf.cidisi.faia.agent.search.SearchBasedAgentState;
+import grafo.Enlace;
 import grafo.GestorNodo;
 import grafo.Nodo;
 
@@ -13,14 +15,14 @@ import grafo.Nodo;
 public class CarAgentState extends SearchBasedAgentState {
 	
 	//TODO: Setup Variables
-    private Nodo posicionInicial = new Nodo();
+    Posicion posicionInicial;
+    Posicion posicionActual;
+    
     private ArrayList<Nodo> mundo = new ArrayList<Nodo>();
    
-	private ArrayList<Producto> productosComprar = new ArrayList<Producto>();
+	private ArrayList<String> productosComprar = new ArrayList<String>();
     
-    private Nodo posicionActual = new Nodo();
-    
-    private ArrayList<Producto> productosComprados = new ArrayList<Producto>();
+    private ArrayList<String> productosComprados = new ArrayList<String>();
 	
 
     public CarAgentState() {
@@ -38,20 +40,20 @@ public class CarAgentState extends SearchBasedAgentState {
         
     	 CarAgentState newState = new CarAgentState();
          
-    	 newState.setposicionActual(posicionActual);
+    	 newState.setPosicionActual(posicionActual);
          
     	 //No sé si es necesario clonar la posición inicial, no debería cambiar nunca
-         newState.setposicionInicial(posicionInicial);
+         newState.setPosicionInicial(posicionInicial);
          
          //No sé si es necesario clonar el mundo no debería cambiar tampoco
          ArrayList<Nodo> mundo1 = (ArrayList<Nodo>) mundo.clone();
          newState.setMundo(mundo1);
+                
+         ArrayList<String> productosComprados1 =  (ArrayList<String>) productosComprados.clone();
+         newState.setProductosComprados(productosComprados1);
          
-         ArrayList<Producto> productosComprados1 = (ArrayList<Producto>) productosComprados.clone();
-         newState.setproductosComprados(productosComprados1);
-         
-         ArrayList<Producto> productosComprar1 = (ArrayList<Producto>) productosComprar.clone();
-         newState.setproductosComprados(productosComprar1);
+         ArrayList<String> productosComprar1 = (ArrayList<String>) productosComprar.clone();
+         newState.setProductosComprados(productosComprar1);
          
          return newState;
     }
@@ -73,10 +75,14 @@ public class CarAgentState extends SearchBasedAgentState {
     public void initState() {
         
     	//No se si es necesario el mundo
-		mundo = GestorNodo.getNodosExistentes();
-		posicionInicial = GestorNodo.obtenerNodo("Juan Castelli y Antonia Godoy");
-		productosComprar.add(new Producto("Huevos",1));
-		posicionActual = posicionInicial;
+		//mundo = GestorNodo.getNodosExistentes();
+    	
+		posicionInicial = new Posicion(null,GestorNodo.obtenerNodo("Juan Castelli y Antonia Godoy"));
+		
+		productosComprar.add("Huevos");
+		
+		posicionActual = new Posicion(posicionInicial.getEnlaceRecorrido(),posicionInicial.getNodoActual());
+		
 		productosComprados = null;
 
     }
@@ -86,7 +92,7 @@ public class CarAgentState extends SearchBasedAgentState {
      */
     @Override
     public String toString() {
-    	String str = "Posicion: " + posicionActual.getNombre();
+    	String str = "Posicion: " + posicionActual.getNodoActual().getNombre();
 
         return str;
     }
@@ -101,71 +107,48 @@ public class CarAgentState extends SearchBasedAgentState {
     	if (!(obj instanceof CarAgentState)) {
             return false;
         }
-        return posicionActual.equals(((CarAgentState) obj).getposicionActual());
+        return posicionActual.equals(((CarAgentState) obj).getPosicionActual());
     }
     
-    public class Producto{
-		public String getProducto() {
-			return producto;
-		}
-		public void setProducto(String producto) {
-			this.producto = producto;
-		}
-		public int getCantidad() {
-			return cantidad;
-		}
-		public void setCantidad(int cantidad) {
-			this.cantidad = cantidad;
-		}
-		private String producto;
-		private int cantidad;
-		Producto(String producto, int cantidad){
-			this.producto=producto;
-			this.cantidad=cantidad;
-		}
-    }
 
     //TODO: Complete this section with agent-specific methods
     // The following methods are agent-specific:
    	
-     public Nodo getposicionInicial(){
+     public Posicion getPosicionInicial(){
        return posicionInicial;
     }
-    public void setposicionInicial(Nodo arg){
+    public void setPosicionInicial(Posicion arg){
       posicionInicial = arg;
      }
      public ArrayList<Nodo> getmundo(){
         return mundo;
      }
-     public void setmundo(ArrayList<Nodo> arg){
+     public void setMundo(ArrayList<Nodo> arg){
         mundo = arg;
      }
-     public ArrayList<Producto> getproductosComprar(){
+     public ArrayList<String> getproductosComprar(){
         return productosComprar;
      }
-     public void setproductosComprar(ArrayList<Producto> arg){
+     public void setProductosComprar(ArrayList<String> arg){
         productosComprar = arg;
      }
-     public Nodo getposicionActual(){
+     public Posicion getPosicionActual(){
         return posicionActual;
      }
-     public void setposicionActual(Nodo arg){
+     public void setPosicionActual(Posicion arg){
         posicionActual = arg;
      }
-     public ArrayList<Producto> getproductosComprados(){
-        return productosComprados;
-     }
-     public void setproductosComprados(ArrayList<Producto> arg){
-        productosComprados = arg;
+     
+     public void setPosicionActual(Enlace enlace, Nodo nodo){
+    	 this.posicionActual.setEnlaceRecorrido(enlace);
+    	 this.posicionActual.setNodoActual(nodo);
      }
      
-     public ArrayList<Nodo> getMundo() {
- 		return mundo;
- 	}
-
- 	public void setMundo(ArrayList<Nodo> mundo) {
- 		this.mundo = mundo;
- 	}
-	
+     public ArrayList<String> getProductosComprados(){
+        return productosComprados;
+     }
+     public void setProductosComprados(ArrayList<String> arg){
+        productosComprados = arg;
+     }
 }
 

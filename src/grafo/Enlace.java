@@ -4,7 +4,7 @@ package grafo;
 import java.util.ArrayList;
 import java.util.HashMap;
 
-public class Enlace {
+public class Enlace{
 
 	private String nombre;
 	private Nodo nodoOrigen;
