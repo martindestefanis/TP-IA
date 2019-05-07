@@ -3,10 +3,21 @@ package grafo;
 public class Evento {
 	
 	private String nombre;
-	private Nodo esquina1;
-	private Nodo esquina2;
+	private Enlace enlace;
 	private double costo;
 
+	public Evento(){
+		
+	}
+	
+	public static Evento crearEvento(String nombre,Enlace enlace, Double costo){
+		Evento evento = new Evento();
+		evento.setNombre(nombre);
+		evento.setEnlace(enlace);
+		evento.setCosto(costo);
+		
+		return evento;
+	}
 	public String getNombre() {
 		return nombre;
 	}
@@ -23,23 +34,14 @@ public class Evento {
 		return this.costo;
 	}
 
-	public Nodo getEsquina1() {
-		return esquina1;
+	public Enlace getEnlace() {
+		return enlace;
 	}
 
-	public void setEsquina1(Nodo esquina1) {
-		this.esquina1 = esquina1;
-	}
-
-	public Nodo getEsquina2() {
-		return esquina2;
-	}
-
-	public void setEsquina2(Nodo esquina2) {
-		this.esquina2 = esquina2;
+	public void setEnlace(Enlace enlace) {
+		this.enlace = enlace;
 	}
 	
 	
 	
-
 }

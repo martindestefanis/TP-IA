@@ -26,6 +26,8 @@ public class Grafo {
 	    
 	    Enlace enlace = new Enlace();
 	    
+	    String nombre;
+	    
 	    try {
 	    	
 	    	//LEO ARCHIVO DE ENLACES
@@ -65,8 +67,7 @@ public class Grafo {
 	    	registrosLeidos = fila.leerEventos(csvEventos,delimitador);
 	    	
 	    	for(int i=0; i< registrosLeidos.size(); i++){
-	    		
-	    		evento.setNombre(registrosLeidos.get(i).getNombreEvento());
+	    		nombre = registrosLeidos.get(i).getNombreEvento();
 	    		nodoOrigen = GestorNodo.crearNodo(registrosLeidos.get(i).getEsquina1());
 	    		nodoDestino = GestorNodo.crearNodo(registrosLeidos.get(i).getEsquina2());
 	    		costo = registrosLeidos.get(i).getCosto();
@@ -87,9 +88,7 @@ public class Grafo {
 	    			enlace = GestorEnlace.crearEnlace(nodoDestino, nodoOrigen);
 	    		}
 	    		
-	    		evento.setEsquina1(enlace.getNodoOrigen());
-	    		evento.setEsquina2(enlace.getNodoDestino());
-	    		evento.setCosto(costo);
+	    		evento = Evento.crearEvento(nombre,enlace,costo);
 	    		
 	    		//VERIFICO QUE NO EXISTA UN EVENTO YA EN EL ENLACE (PROBLEMA EN LAS CALLES DE DOBLE SENTIDO)
 	    		if(!GestorEnlace.existeEvento(enlace,evento.getNombre())){
@@ -97,9 +96,8 @@ public class Grafo {
 	    			if(evento.getNombre().equalsIgnoreCase("Corte Calle")){
 		    			GestorEnlace.cambiarDisponibilidad(enlace,false);
 		    		}
-	    			GestorEnlace.agregarEvento(enlace,evento);
 	    			
-	    			GestorNodo.agregarEvento(enlace,evento);
+	    			GestorEnlace.agregarEvento(enlace,evento);
 	    		}
 	    		else{
 	    			System.out.println("Ya existe el evento: " + evento.getNombre() + " en la calle " +
@@ -111,17 +109,16 @@ public class Grafo {
     			registrosLeidos = fila.leerNegocios(csvNegocios,delimitador);
     	    	String producto;
     	    	Double precio;
-    	    	
+    	       	Boolean abierto;
+    	       	
+    	    	 	    	
     	    	for(int i=0; i< registrosLeidos.size(); i++){
-    	    		
-    	    		negocio.setNombre(registrosLeidos.get(i).getNombreNegocio());
+    	    		nombre = registrosLeidos.get(i).getNombreNegocio();
     	    		nodoOrigen = GestorNodo.crearNodo(registrosLeidos.get(i).getEsquina1());
     	    		nodoDestino = GestorNodo.crearNodo(registrosLeidos.get(i).getEsquina2());
     	    		producto = registrosLeidos.get(i).getProducto();
     	    		precio = registrosLeidos.get(i).getPrecioProducto();
-    	    		
-    	    		System.out.println("Producto: " + producto + " con precio: " + precio.toString());
-    	    		
+    	    		abierto = registrosLeidos.get(i).getNegocioAbierto();   	    		
     	   
       	    		/*PRIMERO CREO UN ENLACE SUPONIENDO QUE EL SENTIDO DE LAS ESQUINAS ES ORIGEN-DESTINO
     	    		 * DESPUES VERIFICO SI EXISTE UN ENLACE CON ESE SENTIDO
@@ -137,26 +134,19 @@ public class Grafo {
     	    			enlace = GestorEnlace.crearEnlace(nodoDestino, nodoOrigen);
     	    		}
     	    		
-    	    		negocio.setEsquina1(enlace.getNodoOrigen());
-    	    		negocio.setEsquina2(enlace.getNodoDestino());
+    	    		negocio = GestorNegocio.crearNegocio(nombre, enlace.getNodoOrigen(), enlace.getNodoDestino(),abierto);
     	    		
     	    	//VERIFICO QUE NO EXISTA EL NEGOCIO EN ESA CALLE (PROBLEMA CON LAS CALLES DOBLE SENTIDO)
     	    		if(!GestorNegocio.existeNegocio(negocio)){
-    	    			System.out.println("P: " + producto + " PR: " + precio);
-    	    			negocio.agregarProductoPrecio(producto,precio);
-    	    			
-    	    			negocio.setAbierto(registrosLeidos.get(i).getNegocioAbierto());
+    	       			negocio.agregarProductoPrecio(producto,precio);
     	    			
     	    			GestorNegocio.agregarNegocio(negocio);
     	    			GestorEnlace.agregarNegocio(enlace, negocio);
-    	    			GestorNodo.agregarNegocio(enlace, negocio);
     	    		}
     	    		else{
-    	    			System.out.println("Esquina1: "+ negocio.getEsquina1().getNombre());
-    	    			System.out.println("Esquina2: "+ negocio.getEsquina2().getNombre());
-    	    			GestorNegocio.agregarProducto(negocio,producto,precio);
+     	    			GestorNegocio.agregarProducto(negocio,producto,precio);
+     	    			GestorEnlace.agregarProducto(negocio,producto,precio);
     	    		}
-    	    		
     	    	}
 	       
 	    } catch (Exception e) {            

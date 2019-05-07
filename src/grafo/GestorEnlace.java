@@ -8,7 +8,7 @@ public class GestorEnlace {
 	
 	private static ArrayList<Enlace> enlacesExistentes = new ArrayList<Enlace>();
 
-	public ArrayList<Enlace> getEnlacesExistentes() {
+	public static ArrayList<Enlace> getEnlacesExistentes() {
 		return enlacesExistentes;
 	}
 	
@@ -80,6 +80,21 @@ public class GestorEnlace {
 			}
 		}
 		return existe;
+	}
+	
+	public static void agregarProducto(Negocio negocio, String producto, Double precio){
+		for(int i=0; i<enlacesExistentes.size(); i++){
+			for(int j=0; j<enlacesExistentes.get(i).getNegocios().size(); j++){
+				if(enlacesExistentes.get(i).getNegocios().get(j).getNombre().equalsIgnoreCase(negocio.getNombre()) &&
+					enlacesExistentes.get(i).getNodoOrigen().getNombre().equalsIgnoreCase(negocio.getEsquina1().getNombre())){
+					if(!GestorNegocio.existeProducto(negocio, producto)){
+						enlacesExistentes.get(i).getNegocios().get(j).agregarProductoPrecio(producto, precio);
+						break;
+					}
+				}
+			}
+			
+		}
 	}
 	
 }

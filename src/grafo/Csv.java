@@ -170,8 +170,8 @@ public class Csv implements Serializable{
 		    		   
 		    		   //PARA LA LECTURA DE EVENTOS SE UTILIZAN ESTAS VARIABLES
 		    		   evento = cvsReader.get("Evento");
-		    		   esquina1 = cvsReader.get("Esquina1");
-		    		   esquina2 = cvsReader.get("Esquina2");
+		    		   esquina1 = cvsReader.get("Esquina 1");
+		    		   esquina2 = cvsReader.get("Esquina 2");
 		    		   costoEvento = cvsReader.get("Costo");
 		    		   
 		    		   Csv fila = new Csv();  		      		   	                                

@@ -59,6 +59,7 @@ public class GestorNodo {
 			if(nodosExistentes.get(i).getNombre().equalsIgnoreCase(enlace.getNodoOrigen().getNombre())){
 				for(int j=0; j<nodosExistentes.get(i).getEnlaces().size(); j++){
 					if(nodosExistentes.get(i).getEnlaces().get(j).getNombre().equalsIgnoreCase(enlace.getNombre())){
+						
 						nodosExistentes.get(i).getEnlaces().get(j).setNegocios(negocio);
 						i = nodosExistentes.size();
 						break;
@@ -75,6 +76,7 @@ public class GestorNodo {
 					if(nodosExistentes.get(i).getEnlaces().get(j).getNombre().equalsIgnoreCase(enlace.getNombre())){
 						nodosExistentes.get(i).getEnlaces().get(j).setEventos(evento);
 						i = nodosExistentes.size();
+						System.out.println("AGREGO EL EVENTO: " + evento.getNombre());
 						break;
 					}
 				}

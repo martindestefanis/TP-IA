@@ -7,6 +7,16 @@ public class GestorNegocio {
 	
 	private static ArrayList<Negocio> negocioExistente = new ArrayList<Negocio>();
 	
+	public static Negocio crearNegocio(String nombre, Nodo esquina1, Nodo esquina2, Boolean abierto){
+		Negocio negocio = new Negocio();
+		negocio.setNombre(nombre);
+		negocio.setEsquina1(esquina1);
+		negocio.setEsquina2(esquina2);
+		negocio.setAbierto(abierto);
+		
+		return negocio;
+	}
+	
 	public static boolean existeNegocio(Nodo esquina1, Nodo esquina2){
 		boolean existe = false;
 		for(int i=0; i< negocioExistente.size(); i++){
@@ -26,13 +36,7 @@ public class GestorNegocio {
 	}
 	
 	public static void agregarNegocio(Negocio negocio){
-		if(!existeNegocio(negocio)){
-			negocioExistente.add(negocio);
-		}
-		else{
-			
-		}
-		
+		negocioExistente.add(negocio);	
 	}
 	
 	public static boolean existeNegocio(Negocio negocio){
@@ -41,11 +45,12 @@ public class GestorNegocio {
 	// Y QUE LA ESQUINA DESTINO SEA ESQUINA2
 		boolean existe = false;
 		for(int i=0; i<negocioExistente.size(); i++){
-			if(negocioExistente.get(i).getNombre().equalsIgnoreCase(negocio.getNombre()) &&
-				negocioExistente.get(i).getEsquina1().getNombre().equalsIgnoreCase(negocio.getEsquina1().getNombre()) &&
-				negocioExistente.get(i).getEsquina2().getNombre().equalsIgnoreCase(negocio.getEsquina2().getNombre())){
-				
+			
+			if(negocioExistente.get(i).getEsquina1().getNombre().equalsIgnoreCase(negocio.getEsquina1().getNombre()) &&
+				negocioExistente.get(i).getEsquina2().getNombre().equalsIgnoreCase(negocio.getEsquina2().getNombre())
+				&& negocioExistente.get(i).getNombre().equalsIgnoreCase(negocio.getNombre())){
 				existe = true;
+				i = negocioExistente.size();
 			}
 		}
 		return existe;
@@ -55,9 +60,9 @@ public class GestorNegocio {
 		for(int i=0; i<negocioExistente.size(); i++){
 			
 			//VERIFICA QUE EL NOMBRE, NODO ORIGEN Y NODO DESTINO SEAN IGUALES PARA OBTENER ASI EL NEGOCIO CORRESPONDIENTE
-			if(negocioExistente.get(i).getNombre().equalsIgnoreCase(negocio.getNombre()) &&
-					negocioExistente.get(i).getEsquina1().getNombre().equalsIgnoreCase(negocio.getEsquina1().getNombre()) &&
-					negocioExistente.get(i).getEsquina2().getNombre().equalsIgnoreCase(negocio.getEsquina2().getNombre())){
+			if(negocioExistente.get(i).getEsquina1().getNombre().equalsIgnoreCase(negocio.getEsquina1().getNombre()) &&
+					negocioExistente.get(i).getEsquina2().getNombre().equalsIgnoreCase(negocio.getEsquina2().getNombre())
+					&& negocioExistente.get(i).getNombre().equalsIgnoreCase(negocio.getNombre())){
 				//VERIFICA LA EXISTENCIA DEL PRODUCTO EN ESE NEGOCIO SELECCIONADO
 				if(!existeProducto(negocioExistente.get(i),producto)){
 					negocioExistente.get(i).agregarProductoPrecio(producto, costo);

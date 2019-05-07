@@ -22,7 +22,7 @@ public class CityState extends EnvironmentState {
     	
     	//MUESTRO TODOS LOS DATOS CARGADOS
     	
-    	System.out.println("------- Nodos y sus enlaces -------");
+    	System.out.println("\t\t\t\t------- Nodos y sus enlaces -------");
     	for(int i=0; i< mundo.size(); i++){
 	    	   for(int j=0; j<mundo.get(i).getEnlaces().size(); j++){
 	    		   System.out.println(mundo.get(i).getNombre() + " ---> " + mundo.get(i).getEnlaces().get(j).getNombre());
@@ -30,7 +30,7 @@ public class CityState extends EnvironmentState {
 	    	   System.out.println("FINALIZAN LOS ENLACES DEL NODO " + mundo.get(i).getNombre());
 	       }
     	
-    	System.out.println("------- Negocios --------");
+    	System.out.println("\t\t\t\t------- Negocios --------");
     	for(int i=0; i<mundo.size(); i++){
     		for(int k = 0; k<mundo.get(i).getEnlaces().size(); k++){
     			for(int j=0; j<mundo.get(i).getEnlaces().get(k).getNegocios().size(); j++){
@@ -41,7 +41,18 @@ public class CityState extends EnvironmentState {
     		
     	}
     	
-    	System.out.println("------- Eventos --------");
+    	System.out.println("\t\t\t\t------ Negocio y productos -------");
+    	for(int i=0; i<mundo.size(); i++){
+    		for(int j=0; j<mundo.get(i).getEnlaces().size(); j++){
+    			for(int k=0; k<mundo.get(i).getEnlaces().get(j).getNegocios().size(); k++){
+    				System.out.println("Negocio: " + mundo.get(i).getEnlaces().get(j).getNegocios().get(k).getNombre() + 
+    					" Producto: " + mundo.get(i).getEnlaces().get(j).getNegocios().get(k).getProductoPrecio().toString());
+    				
+    			}
+    		}
+    	}
+    	
+    	System.out.println("\t\t\t\t------- Eventos --------");
     	
     	for(int i=0; i<mundo.size(); i++){
     		for(int k = 0; k<mundo.get(i).getEnlaces().size(); k++){
@@ -51,6 +62,15 @@ public class CityState extends EnvironmentState {
     			}
     		}
     		
+    	}
+    	
+    	System.out.println("\t\t\t\t------- Estados de los enlaces ---------");
+    	
+    	for(int i=0; i<mundo.size(); i++){
+    		for(int j=0; j<mundo.get(i).getEnlaces().size(); j++){
+    			System.out.println(mundo.get(i).getEnlaces().get(j).getNombre() + "----> " +
+    				String.valueOf(mundo.get(i).getEnlaces().get(j).isDisponible()));
+    		}
     	}
         //TODO: Complete Method
     	/*
