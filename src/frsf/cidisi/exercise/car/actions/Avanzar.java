@@ -1,12 +1,21 @@
 package frsf.cidisi.exercise.car.actions;
 
+import java.util.ArrayList;
+
 import frsf.cidisi.exercise.car.search.*;
 import frsf.cidisi.faia.agent.search.SearchAction;
 import frsf.cidisi.faia.agent.search.SearchBasedAgentState;
 import frsf.cidisi.faia.state.AgentState;
 import frsf.cidisi.faia.state.EnvironmentState;
+import grafo.Nodo;
 
 public class Avanzar extends SearchAction {
+	
+	private Nodo nodoD;
+	
+	public Avanzar(Nodo nodoD){
+		this.nodoD = nodoD;
+	}
 
     /**
      * This method updates a tree node state when the search process is running.
@@ -14,11 +23,11 @@ public class Avanzar extends SearchAction {
      */
     @Override
     public SearchBasedAgentState execute(SearchBasedAgentState s) {
-        CarState agState = (CarState) s;
+        CarAgentState agState = (CarAgentState) s;
+        //Ver si es necesario lo de posiciones visitadas o si el algoritmo lo hace, sino iría acá    
         
-        // TODO: Use this conditions
-        // PreConditions: null
-        // PostConditions: null
+        ArrayList<Nodo> nodosExistentes = new ArrayList<Nodo>();
+        
         
         return null;
     }
@@ -29,7 +38,7 @@ public class Avanzar extends SearchAction {
     @Override
     public EnvironmentState execute(AgentState ast, EnvironmentState est) {
         CityState environmentState = (CityState) est;
-        CarState agState = ((CarState) ast);
+        CarAgentState agState = ((CarAgentState) ast);
 
         // TODO: Use this conditions
         // PreConditions: null

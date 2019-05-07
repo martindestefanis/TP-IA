@@ -21,13 +21,13 @@ public class CarAgent extends SearchBasedAgent {
         CarGoal agGoal = new CarGoal();
 
         // The Agent State
-        CarState agState = new CarState();
+        CarAgentState agState = new CarAgentState();
         this.setAgentState(agState);
 
         // Create the operators
         Vector<SearchAction> operators = new Vector<SearchAction>();
         operators.addElement(new Comprar_producto());	
-        operators.addElement(new Avanzar());	
+        operators.addElement(new Avanzar(null));	
 
         // Create the Problem which the agent will resolve
         Problem problem = new Problem(agGoal, agState, operators);

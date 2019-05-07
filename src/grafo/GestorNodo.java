@@ -18,6 +18,19 @@ public class GestorNodo {
 	public static void setNodosExistentes(ArrayList<Nodo> existentes) {
 		nodosExistentes = existentes;
 	}
+	
+	public static Nodo obtenerNodo(String nombreNodo){
+		Nodo nodo = new Nodo();
+		for(int i=0; i< nodosExistentes.size(); i++){
+			if(nodosExistentes.get(i).getNombre().equalsIgnoreCase(nombreNodo)){
+				for(int j=0; j<nodosExistentes.get(i).getEnlaces().size(); j++){
+					nodo = nodosExistentes.get(i);
+	 	    	   }
+				}
+	       }
+		
+		return nodo;
+	}
 
 	
 	public static void agregarNodo(Nodo nuevoNodo){

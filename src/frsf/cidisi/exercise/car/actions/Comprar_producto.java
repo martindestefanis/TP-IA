@@ -14,7 +14,7 @@ public class Comprar_producto extends SearchAction {
      */
     @Override
     public SearchBasedAgentState execute(SearchBasedAgentState s) {
-        CarState agState = (CarState) s;
+        CarAgentState agState = (CarAgentState) s;
         
         // TODO: Use this conditions
         // PreConditions: null
@@ -29,7 +29,7 @@ public class Comprar_producto extends SearchAction {
     @Override
     public EnvironmentState execute(AgentState ast, EnvironmentState est) {
         CityState environmentState = (CityState) est;
-        CarState agState = ((CarState) ast);
+        CarAgentState agState = ((CarAgentState) ast);
 
         // TODO: Use this conditions
         // PreConditions: null

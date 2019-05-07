@@ -10,10 +10,12 @@ public class CarGoal extends GoalTest {
     public boolean isGoalState (AgentState agentState) {
     
     	// TODO: Complete Method
-        if  (true) //( ProductosComprar.isEmpty()==true)
+        if  (((CarAgentState) agentState).getproductosComprar().isEmpty()==true)
         	{
             return true;
         	}
-        return false;
+        else{
+        	 return false;
+        }
 	}
 }
