@@ -82,8 +82,6 @@ public class CarAgentState extends SearchBasedAgentState {
 		productosComprar.add("Huevos");
 		
 		posicionActual = new Posicion(posicionInicial.getEnlaceRecorrido(),posicionInicial.getNodoActual());
-		
-		productosComprados = null;
 
     }
 
