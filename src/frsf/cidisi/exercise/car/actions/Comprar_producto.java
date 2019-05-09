@@ -47,14 +47,7 @@ public class Comprar_producto extends SearchAction {
 	        		return agState;
 	        	}
 	        }
-        }
-        
-        // TODO: Use this conditions
-        // PreConditions: null
-        // PostConditions: null
-        
-        
-        
+        }     
         return null;
     }
 
@@ -83,16 +76,8 @@ public class Comprar_producto extends SearchAction {
 	        	}
 	        }
         }
-        
-        if (true) {
-            // Update the real world
-            
-            // Update the agent state
-            
-            
-        }
 
-        return null;
+       return null;
     }
 
     /**

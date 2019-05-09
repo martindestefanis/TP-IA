@@ -1,8 +1,10 @@
 package frsf.cidisi.exercise.car.search;
 
+import java.util.ArrayList;
+
 import frsf.cidisi.faia.agent.Action;
-import frsf.cidisi.faia.agent.Perception;
 import frsf.cidisi.faia.environment.Environment;
+import grafo.Enlace;
 
 public class CityEnviroment extends Environment {
 
@@ -25,8 +27,8 @@ public class CityEnviroment extends Environment {
     public  CarAgentPerception getPercept() {
         // Create a new perception to return
          CarAgentPerception perception = new CarAgentPerception();
-		
-		//TODO : Set the perceptions sensors
+
+         perception.setSensorEnlaces(getEnlaces());
         
         // Return the perception
         return perception;
@@ -46,6 +48,11 @@ public class CityEnviroment extends Environment {
         // TODO: Complete Method        
 
         return false;
+    }
+    
+    public ArrayList<Enlace> getEnlaces(){
+    	return ((CityState) this.environmentState)
+        .getPosicionAgente().getNodoActual().getEnlaces();
     }
 
 	//TODO: Complete this section with agent-specific methods

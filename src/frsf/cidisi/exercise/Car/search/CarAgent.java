@@ -90,7 +90,6 @@ public class CarAgent extends SearchBasedAgent {
      */
     @Override
     public void see(Perception p) {
-    	
         this.getAgentState().updateState(p);
     }
 }

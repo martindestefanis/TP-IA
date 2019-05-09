@@ -29,5 +29,9 @@ public class Posicion {
 		this.nodoActual = nodoActual;
 	}
 	
+	public Posicion Clone(){
+		return new Posicion (this.enlaceRecorrido,this.nodoActual);
+	}
+	
 	
 }

@@ -79,19 +79,4 @@ public class GestorNodo {
 			}
 		}
 	}
-	
-	public static void agregarEvento(Enlace enlace, Evento evento){
-		for(int i=0; i<nodosExistentes.size();i++){
-			if(nodosExistentes.get(i).getNombre().equalsIgnoreCase(enlace.getNodoOrigen().getNombre())){
-				for(int j=0; j<nodosExistentes.get(i).getEnlaces().size(); j++){
-					if(nodosExistentes.get(i).getEnlaces().get(j).getNombre().equalsIgnoreCase(enlace.getNombre())){
-						nodosExistentes.get(i).getEnlaces().get(j).setEventos(evento);
-						i = nodosExistentes.size();
-						System.out.println("AGREGO EL EVENTO: " + evento.getNombre());
-						break;
-					}
-				}
-			}
-		}
-	}
 }

@@ -46,10 +46,10 @@ public class Avanzar extends SearchAction {
      */
     @Override
     public EnvironmentState execute(AgentState ast, EnvironmentState est) {
-        CityState environmentState = (CityState) est;
+    CityState environmentState = (CityState) est;
         CarAgentState agState = ((CarAgentState) ast);
                
-        for(int i=0; i<agState.getPosicionActual().getNodoActual().getEnlaces().size(); i++){
+       for(int i=0; i<agState.getPosicionActual().getNodoActual().getEnlaces().size(); i++){
         	if(agState.getPosicionActual().getNodoActual().getEnlaces().get(i).isDisponible() && 
         		agState.getPosicionActual().getNodoActual().getEnlaces().get(i).getNodoDestino().getNombre().equalsIgnoreCase(nodoDestino.getNombre())){
         		
@@ -59,15 +59,7 @@ public class Avanzar extends SearchAction {
         		break;
         	}
         }  
-        
-      
-        
-
-        return null;
-        
-        // TODO: Use this conditions
-        // PreConditions: null
-        // PostConditions: null
+       return null;
     }
 
     /**

@@ -47,16 +47,7 @@ public class GestorEnlace {
 			}
 		}
 	}
-	
-	public static void agregarEvento(Enlace enlace, Evento evento){
-		for(int i=0; i<enlacesExistentes.size();i++){
-			if(enlacesExistentes.get(i).getNombre().equalsIgnoreCase(enlace.getNombre())){
-				enlacesExistentes.get(i).setEventos(evento);
-				i = enlacesExistentes.size();
-			}
-		}
-	}
-	
+		
 	public static void cambiarDisponibilidad(Enlace enlace, Boolean disponibilidad){
 		for(int i=0; i<enlacesExistentes.size(); i++){
 			if(enlacesExistentes.get(i).getNombre().equalsIgnoreCase(enlace.getNombre())){
@@ -64,24 +55,7 @@ public class GestorEnlace {
 				i = enlacesExistentes.size();
 			}
 		}
-	}
-	
-	public static boolean existeEvento(Enlace enlace, String nombreEvento){
-		boolean existe = false;
-		for(int i=0; i<enlacesExistentes.size(); i++){
-			if(enlacesExistentes.get(i).getNombre().equalsIgnoreCase(enlace.getNombre())){
-				for(int j=0; j<enlacesExistentes.get(i).getEventos().size(); j++){
-					if(enlacesExistentes.get(i).getEventos().get(j).getNombre().equalsIgnoreCase(nombreEvento)){
-						existe = true;
-						j = enlacesExistentes.get(i).getEventos().size();
-						i = enlacesExistentes.size();
-					}
-				}
-			}
-		}
-		return existe;
-	}
-	
+	}		
 	public static void agregarProducto(Negocio negocio, String producto, Double precio){
 		for(int i=0; i<enlacesExistentes.size(); i++){
 			for(int j=0; j<enlacesExistentes.get(i).getNegocios().size(); j++){
@@ -102,11 +76,11 @@ public class GestorEnlace {
 	//Y EL COSTO DEL ENLACE ES EL TIEMPO PROMEDIO QUE LE LLEVA AL AGENTE DE RECORRER UNA CUADRA.
 		double costo = 0;
 		
-		for(int i=0; i< enlace.getEventos().size(); i++){
+		/*for(int i=0; i< enlace.getEventos().size(); i++){
 			costo = costo + enlace.getEventos().get(i).getCosto();
 		}
 		costo = enlace.getCosto() + enlace.getCosto()*costo;
-		
+		*/
 		return costo;
 	}
 	

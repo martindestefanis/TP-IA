@@ -15,7 +15,7 @@ import grafo.Nodo;
 public class CarAgentState extends SearchBasedAgentState {
 	
 	//TODO: Setup Variables
-    Posicion posicionInicial;
+    //Posicion posicionInicial;
     Posicion posicionActual;
     
     private ArrayList<Nodo> mundo = new ArrayList<Nodo>();
@@ -40,19 +40,23 @@ public class CarAgentState extends SearchBasedAgentState {
         
     	 CarAgentState newState = new CarAgentState();
          
-    	 newState.setPosicionActual(posicionActual);
+    	 newState.setPosicionActual(posicionActual.Clone());
          
     	 //No sé si es necesario clonar la posición inicial, no debería cambiar nunca
-         newState.setPosicionInicial(posicionInicial);
+    	 // newState.setPosicionInicial(posicionInicial);
          
          //No sé si es necesario clonar el mundo no debería cambiar tampoco
-         ArrayList<Nodo> mundo1 = (ArrayList<Nodo>) mundo.clone();
+    	 //ArrayList<Nodo> mundo1 = (ArrayList<Nodo>) mundo.clone();
+    	 
+    	 ArrayList<Nodo> mundo1 = new ArrayList<Nodo>(mundo);
          newState.setMundo(mundo1);
                 
-         ArrayList<String> productosComprados1 =  (ArrayList<String>) productosComprados.clone();
+         //ArrayList<String> productosComprados1 =  (ArrayList<String>) productosComprados.clone();
+         ArrayList<String> productosComprados1 = new ArrayList<String>(productosComprados);
          newState.setProductosComprados(productosComprados1);
          
-         ArrayList<String> productosComprar1 = (ArrayList<String>) productosComprar.clone();
+         //ArrayList<String> productosComprar1 = (ArrayList<String>) productosComprar.clone();
+         ArrayList<String> productosComprar1 = new ArrayList<String>(productosComprar);
          newState.setProductosComprados(productosComprar1);
          
          return newState;
@@ -66,17 +70,16 @@ public class CarAgentState extends SearchBasedAgentState {
     @Override
     public void updateState(Perception p) {
     	
-    	/*
-    	 * SE SUPONE QUE P TIENE TODOS LOS EVENTOS QUE CARGAMOS EN EL INIT
-    	 * ENTONCES ITERAR POR P (VER LA FORMA DADO QUE CREO QUE EN ESTE METODO SE OBTIENE UNA SOLA
-    	 * PERCEPCION) Y AGREGAR UN EVENTO QUE NO SE ENCUENTRE YA AGREGADO AL ENLACE CORRESPONDIENTE 
-    	 * DE ESA PERCEPCION.
-    	 * */
-    	
     	CarAgentPerception p1 = (CarAgentPerception) p;
-    	
-    	
-        //TODO: Complete Method
+
+    	for(int i=0; i< p1.getSensorEnlaces().size(); i++){
+    		for(int j=0; j<posicionActual.getNodoActual().getEnlaces().size();j++){
+    			if(posicionActual.getNodoActual().getEnlaces().get(i).getNodoOrigen().getNombre().equalsIgnoreCase(p1.getSensorEnlaces().get(j).getNodoOrigen().getNombre())
+    					&& posicionActual.getNodoActual().getEnlaces().get(i).getNodoDestino().getNombre().equalsIgnoreCase(p1.getSensorEnlaces().get(j).getNodoDestino().getNombre())){
+    				posicionActual.getNodoActual().getEnlaces().get(j).setEvento(p1.getSensorEnlaces().get(i).getEvento());
+    			}
+    		}
+    	}
     	
     }
 
@@ -89,11 +92,11 @@ public class CarAgentState extends SearchBasedAgentState {
     	//No se si es necesario el mundo
 		//mundo = GestorNodo.getNodosExistentes();
     	
-		posicionInicial = new Posicion(null,GestorNodo.obtenerNodo("Juan Castelli y Antonia Godoy"));
+		//posicionInicial = new Posicion(null,GestorNodo.obtenerNodo("Juan Castelli y Antonia Godoy"));
 		
 		productosComprar.add("Huevos");
 		
-		posicionActual = new Posicion(posicionInicial.getEnlaceRecorrido(),posicionInicial.getNodoActual());
+		posicionActual = new Posicion(null,GestorNodo.obtenerNodo("Juan Castelli y Antonia Godoy"));
 
     }
 
@@ -124,12 +127,13 @@ public class CarAgentState extends SearchBasedAgentState {
     //TODO: Complete this section with agent-specific methods
     // The following methods are agent-specific:
    	
-     public Posicion getPosicionInicial(){
+ /*    public Posicion getPosicionInicial(){
        return posicionInicial;
     }
     public void setPosicionInicial(Posicion arg){
       posicionInicial = arg;
      }
+ */ 
      public ArrayList<Nodo> getmundo(){
         return mundo;
      }
