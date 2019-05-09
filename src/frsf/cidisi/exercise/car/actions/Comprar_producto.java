@@ -83,14 +83,6 @@ public class Comprar_producto extends SearchAction {
 	        	}
 	        }
         }
-        
-        if (true) {
-            // Update the real world
-            
-            // Update the agent state
-            
-            
-        }
 
         return null;
     }
