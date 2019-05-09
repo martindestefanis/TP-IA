@@ -41,7 +41,7 @@ public class CarAgentPerception extends Perception {
         CityEnviroment environment = (CityEnviroment) environmentIn;
         CityState environmentState =  environment.getEnvironmentState();
         
-        pos = environmentState.getPosicionAgente();
+        pos = environmentState.getPosicionAgente().Clone();
         
         this.setSensorEnlaces(environment.getEnlaces());
         

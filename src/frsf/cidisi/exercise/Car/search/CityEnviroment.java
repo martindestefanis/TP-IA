@@ -40,7 +40,8 @@ public class CityEnviroment extends Environment {
 		return "CityEnviroment [environmentState=" + environmentState
 				+ ", getEnlaces()=" + getEnlaces() + ", getEnvironmentState()="
 				+ getEnvironmentState() + ", getPercept()=" + getPercept()
-				+ "]";
+				+ ", getClass()=" + getClass() + ", hashCode()=" + hashCode()
+				+ ", toString()=" + super.toString() + "]";
 	}
 
     

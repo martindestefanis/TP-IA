@@ -133,9 +133,8 @@ public class CityState extends EnvironmentState {
     @Override
 	public String toString() {
 		return "CityState [agState=" + agState + ", mundo=" + mundo
-				+ ", posicionAgente=" + posicionAgente + ", dataStructure="
-				+ dataStructure + ", getPosicionAgente()="
-				+ getPosicionAgente() + "]";
+				+ ", posicionAgente=" + posicionAgente
+				+ ", getPosicionAgente()=" + getPosicionAgente() + "]";
 	}
 
 	public ArrayList<Evento> leerEventos() throws Exception{

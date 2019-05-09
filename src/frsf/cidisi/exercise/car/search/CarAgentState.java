@@ -77,6 +77,9 @@ public class CarAgentState extends SearchBasedAgentState {
     			if(posicionActual.getNodoActual().getEnlaces().get(i).getNodoOrigen().getNombre().equalsIgnoreCase(p1.getSensorEnlaces().get(j).getNodoOrigen().getNombre())
     					&& posicionActual.getNodoActual().getEnlaces().get(i).getNodoDestino().getNombre().equalsIgnoreCase(p1.getSensorEnlaces().get(j).getNodoDestino().getNombre())){
     				posicionActual.getNodoActual().getEnlaces().get(j).setEvento(p1.getSensorEnlaces().get(i).getEvento());
+    				if(posicionActual.getNodoActual().getEnlaces().get(j).getEvento()==p1.CORTE_CALLE){
+    					posicionActual.getNodoActual().getEnlaces().get(j).setDisponible(false);
+    				}
     			}
     		}
     	}
