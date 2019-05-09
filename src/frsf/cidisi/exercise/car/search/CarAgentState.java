@@ -40,7 +40,7 @@ public class CarAgentState extends SearchBasedAgentState {
         
     	 CarAgentState newState = new CarAgentState();
          
-    	 newState.setPosicionActual(posicionActual);
+    	 newState.setPosicionActual(posicionActual.Clone());
          
     	 //No sé si es necesario clonar la posición inicial, no debería cambiar nunca
          newState.setPosicionInicial(posicionInicial);

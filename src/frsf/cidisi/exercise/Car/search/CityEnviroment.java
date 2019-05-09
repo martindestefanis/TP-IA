@@ -33,9 +33,14 @@ public class CityEnviroment extends Environment {
     }
 
     
-    public String toString() {
-        return environmentState.toString();
-    }
+    @Override
+	public String toString() {
+		return "CityEnviroment [environmentState=" + environmentState
+				+ ", getEnvironmentState()=" + getEnvironmentState()
+				+ ", getPercept()=" + getPercept() + ", getClass()="
+				+ getClass() + ", hashCode()=" + hashCode() + ", toString()="
+				+ super.toString() + "]";
+	}
 
     
     public boolean agentFailed(Action actionReturned) {
