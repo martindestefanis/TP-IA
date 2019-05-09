@@ -5,12 +5,12 @@ nodo1[label="{EO: 1|cost: 1.0|A: Avanzar}"]
 nodo2[label="{EO: 2|cost: 2.0|A: Avanzar|Posicion:\nJuan\nCastelli\ny\nPatricio\nCullen}"]
 nodo3[label="{EO: 3|cost: 3.0|A: Avanzar|Posicion:\nJuan\nCastelli\ny\nCngo.\nEchagüe}"]
 nodo4[label="{EO: 4|cost: 4.0|A: Avanzar|Posicion:\nJuan\nCastelli\ny\nTalcahuano}"]
-nodo5[label="{EO: 5|cost: 5.0|A: Avanzar|Posicion:\nJuan\nCastelli\ny\nDefensa}"]
-nodo6[label="{EO: 6|cost: 6.0|A: Comprar_producto|Posicion:\nJuan\nCastelli\ny\nRiobamba}"]
-
-nodo5 -> nodo6;
+nodo5[label="{EO: 5|cost: 5.0|A: Comprar_producto|Posicion:\nJuan\nCastelli\ny\nDefensa}"]
 
 nodo4 -> nodo5;
+nodo6[label="{EO: 6|cost: 5.0|A: Avanzar|Posicion:\nJuan\nCastelli\ny\nDefensa}"]
+
+nodo4 -> nodo6;
 
 nodo3 -> nodo4;
 
