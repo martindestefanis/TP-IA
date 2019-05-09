@@ -53,12 +53,13 @@ public class CarAgent extends SearchBasedAgent {
     public Action selectAction() {
 
         // Create the search strategy
-        IStepCostFunction cost = new CostFunction();
-        IEstimatedCostFunction heuristic = new Heuristic(); 
-        AStarSearch strategy = new AStarSearch(cost, heuristic);          
+        //IStepCostFunction cost = new CostFunction();
+        //IEstimatedCostFunction heuristic = new Heuristic(); 
+        //AStarSearch strategy = new AStarSearch(cost, heuristic);
+    	BreathFirstSearch searchStrategy = new BreathFirstSearch();
 
         // Create a Search object with the strategy
-        Search searchSolver = new Search(strategy);
+        Search searchSolver = new Search(searchStrategy);
 
         /* Generate an XML file with the search tree. It can also be generated
          * in other formats like PDF with PDF_TREE */
@@ -72,6 +73,7 @@ public class CarAgent extends SearchBasedAgent {
         try {
             selectedAction =
                     this.getSolver().solve(new Object[]{this.getProblem()});
+            System.out.println(selectedAction.toString());
         } catch (Exception ex) {
             Logger.getLogger(CarAgent.class.getName()).log(Level.SEVERE, null, ex);
         }
@@ -88,6 +90,7 @@ public class CarAgent extends SearchBasedAgent {
      */
     @Override
     public void see(Perception p) {
+    	
         this.getAgentState().updateState(p);
     }
 }

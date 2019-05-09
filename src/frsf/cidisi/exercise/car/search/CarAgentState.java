@@ -61,11 +61,23 @@ public class CarAgentState extends SearchBasedAgentState {
     /**
      * This method is used to update the Agent State when a Perception is
      * received by the Simulator.
+     * 
      */
     @Override
     public void updateState(Perception p) {
-        
+    	
+    	/*
+    	 * SE SUPONE QUE P TIENE TODOS LOS EVENTOS QUE CARGAMOS EN EL INIT
+    	 * ENTONCES ITERAR POR P (VER LA FORMA DADO QUE CREO QUE EN ESTE METODO SE OBTIENE UNA SOLA
+    	 * PERCEPCION) Y AGREGAR UN EVENTO QUE NO SE ENCUENTRE YA AGREGADO AL ENLACE CORRESPONDIENTE 
+    	 * DE ESA PERCEPCION.
+    	 * */
+    	
+    	CarAgentPerception p1 = (CarAgentPerception) p;
+    	
+    	
         //TODO: Complete Method
+    	
     }
 
     /**

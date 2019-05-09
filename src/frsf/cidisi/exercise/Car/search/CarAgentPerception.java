@@ -12,6 +12,7 @@ public class CarAgentPerception extends Perception {
 	
 	//TODO: Setup Sensors
 	private int cortes_calles;
+	
 	private int congestion_transito;
 	
  
@@ -29,6 +30,15 @@ public class CarAgentPerception extends Perception {
      */
     @Override
     public void initPerception(Agent agentIn, Environment environmentIn) {
+    	
+    	/*MODIFICAR LAS PERCEPCIONES PARA QUE SEAN UNA LISTA
+		*
+    	 * ACA HAY QUE LEER EL ARCHIVO DE EVENTOS Y POR CADA ENLACE
+    	 * SETEAR EL EVENTO EN EL ENLACE EN EL MUNDO DEL AMBIENTE Y EN LA LISTA DE PERCEPCIONES CREO
+    	 *HAY QUE BORRAR (COMENTALO ASI NO SE PIERDE) EL METODO LEEREVENTOS DEL INICIAR MUNDO
+    	 * Y VERIFICAR QUE AL COMENTAR ESE METODO NO PASE NADA
+    	 * 
+    	 * */
     	
     	//TODO: Complete Method
         

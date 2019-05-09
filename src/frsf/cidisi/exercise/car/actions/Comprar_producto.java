@@ -65,17 +65,31 @@ public class Comprar_producto extends SearchAction {
     public EnvironmentState execute(AgentState ast, EnvironmentState est) {
         CityState environmentState = (CityState) est;
         CarAgentState agState = ((CarAgentState) ast);
-
+        Negocio negocio = new Negocio();
         // TODO: Use this conditions
         // PreConditions: null
         // PostConditions: null
+        
+        if(agState.getPosicionActual().getEnlaceRecorrido() != null){
+        	
+	        for(int i=0; i<agState.getPosicionActual().getEnlaceRecorrido().getNegocios().size(); i++){
+	        	negocio = agState.getPosicionActual().getEnlaceRecorrido().getNegocios().get(i);
+	        	if(negocio.getProductoPrecio().containsKey(this.productoComprar)){
+	        		
+	        		agState.getProductosComprados().add(this.productoComprar);
+	        		agState.getproductosComprar().remove(productoComprar);
+	        		this.costoProducto = negocio.getProductoPrecio().get(this.productoComprar);
+	        		return environmentState;
+	        	}
+	        }
+        }
         
         if (true) {
             // Update the real world
             
             // Update the agent state
             
-            return environmentState;
+            
         }
 
         return null;

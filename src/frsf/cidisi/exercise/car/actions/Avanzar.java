@@ -48,8 +48,20 @@ public class Avanzar extends SearchAction {
     public EnvironmentState execute(AgentState ast, EnvironmentState est) {
         CityState environmentState = (CityState) est;
         CarAgentState agState = ((CarAgentState) ast);
-
-        this.execute((SearchBasedAgentState) ast);
+               
+        for(int i=0; i<agState.getPosicionActual().getNodoActual().getEnlaces().size(); i++){
+        	if(agState.getPosicionActual().getNodoActual().getEnlaces().get(i).isDisponible() && 
+        		agState.getPosicionActual().getNodoActual().getEnlaces().get(i).getNodoDestino().getNombre().equalsIgnoreCase(nodoDestino.getNombre())){
+        		
+        		this.enlace = agState.getPosicionActual().getNodoActual().getEnlaces().get(i);
+        		agState.setPosicionActual(agState.getPosicionActual().getNodoActual().getEnlaces().get(i),nodoDestino);
+        		//return (environmentState) agState;
+        		break;
+        	}
+        }  
+        
+      
+        
 
         return null;
         

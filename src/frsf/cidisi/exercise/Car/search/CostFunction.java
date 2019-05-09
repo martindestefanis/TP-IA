@@ -17,6 +17,8 @@ public class CostFunction implements IStepCostFunction {
         
         //TODO: Complete Method
     	
+    	node.getAction().getCost();
+    	
         
         return 0;
     }
