@@ -88,12 +88,10 @@ public class Comprar_producto extends SearchAction {
         return new Double(this.costoProducto);
     }
 
-    /**
-     * This method is not important for a search based agent, but is essensial
-     * when creating a calculus based one.
-     */
     @Override
-    public String toString() {
-        return "Comprar_producto";
-    }
+	public String toString() {
+		return "Comprar_producto [costoProducto=" + costoProducto
+				+ ", productoComprar=" + productoComprar + ", getCost()="
+				+ getCost() + "]";
+	}
 }

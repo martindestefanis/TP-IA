@@ -113,18 +113,52 @@ public class CarAgentState extends SearchBasedAgentState {
         return str;
     }
 
-    /**
-     * This method is used in the search process to verify if the node already
-     * exists in the actual search.
-     */
     @Override
-    public boolean equals(Object obj) {
-       
-    	if (!(obj instanceof CarAgentState)) {
-            return false;
-        }
-        return posicionActual.equals(((CarAgentState) obj).getPosicionActual());
-    }
+	public int hashCode() {
+		final int prime = 31;
+		int result = 1;
+		result = prime * result + ((mundo == null) ? 0 : mundo.hashCode());
+		result = prime * result
+				+ ((posicionActual == null) ? 0 : posicionActual.hashCode());
+		result = prime
+				* result
+				+ ((productosComprados == null) ? 0 : productosComprados
+						.hashCode());
+		result = prime
+				* result
+				+ ((productosComprar == null) ? 0 : productosComprar.hashCode());
+		return result;
+	}
+
+	@Override
+	public boolean equals(Object obj) {
+		if (this == obj)
+			return true;
+		if (getClass() != obj.getClass())
+			return false;
+		CarAgentState other = (CarAgentState) obj;
+		if (mundo == null) {
+			if (other.mundo != null)
+				return false;
+		} else if (!mundo.equals(other.mundo))
+			return false;
+		if (posicionActual == null) {
+			if (other.posicionActual != null)
+				return false;
+		} else if (!posicionActual.equals(other.posicionActual))
+			return false;
+		if (productosComprados == null) {
+			if (other.productosComprados != null)
+				return false;
+		} else if (!productosComprados.equals(other.productosComprados))
+			return false;
+		if (productosComprar == null) {
+			if (other.productosComprar != null)
+				return false;
+		} else if (!productosComprar.equals(other.productosComprar))
+			return false;
+		return true;
+	}
     
 
     //TODO: Complete this section with agent-specific methods

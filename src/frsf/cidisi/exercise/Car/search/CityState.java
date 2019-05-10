@@ -186,7 +186,7 @@ public class CityState extends EnvironmentState {
     }
     
     public Posicion getPosicionAgente() {
-		return posicionAgente;
+		return posicionAgente.Clone();
 	}
 
 	public void setPosicionAgente(Posicion posicionAgente) {

@@ -70,12 +70,9 @@ public class Avanzar extends SearchAction {
         return new Double(GestorEnlace.calcularCosto(this.enlace));
     }
 
-    /**
-     * This method is not important for a search based agent, but is essensial
-     * when creating a calculus based one.
-     */
     @Override
-    public String toString() {
-        return "Avanzar";
-    }
+	public String toString() {
+		return "Avanzar [nodoDestino=" + nodoDestino.getNombre() + ", getCost()="
+				+ getCost() + "]";
+	}
 }
