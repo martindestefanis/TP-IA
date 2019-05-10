@@ -59,10 +59,6 @@ public class Comprar_producto extends SearchAction {
         CityState environmentState = (CityState) est;
         CarAgentState agState = ((CarAgentState) ast);
         Negocio negocio = new Negocio();
-        // TODO: Use this conditions
-        // PreConditions: null
-        // PostConditions: null
-        
         if(agState.getPosicionActual().getEnlaceRecorrido() != null){
         	
 	        for(int i=0; i<agState.getPosicionActual().getEnlaceRecorrido().getNegocios().size(); i++){

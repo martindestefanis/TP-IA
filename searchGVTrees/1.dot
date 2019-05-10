@@ -1,0 +1,15 @@
+digraph g {
+node [shape = Mrecord];
+nodo0[label="{EO: 0|cost: 0.0|A: null}"]
+nodo1[label="{EO: 1|cost: 1.0|A: Avanzar [nodoDestino=Juan Castelli y Cngo. Echagüe, getCost()=0.0]}"]
+nodo2[label="{EO: 2|cost: 2.0|A: Comprar_producto [costoProducto=12.0, productoComprar=Huevos, getCost()=12.0]|Posicion:\nJuan\nCastelli\ny\nCngo.\nEchagüe}"]
+
+nodo1 -> nodo2;
+nodo3[label="{EO: 3|cost: 2.0|A: Avanzar [nodoDestino=Juan Castelli y Talcahuano, getCost()=0.0]|Posicion:\nJuan\nCastelli\ny\nCngo.\nEchagüe}"]
+
+nodo1 -> nodo3;
+
+nodo0 -> nodo1;
+
+
+}

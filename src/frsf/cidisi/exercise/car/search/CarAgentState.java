@@ -93,7 +93,7 @@ public class CarAgentState extends SearchBasedAgentState {
     public void initState() {
         
     	//No se si es necesario el mundo
-		//mundo = GestorNodo.getNodosExistentes();
+		mundo = GestorNodo.getNodosExistentes();
     	
 		//posicionInicial = new Posicion(null,GestorNodo.obtenerNodo("Juan Castelli y Antonia Godoy"));
 		

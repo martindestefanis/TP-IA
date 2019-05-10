@@ -28,7 +28,7 @@ public class CityEnviroment extends Environment {
         // Create a new perception to return
          CarAgentPerception perception = new CarAgentPerception();
 
-         perception.setSensorEnlaces(getEnlaces());
+         perception.setSensorEnlaces(this.getEnlaces());
         
         // Return the perception
         return perception;
@@ -37,11 +37,7 @@ public class CityEnviroment extends Environment {
     
     @Override
 	public String toString() {
-		return "CityEnviroment [environmentState=" + environmentState
-				+ ", getEnlaces()=" + getEnlaces() + ", getEnvironmentState()="
-				+ getEnvironmentState() + ", getPercept()=" + getPercept()
-				+ ", getClass()=" + getClass() + ", hashCode()=" + hashCode()
-				+ ", toString()=" + super.toString() + "]";
+		return "[environmentState="+ " Posicion agente:" + getEnvironmentState().getPosicionAgente().getNodoActual().getNombre()+"]";
 	}
 
     

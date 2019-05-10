@@ -27,8 +27,11 @@ public class CityState extends EnvironmentState {
         this.initState();
     }
     
-    public Object clone() {
-        return mundo.clone();
+    public CityState clone() {
+    	CityState aux = new CityState();
+    	aux.mundo = (ArrayList<Nodo>) mundo.clone();
+    	aux.posicionAgente = posicionAgente.Clone();
+        return aux;
     }
 
     /**
@@ -39,7 +42,7 @@ public class CityState extends EnvironmentState {
     	
     	mundo = GestorNodo.getNodosExistentes();
     	//MUESTRO TODOS LOS DATOS CARGADOS
-    	posicionAgente = agState.getPosicionActual();
+    	posicionAgente = new Posicion(null,GestorNodo.obtenerNodo("Juan Castelli y Antonia Godoy"));
     	
     	
     	System.out.println("\t\t\t\t------- Nodos y sus enlaces -------");
@@ -186,11 +189,17 @@ public class CityState extends EnvironmentState {
     }
     
     public Posicion getPosicionAgente() {
-		return posicionAgente.Clone();
+		return posicionAgente;
 	}
 
 	public void setPosicionAgente(Posicion posicionAgente) {
 		this.posicionAgente = posicionAgente;
+	}
+
+	public void setPosicionAgente(Enlace enlace, Nodo nodoDestino) {
+		 this.posicionAgente.setEnlaceRecorrido(enlace);
+    	 this.posicionAgente.setNodoActual(nodoDestino);
+		
 	}
 
 	//TODO: Complete this section with agent-specific methods
