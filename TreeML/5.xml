@@ -1,0 +1,643 @@
+<tree id="5" edgedefault="directed">
+<node Id="0" Action="null" Cost="0.0" Estado_Agente="Posicion: Juan Castelli y Cngo. Echag&#252;e"/>
+<node Id="1" Action="Comprar_producto [costoProducto=50.0, productoComprar=Caf&#233;, CostoOperacion=50.0]" Cost="50.0" Estado_Agente="Posicion: Juan Castelli y Cngo. Echag&#252;e"/>
+<node Id="2" Action="Comprar_producto [costoProducto=10.0, productoComprar=Huevos, CostoOperacion=10.0]" Cost="10.0" Estado_Agente="Posicion: Juan Castelli y Cngo. Echag&#252;e"/>
+<node Id="3" Action="Comprar_producto [costoProducto=60.0, productoComprar=Leche, CostoOperacion=60.0]" Cost="60.0" Estado_Agente="Posicion: Juan Castelli y Cngo. Echag&#252;e"/>
+<node Id="4" Action="Comprar_producto [costoProducto=10.0, productoComprar=Man&#237;, CostoOperacion=10.0]" Cost="10.0" Estado_Agente="Posicion: Juan Castelli y Cngo. Echag&#252;e"/>
+<node Id="5" Action="Avanzar [nodoDestino=Juan Castelli y Talcahuano, CostoOperacion=160.0]" Cost="160.0" Estado_Agente="Posicion: Juan Castelli y Talcahuano"/>
+<node Id="156" Action="Comprar_producto [costoProducto=50.0, productoComprar=Caf&#233;, CostoOperacion=50.0]" Cost="100.0" Estado_Agente="Posicion: Juan Castelli y Cngo. Echag&#252;e"/>
+<node Id="157" Action="Comprar_producto [costoProducto=10.0, productoComprar=Huevos, CostoOperacion=10.0]" Cost="60.0" Estado_Agente="Posicion: Juan Castelli y Cngo. Echag&#252;e"/>
+<node Id="158" Action="Comprar_producto [costoProducto=60.0, productoComprar=Leche, CostoOperacion=60.0]" Cost="110.0" Estado_Agente="Posicion: Juan Castelli y Cngo. Echag&#252;e"/>
+<node Id="159" Action="Comprar_producto [costoProducto=10.0, productoComprar=Man&#237;, CostoOperacion=10.0]" Cost="60.0" Estado_Agente="Posicion: Juan Castelli y Cngo. Echag&#252;e"/>
+<node Id="160" Action="Avanzar [nodoDestino=Juan Castelli y Talcahuano, CostoOperacion=160.0]" Cost="210.0" Estado_Agente="Posicion: Juan Castelli y Talcahuano"/>
+<node Id="6" Action="Comprar_producto [costoProducto=50.0, productoComprar=Caf&#233;, CostoOperacion=50.0]" Cost="60.0" Estado_Agente="Posicion: Juan Castelli y Cngo. Echag&#252;e"/>
+<node Id="7" Action="Comprar_producto [costoProducto=10.0, productoComprar=Huevos, CostoOperacion=10.0]" Cost="20.0" Estado_Agente="Posicion: Juan Castelli y Cngo. Echag&#252;e"/>
+<node Id="8" Action="Comprar_producto [costoProducto=60.0, productoComprar=Leche, CostoOperacion=60.0]" Cost="70.0" Estado_Agente="Posicion: Juan Castelli y Cngo. Echag&#252;e"/>
+<node Id="9" Action="Comprar_producto [costoProducto=10.0, productoComprar=Man&#237;, CostoOperacion=10.0]" Cost="20.0" Estado_Agente="Posicion: Juan Castelli y Cngo. Echag&#252;e"/>
+<node Id="10" Action="Avanzar [nodoDestino=Juan Castelli y Talcahuano, CostoOperacion=160.0]" Cost="170.0" Estado_Agente="Posicion: Juan Castelli y Talcahuano"/>
+<node Id="16" Action="Comprar_producto [costoProducto=50.0, productoComprar=Caf&#233;, CostoOperacion=50.0]" Cost="70.0" Estado_Agente="Posicion: Juan Castelli y Cngo. Echag&#252;e"/>
+<node Id="17" Action="Comprar_producto [costoProducto=10.0, productoComprar=Huevos, CostoOperacion=10.0]" Cost="30.0" Estado_Agente="Posicion: Juan Castelli y Cngo. Echag&#252;e"/>
+<node Id="18" Action="Comprar_producto [costoProducto=60.0, productoComprar=Leche, CostoOperacion=60.0]" Cost="80.0" Estado_Agente="Posicion: Juan Castelli y Cngo. Echag&#252;e"/>
+<node Id="19" Action="Comprar_producto [costoProducto=10.0, productoComprar=Man&#237;, CostoOperacion=10.0]" Cost="30.0" Estado_Agente="Posicion: Juan Castelli y Cngo. Echag&#252;e"/>
+<node Id="20" Action="Avanzar [nodoDestino=Juan Castelli y Talcahuano, CostoOperacion=160.0]" Cost="180.0" Estado_Agente="Posicion: Juan Castelli y Talcahuano"/>
+<node Id="36" Action="Comprar_producto [costoProducto=50.0, productoComprar=Caf&#233;, CostoOperacion=50.0]" Cost="80.0" Estado_Agente="Posicion: Juan Castelli y Cngo. Echag&#252;e"/>
+<node Id="37" Action="Comprar_producto [costoProducto=10.0, productoComprar=Huevos, CostoOperacion=10.0]" Cost="40.0" Estado_Agente="Posicion: Juan Castelli y Cngo. Echag&#252;e"/>
+<node Id="38" Action="Comprar_producto [costoProducto=60.0, productoComprar=Leche, CostoOperacion=60.0]" Cost="90.0" Estado_Agente="Posicion: Juan Castelli y Cngo. Echag&#252;e"/>
+<node Id="39" Action="Comprar_producto [costoProducto=10.0, productoComprar=Man&#237;, CostoOperacion=10.0]" Cost="40.0" Estado_Agente="Posicion: Juan Castelli y Cngo. Echag&#252;e"/>
+<node Id="40" Action="Avanzar [nodoDestino=Juan Castelli y Talcahuano, CostoOperacion=160.0]" Cost="190.0" Estado_Agente="Posicion: Juan Castelli y Talcahuano"/>
+<node Id="76" Action="Comprar_producto [costoProducto=50.0, productoComprar=Caf&#233;, CostoOperacion=50.0]" Cost="90.0" Estado_Agente="Posicion: Juan Castelli y Cngo. Echag&#252;e"/>
+<node Id="77" Action="Comprar_producto [costoProducto=10.0, productoComprar=Huevos, CostoOperacion=10.0]" Cost="50.0" Estado_Agente="Posicion: Juan Castelli y Cngo. Echag&#252;e"/>
+<node Id="78" Action="Comprar_producto [costoProducto=60.0, productoComprar=Leche, CostoOperacion=60.0]" Cost="100.0" Estado_Agente="Posicion: Juan Castelli y Cngo. Echag&#252;e"/>
+<node Id="79" Action="Comprar_producto [costoProducto=10.0, productoComprar=Man&#237;, CostoOperacion=10.0]" Cost="50.0" Estado_Agente="Posicion: Juan Castelli y Cngo. Echag&#252;e"/>
+<node Id="80" Action="Avanzar [nodoDestino=Juan Castelli y Talcahuano, CostoOperacion=160.0]" Cost="200.0" Estado_Agente="Posicion: Juan Castelli y Talcahuano"/>
+<node Id="161" Action="Comprar_producto [costoProducto=50.0, productoComprar=Caf&#233;, CostoOperacion=50.0]" Cost="100.0" Estado_Agente="Posicion: Juan Castelli y Cngo. Echag&#252;e"/>
+<node Id="162" Action="Comprar_producto [costoProducto=10.0, productoComprar=Huevos, CostoOperacion=10.0]" Cost="60.0" Estado_Agente="Posicion: Juan Castelli y Cngo. Echag&#252;e"/>
+<node Id="163" Action="Comprar_producto [costoProducto=60.0, productoComprar=Leche, CostoOperacion=60.0]" Cost="110.0" Estado_Agente="Posicion: Juan Castelli y Cngo. Echag&#252;e"/>
+<node Id="164" Action="Comprar_producto [costoProducto=10.0, productoComprar=Man&#237;, CostoOperacion=10.0]" Cost="60.0" Estado_Agente="Posicion: Juan Castelli y Cngo. Echag&#252;e"/>
+<node Id="165" Action="Avanzar [nodoDestino=Juan Castelli y Talcahuano, CostoOperacion=160.0]" Cost="210.0" Estado_Agente="Posicion: Juan Castelli y Talcahuano"/>
+<node Id="166" Action="Comprar_producto [costoProducto=50.0, productoComprar=Caf&#233;, CostoOperacion=50.0]" Cost="100.0" Estado_Agente="Posicion: Juan Castelli y Cngo. Echag&#252;e"/>
+<node Id="167" Action="Comprar_producto [costoProducto=10.0, productoComprar=Huevos, CostoOperacion=10.0]" Cost="60.0" Estado_Agente="Posicion: Juan Castelli y Cngo. Echag&#252;e"/>
+<node Id="168" Action="Comprar_producto [costoProducto=60.0, productoComprar=Leche, CostoOperacion=60.0]" Cost="110.0" Estado_Agente="Posicion: Juan Castelli y Cngo. Echag&#252;e"/>
+<node Id="169" Action="Comprar_producto [costoProducto=10.0, productoComprar=Man&#237;, CostoOperacion=10.0]" Cost="60.0" Estado_Agente="Posicion: Juan Castelli y Cngo. Echag&#252;e"/>
+<node Id="170" Action="Avanzar [nodoDestino=Juan Castelli y Talcahuano, CostoOperacion=160.0]" Cost="210.0" Estado_Agente="Posicion: Juan Castelli y Talcahuano"/>
+<node Id="81" Action="Comprar_producto [costoProducto=50.0, productoComprar=Caf&#233;, CostoOperacion=50.0]" Cost="90.0" Estado_Agente="Posicion: Juan Castelli y Cngo. Echag&#252;e"/>
+<node Id="82" Action="Comprar_producto [costoProducto=10.0, productoComprar=Huevos, CostoOperacion=10.0]" Cost="50.0" Estado_Agente="Posicion: Juan Castelli y Cngo. Echag&#252;e"/>
+<node Id="83" Action="Comprar_producto [costoProducto=60.0, productoComprar=Leche, CostoOperacion=60.0]" Cost="100.0" Estado_Agente="Posicion: Juan Castelli y Cngo. Echag&#252;e"/>
+<node Id="84" Action="Comprar_producto [costoProducto=10.0, productoComprar=Man&#237;, CostoOperacion=10.0]" Cost="50.0" Estado_Agente="Posicion: Juan Castelli y Cngo. Echag&#252;e"/>
+<node Id="85" Action="Avanzar [nodoDestino=Juan Castelli y Talcahuano, CostoOperacion=160.0]" Cost="200.0" Estado_Agente="Posicion: Juan Castelli y Talcahuano"/>
+<node Id="171" Action="Comprar_producto [costoProducto=50.0, productoComprar=Caf&#233;, CostoOperacion=50.0]" Cost="100.0" Estado_Agente="Posicion: Juan Castelli y Cngo. Echag&#252;e"/>
+<node Id="172" Action="Comprar_producto [costoProducto=10.0, productoComprar=Huevos, CostoOperacion=10.0]" Cost="60.0" Estado_Agente="Posicion: Juan Castelli y Cngo. Echag&#252;e"/>
+<node Id="173" Action="Comprar_producto [costoProducto=60.0, productoComprar=Leche, CostoOperacion=60.0]" Cost="110.0" Estado_Agente="Posicion: Juan Castelli y Cngo. Echag&#252;e"/>
+<node Id="174" Action="Comprar_producto [costoProducto=10.0, productoComprar=Man&#237;, CostoOperacion=10.0]" Cost="60.0" Estado_Agente="Posicion: Juan Castelli y Cngo. Echag&#252;e"/>
+<node Id="175" Action="Avanzar [nodoDestino=Juan Castelli y Talcahuano, CostoOperacion=160.0]" Cost="210.0" Estado_Agente="Posicion: Juan Castelli y Talcahuano"/>
+<node Id="176" Action="Comprar_producto [costoProducto=50.0, productoComprar=Caf&#233;, CostoOperacion=50.0]" Cost="100.0" Estado_Agente="Posicion: Juan Castelli y Cngo. Echag&#252;e"/>
+<node Id="177" Action="Comprar_producto [costoProducto=10.0, productoComprar=Huevos, CostoOperacion=10.0]" Cost="60.0" Estado_Agente="Posicion: Juan Castelli y Cngo. Echag&#252;e"/>
+<node Id="178" Action="Comprar_producto [costoProducto=60.0, productoComprar=Leche, CostoOperacion=60.0]" Cost="110.0" Estado_Agente="Posicion: Juan Castelli y Cngo. Echag&#252;e"/>
+<node Id="179" Action="Comprar_producto [costoProducto=10.0, productoComprar=Man&#237;, CostoOperacion=10.0]" Cost="60.0" Estado_Agente="Posicion: Juan Castelli y Cngo. Echag&#252;e"/>
+<node Id="180" Action="Avanzar [nodoDestino=Juan Castelli y Talcahuano, CostoOperacion=160.0]" Cost="210.0" Estado_Agente="Posicion: Juan Castelli y Talcahuano"/>
+<node Id="41" Action="Comprar_producto [costoProducto=50.0, productoComprar=Caf&#233;, CostoOperacion=50.0]" Cost="80.0" Estado_Agente="Posicion: Juan Castelli y Cngo. Echag&#252;e"/>
+<node Id="42" Action="Comprar_producto [costoProducto=10.0, productoComprar=Huevos, CostoOperacion=10.0]" Cost="40.0" Estado_Agente="Posicion: Juan Castelli y Cngo. Echag&#252;e"/>
+<node Id="43" Action="Comprar_producto [costoProducto=60.0, productoComprar=Leche, CostoOperacion=60.0]" Cost="90.0" Estado_Agente="Posicion: Juan Castelli y Cngo. Echag&#252;e"/>
+<node Id="44" Action="Comprar_producto [costoProducto=10.0, productoComprar=Man&#237;, CostoOperacion=10.0]" Cost="40.0" Estado_Agente="Posicion: Juan Castelli y Cngo. Echag&#252;e"/>
+<node Id="45" Action="Avanzar [nodoDestino=Juan Castelli y Talcahuano, CostoOperacion=160.0]" Cost="190.0" Estado_Agente="Posicion: Juan Castelli y Talcahuano"/>
+<node Id="86" Action="Comprar_producto [costoProducto=50.0, productoComprar=Caf&#233;, CostoOperacion=50.0]" Cost="90.0" Estado_Agente="Posicion: Juan Castelli y Cngo. Echag&#252;e"/>
+<node Id="87" Action="Comprar_producto [costoProducto=10.0, productoComprar=Huevos, CostoOperacion=10.0]" Cost="50.0" Estado_Agente="Posicion: Juan Castelli y Cngo. Echag&#252;e"/>
+<node Id="88" Action="Comprar_producto [costoProducto=60.0, productoComprar=Leche, CostoOperacion=60.0]" Cost="100.0" Estado_Agente="Posicion: Juan Castelli y Cngo. Echag&#252;e"/>
+<node Id="89" Action="Comprar_producto [costoProducto=10.0, productoComprar=Man&#237;, CostoOperacion=10.0]" Cost="50.0" Estado_Agente="Posicion: Juan Castelli y Cngo. Echag&#252;e"/>
+<node Id="90" Action="Avanzar [nodoDestino=Juan Castelli y Talcahuano, CostoOperacion=160.0]" Cost="200.0" Estado_Agente="Posicion: Juan Castelli y Talcahuano"/>
+<node Id="181" Action="Comprar_producto [costoProducto=50.0, productoComprar=Caf&#233;, CostoOperacion=50.0]" Cost="100.0" Estado_Agente="Posicion: Juan Castelli y Cngo. Echag&#252;e"/>
+<node Id="182" Action="Comprar_producto [costoProducto=10.0, productoComprar=Huevos, CostoOperacion=10.0]" Cost="60.0" Estado_Agente="Posicion: Juan Castelli y Cngo. Echag&#252;e"/>
+<node Id="183" Action="Comprar_producto [costoProducto=60.0, productoComprar=Leche, CostoOperacion=60.0]" Cost="110.0" Estado_Agente="Posicion: Juan Castelli y Cngo. Echag&#252;e"/>
+<node Id="184" Action="Comprar_producto [costoProducto=10.0, productoComprar=Man&#237;, CostoOperacion=10.0]" Cost="60.0" Estado_Agente="Posicion: Juan Castelli y Cngo. Echag&#252;e"/>
+<node Id="185" Action="Avanzar [nodoDestino=Juan Castelli y Talcahuano, CostoOperacion=160.0]" Cost="210.0" Estado_Agente="Posicion: Juan Castelli y Talcahuano"/>
+<node Id="186" Action="Comprar_producto [costoProducto=50.0, productoComprar=Caf&#233;, CostoOperacion=50.0]" Cost="100.0" Estado_Agente="Posicion: Juan Castelli y Cngo. Echag&#252;e"/>
+<node Id="187" Action="Comprar_producto [costoProducto=10.0, productoComprar=Huevos, CostoOperacion=10.0]" Cost="60.0" Estado_Agente="Posicion: Juan Castelli y Cngo. Echag&#252;e"/>
+<node Id="188" Action="Comprar_producto [costoProducto=60.0, productoComprar=Leche, CostoOperacion=60.0]" Cost="110.0" Estado_Agente="Posicion: Juan Castelli y Cngo. Echag&#252;e"/>
+<node Id="189" Action="Comprar_producto [costoProducto=10.0, productoComprar=Man&#237;, CostoOperacion=10.0]" Cost="60.0" Estado_Agente="Posicion: Juan Castelli y Cngo. Echag&#252;e"/>
+<node Id="190" Action="Avanzar [nodoDestino=Juan Castelli y Talcahuano, CostoOperacion=160.0]" Cost="210.0" Estado_Agente="Posicion: Juan Castelli y Talcahuano"/>
+<node Id="91" Action="Comprar_producto [costoProducto=50.0, productoComprar=Caf&#233;, CostoOperacion=50.0]" Cost="90.0" Estado_Agente="Posicion: Juan Castelli y Cngo. Echag&#252;e"/>
+<node Id="92" Action="Comprar_producto [costoProducto=10.0, productoComprar=Huevos, CostoOperacion=10.0]" Cost="50.0" Estado_Agente="Posicion: Juan Castelli y Cngo. Echag&#252;e"/>
+<node Id="93" Action="Comprar_producto [costoProducto=60.0, productoComprar=Leche, CostoOperacion=60.0]" Cost="100.0" Estado_Agente="Posicion: Juan Castelli y Cngo. Echag&#252;e"/>
+<node Id="94" Action="Comprar_producto [costoProducto=10.0, productoComprar=Man&#237;, CostoOperacion=10.0]" Cost="50.0" Estado_Agente="Posicion: Juan Castelli y Cngo. Echag&#252;e"/>
+<node Id="95" Action="Avanzar [nodoDestino=Juan Castelli y Talcahuano, CostoOperacion=160.0]" Cost="200.0" Estado_Agente="Posicion: Juan Castelli y Talcahuano"/>
+<node Id="191" Action="Comprar_producto [costoProducto=50.0, productoComprar=Caf&#233;, CostoOperacion=50.0]" Cost="100.0" Estado_Agente="Posicion: Juan Castelli y Cngo. Echag&#252;e"/>
+<node Id="192" Action="Comprar_producto [costoProducto=10.0, productoComprar=Huevos, CostoOperacion=10.0]" Cost="60.0" Estado_Agente="Posicion: Juan Castelli y Cngo. Echag&#252;e"/>
+<node Id="193" Action="Comprar_producto [costoProducto=60.0, productoComprar=Leche, CostoOperacion=60.0]" Cost="110.0" Estado_Agente="Posicion: Juan Castelli y Cngo. Echag&#252;e"/>
+<node Id="194" Action="Comprar_producto [costoProducto=10.0, productoComprar=Man&#237;, CostoOperacion=10.0]" Cost="60.0" Estado_Agente="Posicion: Juan Castelli y Cngo. Echag&#252;e"/>
+<node Id="195" Action="Avanzar [nodoDestino=Juan Castelli y Talcahuano, CostoOperacion=160.0]" Cost="210.0" Estado_Agente="Posicion: Juan Castelli y Talcahuano"/>
+<node Id="196" Action="Comprar_producto [costoProducto=50.0, productoComprar=Caf&#233;, CostoOperacion=50.0]" Cost="100.0" Estado_Agente="Posicion: Juan Castelli y Cngo. Echag&#252;e"/>
+<node Id="197" Action="Comprar_producto [costoProducto=10.0, productoComprar=Huevos, CostoOperacion=10.0]" Cost="60.0" Estado_Agente="Posicion: Juan Castelli y Cngo. Echag&#252;e"/>
+<node Id="198" Action="Comprar_producto [costoProducto=60.0, productoComprar=Leche, CostoOperacion=60.0]" Cost="110.0" Estado_Agente="Posicion: Juan Castelli y Cngo. Echag&#252;e"/>
+<node Id="199" Action="Comprar_producto [costoProducto=10.0, productoComprar=Man&#237;, CostoOperacion=10.0]" Cost="60.0" Estado_Agente="Posicion: Juan Castelli y Cngo. Echag&#252;e"/>
+<node Id="200" Action="Avanzar [nodoDestino=Juan Castelli y Talcahuano, CostoOperacion=160.0]" Cost="210.0" Estado_Agente="Posicion: Juan Castelli y Talcahuano"/>
+<node Id="21" Action="Comprar_producto [costoProducto=50.0, productoComprar=Caf&#233;, CostoOperacion=50.0]" Cost="70.0" Estado_Agente="Posicion: Juan Castelli y Cngo. Echag&#252;e"/>
+<node Id="22" Action="Comprar_producto [costoProducto=10.0, productoComprar=Huevos, CostoOperacion=10.0]" Cost="30.0" Estado_Agente="Posicion: Juan Castelli y Cngo. Echag&#252;e"/>
+<node Id="23" Action="Comprar_producto [costoProducto=60.0, productoComprar=Leche, CostoOperacion=60.0]" Cost="80.0" Estado_Agente="Posicion: Juan Castelli y Cngo. Echag&#252;e"/>
+<node Id="24" Action="Comprar_producto [costoProducto=10.0, productoComprar=Man&#237;, CostoOperacion=10.0]" Cost="30.0" Estado_Agente="Posicion: Juan Castelli y Cngo. Echag&#252;e"/>
+<node Id="25" Action="Avanzar [nodoDestino=Juan Castelli y Talcahuano, CostoOperacion=160.0]" Cost="180.0" Estado_Agente="Posicion: Juan Castelli y Talcahuano"/>
+<node Id="46" Action="Comprar_producto [costoProducto=50.0, productoComprar=Caf&#233;, CostoOperacion=50.0]" Cost="80.0" Estado_Agente="Posicion: Juan Castelli y Cngo. Echag&#252;e"/>
+<node Id="47" Action="Comprar_producto [costoProducto=10.0, productoComprar=Huevos, CostoOperacion=10.0]" Cost="40.0" Estado_Agente="Posicion: Juan Castelli y Cngo. Echag&#252;e"/>
+<node Id="48" Action="Comprar_producto [costoProducto=60.0, productoComprar=Leche, CostoOperacion=60.0]" Cost="90.0" Estado_Agente="Posicion: Juan Castelli y Cngo. Echag&#252;e"/>
+<node Id="49" Action="Comprar_producto [costoProducto=10.0, productoComprar=Man&#237;, CostoOperacion=10.0]" Cost="40.0" Estado_Agente="Posicion: Juan Castelli y Cngo. Echag&#252;e"/>
+<node Id="50" Action="Avanzar [nodoDestino=Juan Castelli y Talcahuano, CostoOperacion=160.0]" Cost="190.0" Estado_Agente="Posicion: Juan Castelli y Talcahuano"/>
+<node Id="96" Action="Comprar_producto [costoProducto=50.0, productoComprar=Caf&#233;, CostoOperacion=50.0]" Cost="90.0" Estado_Agente="Posicion: Juan Castelli y Cngo. Echag&#252;e"/>
+<node Id="97" Action="Comprar_producto [costoProducto=10.0, productoComprar=Huevos, CostoOperacion=10.0]" Cost="50.0" Estado_Agente="Posicion: Juan Castelli y Cngo. Echag&#252;e"/>
+<node Id="98" Action="Comprar_producto [costoProducto=60.0, productoComprar=Leche, CostoOperacion=60.0]" Cost="100.0" Estado_Agente="Posicion: Juan Castelli y Cngo. Echag&#252;e"/>
+<node Id="99" Action="Comprar_producto [costoProducto=10.0, productoComprar=Man&#237;, CostoOperacion=10.0]" Cost="50.0" Estado_Agente="Posicion: Juan Castelli y Cngo. Echag&#252;e"/>
+<node Id="100" Action="Avanzar [nodoDestino=Juan Castelli y Talcahuano, CostoOperacion=160.0]" Cost="200.0" Estado_Agente="Posicion: Juan Castelli y Talcahuano"/>
+<node Id="201" Action="Comprar_producto [costoProducto=50.0, productoComprar=Caf&#233;, CostoOperacion=50.0]" Cost="100.0" Estado_Agente="Posicion: Juan Castelli y Cngo. Echag&#252;e"/>
+<node Id="202" Action="Comprar_producto [costoProducto=10.0, productoComprar=Huevos, CostoOperacion=10.0]" Cost="60.0" Estado_Agente="Posicion: Juan Castelli y Cngo. Echag&#252;e"/>
+<node Id="203" Action="Comprar_producto [costoProducto=60.0, productoComprar=Leche, CostoOperacion=60.0]" Cost="110.0" Estado_Agente="Posicion: Juan Castelli y Cngo. Echag&#252;e"/>
+<node Id="204" Action="Comprar_producto [costoProducto=10.0, productoComprar=Man&#237;, CostoOperacion=10.0]" Cost="60.0" Estado_Agente="Posicion: Juan Castelli y Cngo. Echag&#252;e"/>
+<node Id="205" Action="Avanzar [nodoDestino=Juan Castelli y Talcahuano, CostoOperacion=160.0]" Cost="210.0" Estado_Agente="Posicion: Juan Castelli y Talcahuano"/>
+<node Id="206" Action="Comprar_producto [costoProducto=50.0, productoComprar=Caf&#233;, CostoOperacion=50.0]" Cost="100.0" Estado_Agente="Posicion: Juan Castelli y Cngo. Echag&#252;e"/>
+<node Id="207" Action="Comprar_producto [costoProducto=10.0, productoComprar=Huevos, CostoOperacion=10.0]" Cost="60.0" Estado_Agente="Posicion: Juan Castelli y Cngo. Echag&#252;e"/>
+<node Id="208" Action="Comprar_producto [costoProducto=60.0, productoComprar=Leche, CostoOperacion=60.0]" Cost="110.0" Estado_Agente="Posicion: Juan Castelli y Cngo. Echag&#252;e"/>
+<node Id="209" Action="Comprar_producto [costoProducto=10.0, productoComprar=Man&#237;, CostoOperacion=10.0]" Cost="60.0" Estado_Agente="Posicion: Juan Castelli y Cngo. Echag&#252;e"/>
+<node Id="210" Action="Avanzar [nodoDestino=Juan Castelli y Talcahuano, CostoOperacion=160.0]" Cost="210.0" Estado_Agente="Posicion: Juan Castelli y Talcahuano"/>
+<node Id="101" Action="Comprar_producto [costoProducto=50.0, productoComprar=Caf&#233;, CostoOperacion=50.0]" Cost="90.0" Estado_Agente="Posicion: Juan Castelli y Cngo. Echag&#252;e"/>
+<node Id="102" Action="Comprar_producto [costoProducto=10.0, productoComprar=Huevos, CostoOperacion=10.0]" Cost="50.0" Estado_Agente="Posicion: Juan Castelli y Cngo. Echag&#252;e"/>
+<node Id="103" Action="Comprar_producto [costoProducto=60.0, productoComprar=Leche, CostoOperacion=60.0]" Cost="100.0" Estado_Agente="Posicion: Juan Castelli y Cngo. Echag&#252;e"/>
+<node Id="104" Action="Comprar_producto [costoProducto=10.0, productoComprar=Man&#237;, CostoOperacion=10.0]" Cost="50.0" Estado_Agente="Posicion: Juan Castelli y Cngo. Echag&#252;e"/>
+<node Id="105" Action="Avanzar [nodoDestino=Juan Castelli y Talcahuano, CostoOperacion=160.0]" Cost="200.0" Estado_Agente="Posicion: Juan Castelli y Talcahuano"/>
+<node Id="211" Action="Comprar_producto [costoProducto=50.0, productoComprar=Caf&#233;, CostoOperacion=50.0]" Cost="100.0" Estado_Agente="Posicion: Juan Castelli y Cngo. Echag&#252;e"/>
+<node Id="212" Action="Comprar_producto [costoProducto=10.0, productoComprar=Huevos, CostoOperacion=10.0]" Cost="60.0" Estado_Agente="Posicion: Juan Castelli y Cngo. Echag&#252;e"/>
+<node Id="213" Action="Comprar_producto [costoProducto=60.0, productoComprar=Leche, CostoOperacion=60.0]" Cost="110.0" Estado_Agente="Posicion: Juan Castelli y Cngo. Echag&#252;e"/>
+<node Id="214" Action="Comprar_producto [costoProducto=10.0, productoComprar=Man&#237;, CostoOperacion=10.0]" Cost="60.0" Estado_Agente="Posicion: Juan Castelli y Cngo. Echag&#252;e"/>
+<node Id="215" Action="Avanzar [nodoDestino=Juan Castelli y Talcahuano, CostoOperacion=160.0]" Cost="210.0" Estado_Agente="Posicion: Juan Castelli y Talcahuano"/>
+<node Id="216" Action="Comprar_producto [costoProducto=50.0, productoComprar=Caf&#233;, CostoOperacion=50.0]" Cost="100.0" Estado_Agente="Posicion: Juan Castelli y Cngo. Echag&#252;e"/>
+<node Id="217" Action="Comprar_producto [costoProducto=10.0, productoComprar=Huevos, CostoOperacion=10.0]" Cost="60.0" Estado_Agente="Posicion: Juan Castelli y Cngo. Echag&#252;e"/>
+<node Id="218" Action="Comprar_producto [costoProducto=60.0, productoComprar=Leche, CostoOperacion=60.0]" Cost="110.0" Estado_Agente="Posicion: Juan Castelli y Cngo. Echag&#252;e"/>
+<node Id="219" Action="Comprar_producto [costoProducto=10.0, productoComprar=Man&#237;, CostoOperacion=10.0]" Cost="60.0" Estado_Agente="Posicion: Juan Castelli y Cngo. Echag&#252;e"/>
+<node Id="220" Action="Avanzar [nodoDestino=Juan Castelli y Talcahuano, CostoOperacion=160.0]" Cost="210.0" Estado_Agente="Posicion: Juan Castelli y Talcahuano"/>
+<node Id="51" Action="Comprar_producto [costoProducto=50.0, productoComprar=Caf&#233;, CostoOperacion=50.0]" Cost="80.0" Estado_Agente="Posicion: Juan Castelli y Cngo. Echag&#252;e"/>
+<node Id="52" Action="Comprar_producto [costoProducto=10.0, productoComprar=Huevos, CostoOperacion=10.0]" Cost="40.0" Estado_Agente="Posicion: Juan Castelli y Cngo. Echag&#252;e"/>
+<node Id="53" Action="Comprar_producto [costoProducto=60.0, productoComprar=Leche, CostoOperacion=60.0]" Cost="90.0" Estado_Agente="Posicion: Juan Castelli y Cngo. Echag&#252;e"/>
+<node Id="54" Action="Comprar_producto [costoProducto=10.0, productoComprar=Man&#237;, CostoOperacion=10.0]" Cost="40.0" Estado_Agente="Posicion: Juan Castelli y Cngo. Echag&#252;e"/>
+<node Id="55" Action="Avanzar [nodoDestino=Juan Castelli y Talcahuano, CostoOperacion=160.0]" Cost="190.0" Estado_Agente="Posicion: Juan Castelli y Talcahuano"/>
+<node Id="106" Action="Comprar_producto [costoProducto=50.0, productoComprar=Caf&#233;, CostoOperacion=50.0]" Cost="90.0" Estado_Agente="Posicion: Juan Castelli y Cngo. Echag&#252;e"/>
+<node Id="107" Action="Comprar_producto [costoProducto=10.0, productoComprar=Huevos, CostoOperacion=10.0]" Cost="50.0" Estado_Agente="Posicion: Juan Castelli y Cngo. Echag&#252;e"/>
+<node Id="108" Action="Comprar_producto [costoProducto=60.0, productoComprar=Leche, CostoOperacion=60.0]" Cost="100.0" Estado_Agente="Posicion: Juan Castelli y Cngo. Echag&#252;e"/>
+<node Id="109" Action="Comprar_producto [costoProducto=10.0, productoComprar=Man&#237;, CostoOperacion=10.0]" Cost="50.0" Estado_Agente="Posicion: Juan Castelli y Cngo. Echag&#252;e"/>
+<node Id="110" Action="Avanzar [nodoDestino=Juan Castelli y Talcahuano, CostoOperacion=160.0]" Cost="200.0" Estado_Agente="Posicion: Juan Castelli y Talcahuano"/>
+<node Id="221" Action="Comprar_producto [costoProducto=50.0, productoComprar=Caf&#233;, CostoOperacion=50.0]" Cost="100.0" Estado_Agente="Posicion: Juan Castelli y Cngo. Echag&#252;e"/>
+<node Id="222" Action="Comprar_producto [costoProducto=10.0, productoComprar=Huevos, CostoOperacion=10.0]" Cost="60.0" Estado_Agente="Posicion: Juan Castelli y Cngo. Echag&#252;e"/>
+<node Id="223" Action="Comprar_producto [costoProducto=60.0, productoComprar=Leche, CostoOperacion=60.0]" Cost="110.0" Estado_Agente="Posicion: Juan Castelli y Cngo. Echag&#252;e"/>
+<node Id="224" Action="Comprar_producto [costoProducto=10.0, productoComprar=Man&#237;, CostoOperacion=10.0]" Cost="60.0" Estado_Agente="Posicion: Juan Castelli y Cngo. Echag&#252;e"/>
+<node Id="225" Action="Avanzar [nodoDestino=Juan Castelli y Talcahuano, CostoOperacion=160.0]" Cost="210.0" Estado_Agente="Posicion: Juan Castelli y Talcahuano"/>
+<node Id="226" Action="Comprar_producto [costoProducto=50.0, productoComprar=Caf&#233;, CostoOperacion=50.0]" Cost="100.0" Estado_Agente="Posicion: Juan Castelli y Cngo. Echag&#252;e"/>
+<node Id="227" Action="Comprar_producto [costoProducto=10.0, productoComprar=Huevos, CostoOperacion=10.0]" Cost="60.0" Estado_Agente="Posicion: Juan Castelli y Cngo. Echag&#252;e"/>
+<node Id="228" Action="Comprar_producto [costoProducto=60.0, productoComprar=Leche, CostoOperacion=60.0]" Cost="110.0" Estado_Agente="Posicion: Juan Castelli y Cngo. Echag&#252;e"/>
+<node Id="229" Action="Comprar_producto [costoProducto=10.0, productoComprar=Man&#237;, CostoOperacion=10.0]" Cost="60.0" Estado_Agente="Posicion: Juan Castelli y Cngo. Echag&#252;e"/>
+<node Id="230" Action="Avanzar [nodoDestino=Juan Castelli y Talcahuano, CostoOperacion=160.0]" Cost="210.0" Estado_Agente="Posicion: Juan Castelli y Talcahuano"/>
+<node Id="111" Action="Comprar_producto [costoProducto=50.0, productoComprar=Caf&#233;, CostoOperacion=50.0]" Cost="90.0" Estado_Agente="Posicion: Juan Castelli y Cngo. Echag&#252;e"/>
+<node Id="112" Action="Comprar_producto [costoProducto=10.0, productoComprar=Huevos, CostoOperacion=10.0]" Cost="50.0" Estado_Agente="Posicion: Juan Castelli y Cngo. Echag&#252;e"/>
+<node Id="113" Action="Comprar_producto [costoProducto=60.0, productoComprar=Leche, CostoOperacion=60.0]" Cost="100.0" Estado_Agente="Posicion: Juan Castelli y Cngo. Echag&#252;e"/>
+<node Id="114" Action="Comprar_producto [costoProducto=10.0, productoComprar=Man&#237;, CostoOperacion=10.0]" Cost="50.0" Estado_Agente="Posicion: Juan Castelli y Cngo. Echag&#252;e"/>
+<node Id="115" Action="Avanzar [nodoDestino=Juan Castelli y Talcahuano, CostoOperacion=160.0]" Cost="200.0" Estado_Agente="Posicion: Juan Castelli y Talcahuano"/>
+<node Id="231" Action="Comprar_producto [costoProducto=50.0, productoComprar=Caf&#233;, CostoOperacion=50.0]" Cost="100.0" Estado_Agente="Posicion: Juan Castelli y Cngo. Echag&#252;e"/>
+<node Id="232" Action="Comprar_producto [costoProducto=10.0, productoComprar=Huevos, CostoOperacion=10.0]" Cost="60.0" Estado_Agente="Posicion: Juan Castelli y Cngo. Echag&#252;e"/>
+<node Id="233" Action="Comprar_producto [costoProducto=60.0, productoComprar=Leche, CostoOperacion=60.0]" Cost="110.0" Estado_Agente="Posicion: Juan Castelli y Cngo. Echag&#252;e"/>
+<node Id="234" Action="Comprar_producto [costoProducto=10.0, productoComprar=Man&#237;, CostoOperacion=10.0]" Cost="60.0" Estado_Agente="Posicion: Juan Castelli y Cngo. Echag&#252;e"/>
+<node Id="235" Action="Avanzar [nodoDestino=Juan Castelli y Talcahuano, CostoOperacion=160.0]" Cost="210.0" Estado_Agente="Posicion: Juan Castelli y Talcahuano"/>
+<node Id="236" Action="Comprar_producto [costoProducto=50.0, productoComprar=Caf&#233;, CostoOperacion=50.0]" Cost="100.0" Estado_Agente="Posicion: Juan Castelli y Cngo. Echag&#252;e"/>
+<node Id="237" Action="Comprar_producto [costoProducto=10.0, productoComprar=Huevos, CostoOperacion=10.0]" Cost="60.0" Estado_Agente="Posicion: Juan Castelli y Cngo. Echag&#252;e"/>
+<node Id="238" Action="Comprar_producto [costoProducto=60.0, productoComprar=Leche, CostoOperacion=60.0]" Cost="110.0" Estado_Agente="Posicion: Juan Castelli y Cngo. Echag&#252;e"/>
+<node Id="239" Action="Comprar_producto [costoProducto=10.0, productoComprar=Man&#237;, CostoOperacion=10.0]" Cost="60.0" Estado_Agente="Posicion: Juan Castelli y Cngo. Echag&#252;e"/>
+<node Id="240" Action="Avanzar [nodoDestino=Juan Castelli y Talcahuano, CostoOperacion=160.0]" Cost="210.0" Estado_Agente="Posicion: Juan Castelli y Talcahuano"/>
+<node Id="11" Action="Comprar_producto [costoProducto=50.0, productoComprar=Caf&#233;, CostoOperacion=50.0]" Cost="60.0" Estado_Agente="Posicion: Juan Castelli y Cngo. Echag&#252;e"/>
+<node Id="12" Action="Comprar_producto [costoProducto=10.0, productoComprar=Huevos, CostoOperacion=10.0]" Cost="20.0" Estado_Agente="Posicion: Juan Castelli y Cngo. Echag&#252;e"/>
+<node Id="13" Action="Comprar_producto [costoProducto=60.0, productoComprar=Leche, CostoOperacion=60.0]" Cost="70.0" Estado_Agente="Posicion: Juan Castelli y Cngo. Echag&#252;e"/>
+<node Id="14" Action="Comprar_producto [costoProducto=10.0, productoComprar=Man&#237;, CostoOperacion=10.0]" Cost="20.0" Estado_Agente="Posicion: Juan Castelli y Cngo. Echag&#252;e"/>
+<node Id="15" Action="Avanzar [nodoDestino=Juan Castelli y Talcahuano, CostoOperacion=160.0]" Cost="170.0" Estado_Agente="Posicion: Juan Castelli y Talcahuano"/>
+<node Id="26" Action="Comprar_producto [costoProducto=50.0, productoComprar=Caf&#233;, CostoOperacion=50.0]" Cost="70.0" Estado_Agente="Posicion: Juan Castelli y Cngo. Echag&#252;e"/>
+<node Id="27" Action="Comprar_producto [costoProducto=10.0, productoComprar=Huevos, CostoOperacion=10.0]" Cost="30.0" Estado_Agente="Posicion: Juan Castelli y Cngo. Echag&#252;e"/>
+<node Id="28" Action="Comprar_producto [costoProducto=60.0, productoComprar=Leche, CostoOperacion=60.0]" Cost="80.0" Estado_Agente="Posicion: Juan Castelli y Cngo. Echag&#252;e"/>
+<node Id="29" Action="Comprar_producto [costoProducto=10.0, productoComprar=Man&#237;, CostoOperacion=10.0]" Cost="30.0" Estado_Agente="Posicion: Juan Castelli y Cngo. Echag&#252;e"/>
+<node Id="30" Action="Avanzar [nodoDestino=Juan Castelli y Talcahuano, CostoOperacion=160.0]" Cost="180.0" Estado_Agente="Posicion: Juan Castelli y Talcahuano"/>
+<node Id="56" Action="Comprar_producto [costoProducto=50.0, productoComprar=Caf&#233;, CostoOperacion=50.0]" Cost="80.0" Estado_Agente="Posicion: Juan Castelli y Cngo. Echag&#252;e"/>
+<node Id="57" Action="Comprar_producto [costoProducto=10.0, productoComprar=Huevos, CostoOperacion=10.0]" Cost="40.0" Estado_Agente="Posicion: Juan Castelli y Cngo. Echag&#252;e"/>
+<node Id="58" Action="Comprar_producto [costoProducto=60.0, productoComprar=Leche, CostoOperacion=60.0]" Cost="90.0" Estado_Agente="Posicion: Juan Castelli y Cngo. Echag&#252;e"/>
+<node Id="59" Action="Comprar_producto [costoProducto=10.0, productoComprar=Man&#237;, CostoOperacion=10.0]" Cost="40.0" Estado_Agente="Posicion: Juan Castelli y Cngo. Echag&#252;e"/>
+<node Id="60" Action="Avanzar [nodoDestino=Juan Castelli y Talcahuano, CostoOperacion=160.0]" Cost="190.0" Estado_Agente="Posicion: Juan Castelli y Talcahuano"/>
+<node Id="116" Action="Comprar_producto [costoProducto=50.0, productoComprar=Caf&#233;, CostoOperacion=50.0]" Cost="90.0" Estado_Agente="Posicion: Juan Castelli y Cngo. Echag&#252;e"/>
+<node Id="117" Action="Comprar_producto [costoProducto=10.0, productoComprar=Huevos, CostoOperacion=10.0]" Cost="50.0" Estado_Agente="Posicion: Juan Castelli y Cngo. Echag&#252;e"/>
+<node Id="118" Action="Comprar_producto [costoProducto=60.0, productoComprar=Leche, CostoOperacion=60.0]" Cost="100.0" Estado_Agente="Posicion: Juan Castelli y Cngo. Echag&#252;e"/>
+<node Id="119" Action="Comprar_producto [costoProducto=10.0, productoComprar=Man&#237;, CostoOperacion=10.0]" Cost="50.0" Estado_Agente="Posicion: Juan Castelli y Cngo. Echag&#252;e"/>
+<node Id="120" Action="Avanzar [nodoDestino=Juan Castelli y Talcahuano, CostoOperacion=160.0]" Cost="200.0" Estado_Agente="Posicion: Juan Castelli y Talcahuano"/>
+<node Id="241" Action="Comprar_producto [costoProducto=50.0, productoComprar=Caf&#233;, CostoOperacion=50.0]" Cost="100.0" Estado_Agente="Posicion: Juan Castelli y Cngo. Echag&#252;e"/>
+<node Id="242" Action="Comprar_producto [costoProducto=10.0, productoComprar=Huevos, CostoOperacion=10.0]" Cost="60.0" Estado_Agente="Posicion: Juan Castelli y Cngo. Echag&#252;e"/>
+<node Id="243" Action="Comprar_producto [costoProducto=60.0, productoComprar=Leche, CostoOperacion=60.0]" Cost="110.0" Estado_Agente="Posicion: Juan Castelli y Cngo. Echag&#252;e"/>
+<node Id="244" Action="Comprar_producto [costoProducto=10.0, productoComprar=Man&#237;, CostoOperacion=10.0]" Cost="60.0" Estado_Agente="Posicion: Juan Castelli y Cngo. Echag&#252;e"/>
+<node Id="245" Action="Avanzar [nodoDestino=Juan Castelli y Talcahuano, CostoOperacion=160.0]" Cost="210.0" Estado_Agente="Posicion: Juan Castelli y Talcahuano"/>
+<node Id="246" Action="Comprar_producto [costoProducto=50.0, productoComprar=Caf&#233;, CostoOperacion=50.0]" Cost="100.0" Estado_Agente="Posicion: Juan Castelli y Cngo. Echag&#252;e"/>
+<node Id="247" Action="Comprar_producto [costoProducto=10.0, productoComprar=Huevos, CostoOperacion=10.0]" Cost="60.0" Estado_Agente="Posicion: Juan Castelli y Cngo. Echag&#252;e"/>
+<node Id="248" Action="Comprar_producto [costoProducto=60.0, productoComprar=Leche, CostoOperacion=60.0]" Cost="110.0" Estado_Agente="Posicion: Juan Castelli y Cngo. Echag&#252;e"/>
+<node Id="249" Action="Comprar_producto [costoProducto=10.0, productoComprar=Man&#237;, CostoOperacion=10.0]" Cost="60.0" Estado_Agente="Posicion: Juan Castelli y Cngo. Echag&#252;e"/>
+<node Id="250" Action="Avanzar [nodoDestino=Juan Castelli y Talcahuano, CostoOperacion=160.0]" Cost="210.0" Estado_Agente="Posicion: Juan Castelli y Talcahuano"/>
+<node Id="121" Action="Comprar_producto [costoProducto=50.0, productoComprar=Caf&#233;, CostoOperacion=50.0]" Cost="90.0" Estado_Agente="Posicion: Juan Castelli y Cngo. Echag&#252;e"/>
+<node Id="122" Action="Comprar_producto [costoProducto=10.0, productoComprar=Huevos, CostoOperacion=10.0]" Cost="50.0" Estado_Agente="Posicion: Juan Castelli y Cngo. Echag&#252;e"/>
+<node Id="123" Action="Comprar_producto [costoProducto=60.0, productoComprar=Leche, CostoOperacion=60.0]" Cost="100.0" Estado_Agente="Posicion: Juan Castelli y Cngo. Echag&#252;e"/>
+<node Id="124" Action="Comprar_producto [costoProducto=10.0, productoComprar=Man&#237;, CostoOperacion=10.0]" Cost="50.0" Estado_Agente="Posicion: Juan Castelli y Cngo. Echag&#252;e"/>
+<node Id="125" Action="Avanzar [nodoDestino=Juan Castelli y Talcahuano, CostoOperacion=160.0]" Cost="200.0" Estado_Agente="Posicion: Juan Castelli y Talcahuano"/>
+<node Id="251" Action="Comprar_producto [costoProducto=50.0, productoComprar=Caf&#233;, CostoOperacion=50.0]" Cost="100.0" Estado_Agente="Posicion: Juan Castelli y Cngo. Echag&#252;e"/>
+<node Id="252" Action="Comprar_producto [costoProducto=10.0, productoComprar=Huevos, CostoOperacion=10.0]" Cost="60.0" Estado_Agente="Posicion: Juan Castelli y Cngo. Echag&#252;e"/>
+<node Id="253" Action="Comprar_producto [costoProducto=60.0, productoComprar=Leche, CostoOperacion=60.0]" Cost="110.0" Estado_Agente="Posicion: Juan Castelli y Cngo. Echag&#252;e"/>
+<node Id="254" Action="Comprar_producto [costoProducto=10.0, productoComprar=Man&#237;, CostoOperacion=10.0]" Cost="60.0" Estado_Agente="Posicion: Juan Castelli y Cngo. Echag&#252;e"/>
+<node Id="255" Action="Avanzar [nodoDestino=Juan Castelli y Talcahuano, CostoOperacion=160.0]" Cost="210.0" Estado_Agente="Posicion: Juan Castelli y Talcahuano"/>
+<node Id="256" Action="Comprar_producto [costoProducto=50.0, productoComprar=Caf&#233;, CostoOperacion=50.0]" Cost="100.0" Estado_Agente="Posicion: Juan Castelli y Cngo. Echag&#252;e"/>
+<node Id="257" Action="Comprar_producto [costoProducto=10.0, productoComprar=Huevos, CostoOperacion=10.0]" Cost="60.0" Estado_Agente="Posicion: Juan Castelli y Cngo. Echag&#252;e"/>
+<node Id="258" Action="Comprar_producto [costoProducto=60.0, productoComprar=Leche, CostoOperacion=60.0]" Cost="110.0" Estado_Agente="Posicion: Juan Castelli y Cngo. Echag&#252;e"/>
+<node Id="259" Action="Comprar_producto [costoProducto=10.0, productoComprar=Man&#237;, CostoOperacion=10.0]" Cost="60.0" Estado_Agente="Posicion: Juan Castelli y Cngo. Echag&#252;e"/>
+<node Id="260" Action="Avanzar [nodoDestino=Juan Castelli y Talcahuano, CostoOperacion=160.0]" Cost="210.0" Estado_Agente="Posicion: Juan Castelli y Talcahuano"/>
+<node Id="61" Action="Comprar_producto [costoProducto=50.0, productoComprar=Caf&#233;, CostoOperacion=50.0]" Cost="80.0" Estado_Agente="Posicion: Juan Castelli y Cngo. Echag&#252;e"/>
+<node Id="62" Action="Comprar_producto [costoProducto=10.0, productoComprar=Huevos, CostoOperacion=10.0]" Cost="40.0" Estado_Agente="Posicion: Juan Castelli y Cngo. Echag&#252;e"/>
+<node Id="63" Action="Comprar_producto [costoProducto=60.0, productoComprar=Leche, CostoOperacion=60.0]" Cost="90.0" Estado_Agente="Posicion: Juan Castelli y Cngo. Echag&#252;e"/>
+<node Id="64" Action="Comprar_producto [costoProducto=10.0, productoComprar=Man&#237;, CostoOperacion=10.0]" Cost="40.0" Estado_Agente="Posicion: Juan Castelli y Cngo. Echag&#252;e"/>
+<node Id="65" Action="Avanzar [nodoDestino=Juan Castelli y Talcahuano, CostoOperacion=160.0]" Cost="190.0" Estado_Agente="Posicion: Juan Castelli y Talcahuano"/>
+<node Id="126" Action="Comprar_producto [costoProducto=50.0, productoComprar=Caf&#233;, CostoOperacion=50.0]" Cost="90.0" Estado_Agente="Posicion: Juan Castelli y Cngo. Echag&#252;e"/>
+<node Id="127" Action="Comprar_producto [costoProducto=10.0, productoComprar=Huevos, CostoOperacion=10.0]" Cost="50.0" Estado_Agente="Posicion: Juan Castelli y Cngo. Echag&#252;e"/>
+<node Id="128" Action="Comprar_producto [costoProducto=60.0, productoComprar=Leche, CostoOperacion=60.0]" Cost="100.0" Estado_Agente="Posicion: Juan Castelli y Cngo. Echag&#252;e"/>
+<node Id="129" Action="Comprar_producto [costoProducto=10.0, productoComprar=Man&#237;, CostoOperacion=10.0]" Cost="50.0" Estado_Agente="Posicion: Juan Castelli y Cngo. Echag&#252;e"/>
+<node Id="130" Action="Avanzar [nodoDestino=Juan Castelli y Talcahuano, CostoOperacion=160.0]" Cost="200.0" Estado_Agente="Posicion: Juan Castelli y Talcahuano"/>
+<node Id="261" Action="Comprar_producto [costoProducto=50.0, productoComprar=Caf&#233;, CostoOperacion=50.0]" Cost="100.0" Estado_Agente="Posicion: Juan Castelli y Cngo. Echag&#252;e"/>
+<node Id="262" Action="Comprar_producto [costoProducto=10.0, productoComprar=Huevos, CostoOperacion=10.0]" Cost="60.0" Estado_Agente="Posicion: Juan Castelli y Cngo. Echag&#252;e"/>
+<node Id="263" Action="Comprar_producto [costoProducto=60.0, productoComprar=Leche, CostoOperacion=60.0]" Cost="110.0" Estado_Agente="Posicion: Juan Castelli y Cngo. Echag&#252;e"/>
+<node Id="264" Action="Comprar_producto [costoProducto=10.0, productoComprar=Man&#237;, CostoOperacion=10.0]" Cost="60.0" Estado_Agente="Posicion: Juan Castelli y Cngo. Echag&#252;e"/>
+<node Id="265" Action="Avanzar [nodoDestino=Juan Castelli y Talcahuano, CostoOperacion=160.0]" Cost="210.0" Estado_Agente="Posicion: Juan Castelli y Talcahuano"/>
+<node Id="266" Action="Comprar_producto [costoProducto=50.0, productoComprar=Caf&#233;, CostoOperacion=50.0]" Cost="100.0" Estado_Agente="Posicion: Juan Castelli y Cngo. Echag&#252;e"/>
+<node Id="267" Action="Comprar_producto [costoProducto=10.0, productoComprar=Huevos, CostoOperacion=10.0]" Cost="60.0" Estado_Agente="Posicion: Juan Castelli y Cngo. Echag&#252;e"/>
+<node Id="268" Action="Comprar_producto [costoProducto=60.0, productoComprar=Leche, CostoOperacion=60.0]" Cost="110.0" Estado_Agente="Posicion: Juan Castelli y Cngo. Echag&#252;e"/>
+<node Id="269" Action="Comprar_producto [costoProducto=10.0, productoComprar=Man&#237;, CostoOperacion=10.0]" Cost="60.0" Estado_Agente="Posicion: Juan Castelli y Cngo. Echag&#252;e"/>
+<node Id="270" Action="Avanzar [nodoDestino=Juan Castelli y Talcahuano, CostoOperacion=160.0]" Cost="210.0" Estado_Agente="Posicion: Juan Castelli y Talcahuano"/>
+<node Id="131" Action="Comprar_producto [costoProducto=50.0, productoComprar=Caf&#233;, CostoOperacion=50.0]" Cost="90.0" Estado_Agente="Posicion: Juan Castelli y Cngo. Echag&#252;e"/>
+<node Id="132" Action="Comprar_producto [costoProducto=10.0, productoComprar=Huevos, CostoOperacion=10.0]" Cost="50.0" Estado_Agente="Posicion: Juan Castelli y Cngo. Echag&#252;e"/>
+<node Id="133" Action="Comprar_producto [costoProducto=60.0, productoComprar=Leche, CostoOperacion=60.0]" Cost="100.0" Estado_Agente="Posicion: Juan Castelli y Cngo. Echag&#252;e"/>
+<node Id="134" Action="Comprar_producto [costoProducto=10.0, productoComprar=Man&#237;, CostoOperacion=10.0]" Cost="50.0" Estado_Agente="Posicion: Juan Castelli y Cngo. Echag&#252;e"/>
+<node Id="135" Action="Avanzar [nodoDestino=Juan Castelli y Talcahuano, CostoOperacion=160.0]" Cost="200.0" Estado_Agente="Posicion: Juan Castelli y Talcahuano"/>
+<node Id="271" Action="Comprar_producto [costoProducto=50.0, productoComprar=Caf&#233;, CostoOperacion=50.0]" Cost="100.0" Estado_Agente="Posicion: Juan Castelli y Cngo. Echag&#252;e"/>
+<node Id="272" Action="Comprar_producto [costoProducto=10.0, productoComprar=Huevos, CostoOperacion=10.0]" Cost="60.0" Estado_Agente="Posicion: Juan Castelli y Cngo. Echag&#252;e"/>
+<node Id="273" Action="Comprar_producto [costoProducto=60.0, productoComprar=Leche, CostoOperacion=60.0]" Cost="110.0" Estado_Agente="Posicion: Juan Castelli y Cngo. Echag&#252;e"/>
+<node Id="274" Action="Comprar_producto [costoProducto=10.0, productoComprar=Man&#237;, CostoOperacion=10.0]" Cost="60.0" Estado_Agente="Posicion: Juan Castelli y Cngo. Echag&#252;e"/>
+<node Id="275" Action="Avanzar [nodoDestino=Juan Castelli y Talcahuano, CostoOperacion=160.0]" Cost="210.0" Estado_Agente="Posicion: Juan Castelli y Talcahuano"/>
+<node Id="276" Action="Comprar_producto [costoProducto=50.0, productoComprar=Caf&#233;, CostoOperacion=50.0]" Cost="100.0" Estado_Agente="Posicion: Juan Castelli y Cngo. Echag&#252;e"/>
+<node Id="277" Action="Comprar_producto [costoProducto=10.0, productoComprar=Huevos, CostoOperacion=10.0]" Cost="60.0" Estado_Agente="Posicion: Juan Castelli y Cngo. Echag&#252;e"/>
+<node Id="278" Action="Comprar_producto [costoProducto=60.0, productoComprar=Leche, CostoOperacion=60.0]" Cost="110.0" Estado_Agente="Posicion: Juan Castelli y Cngo. Echag&#252;e"/>
+<node Id="279" Action="Comprar_producto [costoProducto=10.0, productoComprar=Man&#237;, CostoOperacion=10.0]" Cost="60.0" Estado_Agente="Posicion: Juan Castelli y Cngo. Echag&#252;e"/>
+<node Id="280" Action="Avanzar [nodoDestino=Juan Castelli y Talcahuano, CostoOperacion=160.0]" Cost="210.0" Estado_Agente="Posicion: Juan Castelli y Talcahuano"/>
+<node Id="31" Action="Comprar_producto [costoProducto=50.0, productoComprar=Caf&#233;, CostoOperacion=50.0]" Cost="70.0" Estado_Agente="Posicion: Juan Castelli y Cngo. Echag&#252;e"/>
+<node Id="32" Action="Comprar_producto [costoProducto=10.0, productoComprar=Huevos, CostoOperacion=10.0]" Cost="30.0" Estado_Agente="Posicion: Juan Castelli y Cngo. Echag&#252;e"/>
+<node Id="33" Action="Comprar_producto [costoProducto=60.0, productoComprar=Leche, CostoOperacion=60.0]" Cost="80.0" Estado_Agente="Posicion: Juan Castelli y Cngo. Echag&#252;e"/>
+<node Id="34" Action="Comprar_producto [costoProducto=10.0, productoComprar=Man&#237;, CostoOperacion=10.0]" Cost="30.0" Estado_Agente="Posicion: Juan Castelli y Cngo. Echag&#252;e"/>
+<node Id="35" Action="Avanzar [nodoDestino=Juan Castelli y Talcahuano, CostoOperacion=160.0]" Cost="180.0" Estado_Agente="Posicion: Juan Castelli y Talcahuano"/>
+<node Id="66" Action="Comprar_producto [costoProducto=50.0, productoComprar=Caf&#233;, CostoOperacion=50.0]" Cost="80.0" Estado_Agente="Posicion: Juan Castelli y Cngo. Echag&#252;e"/>
+<node Id="67" Action="Comprar_producto [costoProducto=10.0, productoComprar=Huevos, CostoOperacion=10.0]" Cost="40.0" Estado_Agente="Posicion: Juan Castelli y Cngo. Echag&#252;e"/>
+<node Id="68" Action="Comprar_producto [costoProducto=60.0, productoComprar=Leche, CostoOperacion=60.0]" Cost="90.0" Estado_Agente="Posicion: Juan Castelli y Cngo. Echag&#252;e"/>
+<node Id="69" Action="Comprar_producto [costoProducto=10.0, productoComprar=Man&#237;, CostoOperacion=10.0]" Cost="40.0" Estado_Agente="Posicion: Juan Castelli y Cngo. Echag&#252;e"/>
+<node Id="70" Action="Avanzar [nodoDestino=Juan Castelli y Talcahuano, CostoOperacion=160.0]" Cost="190.0" Estado_Agente="Posicion: Juan Castelli y Talcahuano"/>
+<node Id="136" Action="Comprar_producto [costoProducto=50.0, productoComprar=Caf&#233;, CostoOperacion=50.0]" Cost="90.0" Estado_Agente="Posicion: Juan Castelli y Cngo. Echag&#252;e"/>
+<node Id="137" Action="Comprar_producto [costoProducto=10.0, productoComprar=Huevos, CostoOperacion=10.0]" Cost="50.0" Estado_Agente="Posicion: Juan Castelli y Cngo. Echag&#252;e"/>
+<node Id="138" Action="Comprar_producto [costoProducto=60.0, productoComprar=Leche, CostoOperacion=60.0]" Cost="100.0" Estado_Agente="Posicion: Juan Castelli y Cngo. Echag&#252;e"/>
+<node Id="139" Action="Comprar_producto [costoProducto=10.0, productoComprar=Man&#237;, CostoOperacion=10.0]" Cost="50.0" Estado_Agente="Posicion: Juan Castelli y Cngo. Echag&#252;e"/>
+<node Id="140" Action="Avanzar [nodoDestino=Juan Castelli y Talcahuano, CostoOperacion=160.0]" Cost="200.0" Estado_Agente="Posicion: Juan Castelli y Talcahuano"/>
+<node Id="281" Action="Comprar_producto [costoProducto=50.0, productoComprar=Caf&#233;, CostoOperacion=50.0]" Cost="100.0" Estado_Agente="Posicion: Juan Castelli y Cngo. Echag&#252;e"/>
+<node Id="282" Action="Comprar_producto [costoProducto=10.0, productoComprar=Huevos, CostoOperacion=10.0]" Cost="60.0" Estado_Agente="Posicion: Juan Castelli y Cngo. Echag&#252;e"/>
+<node Id="283" Action="Comprar_producto [costoProducto=60.0, productoComprar=Leche, CostoOperacion=60.0]" Cost="110.0" Estado_Agente="Posicion: Juan Castelli y Cngo. Echag&#252;e"/>
+<node Id="284" Action="Comprar_producto [costoProducto=10.0, productoComprar=Man&#237;, CostoOperacion=10.0]" Cost="60.0" Estado_Agente="Posicion: Juan Castelli y Cngo. Echag&#252;e"/>
+<node Id="285" Action="Avanzar [nodoDestino=Juan Castelli y Talcahuano, CostoOperacion=160.0]" Cost="210.0" Estado_Agente="Posicion: Juan Castelli y Talcahuano"/>
+<node Id="286" Action="Comprar_producto [costoProducto=50.0, productoComprar=Caf&#233;, CostoOperacion=50.0]" Cost="100.0" Estado_Agente="Posicion: Juan Castelli y Cngo. Echag&#252;e"/>
+<node Id="287" Action="Comprar_producto [costoProducto=10.0, productoComprar=Huevos, CostoOperacion=10.0]" Cost="60.0" Estado_Agente="Posicion: Juan Castelli y Cngo. Echag&#252;e"/>
+<node Id="288" Action="Comprar_producto [costoProducto=60.0, productoComprar=Leche, CostoOperacion=60.0]" Cost="110.0" Estado_Agente="Posicion: Juan Castelli y Cngo. Echag&#252;e"/>
+<node Id="289" Action="Comprar_producto [costoProducto=10.0, productoComprar=Man&#237;, CostoOperacion=10.0]" Cost="60.0" Estado_Agente="Posicion: Juan Castelli y Cngo. Echag&#252;e"/>
+<node Id="290" Action="Avanzar [nodoDestino=Juan Castelli y Talcahuano, CostoOperacion=160.0]" Cost="210.0" Estado_Agente="Posicion: Juan Castelli y Talcahuano"/>
+<node Id="141" Action="Comprar_producto [costoProducto=50.0, productoComprar=Caf&#233;, CostoOperacion=50.0]" Cost="90.0" Estado_Agente="Posicion: Juan Castelli y Cngo. Echag&#252;e"/>
+<node Id="142" Action="Comprar_producto [costoProducto=10.0, productoComprar=Huevos, CostoOperacion=10.0]" Cost="50.0" Estado_Agente="Posicion: Juan Castelli y Cngo. Echag&#252;e"/>
+<node Id="143" Action="Comprar_producto [costoProducto=60.0, productoComprar=Leche, CostoOperacion=60.0]" Cost="100.0" Estado_Agente="Posicion: Juan Castelli y Cngo. Echag&#252;e"/>
+<node Id="144" Action="Comprar_producto [costoProducto=10.0, productoComprar=Man&#237;, CostoOperacion=10.0]" Cost="50.0" Estado_Agente="Posicion: Juan Castelli y Cngo. Echag&#252;e"/>
+<node Id="145" Action="Avanzar [nodoDestino=Juan Castelli y Talcahuano, CostoOperacion=160.0]" Cost="200.0" Estado_Agente="Posicion: Juan Castelli y Talcahuano"/>
+<node Id="291" Action="Comprar_producto [costoProducto=50.0, productoComprar=Caf&#233;, CostoOperacion=50.0]" Cost="100.0" Estado_Agente="Posicion: Juan Castelli y Cngo. Echag&#252;e"/>
+<node Id="292" Action="Comprar_producto [costoProducto=10.0, productoComprar=Huevos, CostoOperacion=10.0]" Cost="60.0" Estado_Agente="Posicion: Juan Castelli y Cngo. Echag&#252;e"/>
+<node Id="293" Action="Comprar_producto [costoProducto=60.0, productoComprar=Leche, CostoOperacion=60.0]" Cost="110.0" Estado_Agente="Posicion: Juan Castelli y Cngo. Echag&#252;e"/>
+<node Id="294" Action="Comprar_producto [costoProducto=10.0, productoComprar=Man&#237;, CostoOperacion=10.0]" Cost="60.0" Estado_Agente="Posicion: Juan Castelli y Cngo. Echag&#252;e"/>
+<node Id="295" Action="Avanzar [nodoDestino=Juan Castelli y Talcahuano, CostoOperacion=160.0]" Cost="210.0" Estado_Agente="Posicion: Juan Castelli y Talcahuano"/>
+<node Id="296" Action="Comprar_producto [costoProducto=50.0, productoComprar=Caf&#233;, CostoOperacion=50.0]" Cost="100.0" Estado_Agente="Posicion: Juan Castelli y Cngo. Echag&#252;e"/>
+<node Id="297" Action="Comprar_producto [costoProducto=10.0, productoComprar=Huevos, CostoOperacion=10.0]" Cost="60.0" Estado_Agente="Posicion: Juan Castelli y Cngo. Echag&#252;e"/>
+<node Id="298" Action="Comprar_producto [costoProducto=60.0, productoComprar=Leche, CostoOperacion=60.0]" Cost="110.0" Estado_Agente="Posicion: Juan Castelli y Cngo. Echag&#252;e"/>
+<node Id="299" Action="Comprar_producto [costoProducto=10.0, productoComprar=Man&#237;, CostoOperacion=10.0]" Cost="60.0" Estado_Agente="Posicion: Juan Castelli y Cngo. Echag&#252;e"/>
+<node Id="300" Action="Avanzar [nodoDestino=Juan Castelli y Talcahuano, CostoOperacion=160.0]" Cost="210.0" Estado_Agente="Posicion: Juan Castelli y Talcahuano"/>
+<node Id="71" Action="Comprar_producto [costoProducto=50.0, productoComprar=Caf&#233;, CostoOperacion=50.0]" Cost="80.0" Estado_Agente="Posicion: Juan Castelli y Cngo. Echag&#252;e"/>
+<node Id="72" Action="Comprar_producto [costoProducto=10.0, productoComprar=Huevos, CostoOperacion=10.0]" Cost="40.0" Estado_Agente="Posicion: Juan Castelli y Cngo. Echag&#252;e"/>
+<node Id="73" Action="Comprar_producto [costoProducto=60.0, productoComprar=Leche, CostoOperacion=60.0]" Cost="90.0" Estado_Agente="Posicion: Juan Castelli y Cngo. Echag&#252;e"/>
+<node Id="74" Action="Comprar_producto [costoProducto=10.0, productoComprar=Man&#237;, CostoOperacion=10.0]" Cost="40.0" Estado_Agente="Posicion: Juan Castelli y Cngo. Echag&#252;e"/>
+<node Id="75" Action="Avanzar [nodoDestino=Juan Castelli y Talcahuano, CostoOperacion=160.0]" Cost="190.0" Estado_Agente="Posicion: Juan Castelli y Talcahuano"/>
+<node Id="146" Action="Comprar_producto [costoProducto=50.0, productoComprar=Caf&#233;, CostoOperacion=50.0]" Cost="90.0" Estado_Agente="Posicion: Juan Castelli y Cngo. Echag&#252;e"/>
+<node Id="147" Action="Comprar_producto [costoProducto=10.0, productoComprar=Huevos, CostoOperacion=10.0]" Cost="50.0" Estado_Agente="Posicion: Juan Castelli y Cngo. Echag&#252;e"/>
+<node Id="148" Action="Comprar_producto [costoProducto=60.0, productoComprar=Leche, CostoOperacion=60.0]" Cost="100.0" Estado_Agente="Posicion: Juan Castelli y Cngo. Echag&#252;e"/>
+<node Id="149" Action="Comprar_producto [costoProducto=10.0, productoComprar=Man&#237;, CostoOperacion=10.0]" Cost="50.0" Estado_Agente="Posicion: Juan Castelli y Cngo. Echag&#252;e"/>
+<node Id="150" Action="Avanzar [nodoDestino=Juan Castelli y Talcahuano, CostoOperacion=160.0]" Cost="200.0" Estado_Agente="Posicion: Juan Castelli y Talcahuano"/>
+<node Id="301" Action="Comprar_producto [costoProducto=50.0, productoComprar=Caf&#233;, CostoOperacion=50.0]" Cost="100.0" Estado_Agente="Posicion: Juan Castelli y Cngo. Echag&#252;e"/>
+<node Id="302" Action="Comprar_producto [costoProducto=10.0, productoComprar=Huevos, CostoOperacion=10.0]" Cost="60.0" Estado_Agente="Posicion: Juan Castelli y Cngo. Echag&#252;e"/>
+<node Id="303" Action="Comprar_producto [costoProducto=60.0, productoComprar=Leche, CostoOperacion=60.0]" Cost="110.0" Estado_Agente="Posicion: Juan Castelli y Cngo. Echag&#252;e"/>
+<node Id="304" Action="Comprar_producto [costoProducto=10.0, productoComprar=Man&#237;, CostoOperacion=10.0]" Cost="60.0" Estado_Agente="Posicion: Juan Castelli y Cngo. Echag&#252;e"/>
+<node Id="305" Action="Avanzar [nodoDestino=Juan Castelli y Talcahuano, CostoOperacion=160.0]" Cost="210.0" Estado_Agente="Posicion: Juan Castelli y Talcahuano"/>
+<node Id="306" Action="Comprar_producto [costoProducto=50.0, productoComprar=Caf&#233;, CostoOperacion=50.0]" Cost="100.0" Estado_Agente="Posicion: Juan Castelli y Cngo. Echag&#252;e"/>
+<node Id="307" Action="Comprar_producto [costoProducto=10.0, productoComprar=Huevos, CostoOperacion=10.0]" Cost="60.0" Estado_Agente="Posicion: Juan Castelli y Cngo. Echag&#252;e"/>
+<node Id="308" Action="Comprar_producto [costoProducto=60.0, productoComprar=Leche, CostoOperacion=60.0]" Cost="110.0" Estado_Agente="Posicion: Juan Castelli y Cngo. Echag&#252;e"/>
+<node Id="309" Action="Comprar_producto [costoProducto=10.0, productoComprar=Man&#237;, CostoOperacion=10.0]" Cost="60.0" Estado_Agente="Posicion: Juan Castelli y Cngo. Echag&#252;e"/>
+<node Id="310" Action="Avanzar [nodoDestino=Juan Castelli y Talcahuano, CostoOperacion=160.0]" Cost="210.0" Estado_Agente="Posicion: Juan Castelli y Talcahuano"/>
+<node Id="151" Action="Comprar_producto [costoProducto=50.0, productoComprar=Caf&#233;, CostoOperacion=50.0]" Cost="90.0" Estado_Agente="Posicion: Juan Castelli y Cngo. Echag&#252;e"/>
+<node Id="152" Action="Comprar_producto [costoProducto=10.0, productoComprar=Huevos, CostoOperacion=10.0]" Cost="50.0" Estado_Agente="Posicion: Juan Castelli y Cngo. Echag&#252;e"/>
+<node Id="153" Action="Comprar_producto [costoProducto=60.0, productoComprar=Leche, CostoOperacion=60.0]" Cost="100.0" Estado_Agente="Posicion: Juan Castelli y Cngo. Echag&#252;e"/>
+<node Id="154" Action="Comprar_producto [costoProducto=10.0, productoComprar=Man&#237;, CostoOperacion=10.0]" Cost="50.0" Estado_Agente="Posicion: Juan Castelli y Cngo. Echag&#252;e"/>
+<node Id="155" Action="Avanzar [nodoDestino=Juan Castelli y Talcahuano, CostoOperacion=160.0]" Cost="200.0" Estado_Agente="Posicion: Juan Castelli y Talcahuano"/>
+<node Id="311" Action="Comprar_producto [costoProducto=50.0, productoComprar=Caf&#233;, CostoOperacion=50.0]" Cost="100.0" Estado_Agente="Posicion: Juan Castelli y Cngo. Echag&#252;e"/>
+<node Id="312" Action="Comprar_producto [costoProducto=10.0, productoComprar=Huevos, CostoOperacion=10.0]" Cost="60.0" Estado_Agente="Posicion: Juan Castelli y Cngo. Echag&#252;e"/>
+<node Id="313" Action="Comprar_producto [costoProducto=60.0, productoComprar=Leche, CostoOperacion=60.0]" Cost="110.0" Estado_Agente="Posicion: Juan Castelli y Cngo. Echag&#252;e"/>
+<node Id="314" Action="Comprar_producto [costoProducto=10.0, productoComprar=Man&#237;, CostoOperacion=10.0]" Cost="60.0" Estado_Agente="Posicion: Juan Castelli y Cngo. Echag&#252;e"/>
+<node Id="315" Action="Avanzar [nodoDestino=Juan Castelli y Talcahuano, CostoOperacion=160.0]" Cost="210.0" Estado_Agente="Posicion: Juan Castelli y Talcahuano"/>
+<node Id="316" Action="Comprar_producto [costoProducto=50.0, productoComprar=Caf&#233;, CostoOperacion=50.0]" Cost="100.0" Estado_Agente="Posicion: Juan Castelli y Cngo. Echag&#252;e"/>
+<node Id="317" Action="Comprar_producto [costoProducto=10.0, productoComprar=Huevos, CostoOperacion=10.0]" Cost="60.0" Estado_Agente="Posicion: Juan Castelli y Cngo. Echag&#252;e"/>
+<node Id="318" Action="Comprar_producto [costoProducto=60.0, productoComprar=Leche, CostoOperacion=60.0]" Cost="110.0" Estado_Agente="Posicion: Juan Castelli y Cngo. Echag&#252;e"/>
+<node Id="319" Action="Comprar_producto [costoProducto=10.0, productoComprar=Man&#237;, CostoOperacion=10.0]" Cost="60.0" Estado_Agente="Posicion: Juan Castelli y Cngo. Echag&#252;e"/>
+<node Id="320" Action="Avanzar [nodoDestino=Juan Castelli y Talcahuano, CostoOperacion=160.0]" Cost="210.0" Estado_Agente="Posicion: Juan Castelli y Talcahuano"/>
+<edge source="0" target="1"/>
+<edge source="0" target="2"/>
+<edge source="0" target="3"/>
+<edge source="0" target="4"/>
+<edge source="0" target="5"/>
+<edge source="1" target="156"/>
+<edge source="1" target="157"/>
+<edge source="1" target="158"/>
+<edge source="1" target="159"/>
+<edge source="1" target="160"/>
+<edge source="2" target="6"/>
+<edge source="2" target="7"/>
+<edge source="2" target="8"/>
+<edge source="2" target="9"/>
+<edge source="2" target="10"/>
+<edge source="4" target="11"/>
+<edge source="4" target="12"/>
+<edge source="4" target="13"/>
+<edge source="4" target="14"/>
+<edge source="4" target="15"/>
+<edge source="7" target="16"/>
+<edge source="7" target="17"/>
+<edge source="7" target="18"/>
+<edge source="7" target="19"/>
+<edge source="7" target="20"/>
+<edge source="9" target="21"/>
+<edge source="9" target="22"/>
+<edge source="9" target="23"/>
+<edge source="9" target="24"/>
+<edge source="9" target="25"/>
+<edge source="17" target="36"/>
+<edge source="17" target="37"/>
+<edge source="17" target="38"/>
+<edge source="17" target="39"/>
+<edge source="17" target="40"/>
+<edge source="19" target="41"/>
+<edge source="19" target="42"/>
+<edge source="19" target="43"/>
+<edge source="19" target="44"/>
+<edge source="19" target="45"/>
+<edge source="37" target="76"/>
+<edge source="37" target="77"/>
+<edge source="37" target="78"/>
+<edge source="37" target="79"/>
+<edge source="37" target="80"/>
+<edge source="39" target="81"/>
+<edge source="39" target="82"/>
+<edge source="39" target="83"/>
+<edge source="39" target="84"/>
+<edge source="39" target="85"/>
+<edge source="77" target="161"/>
+<edge source="77" target="162"/>
+<edge source="77" target="163"/>
+<edge source="77" target="164"/>
+<edge source="77" target="165"/>
+<edge source="79" target="166"/>
+<edge source="79" target="167"/>
+<edge source="79" target="168"/>
+<edge source="79" target="169"/>
+<edge source="79" target="170"/>
+<edge source="82" target="171"/>
+<edge source="82" target="172"/>
+<edge source="82" target="173"/>
+<edge source="82" target="174"/>
+<edge source="82" target="175"/>
+<edge source="84" target="176"/>
+<edge source="84" target="177"/>
+<edge source="84" target="178"/>
+<edge source="84" target="179"/>
+<edge source="84" target="180"/>
+<edge source="42" target="86"/>
+<edge source="42" target="87"/>
+<edge source="42" target="88"/>
+<edge source="42" target="89"/>
+<edge source="42" target="90"/>
+<edge source="44" target="91"/>
+<edge source="44" target="92"/>
+<edge source="44" target="93"/>
+<edge source="44" target="94"/>
+<edge source="44" target="95"/>
+<edge source="87" target="181"/>
+<edge source="87" target="182"/>
+<edge source="87" target="183"/>
+<edge source="87" target="184"/>
+<edge source="87" target="185"/>
+<edge source="89" target="186"/>
+<edge source="89" target="187"/>
+<edge source="89" target="188"/>
+<edge source="89" target="189"/>
+<edge source="89" target="190"/>
+<edge source="92" target="191"/>
+<edge source="92" target="192"/>
+<edge source="92" target="193"/>
+<edge source="92" target="194"/>
+<edge source="92" target="195"/>
+<edge source="94" target="196"/>
+<edge source="94" target="197"/>
+<edge source="94" target="198"/>
+<edge source="94" target="199"/>
+<edge source="94" target="200"/>
+<edge source="22" target="46"/>
+<edge source="22" target="47"/>
+<edge source="22" target="48"/>
+<edge source="22" target="49"/>
+<edge source="22" target="50"/>
+<edge source="24" target="51"/>
+<edge source="24" target="52"/>
+<edge source="24" target="53"/>
+<edge source="24" target="54"/>
+<edge source="24" target="55"/>
+<edge source="47" target="96"/>
+<edge source="47" target="97"/>
+<edge source="47" target="98"/>
+<edge source="47" target="99"/>
+<edge source="47" target="100"/>
+<edge source="49" target="101"/>
+<edge source="49" target="102"/>
+<edge source="49" target="103"/>
+<edge source="49" target="104"/>
+<edge source="49" target="105"/>
+<edge source="97" target="201"/>
+<edge source="97" target="202"/>
+<edge source="97" target="203"/>
+<edge source="97" target="204"/>
+<edge source="97" target="205"/>
+<edge source="99" target="206"/>
+<edge source="99" target="207"/>
+<edge source="99" target="208"/>
+<edge source="99" target="209"/>
+<edge source="99" target="210"/>
+<edge source="102" target="211"/>
+<edge source="102" target="212"/>
+<edge source="102" target="213"/>
+<edge source="102" target="214"/>
+<edge source="102" target="215"/>
+<edge source="104" target="216"/>
+<edge source="104" target="217"/>
+<edge source="104" target="218"/>
+<edge source="104" target="219"/>
+<edge source="104" target="220"/>
+<edge source="52" target="106"/>
+<edge source="52" target="107"/>
+<edge source="52" target="108"/>
+<edge source="52" target="109"/>
+<edge source="52" target="110"/>
+<edge source="54" target="111"/>
+<edge source="54" target="112"/>
+<edge source="54" target="113"/>
+<edge source="54" target="114"/>
+<edge source="54" target="115"/>
+<edge source="107" target="221"/>
+<edge source="107" target="222"/>
+<edge source="107" target="223"/>
+<edge source="107" target="224"/>
+<edge source="107" target="225"/>
+<edge source="109" target="226"/>
+<edge source="109" target="227"/>
+<edge source="109" target="228"/>
+<edge source="109" target="229"/>
+<edge source="109" target="230"/>
+<edge source="112" target="231"/>
+<edge source="112" target="232"/>
+<edge source="112" target="233"/>
+<edge source="112" target="234"/>
+<edge source="112" target="235"/>
+<edge source="114" target="236"/>
+<edge source="114" target="237"/>
+<edge source="114" target="238"/>
+<edge source="114" target="239"/>
+<edge source="114" target="240"/>
+<edge source="12" target="26"/>
+<edge source="12" target="27"/>
+<edge source="12" target="28"/>
+<edge source="12" target="29"/>
+<edge source="12" target="30"/>
+<edge source="14" target="31"/>
+<edge source="14" target="32"/>
+<edge source="14" target="33"/>
+<edge source="14" target="34"/>
+<edge source="14" target="35"/>
+<edge source="27" target="56"/>
+<edge source="27" target="57"/>
+<edge source="27" target="58"/>
+<edge source="27" target="59"/>
+<edge source="27" target="60"/>
+<edge source="29" target="61"/>
+<edge source="29" target="62"/>
+<edge source="29" target="63"/>
+<edge source="29" target="64"/>
+<edge source="29" target="65"/>
+<edge source="57" target="116"/>
+<edge source="57" target="117"/>
+<edge source="57" target="118"/>
+<edge source="57" target="119"/>
+<edge source="57" target="120"/>
+<edge source="59" target="121"/>
+<edge source="59" target="122"/>
+<edge source="59" target="123"/>
+<edge source="59" target="124"/>
+<edge source="59" target="125"/>
+<edge source="117" target="241"/>
+<edge source="117" target="242"/>
+<edge source="117" target="243"/>
+<edge source="117" target="244"/>
+<edge source="117" target="245"/>
+<edge source="119" target="246"/>
+<edge source="119" target="247"/>
+<edge source="119" target="248"/>
+<edge source="119" target="249"/>
+<edge source="119" target="250"/>
+<edge source="122" target="251"/>
+<edge source="122" target="252"/>
+<edge source="122" target="253"/>
+<edge source="122" target="254"/>
+<edge source="122" target="255"/>
+<edge source="124" target="256"/>
+<edge source="124" target="257"/>
+<edge source="124" target="258"/>
+<edge source="124" target="259"/>
+<edge source="124" target="260"/>
+<edge source="62" target="126"/>
+<edge source="62" target="127"/>
+<edge source="62" target="128"/>
+<edge source="62" target="129"/>
+<edge source="62" target="130"/>
+<edge source="64" target="131"/>
+<edge source="64" target="132"/>
+<edge source="64" target="133"/>
+<edge source="64" target="134"/>
+<edge source="64" target="135"/>
+<edge source="127" target="261"/>
+<edge source="127" target="262"/>
+<edge source="127" target="263"/>
+<edge source="127" target="264"/>
+<edge source="127" target="265"/>
+<edge source="129" target="266"/>
+<edge source="129" target="267"/>
+<edge source="129" target="268"/>
+<edge source="129" target="269"/>
+<edge source="129" target="270"/>
+<edge source="132" target="271"/>
+<edge source="132" target="272"/>
+<edge source="132" target="273"/>
+<edge source="132" target="274"/>
+<edge source="132" target="275"/>
+<edge source="134" target="276"/>
+<edge source="134" target="277"/>
+<edge source="134" target="278"/>
+<edge source="134" target="279"/>
+<edge source="134" target="280"/>
+<edge source="32" target="66"/>
+<edge source="32" target="67"/>
+<edge source="32" target="68"/>
+<edge source="32" target="69"/>
+<edge source="32" target="70"/>
+<edge source="34" target="71"/>
+<edge source="34" target="72"/>
+<edge source="34" target="73"/>
+<edge source="34" target="74"/>
+<edge source="34" target="75"/>
+<edge source="67" target="136"/>
+<edge source="67" target="137"/>
+<edge source="67" target="138"/>
+<edge source="67" target="139"/>
+<edge source="67" target="140"/>
+<edge source="69" target="141"/>
+<edge source="69" target="142"/>
+<edge source="69" target="143"/>
+<edge source="69" target="144"/>
+<edge source="69" target="145"/>
+<edge source="137" target="281"/>
+<edge source="137" target="282"/>
+<edge source="137" target="283"/>
+<edge source="137" target="284"/>
+<edge source="137" target="285"/>
+<edge source="139" target="286"/>
+<edge source="139" target="287"/>
+<edge source="139" target="288"/>
+<edge source="139" target="289"/>
+<edge source="139" target="290"/>
+<edge source="142" target="291"/>
+<edge source="142" target="292"/>
+<edge source="142" target="293"/>
+<edge source="142" target="294"/>
+<edge source="142" target="295"/>
+<edge source="144" target="296"/>
+<edge source="144" target="297"/>
+<edge source="144" target="298"/>
+<edge source="144" target="299"/>
+<edge source="144" target="300"/>
+<edge source="72" target="146"/>
+<edge source="72" target="147"/>
+<edge source="72" target="148"/>
+<edge source="72" target="149"/>
+<edge source="72" target="150"/>
+<edge source="74" target="151"/>
+<edge source="74" target="152"/>
+<edge source="74" target="153"/>
+<edge source="74" target="154"/>
+<edge source="74" target="155"/>
+<edge source="147" target="301"/>
+<edge source="147" target="302"/>
+<edge source="147" target="303"/>
+<edge source="147" target="304"/>
+<edge source="147" target="305"/>
+<edge source="149" target="306"/>
+<edge source="149" target="307"/>
+<edge source="149" target="308"/>
+<edge source="149" target="309"/>
+<edge source="149" target="310"/>
+<edge source="152" target="311"/>
+<edge source="152" target="312"/>
+<edge source="152" target="313"/>
+<edge source="152" target="314"/>
+<edge source="152" target="315"/>
+<edge source="154" target="316"/>
+<edge source="154" target="317"/>
+<edge source="154" target="318"/>
+<edge source="154" target="319"/>
+<edge source="154" target="320"/>
+</tree>

@@ -57,6 +57,7 @@ public class Avanzar extends SearchAction {
         		System.out.println("Calle: " + enlace.getNombre());
         		agState.setPosicionActual(agState.getPosicionActual().getNodoActual().getEnlaces().get(i),nodoDestino);
         		environmentState.setPosicionAgente(agState.getPosicionActual().getNodoActual().getEnlaces().get(i),nodoDestino);
+        		System.out.println(agState.getPosicionActual().getNodoActual().getNombre());
         		return environmentState;
         	}
         }  
@@ -68,8 +69,7 @@ public class Avanzar extends SearchAction {
      */
     @Override
     public Double getCost() {
-        //return new Double(GestorEnlace.calcularCosto(this.enlace));
-    	return new Double(0);
+        return new Double(GestorEnlace.calcularCosto(this.enlace));
     }
 
     @Override
