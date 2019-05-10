@@ -32,5 +32,4 @@ public class Posicion {
 	public Posicion Clone(){
 		return new Posicion (this.enlaceRecorrido,this.nodoActual);
 	}
-	
 }

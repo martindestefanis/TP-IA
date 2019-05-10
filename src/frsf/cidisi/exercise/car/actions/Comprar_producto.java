@@ -36,25 +36,18 @@ public class Comprar_producto extends SearchAction {
       * */
         
         if(agState.getPosicionActual().getEnlaceRecorrido() != null){
-        	
 	        for(int i=0; i<agState.getPosicionActual().getEnlaceRecorrido().getNegocios().size(); i++){
 	        	negocio = agState.getPosicionActual().getEnlaceRecorrido().getNegocios().get(i);
 	        	if(negocio.getProductoPrecio().containsKey(this.productoComprar)){
 	        		
 	        		agState.getProductosComprados().add(this.productoComprar);
 	        		agState.getproductosComprar().remove(productoComprar);
+	        		
 	        		this.costoProducto = negocio.getProductoPrecio().get(this.productoComprar);
 	        		return agState;
 	        	}
 	        }
-        }
-        
-        // TODO: Use this conditions
-        // PreConditions: null
-        // PostConditions: null
-        
-        
-        
+        }     
         return null;
     }
 
@@ -66,10 +59,6 @@ public class Comprar_producto extends SearchAction {
         CityState environmentState = (CityState) est;
         CarAgentState agState = ((CarAgentState) ast);
         Negocio negocio = new Negocio();
-        // TODO: Use this conditions
-        // PreConditions: null
-        // PostConditions: null
-        
         if(agState.getPosicionActual().getEnlaceRecorrido() != null){
         	
 	        for(int i=0; i<agState.getPosicionActual().getEnlaceRecorrido().getNegocios().size(); i++){
@@ -79,12 +68,15 @@ public class Comprar_producto extends SearchAction {
 	        		agState.getProductosComprados().add(this.productoComprar);
 	        		agState.getproductosComprar().remove(productoComprar);
 	        		this.costoProducto = negocio.getProductoPrecio().get(this.productoComprar);
+	        		System.out.println(agState.getPosicionActual().getNodoActual().getNombre());
+	        		System.out.println(agState.getProductosComprados().toString());
+	        		System.out.println(costoProducto);
 	        		return environmentState;
 	        	}
 	        }
         }
 
-        return null;
+       return null;
     }
 
     /**
@@ -95,12 +87,10 @@ public class Comprar_producto extends SearchAction {
         return new Double(this.costoProducto);
     }
 
-    /**
-     * This method is not important for a search based agent, but is essensial
-     * when creating a calculus based one.
-     */
     @Override
-    public String toString() {
-        return "Comprar_producto";
-    }
+	public String toString() {
+		return "Comprar_producto [costoProducto=" + costoProducto
+				+ ", productoComprar=" + productoComprar + ", CostoOperacion="
+				+ getCost() + "]";
+	}
 }

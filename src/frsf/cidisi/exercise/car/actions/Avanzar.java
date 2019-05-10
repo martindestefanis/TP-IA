@@ -46,28 +46,22 @@ public class Avanzar extends SearchAction {
      */
     @Override
     public EnvironmentState execute(AgentState ast, EnvironmentState est) {
-        CityState environmentState = (CityState) est;
-        CarAgentState agState = ((CarAgentState) ast);
-               
-        for(int i=0; i<agState.getPosicionActual().getNodoActual().getEnlaces().size(); i++){
+    CityState environmentState = (CityState) est;
+       CarAgentState agState = ((CarAgentState) ast);
+                    
+       for(int i=0; i<agState.getPosicionActual().getNodoActual().getEnlaces().size(); i++){
         	if(agState.getPosicionActual().getNodoActual().getEnlaces().get(i).isDisponible() && 
         		agState.getPosicionActual().getNodoActual().getEnlaces().get(i).getNodoDestino().getNombre().equalsIgnoreCase(nodoDestino.getNombre())){
         		
         		this.enlace = agState.getPosicionActual().getNodoActual().getEnlaces().get(i);
+        		System.out.println("Calle: " + enlace.getNombre());
         		agState.setPosicionActual(agState.getPosicionActual().getNodoActual().getEnlaces().get(i),nodoDestino);
-        		//return (environmentState) agState;
-        		break;
+        		environmentState.setPosicionAgente(agState.getPosicionActual().getNodoActual().getEnlaces().get(i),nodoDestino);
+        		System.out.println(agState.getPosicionActual().getNodoActual().getNombre());
+        		return environmentState;
         	}
         }  
-        
-      
-        
-
-        return null;
-        
-        // TODO: Use this conditions
-        // PreConditions: null
-        // PostConditions: null
+       return null;
     }
 
     /**
@@ -78,12 +72,9 @@ public class Avanzar extends SearchAction {
         return new Double(GestorEnlace.calcularCosto(this.enlace));
     }
 
-    /**
-     * This method is not important for a search based agent, but is essensial
-     * when creating a calculus based one.
-     */
     @Override
-    public String toString() {
-        return "Avanzar";
-    }
+	public String toString() {
+		return "Avanzar [nodoDestino=" + nodoDestino.getNombre() + ", CostoOperacion="
+				+ getCost() + "]";
+	}
 }

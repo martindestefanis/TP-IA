@@ -12,9 +12,17 @@ public class Enlace{
 	private double costoCalle;
 	private boolean disponible;
 	private ArrayList<Negocio> negocios = new ArrayList();
-	private ArrayList<Evento> eventos = new ArrayList();
+	private int evento;
 	
 	
+	public int getEvento() {
+		return evento;
+	}
+
+	public void setEvento(int evento) {
+		this.evento = evento;
+	}
+
 	public String getNombre(){
 		return nombre;
 	}
@@ -63,21 +71,5 @@ public class Enlace{
 	public void setNegocios(Negocio negocio) {
 		this.negocios.add(negocio);
 	}
-
-	public ArrayList<Evento> getEventos() {
-		return eventos;
-	}
-
-	public void setEventos(Evento evento) {
-		this.eventos.add(evento);
-	}
-	
-	
-
-	
-	
-	
-	
-	
 	
 }

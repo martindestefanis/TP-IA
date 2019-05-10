@@ -1,24 +1,39 @@
 package frsf.cidisi.exercise.car.search;
 
+import java.util.ArrayList;
+import java.util.Arrays;
+
 import frsf.cidisi.faia.agent.Agent;
 import frsf.cidisi.faia.agent.Perception;
 import frsf.cidisi.faia.environment.Environment;
+import grafo.Enlace;
+import grafo.Evento;
 
 public class CarAgentPerception extends Perception {
 
-	//TODO: Setup Statics
-    //public static int UNKNOWN_PERCEPTION = -1;   
+	Posicion pos= new Posicion(null,null);
+
+	//TODO: Setup Statics   
+    public static int EMPTY_PERCEPTION = 0;
+    public static int CORTE_CALLE = 1;
+    public static int CONGESTION = 2;
 	
 	
 	//TODO: Setup Sensors
-	private int cortes_calles;
-	
-	private int congestion_transito;
-	
- 
+    
+    //son los enlaces que tiene el nodo actual, de ahi saco cada evento (percepción)
+	private ArrayList<Enlace> SensorEnlaces = new ArrayList<Enlace>();
 
-    public  CarAgentPerception() {
+
+	public  CarAgentPerception() {
     	//TODO: Complete Method
+    }
+	
+	public  CarAgentPerception Clone(){
+		CarAgentPerception aux = new CarAgentPerception();
+		ArrayList<Enlace> SensorEnlaces1 = new ArrayList<Enlace>(SensorEnlaces);
+		aux.setSensorEnlaces(SensorEnlaces1);
+		return aux;
     }
 
     public CarAgentPerception(Agent agent, Environment environment) {
@@ -30,50 +45,64 @@ public class CarAgentPerception extends Perception {
      */
     @Override
     public void initPerception(Agent agentIn, Environment environmentIn) {
-    	
-    	/*MODIFICAR LAS PERCEPCIONES PARA QUE SEAN UNA LISTA
-		*
-    	 * ACA HAY QUE LEER EL ARCHIVO DE EVENTOS Y POR CADA ENLACE
-    	 * SETEAR EL EVENTO EN EL ENLACE EN EL MUNDO DEL AMBIENTE Y EN LA LISTA DE PERCEPCIONES CREO
-    	 *HAY QUE BORRAR (COMENTALO ASI NO SE PIERDE) EL METODO LEEREVENTOS DEL INICIAR MUNDO
-    	 * Y VERIFICAR QUE AL COMENTAR ESE METODO NO PASE NADA
-    	 * 
-    	 * */
-    	
-    	//TODO: Complete Method
+        CarAgent agent = (CarAgent) agentIn;
+        CityEnviroment environment = (CityEnviroment) environmentIn;
+        CityState environmentState =  environment.getEnvironmentState();
         
-        //CarAgent agent = (CarAgent) agentIn;
-        //CityEnviroment environment = (CityEnviroment) environmentIn;
-        //CityState environmentState =
-        //        environment.getEnvironmentState();
-       
+        pos = environmentState.getPosicionAgente();
+        
+        this.setSensorEnlaces(environment.getEnlaces());
         
     }
     
-    @Override
-    public String toString() {
-        StringBuffer str = new StringBuffer();
-
-        //TODO: Complete Method
-
-        return str.toString();
-    }
 
     // The following methods are agent-specific:
     //TODO: Complete this section with the agent-specific methods
+    
+
+
+	public ArrayList<Enlace> getSensorEnlaces() {
+		return SensorEnlaces;
+	}
+	public void setSensorEnlaces(ArrayList<Enlace> setSensorEnlaces) {
+		this.SensorEnlaces = setSensorEnlaces;
+	}
+
+	@Override
+	public String toString() {
+		return "";
+	}
 	
-     public int getcortes_calles(){
-        return cortes_calles;
-     }
-     public void setcortes_calles(int arg){
-        this.cortes_calles = arg;
-     }
-     public int getcongestion_transito(){
-        return congestion_transito;
-     }
-     public void setcongestion_transito(int arg){
-        this.congestion_transito = arg;
-     }
-	
-   
+	@Override
+	public int hashCode() {
+		final int prime = 31;
+		int result = 1;
+		result = prime * result + ((pos == null) ? 0 : pos.hashCode());
+		result = prime
+				* result
+				+ ((SensorEnlaces == null) ? 0 : SensorEnlaces.hashCode());
+		return result;
+	}
+
+	@Override
+	public boolean equals(Object obj) {
+		if (this == obj)
+			return true;
+		if (obj == null)
+			return false;
+		if (getClass() != obj.getClass())
+			return false;
+		CarAgentPerception other = (CarAgentPerception) obj;
+		if (pos == null) {
+			if (other.pos != null)
+				return false;
+		} else if (!pos.equals(other.pos))
+			return false;
+		if (SensorEnlaces == null) {
+			if (other.SensorEnlaces != null)
+				return false;
+		} else if (!SensorEnlaces.equals(other.SensorEnlaces))
+			return false;
+		return true;
+	}
 }

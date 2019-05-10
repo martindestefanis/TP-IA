@@ -15,7 +15,8 @@ import grafo.Nodo;
 public class CarAgentState extends SearchBasedAgentState {
 	
 	//TODO: Setup Variables
-    Posicion posicionInicial;
+	
+    //Posicion posicionInicial;
     Posicion posicionActual;
     
     private ArrayList<Nodo> mundo = new ArrayList<Nodo>();
@@ -43,17 +44,21 @@ public class CarAgentState extends SearchBasedAgentState {
     	 newState.setPosicionActual(posicionActual.Clone());
          
     	 //No sé si es necesario clonar la posición inicial, no debería cambiar nunca
-         newState.setPosicionInicial(posicionInicial);
+    	 // newState.setPosicionInicial(posicionInicial);
          
          //No sé si es necesario clonar el mundo no debería cambiar tampoco
-         ArrayList<Nodo> mundo1 = (ArrayList<Nodo>) mundo.clone();
+    	 //ArrayList<Nodo> mundo1 = (ArrayList<Nodo>) mundo.clone();
+    	 
+    	 ArrayList<Nodo> mundo1 = new ArrayList<Nodo>(mundo);
          newState.setMundo(mundo1);
                 
-         ArrayList<String> productosComprados1 =  (ArrayList<String>) productosComprados.clone();
+         //ArrayList<String> productosComprados1 =  (ArrayList<String>) productosComprados.clone();
+         ArrayList<String> productosComprados1 = new ArrayList<String>(productosComprados);
          newState.setProductosComprados(productosComprados1);
          
-         ArrayList<String> productosComprar1 = (ArrayList<String>) productosComprar.clone();
-         newState.setProductosComprados(productosComprar1);
+         //ArrayList<String> productosComprar1 = (ArrayList<String>) productosComprar.clone();
+         ArrayList<String> productosComprar1 = new ArrayList<String>(productosComprar);
+         newState.setProductosComprar(productosComprar1);
          
          return newState;
     }
@@ -63,20 +68,24 @@ public class CarAgentState extends SearchBasedAgentState {
      * received by the Simulator.
      * 
      */
+    
     @Override
     public void updateState(Perception p) {
     	
-    	/*
-    	 * SE SUPONE QUE P TIENE TODOS LOS EVENTOS QUE CARGAMOS EN EL INIT
-    	 * ENTONCES ITERAR POR P (VER LA FORMA DADO QUE CREO QUE EN ESTE METODO SE OBTIENE UNA SOLA
-    	 * PERCEPCION) Y AGREGAR UN EVENTO QUE NO SE ENCUENTRE YA AGREGADO AL ENLACE CORRESPONDIENTE 
-    	 * DE ESA PERCEPCION.
-    	 * */
-    	
     	CarAgentPerception p1 = (CarAgentPerception) p;
-    	
-    	
-        //TODO: Complete Method
+    	for(int i=0; i< p1.getSensorEnlaces().size(); i++){
+    		for(int j=0; j<posicionActual.getNodoActual().getEnlaces().size();j++){
+    			if(posicionActual.getNodoActual().getEnlaces().get(j).getNodoOrigen().getNombre().equalsIgnoreCase(p1.getSensorEnlaces().get(i).getNodoOrigen().getNombre())
+    					&& posicionActual.getNodoActual().getEnlaces().get(j).getNodoDestino().getNombre().equalsIgnoreCase(p1.getSensorEnlaces().get(i).getNodoDestino().getNombre())){
+    				
+    				posicionActual.getNodoActual().getEnlaces().get(j).setEvento(p1.getSensorEnlaces().get(i).getEvento());
+    				
+    				if(posicionActual.getNodoActual().getEnlaces().get(j).getEvento()==p1.CORTE_CALLE){
+    					posicionActual.getNodoActual().getEnlaces().get(j).setDisponible(false);
+    				}
+    			}
+    		}
+    	}
     	
     }
 
@@ -87,13 +96,15 @@ public class CarAgentState extends SearchBasedAgentState {
     public void initState() {
         
     	//No se si es necesario el mundo
-		//mundo = GestorNodo.getNodosExistentes();
+		mundo = GestorNodo.getNodosExistentes();
     	
-		posicionInicial = new Posicion(null,GestorNodo.obtenerNodo("Juan Castelli y Antonia Godoy"));
+		//posicionInicial = new Posicion(null,GestorNodo.obtenerNodo("Juan Castelli y Antonia Godoy"));
 		
+		productosComprar.add("Café");
 		productosComprar.add("Huevos");
-		
-		posicionActual = new Posicion(posicionInicial.getEnlaceRecorrido(),posicionInicial.getNodoActual());
+		productosComprar.add("Leche");
+		productosComprar.add("Maní");
+		posicionActual = new Posicion(null,GestorNodo.obtenerNodo("Juan Castelli y Antonia Godoy"));
 
     }
 
@@ -107,29 +118,64 @@ public class CarAgentState extends SearchBasedAgentState {
         return str;
     }
 
-    /**
-     * This method is used in the search process to verify if the node already
-     * exists in the actual search.
-     */
     @Override
-    public boolean equals(Object obj) {
-       
-    	if (!(obj instanceof CarAgentState)) {
-            return false;
-        }
-        return posicionActual.equals(((CarAgentState) obj).getPosicionActual());
-    }
+	public int hashCode() {
+		final int prime = 31;
+		int result = 1;
+		result = prime * result + ((mundo == null) ? 0 : mundo.hashCode());
+		result = prime * result
+				+ ((posicionActual == null) ? 0 : posicionActual.hashCode());
+		result = prime
+				* result
+				+ ((productosComprados == null) ? 0 : productosComprados
+						.hashCode());
+		result = prime
+				* result
+				+ ((productosComprar == null) ? 0 : productosComprar.hashCode());
+		return result;
+	}
+
+	@Override
+	public boolean equals(Object obj) {
+		if (this == obj)
+			return true;
+		if (getClass() != obj.getClass())
+			return false;
+		CarAgentState other = (CarAgentState) obj;
+		if (mundo == null) {
+			if (other.mundo != null)
+				return false;
+		} else if (!mundo.equals(other.mundo))
+			return false;
+		if (posicionActual == null) {
+			if (other.posicionActual != null)
+				return false;
+		} else if (!posicionActual.equals(other.posicionActual))
+			return false;
+		if (productosComprados == null) {
+			if (other.productosComprados != null)
+				return false;
+		} else if (!productosComprados.equals(other.productosComprados))
+			return false;
+		if (productosComprar == null) {
+			if (other.productosComprar != null)
+				return false;
+		} else if (!productosComprar.equals(other.productosComprar))
+			return false;
+		return true;
+	}
     
 
     //TODO: Complete this section with agent-specific methods
     // The following methods are agent-specific:
    	
-     public Posicion getPosicionInicial(){
+ /*    public Posicion getPosicionInicial(){
        return posicionInicial;
     }
     public void setPosicionInicial(Posicion arg){
       posicionInicial = arg;
      }
+ */ 
      public ArrayList<Nodo> getmundo(){
         return mundo;
      }

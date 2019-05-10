@@ -10,7 +10,7 @@ public class Grafo {
 	public static void iniciarMundo(){    
 		//DIRECTORIO DEL FICHERO Y DELIMITADOR DE LECTURA
 	    String csvEnlaces = "..\\TP-IA\\src\\grafo\\Enlaces.csv";
-	    String csvEventos = "..\\TP-IA\\src\\grafo\\Eventos.csv";
+//	    String csvEventos = "..\\TP-IA\\src\\grafo\\Eventos.csv";
 	    String csvNegocios = "..\\TP-IA\\src\\grafo\\Negocios.csv";
 	    String delimitador = ";";
 	    
@@ -64,7 +64,7 @@ public class Grafo {
 	       }
 	       	     
 	       //LEO ARCHIVO DE EVENTOS
-	    	registrosLeidos = fila.leerEventos(csvEventos,delimitador);
+/*	    	registrosLeidos = fila.leerEventos(csvEventos,delimitador);
 	    	
 	    	for(int i=0; i< registrosLeidos.size(); i++){
 	    		nombre = registrosLeidos.get(i).getNombreEvento();
@@ -72,23 +72,23 @@ public class Grafo {
 	    		nodoDestino = GestorNodo.crearNodo(registrosLeidos.get(i).getEsquina2());
 	    		costo = registrosLeidos.get(i).getCosto();
 	    		
-	    		
+*/	    		
 	    		/*PRIMERO CREO UN ENLACE SUPONIENDO QUE EL SENTIDO DE LAS ESQUINAS ES ORIGEN-DESTINO
 	    		 * DESPUES VERIFICO SI EXISTE UN ENLACE CON ESE SENTIDO
 	    		 * SI NO EXISTE ES PORQUE LA ORIENTACION ES DESTINO-ORIGEN
 	    		 * 
 	    		 * */
-	    		enlace = GestorEnlace.crearEnlace(nodoOrigen, nodoDestino);
+//	    		enlace = GestorEnlace.crearEnlace(nodoOrigen, nodoDestino);
 	    		
-	    		if(!GestorEnlace.existeEnlace(enlace)){
+//	    		if(!GestorEnlace.existeEnlace(enlace)){
 	    			/*CREO UN ENLACE CON EL SENTIDO INVERSO Y SE LO MANDO AL GESTOR PARA QUE
 	    			 * A ESE ENLACE LE CAMBIE LA DISPONIBILIDAD.
 	    			 * LUEGO CREO EL ENCALE QUE LE CORRESPONDA AL NODO EVENTO
 	    			 * */
-	    			enlace = GestorEnlace.crearEnlace(nodoDestino, nodoOrigen);
-	    		}
+//	    			enlace = GestorEnlace.crearEnlace(nodoDestino, nodoOrigen);
+//	    		}
 	    		
-	    		evento = Evento.crearEvento(nombre,enlace,costo);
+/*	    		evento = Evento.crearEvento(nombre,enlace,costo);
 	    		
 	    		//VERIFICO QUE NO EXISTA UN EVENTO YA EN EL ENLACE (PROBLEMA EN LAS CALLES DE DOBLE SENTIDO)
 	    		if(!GestorEnlace.existeEvento(enlace,evento.getNombre())){
@@ -104,7 +104,7 @@ public class Grafo {
 	    					enlace.getNombre());
 	    		}
 	    	}
-	    		
+ */  		
     		//LEO ARCHIVO DE NEGOCIOS
     			registrosLeidos = fila.leerNegocios(csvNegocios,delimitador);
     	    	String producto;
