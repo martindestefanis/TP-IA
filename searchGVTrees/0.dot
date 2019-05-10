@@ -1,14 +1,2588 @@
 digraph g {
 node [shape = Mrecord];
 nodo0[label="{EO: 0|cost: 0.0|A: null}"]
-nodo1[label="{EO: 1|cost: 1.0|A: Avanzar [nodoDestino=Juan Castelli y Patricio Cullen, getCost()=0.0]}"]
-nodo2[label="{EO: 2|cost: 2.0|A: Avanzar [nodoDestino=Juan Castelli y Cngo. Echagüe, getCost()=0.0]|Posicion:\nJuan\nCastelli\ny\nPatricio\nCullen}"]
-nodo3[label="{EO: 3|cost: 3.0|A: Comprar_producto [costoProducto=50.0, productoComprar=Café, getCost()=50.0]|Posicion:\nJuan\nCastelli\ny\nCngo.\nEchagüe}"]
+nodo1[label="{EO: 1|cost: 0.0|A: Avanzar [nodoDestino=Juan Castelli y Patricio Cullen, CostoOperacion=0.0]}"]
+nodo2[label="{EO: 2|cost: 0.0|A: Avanzar [nodoDestino=Juan Castelli y Cngo. Echagüe, CostoOperacion=0.0]|Posicion:\nJuan\nCastelli\ny\nPatricio\nCullen}"]
+nodo3[label="{EO: 3|cost: 50.0|A: Comprar_producto [costoProducto=50.0, productoComprar=Café, CostoOperacion=50.0]|Posicion:\nJuan\nCastelli\ny\nCngo.\nEchagüe}"]
+nodo71[label="{EO: 71|cost: 100.0|A: Comprar_producto [costoProducto=50.0, productoComprar=Café, CostoOperacion=50.0]|Posicion:\nJuan\nCastelli\ny\nCngo.\nEchagüe}"]
+nodo583[label="{EO: 583|cost: 150.0|A: Comprar_producto [costoProducto=50.0, productoComprar=Café, CostoOperacion=50.0]|Posicion:\nJuan\nCastelli\ny\nCngo.\nEchagüe}"]
+
+nodo71 -> nodo583;
+nodo584[label="{EO: 584|cost: 110.0|A: Comprar_producto [costoProducto=15.0, productoComprar=Huevos, CostoOperacion=15.0]|Posicion:\nJuan\nCastelli\ny\nCngo.\nEchagüe}"]
+
+nodo71 -> nodo584;
+nodo585[label="{EO: 585|cost: 160.0|A: Comprar_producto [costoProducto=50.0, productoComprar=Leche, CostoOperacion=50.0]|Posicion:\nJuan\nCastelli\ny\nCngo.\nEchagüe}"]
+
+nodo71 -> nodo585;
+nodo586[label="{EO: 586|cost: 100.0|A: Avanzar [nodoDestino=Juan Castelli y Talcahuano, CostoOperacion=0.0]|Posicion:\nJuan\nCastelli\ny\nCngo.\nEchagüe}"]
+nodo676[label="{EO: 676|cost: 115.0|A: Comprar_producto [costoProducto=15.0, productoComprar=Huevos, CostoOperacion=15.0]|Posicion:\nJuan\nCastelli\ny\nTalcahuano}"]
+
+nodo586 -> nodo676;
+nodo677[label="{EO: 677|cost: 150.0|A: Comprar_producto [costoProducto=50.0, productoComprar=Leche, CostoOperacion=50.0]|Posicion:\nJuan\nCastelli\ny\nTalcahuano}"]
+
+nodo586 -> nodo677;
+nodo678[label="{EO: 678|cost: 100.0|A: Avanzar [nodoDestino=Juan Castelli y Defensa, CostoOperacion=0.0]|Posicion:\nJuan\nCastelli\ny\nTalcahuano}"]
+nodo727[label="{EO: 727|cost: 100.0|A: Avanzar [nodoDestino=Juan Castelli y Riobamba, CostoOperacion=0.0]|Posicion:\nJuan\nCastelli\ny\nDefensa}"]
+
+nodo678 -> nodo727;
+
+nodo586 -> nodo678;
+
+nodo71 -> nodo586;
+
+nodo3 -> nodo71;
+nodo72[label="{EO: 72|cost: 60.0|A: Comprar_producto [costoProducto=15.0, productoComprar=Huevos, CostoOperacion=15.0]|Posicion:\nJuan\nCastelli\ny\nCngo.\nEchagüe}"]
+nodo120[label="{EO: 120|cost: 110.0|A: Comprar_producto [costoProducto=50.0, productoComprar=Café, CostoOperacion=50.0]|Posicion:\nJuan\nCastelli\ny\nCngo.\nEchagüe}"]
+nodo852[label="{EO: 852|cost: 160.0|A: Comprar_producto [costoProducto=50.0, productoComprar=Café, CostoOperacion=50.0]|Posicion:\nJuan\nCastelli\ny\nCngo.\nEchagüe}"]
+
+nodo120 -> nodo852;
+nodo853[label="{EO: 853|cost: 120.0|A: Comprar_producto [costoProducto=15.0, productoComprar=Huevos, CostoOperacion=15.0]|Posicion:\nJuan\nCastelli\ny\nCngo.\nEchagüe}"]
+
+nodo120 -> nodo853;
+nodo854[label="{EO: 854|cost: 170.0|A: Comprar_producto [costoProducto=50.0, productoComprar=Leche, CostoOperacion=50.0]|Posicion:\nJuan\nCastelli\ny\nCngo.\nEchagüe}"]
+
+nodo120 -> nodo854;
+nodo855[label="{EO: 855|cost: 110.0|A: Avanzar [nodoDestino=Juan Castelli y Talcahuano, CostoOperacion=0.0]|Posicion:\nJuan\nCastelli\ny\nCngo.\nEchagüe}"]
+
+nodo120 -> nodo855;
+
+nodo72 -> nodo120;
+nodo121[label="{EO: 121|cost: 70.0|A: Comprar_producto [costoProducto=15.0, productoComprar=Huevos, CostoOperacion=15.0]|Posicion:\nJuan\nCastelli\ny\nCngo.\nEchagüe}"]
+nodo192[label="{EO: 192|cost: 120.0|A: Comprar_producto [costoProducto=50.0, productoComprar=Café, CostoOperacion=50.0]|Posicion:\nJuan\nCastelli\ny\nCngo.\nEchagüe}"]
+
+nodo121 -> nodo192;
+nodo193[label="{EO: 193|cost: 80.0|A: Comprar_producto [costoProducto=15.0, productoComprar=Huevos, CostoOperacion=15.0]|Posicion:\nJuan\nCastelli\ny\nCngo.\nEchagüe}"]
+nodo304[label="{EO: 304|cost: 130.0|A: Comprar_producto [costoProducto=50.0, productoComprar=Café, CostoOperacion=50.0]|Posicion:\nJuan\nCastelli\ny\nCngo.\nEchagüe}"]
+
+nodo193 -> nodo304;
+nodo305[label="{EO: 305|cost: 90.0|A: Comprar_producto [costoProducto=15.0, productoComprar=Huevos, CostoOperacion=15.0]|Posicion:\nJuan\nCastelli\ny\nCngo.\nEchagüe}"]
+nodo453[label="{EO: 453|cost: 140.0|A: Comprar_producto [costoProducto=50.0, productoComprar=Café, CostoOperacion=50.0]|Posicion:\nJuan\nCastelli\ny\nCngo.\nEchagüe}"]
+
+nodo305 -> nodo453;
+nodo454[label="{EO: 454|cost: 100.0|A: Comprar_producto [costoProducto=15.0, productoComprar=Huevos, CostoOperacion=15.0]|Posicion:\nJuan\nCastelli\ny\nCngo.\nEchagüe}"]
+nodo665[label="{EO: 665|cost: 150.0|A: Comprar_producto [costoProducto=50.0, productoComprar=Café, CostoOperacion=50.0]|Posicion:\nJuan\nCastelli\ny\nCngo.\nEchagüe}"]
+
+nodo454 -> nodo665;
+nodo666[label="{EO: 666|cost: 110.0|A: Comprar_producto [costoProducto=15.0, productoComprar=Huevos, CostoOperacion=15.0]|Posicion:\nJuan\nCastelli\ny\nCngo.\nEchagüe}"]
+
+nodo454 -> nodo666;
+nodo667[label="{EO: 667|cost: 160.0|A: Comprar_producto [costoProducto=50.0, productoComprar=Leche, CostoOperacion=50.0]|Posicion:\nJuan\nCastelli\ny\nCngo.\nEchagüe}"]
+
+nodo454 -> nodo667;
+nodo668[label="{EO: 668|cost: 100.0|A: Avanzar [nodoDestino=Juan Castelli y Talcahuano, CostoOperacion=0.0]|Posicion:\nJuan\nCastelli\ny\nCngo.\nEchagüe}"]
+nodo720[label="{EO: 720|cost: 115.0|A: Comprar_producto [costoProducto=15.0, productoComprar=Huevos, CostoOperacion=15.0]|Posicion:\nJuan\nCastelli\ny\nTalcahuano}"]
+
+nodo668 -> nodo720;
+nodo721[label="{EO: 721|cost: 150.0|A: Comprar_producto [costoProducto=50.0, productoComprar=Leche, CostoOperacion=50.0]|Posicion:\nJuan\nCastelli\ny\nTalcahuano}"]
+
+nodo668 -> nodo721;
+nodo722[label="{EO: 722|cost: 100.0|A: Avanzar [nodoDestino=Juan Castelli y Defensa, CostoOperacion=0.0]|Posicion:\nJuan\nCastelli\ny\nTalcahuano}"]
+nodo737[label="{EO: 737|cost: 100.0|A: Avanzar [nodoDestino=Juan Castelli y Riobamba, CostoOperacion=0.0]|Posicion:\nJuan\nCastelli\ny\nDefensa}"]
+
+nodo722 -> nodo737;
+
+nodo668 -> nodo722;
+
+nodo454 -> nodo668;
+
+nodo305 -> nodo454;
+nodo455[label="{EO: 455|cost: 150.0|A: Comprar_producto [costoProducto=50.0, productoComprar=Leche, CostoOperacion=50.0]|Posicion:\nJuan\nCastelli\ny\nCngo.\nEchagüe}"]
+
+nodo305 -> nodo455;
+nodo456[label="{EO: 456|cost: 90.0|A: Avanzar [nodoDestino=Juan Castelli y Talcahuano, CostoOperacion=0.0]|Posicion:\nJuan\nCastelli\ny\nCngo.\nEchagüe}"]
+nodo495[label="{EO: 495|cost: 105.0|A: Comprar_producto [costoProducto=15.0, productoComprar=Huevos, CostoOperacion=15.0]|Posicion:\nJuan\nCastelli\ny\nTalcahuano}"]
+nodo799[label="{EO: 799|cost: 120.0|A: Comprar_producto [costoProducto=15.0, productoComprar=Huevos, CostoOperacion=15.0]|Posicion:\nJuan\nCastelli\ny\nTalcahuano}"]
+
+nodo495 -> nodo799;
+nodo800[label="{EO: 800|cost: 155.0|A: Comprar_producto [costoProducto=50.0, productoComprar=Leche, CostoOperacion=50.0]|Posicion:\nJuan\nCastelli\ny\nTalcahuano}"]
+
+nodo495 -> nodo800;
+nodo801[label="{EO: 801|cost: 105.0|A: Avanzar [nodoDestino=Juan Castelli y Defensa, CostoOperacion=0.0]|Posicion:\nJuan\nCastelli\ny\nTalcahuano}"]
+nodo825[label="{EO: 825|cost: 105.0|A: Avanzar [nodoDestino=Juan Castelli y Riobamba, CostoOperacion=0.0]|Posicion:\nJuan\nCastelli\ny\nDefensa}"]
+
+nodo801 -> nodo825;
+
+nodo495 -> nodo801;
+
+nodo456 -> nodo495;
+nodo496[label="{EO: 496|cost: 140.0|A: Comprar_producto [costoProducto=50.0, productoComprar=Leche, CostoOperacion=50.0]|Posicion:\nJuan\nCastelli\ny\nTalcahuano}"]
+
+nodo456 -> nodo496;
+nodo497[label="{EO: 497|cost: 90.0|A: Avanzar [nodoDestino=Juan Castelli y Defensa, CostoOperacion=0.0]|Posicion:\nJuan\nCastelli\ny\nTalcahuano}"]
+nodo509[label="{EO: 509|cost: 90.0|A: Avanzar [nodoDestino=Juan Castelli y Riobamba, CostoOperacion=0.0]|Posicion:\nJuan\nCastelli\ny\nDefensa}"]
+
+nodo497 -> nodo509;
+
+nodo456 -> nodo497;
+
+nodo305 -> nodo456;
+
+nodo193 -> nodo305;
+nodo306[label="{EO: 306|cost: 140.0|A: Comprar_producto [costoProducto=50.0, productoComprar=Leche, CostoOperacion=50.0]|Posicion:\nJuan\nCastelli\ny\nCngo.\nEchagüe}"]
+
+nodo193 -> nodo306;
+nodo307[label="{EO: 307|cost: 80.0|A: Avanzar [nodoDestino=Juan Castelli y Talcahuano, CostoOperacion=0.0]|Posicion:\nJuan\nCastelli\ny\nCngo.\nEchagüe}"]
+nodo337[label="{EO: 337|cost: 95.0|A: Comprar_producto [costoProducto=15.0, productoComprar=Huevos, CostoOperacion=15.0]|Posicion:\nJuan\nCastelli\ny\nTalcahuano}"]
+nodo556[label="{EO: 556|cost: 110.0|A: Comprar_producto [costoProducto=15.0, productoComprar=Huevos, CostoOperacion=15.0]|Posicion:\nJuan\nCastelli\ny\nTalcahuano}"]
+
+nodo337 -> nodo556;
+nodo557[label="{EO: 557|cost: 145.0|A: Comprar_producto [costoProducto=50.0, productoComprar=Leche, CostoOperacion=50.0]|Posicion:\nJuan\nCastelli\ny\nTalcahuano}"]
+
+nodo337 -> nodo557;
+nodo558[label="{EO: 558|cost: 95.0|A: Avanzar [nodoDestino=Juan Castelli y Defensa, CostoOperacion=0.0]|Posicion:\nJuan\nCastelli\ny\nTalcahuano}"]
+nodo577[label="{EO: 577|cost: 95.0|A: Avanzar [nodoDestino=Juan Castelli y Riobamba, CostoOperacion=0.0]|Posicion:\nJuan\nCastelli\ny\nDefensa}"]
+
+nodo558 -> nodo577;
+
+nodo337 -> nodo558;
+
+nodo307 -> nodo337;
+nodo338[label="{EO: 338|cost: 130.0|A: Comprar_producto [costoProducto=50.0, productoComprar=Leche, CostoOperacion=50.0]|Posicion:\nJuan\nCastelli\ny\nTalcahuano}"]
+
+nodo307 -> nodo338;
+nodo339[label="{EO: 339|cost: 80.0|A: Avanzar [nodoDestino=Juan Castelli y Defensa, CostoOperacion=0.0]|Posicion:\nJuan\nCastelli\ny\nTalcahuano}"]
+nodo349[label="{EO: 349|cost: 80.0|A: Avanzar [nodoDestino=Juan Castelli y Riobamba, CostoOperacion=0.0]|Posicion:\nJuan\nCastelli\ny\nDefensa}"]
+
+nodo339 -> nodo349;
+
+nodo307 -> nodo339;
+
+nodo193 -> nodo307;
+
+nodo121 -> nodo193;
+nodo194[label="{EO: 194|cost: 130.0|A: Comprar_producto [costoProducto=50.0, productoComprar=Leche, CostoOperacion=50.0]|Posicion:\nJuan\nCastelli\ny\nCngo.\nEchagüe}"]
+
+nodo121 -> nodo194;
+nodo195[label="{EO: 195|cost: 70.0|A: Avanzar [nodoDestino=Juan Castelli y Talcahuano, CostoOperacion=0.0]|Posicion:\nJuan\nCastelli\ny\nCngo.\nEchagüe}"]
+nodo215[label="{EO: 215|cost: 85.0|A: Comprar_producto [costoProducto=15.0, productoComprar=Huevos, CostoOperacion=15.0]|Posicion:\nJuan\nCastelli\ny\nTalcahuano}"]
+nodo375[label="{EO: 375|cost: 100.0|A: Comprar_producto [costoProducto=15.0, productoComprar=Huevos, CostoOperacion=15.0]|Posicion:\nJuan\nCastelli\ny\nTalcahuano}"]
+nodo627[label="{EO: 627|cost: 115.0|A: Comprar_producto [costoProducto=15.0, productoComprar=Huevos, CostoOperacion=15.0]|Posicion:\nJuan\nCastelli\ny\nTalcahuano}"]
+
+nodo375 -> nodo627;
+nodo628[label="{EO: 628|cost: 150.0|A: Comprar_producto [costoProducto=50.0, productoComprar=Leche, CostoOperacion=50.0]|Posicion:\nJuan\nCastelli\ny\nTalcahuano}"]
+
+nodo375 -> nodo628;
+nodo629[label="{EO: 629|cost: 100.0|A: Avanzar [nodoDestino=Juan Castelli y Defensa, CostoOperacion=0.0]|Posicion:\nJuan\nCastelli\ny\nTalcahuano}"]
+nodo694[label="{EO: 694|cost: 100.0|A: Avanzar [nodoDestino=Juan Castelli y Riobamba, CostoOperacion=0.0]|Posicion:\nJuan\nCastelli\ny\nDefensa}"]
+
+nodo629 -> nodo694;
+
+nodo375 -> nodo629;
+
+nodo215 -> nodo375;
+nodo376[label="{EO: 376|cost: 135.0|A: Comprar_producto [costoProducto=50.0, productoComprar=Leche, CostoOperacion=50.0]|Posicion:\nJuan\nCastelli\ny\nTalcahuano}"]
+
+nodo215 -> nodo376;
+nodo377[label="{EO: 377|cost: 85.0|A: Avanzar [nodoDestino=Juan Castelli y Defensa, CostoOperacion=0.0]|Posicion:\nJuan\nCastelli\ny\nTalcahuano}"]
+nodo389[label="{EO: 389|cost: 85.0|A: Avanzar [nodoDestino=Juan Castelli y Riobamba, CostoOperacion=0.0]|Posicion:\nJuan\nCastelli\ny\nDefensa}"]
+
+nodo377 -> nodo389;
+
+nodo215 -> nodo377;
+
+nodo195 -> nodo215;
+nodo216[label="{EO: 216|cost: 120.0|A: Comprar_producto [costoProducto=50.0, productoComprar=Leche, CostoOperacion=50.0]|Posicion:\nJuan\nCastelli\ny\nTalcahuano}"]
+
+nodo195 -> nodo216;
+nodo217[label="{EO: 217|cost: 70.0|A: Avanzar [nodoDestino=Juan Castelli y Defensa, CostoOperacion=0.0]|Posicion:\nJuan\nCastelli\ny\nTalcahuano}"]
+nodo225[label="{EO: 225|cost: 70.0|A: Avanzar [nodoDestino=Juan Castelli y Riobamba, CostoOperacion=0.0]|Posicion:\nJuan\nCastelli\ny\nDefensa}"]
+
+nodo217 -> nodo225;
+
+nodo195 -> nodo217;
+
+nodo121 -> nodo195;
+
+nodo72 -> nodo121;
+nodo122[label="{EO: 122|cost: 120.0|A: Comprar_producto [costoProducto=50.0, productoComprar=Leche, CostoOperacion=50.0]|Posicion:\nJuan\nCastelli\ny\nCngo.\nEchagüe}"]
+
+nodo72 -> nodo122;
+nodo123[label="{EO: 123|cost: 60.0|A: Avanzar [nodoDestino=Juan Castelli y Talcahuano, CostoOperacion=0.0]|Posicion:\nJuan\nCastelli\ny\nCngo.\nEchagüe}"]
+nodo137[label="{EO: 137|cost: 75.0|A: Comprar_producto [costoProducto=15.0, productoComprar=Huevos, CostoOperacion=15.0]|Posicion:\nJuan\nCastelli\ny\nTalcahuano}"]
+nodo245[label="{EO: 245|cost: 90.0|A: Comprar_producto [costoProducto=15.0, productoComprar=Huevos, CostoOperacion=15.0]|Posicion:\nJuan\nCastelli\ny\nTalcahuano}"]
+nodo423[label="{EO: 423|cost: 105.0|A: Comprar_producto [costoProducto=15.0, productoComprar=Huevos, CostoOperacion=15.0]|Posicion:\nJuan\nCastelli\ny\nTalcahuano}"]
+nodo769[label="{EO: 769|cost: 120.0|A: Comprar_producto [costoProducto=15.0, productoComprar=Huevos, CostoOperacion=15.0]|Posicion:\nJuan\nCastelli\ny\nTalcahuano}"]
+
+nodo423 -> nodo769;
+nodo770[label="{EO: 770|cost: 155.0|A: Comprar_producto [costoProducto=50.0, productoComprar=Leche, CostoOperacion=50.0]|Posicion:\nJuan\nCastelli\ny\nTalcahuano}"]
+
+nodo423 -> nodo770;
+nodo771[label="{EO: 771|cost: 105.0|A: Avanzar [nodoDestino=Juan Castelli y Defensa, CostoOperacion=0.0]|Posicion:\nJuan\nCastelli\ny\nTalcahuano}"]
+nodo815[label="{EO: 815|cost: 105.0|A: Avanzar [nodoDestino=Juan Castelli y Riobamba, CostoOperacion=0.0]|Posicion:\nJuan\nCastelli\ny\nDefensa}"]
+
+nodo771 -> nodo815;
+
+nodo423 -> nodo771;
+
+nodo245 -> nodo423;
+nodo424[label="{EO: 424|cost: 140.0|A: Comprar_producto [costoProducto=50.0, productoComprar=Leche, CostoOperacion=50.0]|Posicion:\nJuan\nCastelli\ny\nTalcahuano}"]
+
+nodo245 -> nodo424;
+nodo425[label="{EO: 425|cost: 90.0|A: Avanzar [nodoDestino=Juan Castelli y Defensa, CostoOperacion=0.0]|Posicion:\nJuan\nCastelli\ny\nTalcahuano}"]
+nodo475[label="{EO: 475|cost: 90.0|A: Avanzar [nodoDestino=Juan Castelli y Riobamba, CostoOperacion=0.0]|Posicion:\nJuan\nCastelli\ny\nDefensa}"]
+
+nodo425 -> nodo475;
+
+nodo245 -> nodo425;
+
+nodo137 -> nodo245;
+nodo246[label="{EO: 246|cost: 125.0|A: Comprar_producto [costoProducto=50.0, productoComprar=Leche, CostoOperacion=50.0]|Posicion:\nJuan\nCastelli\ny\nTalcahuano}"]
+
+nodo137 -> nodo246;
+nodo247[label="{EO: 247|cost: 75.0|A: Avanzar [nodoDestino=Juan Castelli y Defensa, CostoOperacion=0.0]|Posicion:\nJuan\nCastelli\ny\nTalcahuano}"]
+nodo257[label="{EO: 257|cost: 75.0|A: Avanzar [nodoDestino=Juan Castelli y Riobamba, CostoOperacion=0.0]|Posicion:\nJuan\nCastelli\ny\nDefensa}"]
+
+nodo247 -> nodo257;
+
+nodo137 -> nodo247;
+
+nodo123 -> nodo137;
+nodo138[label="{EO: 138|cost: 110.0|A: Comprar_producto [costoProducto=50.0, productoComprar=Leche, CostoOperacion=50.0]|Posicion:\nJuan\nCastelli\ny\nTalcahuano}"]
+
+nodo123 -> nodo138;
+nodo139[label="{EO: 139|cost: 60.0|A: Avanzar [nodoDestino=Juan Castelli y Defensa, CostoOperacion=0.0]|Posicion:\nJuan\nCastelli\ny\nTalcahuano}"]
+nodo145[label="{EO: 145|cost: 60.0|A: Avanzar [nodoDestino=Juan Castelli y Riobamba, CostoOperacion=0.0]|Posicion:\nJuan\nCastelli\ny\nDefensa}"]
+
+nodo139 -> nodo145;
+
+nodo123 -> nodo139;
+
+nodo72 -> nodo123;
+
+nodo3 -> nodo72;
+nodo73[label="{EO: 73|cost: 110.0|A: Comprar_producto [costoProducto=50.0, productoComprar=Leche, CostoOperacion=50.0]|Posicion:\nJuan\nCastelli\ny\nCngo.\nEchagüe}"]
+nodo827[label="{EO: 827|cost: 160.0|A: Comprar_producto [costoProducto=50.0, productoComprar=Café, CostoOperacion=50.0]|Posicion:\nJuan\nCastelli\ny\nCngo.\nEchagüe}"]
+
+nodo73 -> nodo827;
+nodo828[label="{EO: 828|cost: 120.0|A: Comprar_producto [costoProducto=15.0, productoComprar=Huevos, CostoOperacion=15.0]|Posicion:\nJuan\nCastelli\ny\nCngo.\nEchagüe}"]
+
+nodo73 -> nodo828;
+nodo829[label="{EO: 829|cost: 170.0|A: Comprar_producto [costoProducto=50.0, productoComprar=Leche, CostoOperacion=50.0]|Posicion:\nJuan\nCastelli\ny\nCngo.\nEchagüe}"]
+
+nodo73 -> nodo829;
+nodo830[label="{EO: 830|cost: 110.0|A: Avanzar [nodoDestino=Juan Castelli y Talcahuano, CostoOperacion=0.0]|Posicion:\nJuan\nCastelli\ny\nCngo.\nEchagüe}"]
+
+nodo73 -> nodo830;
+
+nodo3 -> nodo73;
+nodo74[label="{EO: 74|cost: 50.0|A: Avanzar [nodoDestino=Juan Castelli y Talcahuano, CostoOperacion=0.0]|Posicion:\nJuan\nCastelli\ny\nCngo.\nEchagüe}"]
+nodo85[label="{EO: 85|cost: 65.0|A: Comprar_producto [costoProducto=15.0, productoComprar=Huevos, CostoOperacion=15.0]|Posicion:\nJuan\nCastelli\ny\nTalcahuano}"]
+nodo156[label="{EO: 156|cost: 80.0|A: Comprar_producto [costoProducto=15.0, productoComprar=Huevos, CostoOperacion=15.0]|Posicion:\nJuan\nCastelli\ny\nTalcahuano}"]
+nodo282[label="{EO: 282|cost: 95.0|A: Comprar_producto [costoProducto=15.0, productoComprar=Huevos, CostoOperacion=15.0]|Posicion:\nJuan\nCastelli\ny\nTalcahuano}"]
+nodo532[label="{EO: 532|cost: 110.0|A: Comprar_producto [costoProducto=15.0, productoComprar=Huevos, CostoOperacion=15.0]|Posicion:\nJuan\nCastelli\ny\nTalcahuano}"]
+
+nodo282 -> nodo532;
+nodo533[label="{EO: 533|cost: 145.0|A: Comprar_producto [costoProducto=50.0, productoComprar=Leche, CostoOperacion=50.0]|Posicion:\nJuan\nCastelli\ny\nTalcahuano}"]
+
+nodo282 -> nodo533;
+nodo534[label="{EO: 534|cost: 95.0|A: Avanzar [nodoDestino=Juan Castelli y Defensa, CostoOperacion=0.0]|Posicion:\nJuan\nCastelli\ny\nTalcahuano}"]
+nodo569[label="{EO: 569|cost: 95.0|A: Avanzar [nodoDestino=Juan Castelli y Riobamba, CostoOperacion=0.0]|Posicion:\nJuan\nCastelli\ny\nDefensa}"]
+
+nodo534 -> nodo569;
+
+nodo282 -> nodo534;
+
+nodo156 -> nodo282;
+nodo283[label="{EO: 283|cost: 130.0|A: Comprar_producto [costoProducto=50.0, productoComprar=Leche, CostoOperacion=50.0]|Posicion:\nJuan\nCastelli\ny\nTalcahuano}"]
+
+nodo156 -> nodo283;
+nodo284[label="{EO: 284|cost: 80.0|A: Avanzar [nodoDestino=Juan Castelli y Defensa, CostoOperacion=0.0]|Posicion:\nJuan\nCastelli\ny\nTalcahuano}"]
+nodo323[label="{EO: 323|cost: 80.0|A: Avanzar [nodoDestino=Juan Castelli y Riobamba, CostoOperacion=0.0]|Posicion:\nJuan\nCastelli\ny\nDefensa}"]
+
+nodo284 -> nodo323;
+
+nodo156 -> nodo284;
+
+nodo85 -> nodo156;
+nodo157[label="{EO: 157|cost: 115.0|A: Comprar_producto [costoProducto=50.0, productoComprar=Leche, CostoOperacion=50.0]|Posicion:\nJuan\nCastelli\ny\nTalcahuano}"]
+
+nodo85 -> nodo157;
+nodo158[label="{EO: 158|cost: 65.0|A: Avanzar [nodoDestino=Juan Castelli y Defensa, CostoOperacion=0.0]|Posicion:\nJuan\nCastelli\ny\nTalcahuano}"]
+nodo165[label="{EO: 165|cost: 65.0|A: Avanzar [nodoDestino=Juan Castelli y Riobamba, CostoOperacion=0.0]|Posicion:\nJuan\nCastelli\ny\nDefensa}"]
+
+nodo158 -> nodo165;
+
+nodo85 -> nodo158;
+
+nodo74 -> nodo85;
+nodo86[label="{EO: 86|cost: 100.0|A: Comprar_producto [costoProducto=50.0, productoComprar=Leche, CostoOperacion=50.0]|Posicion:\nJuan\nCastelli\ny\nTalcahuano}"]
+nodo597[label="{EO: 597|cost: 115.0|A: Comprar_producto [costoProducto=15.0, productoComprar=Huevos, CostoOperacion=15.0]|Posicion:\nJuan\nCastelli\ny\nTalcahuano}"]
+
+nodo86 -> nodo597;
+nodo598[label="{EO: 598|cost: 150.0|A: Comprar_producto [costoProducto=50.0, productoComprar=Leche, CostoOperacion=50.0]|Posicion:\nJuan\nCastelli\ny\nTalcahuano}"]
+
+nodo86 -> nodo598;
+nodo599[label="{EO: 599|cost: 100.0|A: Avanzar [nodoDestino=Juan Castelli y Defensa, CostoOperacion=0.0]|Posicion:\nJuan\nCastelli\ny\nTalcahuano}"]
+nodo684[label="{EO: 684|cost: 100.0|A: Avanzar [nodoDestino=Juan Castelli y Riobamba, CostoOperacion=0.0]|Posicion:\nJuan\nCastelli\ny\nDefensa}"]
+
+nodo599 -> nodo684;
+
+nodo86 -> nodo599;
+
+nodo74 -> nodo86;
+nodo87[label="{EO: 87|cost: 50.0|A: Avanzar [nodoDestino=Juan Castelli y Defensa, CostoOperacion=0.0]|Posicion:\nJuan\nCastelli\ny\nTalcahuano}"]
+nodo93[label="{EO: 93|cost: 50.0|A: Avanzar [nodoDestino=Juan Castelli y Riobamba, CostoOperacion=0.0]|Posicion:\nJuan\nCastelli\ny\nDefensa}"]
+
+nodo87 -> nodo93;
+
+nodo74 -> nodo87;
+
+nodo3 -> nodo74;
 
 nodo2 -> nodo3;
-nodo4[label="{EO: 4|cost: 3.0|A: Avanzar [nodoDestino=Juan Castelli y Talcahuano, getCost()=0.0]|Posicion:\nJuan\nCastelli\ny\nCngo.\nEchagüe}"]
+nodo4[label="{EO: 4|cost: 10.0|A: Comprar_producto [costoProducto=15.0, productoComprar=Huevos, CostoOperacion=15.0]|Posicion:\nJuan\nCastelli\ny\nCngo.\nEchagüe}"]
+nodo11[label="{EO: 11|cost: 60.0|A: Comprar_producto [costoProducto=50.0, productoComprar=Café, CostoOperacion=50.0]|Posicion:\nJuan\nCastelli\ny\nCngo.\nEchagüe}"]
+nodo107[label="{EO: 107|cost: 110.0|A: Comprar_producto [costoProducto=50.0, productoComprar=Café, CostoOperacion=50.0]|Posicion:\nJuan\nCastelli\ny\nCngo.\nEchagüe}"]
+nodo839[label="{EO: 839|cost: 160.0|A: Comprar_producto [costoProducto=50.0, productoComprar=Café, CostoOperacion=50.0]|Posicion:\nJuan\nCastelli\ny\nCngo.\nEchagüe}"]
+
+nodo107 -> nodo839;
+nodo840[label="{EO: 840|cost: 120.0|A: Comprar_producto [costoProducto=15.0, productoComprar=Huevos, CostoOperacion=15.0]|Posicion:\nJuan\nCastelli\ny\nCngo.\nEchagüe}"]
+
+nodo107 -> nodo840;
+nodo841[label="{EO: 841|cost: 170.0|A: Comprar_producto [costoProducto=50.0, productoComprar=Leche, CostoOperacion=50.0]|Posicion:\nJuan\nCastelli\ny\nCngo.\nEchagüe}"]
+
+nodo107 -> nodo841;
+nodo842[label="{EO: 842|cost: 110.0|A: Avanzar [nodoDestino=Juan Castelli y Talcahuano, CostoOperacion=0.0]|Posicion:\nJuan\nCastelli\ny\nCngo.\nEchagüe}"]
+
+nodo107 -> nodo842;
+
+nodo11 -> nodo107;
+nodo108[label="{EO: 108|cost: 70.0|A: Comprar_producto [costoProducto=15.0, productoComprar=Huevos, CostoOperacion=15.0]|Posicion:\nJuan\nCastelli\ny\nCngo.\nEchagüe}"]
+nodo188[label="{EO: 188|cost: 120.0|A: Comprar_producto [costoProducto=50.0, productoComprar=Café, CostoOperacion=50.0]|Posicion:\nJuan\nCastelli\ny\nCngo.\nEchagüe}"]
+
+nodo108 -> nodo188;
+nodo189[label="{EO: 189|cost: 80.0|A: Comprar_producto [costoProducto=15.0, productoComprar=Huevos, CostoOperacion=15.0]|Posicion:\nJuan\nCastelli\ny\nCngo.\nEchagüe}"]
+nodo300[label="{EO: 300|cost: 130.0|A: Comprar_producto [costoProducto=50.0, productoComprar=Café, CostoOperacion=50.0]|Posicion:\nJuan\nCastelli\ny\nCngo.\nEchagüe}"]
+
+nodo189 -> nodo300;
+nodo301[label="{EO: 301|cost: 90.0|A: Comprar_producto [costoProducto=15.0, productoComprar=Huevos, CostoOperacion=15.0]|Posicion:\nJuan\nCastelli\ny\nCngo.\nEchagüe}"]
+nodo449[label="{EO: 449|cost: 140.0|A: Comprar_producto [costoProducto=50.0, productoComprar=Café, CostoOperacion=50.0]|Posicion:\nJuan\nCastelli\ny\nCngo.\nEchagüe}"]
+
+nodo301 -> nodo449;
+nodo450[label="{EO: 450|cost: 100.0|A: Comprar_producto [costoProducto=15.0, productoComprar=Huevos, CostoOperacion=15.0]|Posicion:\nJuan\nCastelli\ny\nCngo.\nEchagüe}"]
+nodo661[label="{EO: 661|cost: 150.0|A: Comprar_producto [costoProducto=50.0, productoComprar=Café, CostoOperacion=50.0]|Posicion:\nJuan\nCastelli\ny\nCngo.\nEchagüe}"]
+
+nodo450 -> nodo661;
+nodo662[label="{EO: 662|cost: 110.0|A: Comprar_producto [costoProducto=15.0, productoComprar=Huevos, CostoOperacion=15.0]|Posicion:\nJuan\nCastelli\ny\nCngo.\nEchagüe}"]
+
+nodo450 -> nodo662;
+nodo663[label="{EO: 663|cost: 160.0|A: Comprar_producto [costoProducto=50.0, productoComprar=Leche, CostoOperacion=50.0]|Posicion:\nJuan\nCastelli\ny\nCngo.\nEchagüe}"]
+
+nodo450 -> nodo663;
+nodo664[label="{EO: 664|cost: 100.0|A: Avanzar [nodoDestino=Juan Castelli y Talcahuano, CostoOperacion=0.0]|Posicion:\nJuan\nCastelli\ny\nCngo.\nEchagüe}"]
+nodo717[label="{EO: 717|cost: 115.0|A: Comprar_producto [costoProducto=15.0, productoComprar=Huevos, CostoOperacion=15.0]|Posicion:\nJuan\nCastelli\ny\nTalcahuano}"]
+
+nodo664 -> nodo717;
+nodo718[label="{EO: 718|cost: 150.0|A: Comprar_producto [costoProducto=50.0, productoComprar=Leche, CostoOperacion=50.0]|Posicion:\nJuan\nCastelli\ny\nTalcahuano}"]
+
+nodo664 -> nodo718;
+nodo719[label="{EO: 719|cost: 100.0|A: Avanzar [nodoDestino=Juan Castelli y Defensa, CostoOperacion=0.0]|Posicion:\nJuan\nCastelli\ny\nTalcahuano}"]
+nodo736[label="{EO: 736|cost: 100.0|A: Avanzar [nodoDestino=Juan Castelli y Riobamba, CostoOperacion=0.0]|Posicion:\nJuan\nCastelli\ny\nDefensa}"]
+
+nodo719 -> nodo736;
+
+nodo664 -> nodo719;
+
+nodo450 -> nodo664;
+
+nodo301 -> nodo450;
+nodo451[label="{EO: 451|cost: 150.0|A: Comprar_producto [costoProducto=50.0, productoComprar=Leche, CostoOperacion=50.0]|Posicion:\nJuan\nCastelli\ny\nCngo.\nEchagüe}"]
+
+nodo301 -> nodo451;
+nodo452[label="{EO: 452|cost: 90.0|A: Avanzar [nodoDestino=Juan Castelli y Talcahuano, CostoOperacion=0.0]|Posicion:\nJuan\nCastelli\ny\nCngo.\nEchagüe}"]
+nodo492[label="{EO: 492|cost: 105.0|A: Comprar_producto [costoProducto=15.0, productoComprar=Huevos, CostoOperacion=15.0]|Posicion:\nJuan\nCastelli\ny\nTalcahuano}"]
+nodo796[label="{EO: 796|cost: 120.0|A: Comprar_producto [costoProducto=15.0, productoComprar=Huevos, CostoOperacion=15.0]|Posicion:\nJuan\nCastelli\ny\nTalcahuano}"]
+
+nodo492 -> nodo796;
+nodo797[label="{EO: 797|cost: 155.0|A: Comprar_producto [costoProducto=50.0, productoComprar=Leche, CostoOperacion=50.0]|Posicion:\nJuan\nCastelli\ny\nTalcahuano}"]
+
+nodo492 -> nodo797;
+nodo798[label="{EO: 798|cost: 105.0|A: Avanzar [nodoDestino=Juan Castelli y Defensa, CostoOperacion=0.0]|Posicion:\nJuan\nCastelli\ny\nTalcahuano}"]
+nodo824[label="{EO: 824|cost: 105.0|A: Avanzar [nodoDestino=Juan Castelli y Riobamba, CostoOperacion=0.0]|Posicion:\nJuan\nCastelli\ny\nDefensa}"]
+
+nodo798 -> nodo824;
+
+nodo492 -> nodo798;
+
+nodo452 -> nodo492;
+nodo493[label="{EO: 493|cost: 140.0|A: Comprar_producto [costoProducto=50.0, productoComprar=Leche, CostoOperacion=50.0]|Posicion:\nJuan\nCastelli\ny\nTalcahuano}"]
+
+nodo452 -> nodo493;
+nodo494[label="{EO: 494|cost: 90.0|A: Avanzar [nodoDestino=Juan Castelli y Defensa, CostoOperacion=0.0]|Posicion:\nJuan\nCastelli\ny\nTalcahuano}"]
+nodo508[label="{EO: 508|cost: 90.0|A: Avanzar [nodoDestino=Juan Castelli y Riobamba, CostoOperacion=0.0]|Posicion:\nJuan\nCastelli\ny\nDefensa}"]
+
+nodo494 -> nodo508;
+
+nodo452 -> nodo494;
+
+nodo301 -> nodo452;
+
+nodo189 -> nodo301;
+nodo302[label="{EO: 302|cost: 140.0|A: Comprar_producto [costoProducto=50.0, productoComprar=Leche, CostoOperacion=50.0]|Posicion:\nJuan\nCastelli\ny\nCngo.\nEchagüe}"]
+
+nodo189 -> nodo302;
+nodo303[label="{EO: 303|cost: 80.0|A: Avanzar [nodoDestino=Juan Castelli y Talcahuano, CostoOperacion=0.0]|Posicion:\nJuan\nCastelli\ny\nCngo.\nEchagüe}"]
+nodo334[label="{EO: 334|cost: 95.0|A: Comprar_producto [costoProducto=15.0, productoComprar=Huevos, CostoOperacion=15.0]|Posicion:\nJuan\nCastelli\ny\nTalcahuano}"]
+nodo553[label="{EO: 553|cost: 110.0|A: Comprar_producto [costoProducto=15.0, productoComprar=Huevos, CostoOperacion=15.0]|Posicion:\nJuan\nCastelli\ny\nTalcahuano}"]
+
+nodo334 -> nodo553;
+nodo554[label="{EO: 554|cost: 145.0|A: Comprar_producto [costoProducto=50.0, productoComprar=Leche, CostoOperacion=50.0]|Posicion:\nJuan\nCastelli\ny\nTalcahuano}"]
+
+nodo334 -> nodo554;
+nodo555[label="{EO: 555|cost: 95.0|A: Avanzar [nodoDestino=Juan Castelli y Defensa, CostoOperacion=0.0]|Posicion:\nJuan\nCastelli\ny\nTalcahuano}"]
+nodo576[label="{EO: 576|cost: 95.0|A: Avanzar [nodoDestino=Juan Castelli y Riobamba, CostoOperacion=0.0]|Posicion:\nJuan\nCastelli\ny\nDefensa}"]
+
+nodo555 -> nodo576;
+
+nodo334 -> nodo555;
+
+nodo303 -> nodo334;
+nodo335[label="{EO: 335|cost: 130.0|A: Comprar_producto [costoProducto=50.0, productoComprar=Leche, CostoOperacion=50.0]|Posicion:\nJuan\nCastelli\ny\nTalcahuano}"]
+
+nodo303 -> nodo335;
+nodo336[label="{EO: 336|cost: 80.0|A: Avanzar [nodoDestino=Juan Castelli y Defensa, CostoOperacion=0.0]|Posicion:\nJuan\nCastelli\ny\nTalcahuano}"]
+nodo348[label="{EO: 348|cost: 80.0|A: Avanzar [nodoDestino=Juan Castelli y Riobamba, CostoOperacion=0.0]|Posicion:\nJuan\nCastelli\ny\nDefensa}"]
+
+nodo336 -> nodo348;
+
+nodo303 -> nodo336;
+
+nodo189 -> nodo303;
+
+nodo108 -> nodo189;
+nodo190[label="{EO: 190|cost: 130.0|A: Comprar_producto [costoProducto=50.0, productoComprar=Leche, CostoOperacion=50.0]|Posicion:\nJuan\nCastelli\ny\nCngo.\nEchagüe}"]
+
+nodo108 -> nodo190;
+nodo191[label="{EO: 191|cost: 70.0|A: Avanzar [nodoDestino=Juan Castelli y Talcahuano, CostoOperacion=0.0]|Posicion:\nJuan\nCastelli\ny\nCngo.\nEchagüe}"]
+nodo212[label="{EO: 212|cost: 85.0|A: Comprar_producto [costoProducto=15.0, productoComprar=Huevos, CostoOperacion=15.0]|Posicion:\nJuan\nCastelli\ny\nTalcahuano}"]
+nodo372[label="{EO: 372|cost: 100.0|A: Comprar_producto [costoProducto=15.0, productoComprar=Huevos, CostoOperacion=15.0]|Posicion:\nJuan\nCastelli\ny\nTalcahuano}"]
+nodo624[label="{EO: 624|cost: 115.0|A: Comprar_producto [costoProducto=15.0, productoComprar=Huevos, CostoOperacion=15.0]|Posicion:\nJuan\nCastelli\ny\nTalcahuano}"]
+
+nodo372 -> nodo624;
+nodo625[label="{EO: 625|cost: 150.0|A: Comprar_producto [costoProducto=50.0, productoComprar=Leche, CostoOperacion=50.0]|Posicion:\nJuan\nCastelli\ny\nTalcahuano}"]
+
+nodo372 -> nodo625;
+nodo626[label="{EO: 626|cost: 100.0|A: Avanzar [nodoDestino=Juan Castelli y Defensa, CostoOperacion=0.0]|Posicion:\nJuan\nCastelli\ny\nTalcahuano}"]
+nodo693[label="{EO: 693|cost: 100.0|A: Avanzar [nodoDestino=Juan Castelli y Riobamba, CostoOperacion=0.0]|Posicion:\nJuan\nCastelli\ny\nDefensa}"]
+
+nodo626 -> nodo693;
+
+nodo372 -> nodo626;
+
+nodo212 -> nodo372;
+nodo373[label="{EO: 373|cost: 135.0|A: Comprar_producto [costoProducto=50.0, productoComprar=Leche, CostoOperacion=50.0]|Posicion:\nJuan\nCastelli\ny\nTalcahuano}"]
+
+nodo212 -> nodo373;
+nodo374[label="{EO: 374|cost: 85.0|A: Avanzar [nodoDestino=Juan Castelli y Defensa, CostoOperacion=0.0]|Posicion:\nJuan\nCastelli\ny\nTalcahuano}"]
+nodo388[label="{EO: 388|cost: 85.0|A: Avanzar [nodoDestino=Juan Castelli y Riobamba, CostoOperacion=0.0]|Posicion:\nJuan\nCastelli\ny\nDefensa}"]
+
+nodo374 -> nodo388;
+
+nodo212 -> nodo374;
+
+nodo191 -> nodo212;
+nodo213[label="{EO: 213|cost: 120.0|A: Comprar_producto [costoProducto=50.0, productoComprar=Leche, CostoOperacion=50.0]|Posicion:\nJuan\nCastelli\ny\nTalcahuano}"]
+
+nodo191 -> nodo213;
+nodo214[label="{EO: 214|cost: 70.0|A: Avanzar [nodoDestino=Juan Castelli y Defensa, CostoOperacion=0.0]|Posicion:\nJuan\nCastelli\ny\nTalcahuano}"]
+nodo224[label="{EO: 224|cost: 70.0|A: Avanzar [nodoDestino=Juan Castelli y Riobamba, CostoOperacion=0.0]|Posicion:\nJuan\nCastelli\ny\nDefensa}"]
+
+nodo214 -> nodo224;
+
+nodo191 -> nodo214;
+
+nodo108 -> nodo191;
+
+nodo11 -> nodo108;
+nodo109[label="{EO: 109|cost: 120.0|A: Comprar_producto [costoProducto=50.0, productoComprar=Leche, CostoOperacion=50.0]|Posicion:\nJuan\nCastelli\ny\nCngo.\nEchagüe}"]
+
+nodo11 -> nodo109;
+nodo110[label="{EO: 110|cost: 60.0|A: Avanzar [nodoDestino=Juan Castelli y Talcahuano, CostoOperacion=0.0]|Posicion:\nJuan\nCastelli\ny\nCngo.\nEchagüe}"]
+nodo131[label="{EO: 131|cost: 75.0|A: Comprar_producto [costoProducto=15.0, productoComprar=Huevos, CostoOperacion=15.0]|Posicion:\nJuan\nCastelli\ny\nTalcahuano}"]
+nodo242[label="{EO: 242|cost: 90.0|A: Comprar_producto [costoProducto=15.0, productoComprar=Huevos, CostoOperacion=15.0]|Posicion:\nJuan\nCastelli\ny\nTalcahuano}"]
+nodo420[label="{EO: 420|cost: 105.0|A: Comprar_producto [costoProducto=15.0, productoComprar=Huevos, CostoOperacion=15.0]|Posicion:\nJuan\nCastelli\ny\nTalcahuano}"]
+nodo766[label="{EO: 766|cost: 120.0|A: Comprar_producto [costoProducto=15.0, productoComprar=Huevos, CostoOperacion=15.0]|Posicion:\nJuan\nCastelli\ny\nTalcahuano}"]
+
+nodo420 -> nodo766;
+nodo767[label="{EO: 767|cost: 155.0|A: Comprar_producto [costoProducto=50.0, productoComprar=Leche, CostoOperacion=50.0]|Posicion:\nJuan\nCastelli\ny\nTalcahuano}"]
+
+nodo420 -> nodo767;
+nodo768[label="{EO: 768|cost: 105.0|A: Avanzar [nodoDestino=Juan Castelli y Defensa, CostoOperacion=0.0]|Posicion:\nJuan\nCastelli\ny\nTalcahuano}"]
+nodo814[label="{EO: 814|cost: 105.0|A: Avanzar [nodoDestino=Juan Castelli y Riobamba, CostoOperacion=0.0]|Posicion:\nJuan\nCastelli\ny\nDefensa}"]
+
+nodo768 -> nodo814;
+
+nodo420 -> nodo768;
+
+nodo242 -> nodo420;
+nodo421[label="{EO: 421|cost: 140.0|A: Comprar_producto [costoProducto=50.0, productoComprar=Leche, CostoOperacion=50.0]|Posicion:\nJuan\nCastelli\ny\nTalcahuano}"]
+
+nodo242 -> nodo421;
+nodo422[label="{EO: 422|cost: 90.0|A: Avanzar [nodoDestino=Juan Castelli y Defensa, CostoOperacion=0.0]|Posicion:\nJuan\nCastelli\ny\nTalcahuano}"]
+nodo474[label="{EO: 474|cost: 90.0|A: Avanzar [nodoDestino=Juan Castelli y Riobamba, CostoOperacion=0.0]|Posicion:\nJuan\nCastelli\ny\nDefensa}"]
+
+nodo422 -> nodo474;
+
+nodo242 -> nodo422;
+
+nodo131 -> nodo242;
+nodo243[label="{EO: 243|cost: 125.0|A: Comprar_producto [costoProducto=50.0, productoComprar=Leche, CostoOperacion=50.0]|Posicion:\nJuan\nCastelli\ny\nTalcahuano}"]
+
+nodo131 -> nodo243;
+nodo244[label="{EO: 244|cost: 75.0|A: Avanzar [nodoDestino=Juan Castelli y Defensa, CostoOperacion=0.0]|Posicion:\nJuan\nCastelli\ny\nTalcahuano}"]
+nodo256[label="{EO: 256|cost: 75.0|A: Avanzar [nodoDestino=Juan Castelli y Riobamba, CostoOperacion=0.0]|Posicion:\nJuan\nCastelli\ny\nDefensa}"]
+
+nodo244 -> nodo256;
+
+nodo131 -> nodo244;
+
+nodo110 -> nodo131;
+nodo132[label="{EO: 132|cost: 110.0|A: Comprar_producto [costoProducto=50.0, productoComprar=Leche, CostoOperacion=50.0]|Posicion:\nJuan\nCastelli\ny\nTalcahuano}"]
+
+nodo110 -> nodo132;
+nodo133[label="{EO: 133|cost: 60.0|A: Avanzar [nodoDestino=Juan Castelli y Defensa, CostoOperacion=0.0]|Posicion:\nJuan\nCastelli\ny\nTalcahuano}"]
+nodo144[label="{EO: 144|cost: 60.0|A: Avanzar [nodoDestino=Juan Castelli y Riobamba, CostoOperacion=0.0]|Posicion:\nJuan\nCastelli\ny\nDefensa}"]
+
+nodo133 -> nodo144;
+
+nodo110 -> nodo133;
+
+nodo11 -> nodo110;
+
+nodo4 -> nodo11;
+nodo12[label="{EO: 12|cost: 20.0|A: Comprar_producto [costoProducto=15.0, productoComprar=Huevos, CostoOperacion=15.0]|Posicion:\nJuan\nCastelli\ny\nCngo.\nEchagüe}"]
+nodo23[label="{EO: 23|cost: 70.0|A: Comprar_producto [costoProducto=50.0, productoComprar=Café, CostoOperacion=50.0]|Posicion:\nJuan\nCastelli\ny\nCngo.\nEchagüe}"]
+nodo171[label="{EO: 171|cost: 120.0|A: Comprar_producto [costoProducto=50.0, productoComprar=Café, CostoOperacion=50.0]|Posicion:\nJuan\nCastelli\ny\nCngo.\nEchagüe}"]
+
+nodo23 -> nodo171;
+nodo172[label="{EO: 172|cost: 80.0|A: Comprar_producto [costoProducto=15.0, productoComprar=Huevos, CostoOperacion=15.0]|Posicion:\nJuan\nCastelli\ny\nCngo.\nEchagüe}"]
+nodo292[label="{EO: 292|cost: 130.0|A: Comprar_producto [costoProducto=50.0, productoComprar=Café, CostoOperacion=50.0]|Posicion:\nJuan\nCastelli\ny\nCngo.\nEchagüe}"]
+
+nodo172 -> nodo292;
+nodo293[label="{EO: 293|cost: 90.0|A: Comprar_producto [costoProducto=15.0, productoComprar=Huevos, CostoOperacion=15.0]|Posicion:\nJuan\nCastelli\ny\nCngo.\nEchagüe}"]
+nodo441[label="{EO: 441|cost: 140.0|A: Comprar_producto [costoProducto=50.0, productoComprar=Café, CostoOperacion=50.0]|Posicion:\nJuan\nCastelli\ny\nCngo.\nEchagüe}"]
+
+nodo293 -> nodo441;
+nodo442[label="{EO: 442|cost: 100.0|A: Comprar_producto [costoProducto=15.0, productoComprar=Huevos, CostoOperacion=15.0]|Posicion:\nJuan\nCastelli\ny\nCngo.\nEchagüe}"]
+nodo653[label="{EO: 653|cost: 150.0|A: Comprar_producto [costoProducto=50.0, productoComprar=Café, CostoOperacion=50.0]|Posicion:\nJuan\nCastelli\ny\nCngo.\nEchagüe}"]
+
+nodo442 -> nodo653;
+nodo654[label="{EO: 654|cost: 110.0|A: Comprar_producto [costoProducto=15.0, productoComprar=Huevos, CostoOperacion=15.0]|Posicion:\nJuan\nCastelli\ny\nCngo.\nEchagüe}"]
+
+nodo442 -> nodo654;
+nodo655[label="{EO: 655|cost: 160.0|A: Comprar_producto [costoProducto=50.0, productoComprar=Leche, CostoOperacion=50.0]|Posicion:\nJuan\nCastelli\ny\nCngo.\nEchagüe}"]
+
+nodo442 -> nodo655;
+nodo656[label="{EO: 656|cost: 100.0|A: Avanzar [nodoDestino=Juan Castelli y Talcahuano, CostoOperacion=0.0]|Posicion:\nJuan\nCastelli\ny\nCngo.\nEchagüe}"]
+nodo711[label="{EO: 711|cost: 115.0|A: Comprar_producto [costoProducto=15.0, productoComprar=Huevos, CostoOperacion=15.0]|Posicion:\nJuan\nCastelli\ny\nTalcahuano}"]
+
+nodo656 -> nodo711;
+nodo712[label="{EO: 712|cost: 150.0|A: Comprar_producto [costoProducto=50.0, productoComprar=Leche, CostoOperacion=50.0]|Posicion:\nJuan\nCastelli\ny\nTalcahuano}"]
+
+nodo656 -> nodo712;
+nodo713[label="{EO: 713|cost: 100.0|A: Avanzar [nodoDestino=Juan Castelli y Defensa, CostoOperacion=0.0]|Posicion:\nJuan\nCastelli\ny\nTalcahuano}"]
+nodo734[label="{EO: 734|cost: 100.0|A: Avanzar [nodoDestino=Juan Castelli y Riobamba, CostoOperacion=0.0]|Posicion:\nJuan\nCastelli\ny\nDefensa}"]
+
+nodo713 -> nodo734;
+
+nodo656 -> nodo713;
+
+nodo442 -> nodo656;
+
+nodo293 -> nodo442;
+nodo443[label="{EO: 443|cost: 150.0|A: Comprar_producto [costoProducto=50.0, productoComprar=Leche, CostoOperacion=50.0]|Posicion:\nJuan\nCastelli\ny\nCngo.\nEchagüe}"]
+
+nodo293 -> nodo443;
+nodo444[label="{EO: 444|cost: 90.0|A: Avanzar [nodoDestino=Juan Castelli y Talcahuano, CostoOperacion=0.0]|Posicion:\nJuan\nCastelli\ny\nCngo.\nEchagüe}"]
+nodo486[label="{EO: 486|cost: 105.0|A: Comprar_producto [costoProducto=15.0, productoComprar=Huevos, CostoOperacion=15.0]|Posicion:\nJuan\nCastelli\ny\nTalcahuano}"]
+nodo790[label="{EO: 790|cost: 120.0|A: Comprar_producto [costoProducto=15.0, productoComprar=Huevos, CostoOperacion=15.0]|Posicion:\nJuan\nCastelli\ny\nTalcahuano}"]
+
+nodo486 -> nodo790;
+nodo791[label="{EO: 791|cost: 155.0|A: Comprar_producto [costoProducto=50.0, productoComprar=Leche, CostoOperacion=50.0]|Posicion:\nJuan\nCastelli\ny\nTalcahuano}"]
+
+nodo486 -> nodo791;
+nodo792[label="{EO: 792|cost: 105.0|A: Avanzar [nodoDestino=Juan Castelli y Defensa, CostoOperacion=0.0]|Posicion:\nJuan\nCastelli\ny\nTalcahuano}"]
+nodo822[label="{EO: 822|cost: 105.0|A: Avanzar [nodoDestino=Juan Castelli y Riobamba, CostoOperacion=0.0]|Posicion:\nJuan\nCastelli\ny\nDefensa}"]
+
+nodo792 -> nodo822;
+
+nodo486 -> nodo792;
+
+nodo444 -> nodo486;
+nodo487[label="{EO: 487|cost: 140.0|A: Comprar_producto [costoProducto=50.0, productoComprar=Leche, CostoOperacion=50.0]|Posicion:\nJuan\nCastelli\ny\nTalcahuano}"]
+
+nodo444 -> nodo487;
+nodo488[label="{EO: 488|cost: 90.0|A: Avanzar [nodoDestino=Juan Castelli y Defensa, CostoOperacion=0.0]|Posicion:\nJuan\nCastelli\ny\nTalcahuano}"]
+nodo506[label="{EO: 506|cost: 90.0|A: Avanzar [nodoDestino=Juan Castelli y Riobamba, CostoOperacion=0.0]|Posicion:\nJuan\nCastelli\ny\nDefensa}"]
+
+nodo488 -> nodo506;
+
+nodo444 -> nodo488;
+
+nodo293 -> nodo444;
+
+nodo172 -> nodo293;
+nodo294[label="{EO: 294|cost: 140.0|A: Comprar_producto [costoProducto=50.0, productoComprar=Leche, CostoOperacion=50.0]|Posicion:\nJuan\nCastelli\ny\nCngo.\nEchagüe}"]
+
+nodo172 -> nodo294;
+nodo295[label="{EO: 295|cost: 80.0|A: Avanzar [nodoDestino=Juan Castelli y Talcahuano, CostoOperacion=0.0]|Posicion:\nJuan\nCastelli\ny\nCngo.\nEchagüe}"]
+nodo328[label="{EO: 328|cost: 95.0|A: Comprar_producto [costoProducto=15.0, productoComprar=Huevos, CostoOperacion=15.0]|Posicion:\nJuan\nCastelli\ny\nTalcahuano}"]
+nodo547[label="{EO: 547|cost: 110.0|A: Comprar_producto [costoProducto=15.0, productoComprar=Huevos, CostoOperacion=15.0]|Posicion:\nJuan\nCastelli\ny\nTalcahuano}"]
+
+nodo328 -> nodo547;
+nodo548[label="{EO: 548|cost: 145.0|A: Comprar_producto [costoProducto=50.0, productoComprar=Leche, CostoOperacion=50.0]|Posicion:\nJuan\nCastelli\ny\nTalcahuano}"]
+
+nodo328 -> nodo548;
+nodo549[label="{EO: 549|cost: 95.0|A: Avanzar [nodoDestino=Juan Castelli y Defensa, CostoOperacion=0.0]|Posicion:\nJuan\nCastelli\ny\nTalcahuano}"]
+nodo574[label="{EO: 574|cost: 95.0|A: Avanzar [nodoDestino=Juan Castelli y Riobamba, CostoOperacion=0.0]|Posicion:\nJuan\nCastelli\ny\nDefensa}"]
+
+nodo549 -> nodo574;
+
+nodo328 -> nodo549;
+
+nodo295 -> nodo328;
+nodo329[label="{EO: 329|cost: 130.0|A: Comprar_producto [costoProducto=50.0, productoComprar=Leche, CostoOperacion=50.0]|Posicion:\nJuan\nCastelli\ny\nTalcahuano}"]
+
+nodo295 -> nodo329;
+nodo330[label="{EO: 330|cost: 80.0|A: Avanzar [nodoDestino=Juan Castelli y Defensa, CostoOperacion=0.0]|Posicion:\nJuan\nCastelli\ny\nTalcahuano}"]
+nodo346[label="{EO: 346|cost: 80.0|A: Avanzar [nodoDestino=Juan Castelli y Riobamba, CostoOperacion=0.0]|Posicion:\nJuan\nCastelli\ny\nDefensa}"]
+
+nodo330 -> nodo346;
+
+nodo295 -> nodo330;
+
+nodo172 -> nodo295;
+
+nodo23 -> nodo172;
+nodo173[label="{EO: 173|cost: 130.0|A: Comprar_producto [costoProducto=50.0, productoComprar=Leche, CostoOperacion=50.0]|Posicion:\nJuan\nCastelli\ny\nCngo.\nEchagüe}"]
+
+nodo23 -> nodo173;
+nodo174[label="{EO: 174|cost: 70.0|A: Avanzar [nodoDestino=Juan Castelli y Talcahuano, CostoOperacion=0.0]|Posicion:\nJuan\nCastelli\ny\nCngo.\nEchagüe}"]
+nodo203[label="{EO: 203|cost: 85.0|A: Comprar_producto [costoProducto=15.0, productoComprar=Huevos, CostoOperacion=15.0]|Posicion:\nJuan\nCastelli\ny\nTalcahuano}"]
+nodo366[label="{EO: 366|cost: 100.0|A: Comprar_producto [costoProducto=15.0, productoComprar=Huevos, CostoOperacion=15.0]|Posicion:\nJuan\nCastelli\ny\nTalcahuano}"]
+nodo618[label="{EO: 618|cost: 115.0|A: Comprar_producto [costoProducto=15.0, productoComprar=Huevos, CostoOperacion=15.0]|Posicion:\nJuan\nCastelli\ny\nTalcahuano}"]
+
+nodo366 -> nodo618;
+nodo619[label="{EO: 619|cost: 150.0|A: Comprar_producto [costoProducto=50.0, productoComprar=Leche, CostoOperacion=50.0]|Posicion:\nJuan\nCastelli\ny\nTalcahuano}"]
+
+nodo366 -> nodo619;
+nodo620[label="{EO: 620|cost: 100.0|A: Avanzar [nodoDestino=Juan Castelli y Defensa, CostoOperacion=0.0]|Posicion:\nJuan\nCastelli\ny\nTalcahuano}"]
+nodo691[label="{EO: 691|cost: 100.0|A: Avanzar [nodoDestino=Juan Castelli y Riobamba, CostoOperacion=0.0]|Posicion:\nJuan\nCastelli\ny\nDefensa}"]
+
+nodo620 -> nodo691;
+
+nodo366 -> nodo620;
+
+nodo203 -> nodo366;
+nodo367[label="{EO: 367|cost: 135.0|A: Comprar_producto [costoProducto=50.0, productoComprar=Leche, CostoOperacion=50.0]|Posicion:\nJuan\nCastelli\ny\nTalcahuano}"]
+
+nodo203 -> nodo367;
+nodo368[label="{EO: 368|cost: 85.0|A: Avanzar [nodoDestino=Juan Castelli y Defensa, CostoOperacion=0.0]|Posicion:\nJuan\nCastelli\ny\nTalcahuano}"]
+nodo386[label="{EO: 386|cost: 85.0|A: Avanzar [nodoDestino=Juan Castelli y Riobamba, CostoOperacion=0.0]|Posicion:\nJuan\nCastelli\ny\nDefensa}"]
+
+nodo368 -> nodo386;
+
+nodo203 -> nodo368;
+
+nodo174 -> nodo203;
+nodo204[label="{EO: 204|cost: 120.0|A: Comprar_producto [costoProducto=50.0, productoComprar=Leche, CostoOperacion=50.0]|Posicion:\nJuan\nCastelli\ny\nTalcahuano}"]
+
+nodo174 -> nodo204;
+nodo205[label="{EO: 205|cost: 70.0|A: Avanzar [nodoDestino=Juan Castelli y Defensa, CostoOperacion=0.0]|Posicion:\nJuan\nCastelli\ny\nTalcahuano}"]
+nodo222[label="{EO: 222|cost: 70.0|A: Avanzar [nodoDestino=Juan Castelli y Riobamba, CostoOperacion=0.0]|Posicion:\nJuan\nCastelli\ny\nDefensa}"]
+
+nodo205 -> nodo222;
+
+nodo174 -> nodo205;
+
+nodo23 -> nodo174;
+
+nodo12 -> nodo23;
+nodo24[label="{EO: 24|cost: 30.0|A: Comprar_producto [costoProducto=15.0, productoComprar=Huevos, CostoOperacion=15.0]|Posicion:\nJuan\nCastelli\ny\nCngo.\nEchagüe}"]
+nodo38[label="{EO: 38|cost: 80.0|A: Comprar_producto [costoProducto=50.0, productoComprar=Café, CostoOperacion=50.0]|Posicion:\nJuan\nCastelli\ny\nCngo.\nEchagüe}"]
+nodo266[label="{EO: 266|cost: 130.0|A: Comprar_producto [costoProducto=50.0, productoComprar=Café, CostoOperacion=50.0]|Posicion:\nJuan\nCastelli\ny\nCngo.\nEchagüe}"]
+
+nodo38 -> nodo266;
+nodo267[label="{EO: 267|cost: 90.0|A: Comprar_producto [costoProducto=15.0, productoComprar=Huevos, CostoOperacion=15.0]|Posicion:\nJuan\nCastelli\ny\nCngo.\nEchagüe}"]
+nodo433[label="{EO: 433|cost: 140.0|A: Comprar_producto [costoProducto=50.0, productoComprar=Café, CostoOperacion=50.0]|Posicion:\nJuan\nCastelli\ny\nCngo.\nEchagüe}"]
+
+nodo267 -> nodo433;
+nodo434[label="{EO: 434|cost: 100.0|A: Comprar_producto [costoProducto=15.0, productoComprar=Huevos, CostoOperacion=15.0]|Posicion:\nJuan\nCastelli\ny\nCngo.\nEchagüe}"]
+nodo645[label="{EO: 645|cost: 150.0|A: Comprar_producto [costoProducto=50.0, productoComprar=Café, CostoOperacion=50.0]|Posicion:\nJuan\nCastelli\ny\nCngo.\nEchagüe}"]
+
+nodo434 -> nodo645;
+nodo646[label="{EO: 646|cost: 110.0|A: Comprar_producto [costoProducto=15.0, productoComprar=Huevos, CostoOperacion=15.0]|Posicion:\nJuan\nCastelli\ny\nCngo.\nEchagüe}"]
+
+nodo434 -> nodo646;
+nodo647[label="{EO: 647|cost: 160.0|A: Comprar_producto [costoProducto=50.0, productoComprar=Leche, CostoOperacion=50.0]|Posicion:\nJuan\nCastelli\ny\nCngo.\nEchagüe}"]
+
+nodo434 -> nodo647;
+nodo648[label="{EO: 648|cost: 100.0|A: Avanzar [nodoDestino=Juan Castelli y Talcahuano, CostoOperacion=0.0]|Posicion:\nJuan\nCastelli\ny\nCngo.\nEchagüe}"]
+nodo705[label="{EO: 705|cost: 115.0|A: Comprar_producto [costoProducto=15.0, productoComprar=Huevos, CostoOperacion=15.0]|Posicion:\nJuan\nCastelli\ny\nTalcahuano}"]
+
+nodo648 -> nodo705;
+nodo706[label="{EO: 706|cost: 150.0|A: Comprar_producto [costoProducto=50.0, productoComprar=Leche, CostoOperacion=50.0]|Posicion:\nJuan\nCastelli\ny\nTalcahuano}"]
+
+nodo648 -> nodo706;
+nodo707[label="{EO: 707|cost: 100.0|A: Avanzar [nodoDestino=Juan Castelli y Defensa, CostoOperacion=0.0]|Posicion:\nJuan\nCastelli\ny\nTalcahuano}"]
+nodo732[label="{EO: 732|cost: 100.0|A: Avanzar [nodoDestino=Juan Castelli y Riobamba, CostoOperacion=0.0]|Posicion:\nJuan\nCastelli\ny\nDefensa}"]
+
+nodo707 -> nodo732;
+
+nodo648 -> nodo707;
+
+nodo434 -> nodo648;
+
+nodo267 -> nodo434;
+nodo435[label="{EO: 435|cost: 150.0|A: Comprar_producto [costoProducto=50.0, productoComprar=Leche, CostoOperacion=50.0]|Posicion:\nJuan\nCastelli\ny\nCngo.\nEchagüe}"]
+
+nodo267 -> nodo435;
+nodo436[label="{EO: 436|cost: 90.0|A: Avanzar [nodoDestino=Juan Castelli y Talcahuano, CostoOperacion=0.0]|Posicion:\nJuan\nCastelli\ny\nCngo.\nEchagüe}"]
+nodo480[label="{EO: 480|cost: 105.0|A: Comprar_producto [costoProducto=15.0, productoComprar=Huevos, CostoOperacion=15.0]|Posicion:\nJuan\nCastelli\ny\nTalcahuano}"]
+nodo784[label="{EO: 784|cost: 120.0|A: Comprar_producto [costoProducto=15.0, productoComprar=Huevos, CostoOperacion=15.0]|Posicion:\nJuan\nCastelli\ny\nTalcahuano}"]
+
+nodo480 -> nodo784;
+nodo785[label="{EO: 785|cost: 155.0|A: Comprar_producto [costoProducto=50.0, productoComprar=Leche, CostoOperacion=50.0]|Posicion:\nJuan\nCastelli\ny\nTalcahuano}"]
+
+nodo480 -> nodo785;
+nodo786[label="{EO: 786|cost: 105.0|A: Avanzar [nodoDestino=Juan Castelli y Defensa, CostoOperacion=0.0]|Posicion:\nJuan\nCastelli\ny\nTalcahuano}"]
+nodo820[label="{EO: 820|cost: 105.0|A: Avanzar [nodoDestino=Juan Castelli y Riobamba, CostoOperacion=0.0]|Posicion:\nJuan\nCastelli\ny\nDefensa}"]
+
+nodo786 -> nodo820;
+
+nodo480 -> nodo786;
+
+nodo436 -> nodo480;
+nodo481[label="{EO: 481|cost: 140.0|A: Comprar_producto [costoProducto=50.0, productoComprar=Leche, CostoOperacion=50.0]|Posicion:\nJuan\nCastelli\ny\nTalcahuano}"]
+
+nodo436 -> nodo481;
+nodo482[label="{EO: 482|cost: 90.0|A: Avanzar [nodoDestino=Juan Castelli y Defensa, CostoOperacion=0.0]|Posicion:\nJuan\nCastelli\ny\nTalcahuano}"]
+nodo504[label="{EO: 504|cost: 90.0|A: Avanzar [nodoDestino=Juan Castelli y Riobamba, CostoOperacion=0.0]|Posicion:\nJuan\nCastelli\ny\nDefensa}"]
+
+nodo482 -> nodo504;
+
+nodo436 -> nodo482;
+
+nodo267 -> nodo436;
+
+nodo38 -> nodo267;
+nodo268[label="{EO: 268|cost: 140.0|A: Comprar_producto [costoProducto=50.0, productoComprar=Leche, CostoOperacion=50.0]|Posicion:\nJuan\nCastelli\ny\nCngo.\nEchagüe}"]
+
+nodo38 -> nodo268;
+nodo269[label="{EO: 269|cost: 80.0|A: Avanzar [nodoDestino=Juan Castelli y Talcahuano, CostoOperacion=0.0]|Posicion:\nJuan\nCastelli\ny\nCngo.\nEchagüe}"]
+nodo316[label="{EO: 316|cost: 95.0|A: Comprar_producto [costoProducto=15.0, productoComprar=Huevos, CostoOperacion=15.0]|Posicion:\nJuan\nCastelli\ny\nTalcahuano}"]
+nodo541[label="{EO: 541|cost: 110.0|A: Comprar_producto [costoProducto=15.0, productoComprar=Huevos, CostoOperacion=15.0]|Posicion:\nJuan\nCastelli\ny\nTalcahuano}"]
+
+nodo316 -> nodo541;
+nodo542[label="{EO: 542|cost: 145.0|A: Comprar_producto [costoProducto=50.0, productoComprar=Leche, CostoOperacion=50.0]|Posicion:\nJuan\nCastelli\ny\nTalcahuano}"]
+
+nodo316 -> nodo542;
+nodo543[label="{EO: 543|cost: 95.0|A: Avanzar [nodoDestino=Juan Castelli y Defensa, CostoOperacion=0.0]|Posicion:\nJuan\nCastelli\ny\nTalcahuano}"]
+nodo572[label="{EO: 572|cost: 95.0|A: Avanzar [nodoDestino=Juan Castelli y Riobamba, CostoOperacion=0.0]|Posicion:\nJuan\nCastelli\ny\nDefensa}"]
+
+nodo543 -> nodo572;
+
+nodo316 -> nodo543;
+
+nodo269 -> nodo316;
+nodo317[label="{EO: 317|cost: 130.0|A: Comprar_producto [costoProducto=50.0, productoComprar=Leche, CostoOperacion=50.0]|Posicion:\nJuan\nCastelli\ny\nTalcahuano}"]
+
+nodo269 -> nodo317;
+nodo318[label="{EO: 318|cost: 80.0|A: Avanzar [nodoDestino=Juan Castelli y Defensa, CostoOperacion=0.0]|Posicion:\nJuan\nCastelli\ny\nTalcahuano}"]
+nodo344[label="{EO: 344|cost: 80.0|A: Avanzar [nodoDestino=Juan Castelli y Riobamba, CostoOperacion=0.0]|Posicion:\nJuan\nCastelli\ny\nDefensa}"]
+
+nodo318 -> nodo344;
+
+nodo269 -> nodo318;
+
+nodo38 -> nodo269;
+
+nodo24 -> nodo38;
+nodo39[label="{EO: 39|cost: 40.0|A: Comprar_producto [costoProducto=15.0, productoComprar=Huevos, CostoOperacion=15.0]|Posicion:\nJuan\nCastelli\ny\nCngo.\nEchagüe}"]
+nodo54[label="{EO: 54|cost: 90.0|A: Comprar_producto [costoProducto=50.0, productoComprar=Café, CostoOperacion=50.0]|Posicion:\nJuan\nCastelli\ny\nCngo.\nEchagüe}"]
+nodo398[label="{EO: 398|cost: 140.0|A: Comprar_producto [costoProducto=50.0, productoComprar=Café, CostoOperacion=50.0]|Posicion:\nJuan\nCastelli\ny\nCngo.\nEchagüe}"]
+
+nodo54 -> nodo398;
+nodo399[label="{EO: 399|cost: 100.0|A: Comprar_producto [costoProducto=15.0, productoComprar=Huevos, CostoOperacion=15.0]|Posicion:\nJuan\nCastelli\ny\nCngo.\nEchagüe}"]
+nodo637[label="{EO: 637|cost: 150.0|A: Comprar_producto [costoProducto=50.0, productoComprar=Café, CostoOperacion=50.0]|Posicion:\nJuan\nCastelli\ny\nCngo.\nEchagüe}"]
+
+nodo399 -> nodo637;
+nodo638[label="{EO: 638|cost: 110.0|A: Comprar_producto [costoProducto=15.0, productoComprar=Huevos, CostoOperacion=15.0]|Posicion:\nJuan\nCastelli\ny\nCngo.\nEchagüe}"]
+
+nodo399 -> nodo638;
+nodo639[label="{EO: 639|cost: 160.0|A: Comprar_producto [costoProducto=50.0, productoComprar=Leche, CostoOperacion=50.0]|Posicion:\nJuan\nCastelli\ny\nCngo.\nEchagüe}"]
+
+nodo399 -> nodo639;
+nodo640[label="{EO: 640|cost: 100.0|A: Avanzar [nodoDestino=Juan Castelli y Talcahuano, CostoOperacion=0.0]|Posicion:\nJuan\nCastelli\ny\nCngo.\nEchagüe}"]
+nodo699[label="{EO: 699|cost: 115.0|A: Comprar_producto [costoProducto=15.0, productoComprar=Huevos, CostoOperacion=15.0]|Posicion:\nJuan\nCastelli\ny\nTalcahuano}"]
+
+nodo640 -> nodo699;
+nodo700[label="{EO: 700|cost: 150.0|A: Comprar_producto [costoProducto=50.0, productoComprar=Leche, CostoOperacion=50.0]|Posicion:\nJuan\nCastelli\ny\nTalcahuano}"]
+
+nodo640 -> nodo700;
+nodo701[label="{EO: 701|cost: 100.0|A: Avanzar [nodoDestino=Juan Castelli y Defensa, CostoOperacion=0.0]|Posicion:\nJuan\nCastelli\ny\nTalcahuano}"]
+nodo730[label="{EO: 730|cost: 100.0|A: Avanzar [nodoDestino=Juan Castelli y Riobamba, CostoOperacion=0.0]|Posicion:\nJuan\nCastelli\ny\nDefensa}"]
+
+nodo701 -> nodo730;
+
+nodo640 -> nodo701;
+
+nodo399 -> nodo640;
+
+nodo54 -> nodo399;
+nodo400[label="{EO: 400|cost: 150.0|A: Comprar_producto [costoProducto=50.0, productoComprar=Leche, CostoOperacion=50.0]|Posicion:\nJuan\nCastelli\ny\nCngo.\nEchagüe}"]
+
+nodo54 -> nodo400;
+nodo401[label="{EO: 401|cost: 90.0|A: Avanzar [nodoDestino=Juan Castelli y Talcahuano, CostoOperacion=0.0]|Posicion:\nJuan\nCastelli\ny\nCngo.\nEchagüe}"]
+nodo465[label="{EO: 465|cost: 105.0|A: Comprar_producto [costoProducto=15.0, productoComprar=Huevos, CostoOperacion=15.0]|Posicion:\nJuan\nCastelli\ny\nTalcahuano}"]
+nodo778[label="{EO: 778|cost: 120.0|A: Comprar_producto [costoProducto=15.0, productoComprar=Huevos, CostoOperacion=15.0]|Posicion:\nJuan\nCastelli\ny\nTalcahuano}"]
+
+nodo465 -> nodo778;
+nodo779[label="{EO: 779|cost: 155.0|A: Comprar_producto [costoProducto=50.0, productoComprar=Leche, CostoOperacion=50.0]|Posicion:\nJuan\nCastelli\ny\nTalcahuano}"]
+
+nodo465 -> nodo779;
+nodo780[label="{EO: 780|cost: 105.0|A: Avanzar [nodoDestino=Juan Castelli y Defensa, CostoOperacion=0.0]|Posicion:\nJuan\nCastelli\ny\nTalcahuano}"]
+nodo818[label="{EO: 818|cost: 105.0|A: Avanzar [nodoDestino=Juan Castelli y Riobamba, CostoOperacion=0.0]|Posicion:\nJuan\nCastelli\ny\nDefensa}"]
+
+nodo780 -> nodo818;
+
+nodo465 -> nodo780;
+
+nodo401 -> nodo465;
+nodo466[label="{EO: 466|cost: 140.0|A: Comprar_producto [costoProducto=50.0, productoComprar=Leche, CostoOperacion=50.0]|Posicion:\nJuan\nCastelli\ny\nTalcahuano}"]
+
+nodo401 -> nodo466;
+nodo467[label="{EO: 467|cost: 90.0|A: Avanzar [nodoDestino=Juan Castelli y Defensa, CostoOperacion=0.0]|Posicion:\nJuan\nCastelli\ny\nTalcahuano}"]
+nodo502[label="{EO: 502|cost: 90.0|A: Avanzar [nodoDestino=Juan Castelli y Riobamba, CostoOperacion=0.0]|Posicion:\nJuan\nCastelli\ny\nDefensa}"]
+
+nodo467 -> nodo502;
+
+nodo401 -> nodo467;
+
+nodo54 -> nodo401;
+
+nodo39 -> nodo54;
+nodo55[label="{EO: 55|cost: 50.0|A: Comprar_producto [costoProducto=15.0, productoComprar=Huevos, CostoOperacion=15.0]|Posicion:\nJuan\nCastelli\ny\nCngo.\nEchagüe}"]
+nodo81[label="{EO: 81|cost: 100.0|A: Comprar_producto [costoProducto=50.0, productoComprar=Café, CostoOperacion=50.0]|Posicion:\nJuan\nCastelli\ny\nCngo.\nEchagüe}"]
+nodo593[label="{EO: 593|cost: 150.0|A: Comprar_producto [costoProducto=50.0, productoComprar=Café, CostoOperacion=50.0]|Posicion:\nJuan\nCastelli\ny\nCngo.\nEchagüe}"]
+
+nodo81 -> nodo593;
+nodo594[label="{EO: 594|cost: 110.0|A: Comprar_producto [costoProducto=15.0, productoComprar=Huevos, CostoOperacion=15.0]|Posicion:\nJuan\nCastelli\ny\nCngo.\nEchagüe}"]
+
+nodo81 -> nodo594;
+nodo595[label="{EO: 595|cost: 160.0|A: Comprar_producto [costoProducto=50.0, productoComprar=Leche, CostoOperacion=50.0]|Posicion:\nJuan\nCastelli\ny\nCngo.\nEchagüe}"]
+
+nodo81 -> nodo595;
+nodo596[label="{EO: 596|cost: 100.0|A: Avanzar [nodoDestino=Juan Castelli y Talcahuano, CostoOperacion=0.0]|Posicion:\nJuan\nCastelli\ny\nCngo.\nEchagüe}"]
+nodo681[label="{EO: 681|cost: 115.0|A: Comprar_producto [costoProducto=15.0, productoComprar=Huevos, CostoOperacion=15.0]|Posicion:\nJuan\nCastelli\ny\nTalcahuano}"]
+
+nodo596 -> nodo681;
+nodo682[label="{EO: 682|cost: 150.0|A: Comprar_producto [costoProducto=50.0, productoComprar=Leche, CostoOperacion=50.0]|Posicion:\nJuan\nCastelli\ny\nTalcahuano}"]
+
+nodo596 -> nodo682;
+nodo683[label="{EO: 683|cost: 100.0|A: Avanzar [nodoDestino=Juan Castelli y Defensa, CostoOperacion=0.0]|Posicion:\nJuan\nCastelli\ny\nTalcahuano}"]
+nodo728[label="{EO: 728|cost: 100.0|A: Avanzar [nodoDestino=Juan Castelli y Riobamba, CostoOperacion=0.0]|Posicion:\nJuan\nCastelli\ny\nDefensa}"]
+
+nodo683 -> nodo728;
+
+nodo596 -> nodo683;
+
+nodo81 -> nodo596;
+
+nodo55 -> nodo81;
+nodo82[label="{EO: 82|cost: 60.0|A: Comprar_producto [costoProducto=15.0, productoComprar=Huevos, CostoOperacion=15.0]|Posicion:\nJuan\nCastelli\ny\nCngo.\nEchagüe}"]
+nodo124[label="{EO: 124|cost: 110.0|A: Comprar_producto [costoProducto=50.0, productoComprar=Café, CostoOperacion=50.0]|Posicion:\nJuan\nCastelli\ny\nCngo.\nEchagüe}"]
+nodo856[label="{EO: 856|cost: 160.0|A: Comprar_producto [costoProducto=50.0, productoComprar=Café, CostoOperacion=50.0]|Posicion:\nJuan\nCastelli\ny\nCngo.\nEchagüe}"]
+
+nodo124 -> nodo856;
+nodo857[label="{EO: 857|cost: 120.0|A: Comprar_producto [costoProducto=15.0, productoComprar=Huevos, CostoOperacion=15.0]|Posicion:\nJuan\nCastelli\ny\nCngo.\nEchagüe}"]
+
+nodo124 -> nodo857;
+nodo858[label="{EO: 858|cost: 170.0|A: Comprar_producto [costoProducto=50.0, productoComprar=Leche, CostoOperacion=50.0]|Posicion:\nJuan\nCastelli\ny\nCngo.\nEchagüe}"]
+
+nodo124 -> nodo858;
+nodo859[label="{EO: 859|cost: 110.0|A: Avanzar [nodoDestino=Juan Castelli y Talcahuano, CostoOperacion=0.0]|Posicion:\nJuan\nCastelli\ny\nCngo.\nEchagüe}"]
+
+nodo124 -> nodo859;
+
+nodo82 -> nodo124;
+nodo125[label="{EO: 125|cost: 70.0|A: Comprar_producto [costoProducto=15.0, productoComprar=Huevos, CostoOperacion=15.0]|Posicion:\nJuan\nCastelli\ny\nCngo.\nEchagüe}"]
+nodo196[label="{EO: 196|cost: 120.0|A: Comprar_producto [costoProducto=50.0, productoComprar=Café, CostoOperacion=50.0]|Posicion:\nJuan\nCastelli\ny\nCngo.\nEchagüe}"]
+
+nodo125 -> nodo196;
+nodo197[label="{EO: 197|cost: 80.0|A: Comprar_producto [costoProducto=15.0, productoComprar=Huevos, CostoOperacion=15.0]|Posicion:\nJuan\nCastelli\ny\nCngo.\nEchagüe}"]
+nodo308[label="{EO: 308|cost: 130.0|A: Comprar_producto [costoProducto=50.0, productoComprar=Café, CostoOperacion=50.0]|Posicion:\nJuan\nCastelli\ny\nCngo.\nEchagüe}"]
+
+nodo197 -> nodo308;
+nodo309[label="{EO: 309|cost: 90.0|A: Comprar_producto [costoProducto=15.0, productoComprar=Huevos, CostoOperacion=15.0]|Posicion:\nJuan\nCastelli\ny\nCngo.\nEchagüe}"]
+nodo457[label="{EO: 457|cost: 140.0|A: Comprar_producto [costoProducto=50.0, productoComprar=Café, CostoOperacion=50.0]|Posicion:\nJuan\nCastelli\ny\nCngo.\nEchagüe}"]
+
+nodo309 -> nodo457;
+nodo458[label="{EO: 458|cost: 100.0|A: Comprar_producto [costoProducto=15.0, productoComprar=Huevos, CostoOperacion=15.0]|Posicion:\nJuan\nCastelli\ny\nCngo.\nEchagüe}"]
+nodo669[label="{EO: 669|cost: 150.0|A: Comprar_producto [costoProducto=50.0, productoComprar=Café, CostoOperacion=50.0]|Posicion:\nJuan\nCastelli\ny\nCngo.\nEchagüe}"]
+
+nodo458 -> nodo669;
+nodo670[label="{EO: 670|cost: 110.0|A: Comprar_producto [costoProducto=15.0, productoComprar=Huevos, CostoOperacion=15.0]|Posicion:\nJuan\nCastelli\ny\nCngo.\nEchagüe}"]
+
+nodo458 -> nodo670;
+nodo671[label="{EO: 671|cost: 160.0|A: Comprar_producto [costoProducto=50.0, productoComprar=Leche, CostoOperacion=50.0]|Posicion:\nJuan\nCastelli\ny\nCngo.\nEchagüe}"]
+
+nodo458 -> nodo671;
+nodo672[label="{EO: 672|cost: 100.0|A: Avanzar [nodoDestino=Juan Castelli y Talcahuano, CostoOperacion=0.0]|Posicion:\nJuan\nCastelli\ny\nCngo.\nEchagüe}"]
+nodo723[label="{EO: 723|cost: 115.0|A: Comprar_producto [costoProducto=15.0, productoComprar=Huevos, CostoOperacion=15.0]|Posicion:\nJuan\nCastelli\ny\nTalcahuano}"]
+
+nodo672 -> nodo723;
+nodo724[label="{EO: 724|cost: 150.0|A: Comprar_producto [costoProducto=50.0, productoComprar=Leche, CostoOperacion=50.0]|Posicion:\nJuan\nCastelli\ny\nTalcahuano}"]
+
+nodo672 -> nodo724;
+nodo725[label="{EO: 725|cost: 100.0|A: Avanzar [nodoDestino=Juan Castelli y Defensa, CostoOperacion=0.0]|Posicion:\nJuan\nCastelli\ny\nTalcahuano}"]
+nodo738[label="{EO: 738|cost: 100.0|A: Avanzar [nodoDestino=Juan Castelli y Riobamba, CostoOperacion=0.0]|Posicion:\nJuan\nCastelli\ny\nDefensa}"]
+
+nodo725 -> nodo738;
+
+nodo672 -> nodo725;
+
+nodo458 -> nodo672;
+
+nodo309 -> nodo458;
+nodo459[label="{EO: 459|cost: 150.0|A: Comprar_producto [costoProducto=50.0, productoComprar=Leche, CostoOperacion=50.0]|Posicion:\nJuan\nCastelli\ny\nCngo.\nEchagüe}"]
+
+nodo309 -> nodo459;
+nodo460[label="{EO: 460|cost: 90.0|A: Avanzar [nodoDestino=Juan Castelli y Talcahuano, CostoOperacion=0.0]|Posicion:\nJuan\nCastelli\ny\nCngo.\nEchagüe}"]
+nodo498[label="{EO: 498|cost: 105.0|A: Comprar_producto [costoProducto=15.0, productoComprar=Huevos, CostoOperacion=15.0]|Posicion:\nJuan\nCastelli\ny\nTalcahuano}"]
+nodo802[label="{EO: 802|cost: 120.0|A: Comprar_producto [costoProducto=15.0, productoComprar=Huevos, CostoOperacion=15.0]|Posicion:\nJuan\nCastelli\ny\nTalcahuano}"]
+
+nodo498 -> nodo802;
+nodo803[label="{EO: 803|cost: 155.0|A: Comprar_producto [costoProducto=50.0, productoComprar=Leche, CostoOperacion=50.0]|Posicion:\nJuan\nCastelli\ny\nTalcahuano}"]
+
+nodo498 -> nodo803;
+nodo804[label="{EO: 804|cost: 105.0|A: Avanzar [nodoDestino=Juan Castelli y Defensa, CostoOperacion=0.0]|Posicion:\nJuan\nCastelli\ny\nTalcahuano}"]
+nodo826[label="{EO: 826|cost: 105.0|A: Avanzar [nodoDestino=Juan Castelli y Riobamba, CostoOperacion=0.0]|Posicion:\nJuan\nCastelli\ny\nDefensa}"]
+
+nodo804 -> nodo826;
+
+nodo498 -> nodo804;
+
+nodo460 -> nodo498;
+nodo499[label="{EO: 499|cost: 140.0|A: Comprar_producto [costoProducto=50.0, productoComprar=Leche, CostoOperacion=50.0]|Posicion:\nJuan\nCastelli\ny\nTalcahuano}"]
+
+nodo460 -> nodo499;
+nodo500[label="{EO: 500|cost: 90.0|A: Avanzar [nodoDestino=Juan Castelli y Defensa, CostoOperacion=0.0]|Posicion:\nJuan\nCastelli\ny\nTalcahuano}"]
+nodo510[label="{EO: 510|cost: 90.0|A: Avanzar [nodoDestino=Juan Castelli y Riobamba, CostoOperacion=0.0]|Posicion:\nJuan\nCastelli\ny\nDefensa}"]
+
+nodo500 -> nodo510;
+
+nodo460 -> nodo500;
+
+nodo309 -> nodo460;
+
+nodo197 -> nodo309;
+nodo310[label="{EO: 310|cost: 140.0|A: Comprar_producto [costoProducto=50.0, productoComprar=Leche, CostoOperacion=50.0]|Posicion:\nJuan\nCastelli\ny\nCngo.\nEchagüe}"]
+
+nodo197 -> nodo310;
+nodo311[label="{EO: 311|cost: 80.0|A: Avanzar [nodoDestino=Juan Castelli y Talcahuano, CostoOperacion=0.0]|Posicion:\nJuan\nCastelli\ny\nCngo.\nEchagüe}"]
+nodo340[label="{EO: 340|cost: 95.0|A: Comprar_producto [costoProducto=15.0, productoComprar=Huevos, CostoOperacion=15.0]|Posicion:\nJuan\nCastelli\ny\nTalcahuano}"]
+nodo559[label="{EO: 559|cost: 110.0|A: Comprar_producto [costoProducto=15.0, productoComprar=Huevos, CostoOperacion=15.0]|Posicion:\nJuan\nCastelli\ny\nTalcahuano}"]
+
+nodo340 -> nodo559;
+nodo560[label="{EO: 560|cost: 145.0|A: Comprar_producto [costoProducto=50.0, productoComprar=Leche, CostoOperacion=50.0]|Posicion:\nJuan\nCastelli\ny\nTalcahuano}"]
+
+nodo340 -> nodo560;
+nodo561[label="{EO: 561|cost: 95.0|A: Avanzar [nodoDestino=Juan Castelli y Defensa, CostoOperacion=0.0]|Posicion:\nJuan\nCastelli\ny\nTalcahuano}"]
+nodo578[label="{EO: 578|cost: 95.0|A: Avanzar [nodoDestino=Juan Castelli y Riobamba, CostoOperacion=0.0]|Posicion:\nJuan\nCastelli\ny\nDefensa}"]
+
+nodo561 -> nodo578;
+
+nodo340 -> nodo561;
+
+nodo311 -> nodo340;
+nodo341[label="{EO: 341|cost: 130.0|A: Comprar_producto [costoProducto=50.0, productoComprar=Leche, CostoOperacion=50.0]|Posicion:\nJuan\nCastelli\ny\nTalcahuano}"]
+
+nodo311 -> nodo341;
+nodo342[label="{EO: 342|cost: 80.0|A: Avanzar [nodoDestino=Juan Castelli y Defensa, CostoOperacion=0.0]|Posicion:\nJuan\nCastelli\ny\nTalcahuano}"]
+nodo350[label="{EO: 350|cost: 80.0|A: Avanzar [nodoDestino=Juan Castelli y Riobamba, CostoOperacion=0.0]|Posicion:\nJuan\nCastelli\ny\nDefensa}"]
+
+nodo342 -> nodo350;
+
+nodo311 -> nodo342;
+
+nodo197 -> nodo311;
+
+nodo125 -> nodo197;
+nodo198[label="{EO: 198|cost: 130.0|A: Comprar_producto [costoProducto=50.0, productoComprar=Leche, CostoOperacion=50.0]|Posicion:\nJuan\nCastelli\ny\nCngo.\nEchagüe}"]
+
+nodo125 -> nodo198;
+nodo199[label="{EO: 199|cost: 70.0|A: Avanzar [nodoDestino=Juan Castelli y Talcahuano, CostoOperacion=0.0]|Posicion:\nJuan\nCastelli\ny\nCngo.\nEchagüe}"]
+nodo218[label="{EO: 218|cost: 85.0|A: Comprar_producto [costoProducto=15.0, productoComprar=Huevos, CostoOperacion=15.0]|Posicion:\nJuan\nCastelli\ny\nTalcahuano}"]
+nodo378[label="{EO: 378|cost: 100.0|A: Comprar_producto [costoProducto=15.0, productoComprar=Huevos, CostoOperacion=15.0]|Posicion:\nJuan\nCastelli\ny\nTalcahuano}"]
+nodo630[label="{EO: 630|cost: 115.0|A: Comprar_producto [costoProducto=15.0, productoComprar=Huevos, CostoOperacion=15.0]|Posicion:\nJuan\nCastelli\ny\nTalcahuano}"]
+
+nodo378 -> nodo630;
+nodo631[label="{EO: 631|cost: 150.0|A: Comprar_producto [costoProducto=50.0, productoComprar=Leche, CostoOperacion=50.0]|Posicion:\nJuan\nCastelli\ny\nTalcahuano}"]
+
+nodo378 -> nodo631;
+nodo632[label="{EO: 632|cost: 100.0|A: Avanzar [nodoDestino=Juan Castelli y Defensa, CostoOperacion=0.0]|Posicion:\nJuan\nCastelli\ny\nTalcahuano}"]
+nodo695[label="{EO: 695|cost: 100.0|A: Avanzar [nodoDestino=Juan Castelli y Riobamba, CostoOperacion=0.0]|Posicion:\nJuan\nCastelli\ny\nDefensa}"]
+
+nodo632 -> nodo695;
+
+nodo378 -> nodo632;
+
+nodo218 -> nodo378;
+nodo379[label="{EO: 379|cost: 135.0|A: Comprar_producto [costoProducto=50.0, productoComprar=Leche, CostoOperacion=50.0]|Posicion:\nJuan\nCastelli\ny\nTalcahuano}"]
+
+nodo218 -> nodo379;
+nodo380[label="{EO: 380|cost: 85.0|A: Avanzar [nodoDestino=Juan Castelli y Defensa, CostoOperacion=0.0]|Posicion:\nJuan\nCastelli\ny\nTalcahuano}"]
+nodo390[label="{EO: 390|cost: 85.0|A: Avanzar [nodoDestino=Juan Castelli y Riobamba, CostoOperacion=0.0]|Posicion:\nJuan\nCastelli\ny\nDefensa}"]
+
+nodo380 -> nodo390;
+
+nodo218 -> nodo380;
+
+nodo199 -> nodo218;
+nodo219[label="{EO: 219|cost: 120.0|A: Comprar_producto [costoProducto=50.0, productoComprar=Leche, CostoOperacion=50.0]|Posicion:\nJuan\nCastelli\ny\nTalcahuano}"]
+
+nodo199 -> nodo219;
+nodo220[label="{EO: 220|cost: 70.0|A: Avanzar [nodoDestino=Juan Castelli y Defensa, CostoOperacion=0.0]|Posicion:\nJuan\nCastelli\ny\nTalcahuano}"]
+nodo226[label="{EO: 226|cost: 70.0|A: Avanzar [nodoDestino=Juan Castelli y Riobamba, CostoOperacion=0.0]|Posicion:\nJuan\nCastelli\ny\nDefensa}"]
+
+nodo220 -> nodo226;
+
+nodo199 -> nodo220;
+
+nodo125 -> nodo199;
+
+nodo82 -> nodo125;
+nodo126[label="{EO: 126|cost: 120.0|A: Comprar_producto [costoProducto=50.0, productoComprar=Leche, CostoOperacion=50.0]|Posicion:\nJuan\nCastelli\ny\nCngo.\nEchagüe}"]
+
+nodo82 -> nodo126;
+nodo127[label="{EO: 127|cost: 60.0|A: Avanzar [nodoDestino=Juan Castelli y Talcahuano, CostoOperacion=0.0]|Posicion:\nJuan\nCastelli\ny\nCngo.\nEchagüe}"]
+nodo140[label="{EO: 140|cost: 75.0|A: Comprar_producto [costoProducto=15.0, productoComprar=Huevos, CostoOperacion=15.0]|Posicion:\nJuan\nCastelli\ny\nTalcahuano}"]
+nodo248[label="{EO: 248|cost: 90.0|A: Comprar_producto [costoProducto=15.0, productoComprar=Huevos, CostoOperacion=15.0]|Posicion:\nJuan\nCastelli\ny\nTalcahuano}"]
+nodo426[label="{EO: 426|cost: 105.0|A: Comprar_producto [costoProducto=15.0, productoComprar=Huevos, CostoOperacion=15.0]|Posicion:\nJuan\nCastelli\ny\nTalcahuano}"]
+nodo772[label="{EO: 772|cost: 120.0|A: Comprar_producto [costoProducto=15.0, productoComprar=Huevos, CostoOperacion=15.0]|Posicion:\nJuan\nCastelli\ny\nTalcahuano}"]
+
+nodo426 -> nodo772;
+nodo773[label="{EO: 773|cost: 155.0|A: Comprar_producto [costoProducto=50.0, productoComprar=Leche, CostoOperacion=50.0]|Posicion:\nJuan\nCastelli\ny\nTalcahuano}"]
+
+nodo426 -> nodo773;
+nodo774[label="{EO: 774|cost: 105.0|A: Avanzar [nodoDestino=Juan Castelli y Defensa, CostoOperacion=0.0]|Posicion:\nJuan\nCastelli\ny\nTalcahuano}"]
+nodo816[label="{EO: 816|cost: 105.0|A: Avanzar [nodoDestino=Juan Castelli y Riobamba, CostoOperacion=0.0]|Posicion:\nJuan\nCastelli\ny\nDefensa}"]
+
+nodo774 -> nodo816;
+
+nodo426 -> nodo774;
+
+nodo248 -> nodo426;
+nodo427[label="{EO: 427|cost: 140.0|A: Comprar_producto [costoProducto=50.0, productoComprar=Leche, CostoOperacion=50.0]|Posicion:\nJuan\nCastelli\ny\nTalcahuano}"]
+
+nodo248 -> nodo427;
+nodo428[label="{EO: 428|cost: 90.0|A: Avanzar [nodoDestino=Juan Castelli y Defensa, CostoOperacion=0.0]|Posicion:\nJuan\nCastelli\ny\nTalcahuano}"]
+nodo476[label="{EO: 476|cost: 90.0|A: Avanzar [nodoDestino=Juan Castelli y Riobamba, CostoOperacion=0.0]|Posicion:\nJuan\nCastelli\ny\nDefensa}"]
+
+nodo428 -> nodo476;
+
+nodo248 -> nodo428;
+
+nodo140 -> nodo248;
+nodo249[label="{EO: 249|cost: 125.0|A: Comprar_producto [costoProducto=50.0, productoComprar=Leche, CostoOperacion=50.0]|Posicion:\nJuan\nCastelli\ny\nTalcahuano}"]
+
+nodo140 -> nodo249;
+nodo250[label="{EO: 250|cost: 75.0|A: Avanzar [nodoDestino=Juan Castelli y Defensa, CostoOperacion=0.0]|Posicion:\nJuan\nCastelli\ny\nTalcahuano}"]
+nodo258[label="{EO: 258|cost: 75.0|A: Avanzar [nodoDestino=Juan Castelli y Riobamba, CostoOperacion=0.0]|Posicion:\nJuan\nCastelli\ny\nDefensa}"]
+
+nodo250 -> nodo258;
+
+nodo140 -> nodo250;
+
+nodo127 -> nodo140;
+nodo141[label="{EO: 141|cost: 110.0|A: Comprar_producto [costoProducto=50.0, productoComprar=Leche, CostoOperacion=50.0]|Posicion:\nJuan\nCastelli\ny\nTalcahuano}"]
+
+nodo127 -> nodo141;
+nodo142[label="{EO: 142|cost: 60.0|A: Avanzar [nodoDestino=Juan Castelli y Defensa, CostoOperacion=0.0]|Posicion:\nJuan\nCastelli\ny\nTalcahuano}"]
+nodo146[label="{EO: 146|cost: 60.0|A: Avanzar [nodoDestino=Juan Castelli y Riobamba, CostoOperacion=0.0]|Posicion:\nJuan\nCastelli\ny\nDefensa}"]
+
+nodo142 -> nodo146;
+
+nodo127 -> nodo142;
+
+nodo82 -> nodo127;
+
+nodo55 -> nodo82;
+nodo83[label="{EO: 83|cost: 110.0|A: Comprar_producto [costoProducto=50.0, productoComprar=Leche, CostoOperacion=50.0]|Posicion:\nJuan\nCastelli\ny\nCngo.\nEchagüe}"]
+nodo831[label="{EO: 831|cost: 160.0|A: Comprar_producto [costoProducto=50.0, productoComprar=Café, CostoOperacion=50.0]|Posicion:\nJuan\nCastelli\ny\nCngo.\nEchagüe}"]
+
+nodo83 -> nodo831;
+nodo832[label="{EO: 832|cost: 120.0|A: Comprar_producto [costoProducto=15.0, productoComprar=Huevos, CostoOperacion=15.0]|Posicion:\nJuan\nCastelli\ny\nCngo.\nEchagüe}"]
+
+nodo83 -> nodo832;
+nodo833[label="{EO: 833|cost: 170.0|A: Comprar_producto [costoProducto=50.0, productoComprar=Leche, CostoOperacion=50.0]|Posicion:\nJuan\nCastelli\ny\nCngo.\nEchagüe}"]
+
+nodo83 -> nodo833;
+nodo834[label="{EO: 834|cost: 110.0|A: Avanzar [nodoDestino=Juan Castelli y Talcahuano, CostoOperacion=0.0]|Posicion:\nJuan\nCastelli\ny\nCngo.\nEchagüe}"]
+
+nodo83 -> nodo834;
+
+nodo55 -> nodo83;
+nodo84[label="{EO: 84|cost: 50.0|A: Avanzar [nodoDestino=Juan Castelli y Talcahuano, CostoOperacion=0.0]|Posicion:\nJuan\nCastelli\ny\nCngo.\nEchagüe}"]
+nodo90[label="{EO: 90|cost: 65.0|A: Comprar_producto [costoProducto=15.0, productoComprar=Huevos, CostoOperacion=15.0]|Posicion:\nJuan\nCastelli\ny\nTalcahuano}"]
+nodo159[label="{EO: 159|cost: 80.0|A: Comprar_producto [costoProducto=15.0, productoComprar=Huevos, CostoOperacion=15.0]|Posicion:\nJuan\nCastelli\ny\nTalcahuano}"]
+nodo285[label="{EO: 285|cost: 95.0|A: Comprar_producto [costoProducto=15.0, productoComprar=Huevos, CostoOperacion=15.0]|Posicion:\nJuan\nCastelli\ny\nTalcahuano}"]
+nodo535[label="{EO: 535|cost: 110.0|A: Comprar_producto [costoProducto=15.0, productoComprar=Huevos, CostoOperacion=15.0]|Posicion:\nJuan\nCastelli\ny\nTalcahuano}"]
+
+nodo285 -> nodo535;
+nodo536[label="{EO: 536|cost: 145.0|A: Comprar_producto [costoProducto=50.0, productoComprar=Leche, CostoOperacion=50.0]|Posicion:\nJuan\nCastelli\ny\nTalcahuano}"]
+
+nodo285 -> nodo536;
+nodo537[label="{EO: 537|cost: 95.0|A: Avanzar [nodoDestino=Juan Castelli y Defensa, CostoOperacion=0.0]|Posicion:\nJuan\nCastelli\ny\nTalcahuano}"]
+nodo570[label="{EO: 570|cost: 95.0|A: Avanzar [nodoDestino=Juan Castelli y Riobamba, CostoOperacion=0.0]|Posicion:\nJuan\nCastelli\ny\nDefensa}"]
+
+nodo537 -> nodo570;
+
+nodo285 -> nodo537;
+
+nodo159 -> nodo285;
+nodo286[label="{EO: 286|cost: 130.0|A: Comprar_producto [costoProducto=50.0, productoComprar=Leche, CostoOperacion=50.0]|Posicion:\nJuan\nCastelli\ny\nTalcahuano}"]
+
+nodo159 -> nodo286;
+nodo287[label="{EO: 287|cost: 80.0|A: Avanzar [nodoDestino=Juan Castelli y Defensa, CostoOperacion=0.0]|Posicion:\nJuan\nCastelli\ny\nTalcahuano}"]
+nodo324[label="{EO: 324|cost: 80.0|A: Avanzar [nodoDestino=Juan Castelli y Riobamba, CostoOperacion=0.0]|Posicion:\nJuan\nCastelli\ny\nDefensa}"]
+
+nodo287 -> nodo324;
+
+nodo159 -> nodo287;
+
+nodo90 -> nodo159;
+nodo160[label="{EO: 160|cost: 115.0|A: Comprar_producto [costoProducto=50.0, productoComprar=Leche, CostoOperacion=50.0]|Posicion:\nJuan\nCastelli\ny\nTalcahuano}"]
+
+nodo90 -> nodo160;
+nodo161[label="{EO: 161|cost: 65.0|A: Avanzar [nodoDestino=Juan Castelli y Defensa, CostoOperacion=0.0]|Posicion:\nJuan\nCastelli\ny\nTalcahuano}"]
+nodo166[label="{EO: 166|cost: 65.0|A: Avanzar [nodoDestino=Juan Castelli y Riobamba, CostoOperacion=0.0]|Posicion:\nJuan\nCastelli\ny\nDefensa}"]
+
+nodo161 -> nodo166;
+
+nodo90 -> nodo161;
+
+nodo84 -> nodo90;
+nodo91[label="{EO: 91|cost: 100.0|A: Comprar_producto [costoProducto=50.0, productoComprar=Leche, CostoOperacion=50.0]|Posicion:\nJuan\nCastelli\ny\nTalcahuano}"]
+nodo600[label="{EO: 600|cost: 115.0|A: Comprar_producto [costoProducto=15.0, productoComprar=Huevos, CostoOperacion=15.0]|Posicion:\nJuan\nCastelli\ny\nTalcahuano}"]
+
+nodo91 -> nodo600;
+nodo601[label="{EO: 601|cost: 150.0|A: Comprar_producto [costoProducto=50.0, productoComprar=Leche, CostoOperacion=50.0]|Posicion:\nJuan\nCastelli\ny\nTalcahuano}"]
+
+nodo91 -> nodo601;
+nodo602[label="{EO: 602|cost: 100.0|A: Avanzar [nodoDestino=Juan Castelli y Defensa, CostoOperacion=0.0]|Posicion:\nJuan\nCastelli\ny\nTalcahuano}"]
+nodo685[label="{EO: 685|cost: 100.0|A: Avanzar [nodoDestino=Juan Castelli y Riobamba, CostoOperacion=0.0]|Posicion:\nJuan\nCastelli\ny\nDefensa}"]
+
+nodo602 -> nodo685;
+
+nodo91 -> nodo602;
+
+nodo84 -> nodo91;
+nodo92[label="{EO: 92|cost: 50.0|A: Avanzar [nodoDestino=Juan Castelli y Defensa, CostoOperacion=0.0]|Posicion:\nJuan\nCastelli\ny\nTalcahuano}"]
+nodo94[label="{EO: 94|cost: 50.0|A: Avanzar [nodoDestino=Juan Castelli y Riobamba, CostoOperacion=0.0]|Posicion:\nJuan\nCastelli\ny\nDefensa}"]
+
+nodo92 -> nodo94;
+
+nodo84 -> nodo92;
+
+nodo55 -> nodo84;
+
+nodo39 -> nodo55;
+nodo56[label="{EO: 56|cost: 100.0|A: Comprar_producto [costoProducto=50.0, productoComprar=Leche, CostoOperacion=50.0]|Posicion:\nJuan\nCastelli\ny\nCngo.\nEchagüe}"]
+nodo579[label="{EO: 579|cost: 150.0|A: Comprar_producto [costoProducto=50.0, productoComprar=Café, CostoOperacion=50.0]|Posicion:\nJuan\nCastelli\ny\nCngo.\nEchagüe}"]
+
+nodo56 -> nodo579;
+nodo580[label="{EO: 580|cost: 110.0|A: Comprar_producto [costoProducto=15.0, productoComprar=Huevos, CostoOperacion=15.0]|Posicion:\nJuan\nCastelli\ny\nCngo.\nEchagüe}"]
+
+nodo56 -> nodo580;
+nodo581[label="{EO: 581|cost: 160.0|A: Comprar_producto [costoProducto=50.0, productoComprar=Leche, CostoOperacion=50.0]|Posicion:\nJuan\nCastelli\ny\nCngo.\nEchagüe}"]
+
+nodo56 -> nodo581;
+nodo582[label="{EO: 582|cost: 100.0|A: Avanzar [nodoDestino=Juan Castelli y Talcahuano, CostoOperacion=0.0]|Posicion:\nJuan\nCastelli\ny\nCngo.\nEchagüe}"]
+nodo673[label="{EO: 673|cost: 115.0|A: Comprar_producto [costoProducto=15.0, productoComprar=Huevos, CostoOperacion=15.0]|Posicion:\nJuan\nCastelli\ny\nTalcahuano}"]
+
+nodo582 -> nodo673;
+nodo674[label="{EO: 674|cost: 150.0|A: Comprar_producto [costoProducto=50.0, productoComprar=Leche, CostoOperacion=50.0]|Posicion:\nJuan\nCastelli\ny\nTalcahuano}"]
+
+nodo582 -> nodo674;
+nodo675[label="{EO: 675|cost: 100.0|A: Avanzar [nodoDestino=Juan Castelli y Defensa, CostoOperacion=0.0]|Posicion:\nJuan\nCastelli\ny\nTalcahuano}"]
+nodo726[label="{EO: 726|cost: 100.0|A: Avanzar [nodoDestino=Juan Castelli y Riobamba, CostoOperacion=0.0]|Posicion:\nJuan\nCastelli\ny\nDefensa}"]
+
+nodo675 -> nodo726;
+
+nodo582 -> nodo675;
+
+nodo56 -> nodo582;
+
+nodo39 -> nodo56;
+nodo57[label="{EO: 57|cost: 40.0|A: Avanzar [nodoDestino=Juan Castelli y Talcahuano, CostoOperacion=0.0]|Posicion:\nJuan\nCastelli\ny\nCngo.\nEchagüe}"]
+nodo59[label="{EO: 59|cost: 55.0|A: Comprar_producto [costoProducto=15.0, productoComprar=Huevos, CostoOperacion=15.0]|Posicion:\nJuan\nCastelli\ny\nTalcahuano}"]
+nodo98[label="{EO: 98|cost: 70.0|A: Comprar_producto [costoProducto=15.0, productoComprar=Huevos, CostoOperacion=15.0]|Posicion:\nJuan\nCastelli\ny\nTalcahuano}"]
+nodo181[label="{EO: 181|cost: 85.0|A: Comprar_producto [costoProducto=15.0, productoComprar=Huevos, CostoOperacion=15.0]|Posicion:\nJuan\nCastelli\ny\nTalcahuano}"]
+nodo360[label="{EO: 360|cost: 100.0|A: Comprar_producto [costoProducto=15.0, productoComprar=Huevos, CostoOperacion=15.0]|Posicion:\nJuan\nCastelli\ny\nTalcahuano}"]
+nodo612[label="{EO: 612|cost: 115.0|A: Comprar_producto [costoProducto=15.0, productoComprar=Huevos, CostoOperacion=15.0]|Posicion:\nJuan\nCastelli\ny\nTalcahuano}"]
+
+nodo360 -> nodo612;
+nodo613[label="{EO: 613|cost: 150.0|A: Comprar_producto [costoProducto=50.0, productoComprar=Leche, CostoOperacion=50.0]|Posicion:\nJuan\nCastelli\ny\nTalcahuano}"]
+
+nodo360 -> nodo613;
+nodo614[label="{EO: 614|cost: 100.0|A: Avanzar [nodoDestino=Juan Castelli y Defensa, CostoOperacion=0.0]|Posicion:\nJuan\nCastelli\ny\nTalcahuano}"]
+nodo689[label="{EO: 689|cost: 100.0|A: Avanzar [nodoDestino=Juan Castelli y Riobamba, CostoOperacion=0.0]|Posicion:\nJuan\nCastelli\ny\nDefensa}"]
+
+nodo614 -> nodo689;
+
+nodo360 -> nodo614;
+
+nodo181 -> nodo360;
+nodo361[label="{EO: 361|cost: 135.0|A: Comprar_producto [costoProducto=50.0, productoComprar=Leche, CostoOperacion=50.0]|Posicion:\nJuan\nCastelli\ny\nTalcahuano}"]
+
+nodo181 -> nodo361;
+nodo362[label="{EO: 362|cost: 85.0|A: Avanzar [nodoDestino=Juan Castelli y Defensa, CostoOperacion=0.0]|Posicion:\nJuan\nCastelli\ny\nTalcahuano}"]
+nodo384[label="{EO: 384|cost: 85.0|A: Avanzar [nodoDestino=Juan Castelli y Riobamba, CostoOperacion=0.0]|Posicion:\nJuan\nCastelli\ny\nDefensa}"]
+
+nodo362 -> nodo384;
+
+nodo181 -> nodo362;
+
+nodo98 -> nodo181;
+nodo182[label="{EO: 182|cost: 120.0|A: Comprar_producto [costoProducto=50.0, productoComprar=Leche, CostoOperacion=50.0]|Posicion:\nJuan\nCastelli\ny\nTalcahuano}"]
+
+nodo98 -> nodo182;
+nodo183[label="{EO: 183|cost: 70.0|A: Avanzar [nodoDestino=Juan Castelli y Defensa, CostoOperacion=0.0]|Posicion:\nJuan\nCastelli\ny\nTalcahuano}"]
+nodo208[label="{EO: 208|cost: 70.0|A: Avanzar [nodoDestino=Juan Castelli y Riobamba, CostoOperacion=0.0]|Posicion:\nJuan\nCastelli\ny\nDefensa}"]
+
+nodo183 -> nodo208;
+
+nodo98 -> nodo183;
+
+nodo59 -> nodo98;
+nodo99[label="{EO: 99|cost: 105.0|A: Comprar_producto [costoProducto=50.0, productoComprar=Leche, CostoOperacion=50.0]|Posicion:\nJuan\nCastelli\ny\nTalcahuano}"]
+nodo742[label="{EO: 742|cost: 120.0|A: Comprar_producto [costoProducto=15.0, productoComprar=Huevos, CostoOperacion=15.0]|Posicion:\nJuan\nCastelli\ny\nTalcahuano}"]
+
+nodo99 -> nodo742;
+nodo743[label="{EO: 743|cost: 155.0|A: Comprar_producto [costoProducto=50.0, productoComprar=Leche, CostoOperacion=50.0]|Posicion:\nJuan\nCastelli\ny\nTalcahuano}"]
+
+nodo99 -> nodo743;
+nodo744[label="{EO: 744|cost: 105.0|A: Avanzar [nodoDestino=Juan Castelli y Defensa, CostoOperacion=0.0]|Posicion:\nJuan\nCastelli\ny\nTalcahuano}"]
+nodo806[label="{EO: 806|cost: 105.0|A: Avanzar [nodoDestino=Juan Castelli y Riobamba, CostoOperacion=0.0]|Posicion:\nJuan\nCastelli\ny\nDefensa}"]
+
+nodo744 -> nodo806;
+
+nodo99 -> nodo744;
+
+nodo59 -> nodo99;
+nodo100[label="{EO: 100|cost: 55.0|A: Avanzar [nodoDestino=Juan Castelli y Defensa, CostoOperacion=0.0]|Posicion:\nJuan\nCastelli\ny\nTalcahuano}"]
+nodo102[label="{EO: 102|cost: 55.0|A: Avanzar [nodoDestino=Juan Castelli y Riobamba, CostoOperacion=0.0]|Posicion:\nJuan\nCastelli\ny\nDefensa}"]
+
+nodo100 -> nodo102;
+
+nodo59 -> nodo100;
+
+nodo57 -> nodo59;
+nodo60[label="{EO: 60|cost: 90.0|A: Comprar_producto [costoProducto=50.0, productoComprar=Leche, CostoOperacion=50.0]|Posicion:\nJuan\nCastelli\ny\nTalcahuano}"]
+nodo402[label="{EO: 402|cost: 105.0|A: Comprar_producto [costoProducto=15.0, productoComprar=Huevos, CostoOperacion=15.0]|Posicion:\nJuan\nCastelli\ny\nTalcahuano}"]
+nodo748[label="{EO: 748|cost: 120.0|A: Comprar_producto [costoProducto=15.0, productoComprar=Huevos, CostoOperacion=15.0]|Posicion:\nJuan\nCastelli\ny\nTalcahuano}"]
+
+nodo402 -> nodo748;
+nodo749[label="{EO: 749|cost: 155.0|A: Comprar_producto [costoProducto=50.0, productoComprar=Leche, CostoOperacion=50.0]|Posicion:\nJuan\nCastelli\ny\nTalcahuano}"]
+
+nodo402 -> nodo749;
+nodo750[label="{EO: 750|cost: 105.0|A: Avanzar [nodoDestino=Juan Castelli y Defensa, CostoOperacion=0.0]|Posicion:\nJuan\nCastelli\ny\nTalcahuano}"]
+nodo808[label="{EO: 808|cost: 105.0|A: Avanzar [nodoDestino=Juan Castelli y Riobamba, CostoOperacion=0.0]|Posicion:\nJuan\nCastelli\ny\nDefensa}"]
+
+nodo750 -> nodo808;
+
+nodo402 -> nodo750;
+
+nodo60 -> nodo402;
+nodo403[label="{EO: 403|cost: 140.0|A: Comprar_producto [costoProducto=50.0, productoComprar=Leche, CostoOperacion=50.0]|Posicion:\nJuan\nCastelli\ny\nTalcahuano}"]
+
+nodo60 -> nodo403;
+nodo404[label="{EO: 404|cost: 90.0|A: Avanzar [nodoDestino=Juan Castelli y Defensa, CostoOperacion=0.0]|Posicion:\nJuan\nCastelli\ny\nTalcahuano}"]
+nodo468[label="{EO: 468|cost: 90.0|A: Avanzar [nodoDestino=Juan Castelli y Riobamba, CostoOperacion=0.0]|Posicion:\nJuan\nCastelli\ny\nDefensa}"]
+
+nodo404 -> nodo468;
+
+nodo60 -> nodo404;
+
+nodo57 -> nodo60;
+nodo61[label="{EO: 61|cost: 40.0|A: Avanzar [nodoDestino=Juan Castelli y Defensa, CostoOperacion=0.0]|Posicion:\nJuan\nCastelli\ny\nTalcahuano}"]
+nodo62[label="{EO: 62|cost: 40.0|A: Avanzar [nodoDestino=Juan Castelli y Riobamba, CostoOperacion=0.0]|Posicion:\nJuan\nCastelli\ny\nDefensa}"]
+
+nodo61 -> nodo62;
+
+nodo57 -> nodo61;
+
+nodo39 -> nodo57;
+
+nodo24 -> nodo39;
+nodo40[label="{EO: 40|cost: 90.0|A: Comprar_producto [costoProducto=50.0, productoComprar=Leche, CostoOperacion=50.0]|Posicion:\nJuan\nCastelli\ny\nCngo.\nEchagüe}"]
+nodo391[label="{EO: 391|cost: 140.0|A: Comprar_producto [costoProducto=50.0, productoComprar=Café, CostoOperacion=50.0]|Posicion:\nJuan\nCastelli\ny\nCngo.\nEchagüe}"]
+
+nodo40 -> nodo391;
+nodo392[label="{EO: 392|cost: 100.0|A: Comprar_producto [costoProducto=15.0, productoComprar=Huevos, CostoOperacion=15.0]|Posicion:\nJuan\nCastelli\ny\nCngo.\nEchagüe}"]
+nodo633[label="{EO: 633|cost: 150.0|A: Comprar_producto [costoProducto=50.0, productoComprar=Café, CostoOperacion=50.0]|Posicion:\nJuan\nCastelli\ny\nCngo.\nEchagüe}"]
+
+nodo392 -> nodo633;
+nodo634[label="{EO: 634|cost: 110.0|A: Comprar_producto [costoProducto=15.0, productoComprar=Huevos, CostoOperacion=15.0]|Posicion:\nJuan\nCastelli\ny\nCngo.\nEchagüe}"]
+
+nodo392 -> nodo634;
+nodo635[label="{EO: 635|cost: 160.0|A: Comprar_producto [costoProducto=50.0, productoComprar=Leche, CostoOperacion=50.0]|Posicion:\nJuan\nCastelli\ny\nCngo.\nEchagüe}"]
+
+nodo392 -> nodo635;
+nodo636[label="{EO: 636|cost: 100.0|A: Avanzar [nodoDestino=Juan Castelli y Talcahuano, CostoOperacion=0.0]|Posicion:\nJuan\nCastelli\ny\nCngo.\nEchagüe}"]
+nodo696[label="{EO: 696|cost: 115.0|A: Comprar_producto [costoProducto=15.0, productoComprar=Huevos, CostoOperacion=15.0]|Posicion:\nJuan\nCastelli\ny\nTalcahuano}"]
+
+nodo636 -> nodo696;
+nodo697[label="{EO: 697|cost: 150.0|A: Comprar_producto [costoProducto=50.0, productoComprar=Leche, CostoOperacion=50.0]|Posicion:\nJuan\nCastelli\ny\nTalcahuano}"]
+
+nodo636 -> nodo697;
+nodo698[label="{EO: 698|cost: 100.0|A: Avanzar [nodoDestino=Juan Castelli y Defensa, CostoOperacion=0.0]|Posicion:\nJuan\nCastelli\ny\nTalcahuano}"]
+nodo729[label="{EO: 729|cost: 100.0|A: Avanzar [nodoDestino=Juan Castelli y Riobamba, CostoOperacion=0.0]|Posicion:\nJuan\nCastelli\ny\nDefensa}"]
+
+nodo698 -> nodo729;
+
+nodo636 -> nodo698;
+
+nodo392 -> nodo636;
+
+nodo40 -> nodo392;
+nodo393[label="{EO: 393|cost: 150.0|A: Comprar_producto [costoProducto=50.0, productoComprar=Leche, CostoOperacion=50.0]|Posicion:\nJuan\nCastelli\ny\nCngo.\nEchagüe}"]
+
+nodo40 -> nodo393;
+nodo394[label="{EO: 394|cost: 90.0|A: Avanzar [nodoDestino=Juan Castelli y Talcahuano, CostoOperacion=0.0]|Posicion:\nJuan\nCastelli\ny\nCngo.\nEchagüe}"]
+nodo461[label="{EO: 461|cost: 105.0|A: Comprar_producto [costoProducto=15.0, productoComprar=Huevos, CostoOperacion=15.0]|Posicion:\nJuan\nCastelli\ny\nTalcahuano}"]
+nodo775[label="{EO: 775|cost: 120.0|A: Comprar_producto [costoProducto=15.0, productoComprar=Huevos, CostoOperacion=15.0]|Posicion:\nJuan\nCastelli\ny\nTalcahuano}"]
+
+nodo461 -> nodo775;
+nodo776[label="{EO: 776|cost: 155.0|A: Comprar_producto [costoProducto=50.0, productoComprar=Leche, CostoOperacion=50.0]|Posicion:\nJuan\nCastelli\ny\nTalcahuano}"]
+
+nodo461 -> nodo776;
+nodo777[label="{EO: 777|cost: 105.0|A: Avanzar [nodoDestino=Juan Castelli y Defensa, CostoOperacion=0.0]|Posicion:\nJuan\nCastelli\ny\nTalcahuano}"]
+nodo817[label="{EO: 817|cost: 105.0|A: Avanzar [nodoDestino=Juan Castelli y Riobamba, CostoOperacion=0.0]|Posicion:\nJuan\nCastelli\ny\nDefensa}"]
+
+nodo777 -> nodo817;
+
+nodo461 -> nodo777;
+
+nodo394 -> nodo461;
+nodo462[label="{EO: 462|cost: 140.0|A: Comprar_producto [costoProducto=50.0, productoComprar=Leche, CostoOperacion=50.0]|Posicion:\nJuan\nCastelli\ny\nTalcahuano}"]
+
+nodo394 -> nodo462;
+nodo463[label="{EO: 463|cost: 90.0|A: Avanzar [nodoDestino=Juan Castelli y Defensa, CostoOperacion=0.0]|Posicion:\nJuan\nCastelli\ny\nTalcahuano}"]
+nodo501[label="{EO: 501|cost: 90.0|A: Avanzar [nodoDestino=Juan Castelli y Riobamba, CostoOperacion=0.0]|Posicion:\nJuan\nCastelli\ny\nDefensa}"]
+
+nodo463 -> nodo501;
+
+nodo394 -> nodo463;
+
+nodo40 -> nodo394;
+
+nodo24 -> nodo40;
+nodo41[label="{EO: 41|cost: 30.0|A: Avanzar [nodoDestino=Juan Castelli y Talcahuano, CostoOperacion=0.0]|Posicion:\nJuan\nCastelli\ny\nCngo.\nEchagüe}"]
+nodo43[label="{EO: 43|cost: 45.0|A: Comprar_producto [costoProducto=15.0, productoComprar=Huevos, CostoOperacion=15.0]|Posicion:\nJuan\nCastelli\ny\nTalcahuano}"]
+nodo66[label="{EO: 66|cost: 60.0|A: Comprar_producto [costoProducto=15.0, productoComprar=Huevos, CostoOperacion=15.0]|Posicion:\nJuan\nCastelli\ny\nTalcahuano}"]
+nodo117[label="{EO: 117|cost: 75.0|A: Comprar_producto [costoProducto=15.0, productoComprar=Huevos, CostoOperacion=15.0]|Posicion:\nJuan\nCastelli\ny\nTalcahuano}"]
+nodo236[label="{EO: 236|cost: 90.0|A: Comprar_producto [costoProducto=15.0, productoComprar=Huevos, CostoOperacion=15.0]|Posicion:\nJuan\nCastelli\ny\nTalcahuano}"]
+nodo414[label="{EO: 414|cost: 105.0|A: Comprar_producto [costoProducto=15.0, productoComprar=Huevos, CostoOperacion=15.0]|Posicion:\nJuan\nCastelli\ny\nTalcahuano}"]
+nodo760[label="{EO: 760|cost: 120.0|A: Comprar_producto [costoProducto=15.0, productoComprar=Huevos, CostoOperacion=15.0]|Posicion:\nJuan\nCastelli\ny\nTalcahuano}"]
+
+nodo414 -> nodo760;
+nodo761[label="{EO: 761|cost: 155.0|A: Comprar_producto [costoProducto=50.0, productoComprar=Leche, CostoOperacion=50.0]|Posicion:\nJuan\nCastelli\ny\nTalcahuano}"]
+
+nodo414 -> nodo761;
+nodo762[label="{EO: 762|cost: 105.0|A: Avanzar [nodoDestino=Juan Castelli y Defensa, CostoOperacion=0.0]|Posicion:\nJuan\nCastelli\ny\nTalcahuano}"]
+nodo812[label="{EO: 812|cost: 105.0|A: Avanzar [nodoDestino=Juan Castelli y Riobamba, CostoOperacion=0.0]|Posicion:\nJuan\nCastelli\ny\nDefensa}"]
+
+nodo762 -> nodo812;
+
+nodo414 -> nodo762;
+
+nodo236 -> nodo414;
+nodo415[label="{EO: 415|cost: 140.0|A: Comprar_producto [costoProducto=50.0, productoComprar=Leche, CostoOperacion=50.0]|Posicion:\nJuan\nCastelli\ny\nTalcahuano}"]
+
+nodo236 -> nodo415;
+nodo416[label="{EO: 416|cost: 90.0|A: Avanzar [nodoDestino=Juan Castelli y Defensa, CostoOperacion=0.0]|Posicion:\nJuan\nCastelli\ny\nTalcahuano}"]
+nodo472[label="{EO: 472|cost: 90.0|A: Avanzar [nodoDestino=Juan Castelli y Riobamba, CostoOperacion=0.0]|Posicion:\nJuan\nCastelli\ny\nDefensa}"]
+
+nodo416 -> nodo472;
+
+nodo236 -> nodo416;
+
+nodo117 -> nodo236;
+nodo237[label="{EO: 237|cost: 125.0|A: Comprar_producto [costoProducto=50.0, productoComprar=Leche, CostoOperacion=50.0]|Posicion:\nJuan\nCastelli\ny\nTalcahuano}"]
+
+nodo117 -> nodo237;
+nodo238[label="{EO: 238|cost: 75.0|A: Avanzar [nodoDestino=Juan Castelli y Defensa, CostoOperacion=0.0]|Posicion:\nJuan\nCastelli\ny\nTalcahuano}"]
+nodo254[label="{EO: 254|cost: 75.0|A: Avanzar [nodoDestino=Juan Castelli y Riobamba, CostoOperacion=0.0]|Posicion:\nJuan\nCastelli\ny\nDefensa}"]
+
+nodo238 -> nodo254;
+
+nodo117 -> nodo238;
+
+nodo66 -> nodo117;
+nodo118[label="{EO: 118|cost: 110.0|A: Comprar_producto [costoProducto=50.0, productoComprar=Leche, CostoOperacion=50.0]|Posicion:\nJuan\nCastelli\ny\nTalcahuano}"]
+nodo849[label="{EO: 849|cost: 125.0|A: Comprar_producto [costoProducto=15.0, productoComprar=Huevos, CostoOperacion=15.0]|Posicion:\nJuan\nCastelli\ny\nTalcahuano}"]
+
+nodo118 -> nodo849;
+nodo850[label="{EO: 850|cost: 160.0|A: Comprar_producto [costoProducto=50.0, productoComprar=Leche, CostoOperacion=50.0]|Posicion:\nJuan\nCastelli\ny\nTalcahuano}"]
+
+nodo118 -> nodo850;
+nodo851[label="{EO: 851|cost: 110.0|A: Avanzar [nodoDestino=Juan Castelli y Defensa, CostoOperacion=0.0]|Posicion:\nJuan\nCastelli\ny\nTalcahuano}"]
+
+nodo118 -> nodo851;
+
+nodo66 -> nodo118;
+nodo119[label="{EO: 119|cost: 60.0|A: Avanzar [nodoDestino=Juan Castelli y Defensa, CostoOperacion=0.0]|Posicion:\nJuan\nCastelli\ny\nTalcahuano}"]
+nodo136[label="{EO: 136|cost: 60.0|A: Avanzar [nodoDestino=Juan Castelli y Riobamba, CostoOperacion=0.0]|Posicion:\nJuan\nCastelli\ny\nDefensa}"]
+
+nodo119 -> nodo136;
+
+nodo66 -> nodo119;
+
+nodo43 -> nodo66;
+nodo67[label="{EO: 67|cost: 95.0|A: Comprar_producto [costoProducto=50.0, productoComprar=Leche, CostoOperacion=50.0]|Posicion:\nJuan\nCastelli\ny\nTalcahuano}"]
+nodo514[label="{EO: 514|cost: 110.0|A: Comprar_producto [costoProducto=15.0, productoComprar=Huevos, CostoOperacion=15.0]|Posicion:\nJuan\nCastelli\ny\nTalcahuano}"]
+
+nodo67 -> nodo514;
+nodo515[label="{EO: 515|cost: 145.0|A: Comprar_producto [costoProducto=50.0, productoComprar=Leche, CostoOperacion=50.0]|Posicion:\nJuan\nCastelli\ny\nTalcahuano}"]
+
+nodo67 -> nodo515;
+nodo516[label="{EO: 516|cost: 95.0|A: Avanzar [nodoDestino=Juan Castelli y Defensa, CostoOperacion=0.0]|Posicion:\nJuan\nCastelli\ny\nTalcahuano}"]
+nodo563[label="{EO: 563|cost: 95.0|A: Avanzar [nodoDestino=Juan Castelli y Riobamba, CostoOperacion=0.0]|Posicion:\nJuan\nCastelli\ny\nDefensa}"]
+
+nodo516 -> nodo563;
+
+nodo67 -> nodo516;
+
+nodo43 -> nodo67;
+nodo68[label="{EO: 68|cost: 45.0|A: Avanzar [nodoDestino=Juan Castelli y Defensa, CostoOperacion=0.0]|Posicion:\nJuan\nCastelli\ny\nTalcahuano}"]
+nodo70[label="{EO: 70|cost: 45.0|A: Avanzar [nodoDestino=Juan Castelli y Riobamba, CostoOperacion=0.0]|Posicion:\nJuan\nCastelli\ny\nDefensa}"]
+
+nodo68 -> nodo70;
+
+nodo43 -> nodo68;
+
+nodo41 -> nodo43;
+nodo44[label="{EO: 44|cost: 80.0|A: Comprar_producto [costoProducto=50.0, productoComprar=Leche, CostoOperacion=50.0]|Posicion:\nJuan\nCastelli\ny\nTalcahuano}"]
+nodo270[label="{EO: 270|cost: 95.0|A: Comprar_producto [costoProducto=15.0, productoComprar=Huevos, CostoOperacion=15.0]|Posicion:\nJuan\nCastelli\ny\nTalcahuano}"]
+nodo520[label="{EO: 520|cost: 110.0|A: Comprar_producto [costoProducto=15.0, productoComprar=Huevos, CostoOperacion=15.0]|Posicion:\nJuan\nCastelli\ny\nTalcahuano}"]
+
+nodo270 -> nodo520;
+nodo521[label="{EO: 521|cost: 145.0|A: Comprar_producto [costoProducto=50.0, productoComprar=Leche, CostoOperacion=50.0]|Posicion:\nJuan\nCastelli\ny\nTalcahuano}"]
+
+nodo270 -> nodo521;
+nodo522[label="{EO: 522|cost: 95.0|A: Avanzar [nodoDestino=Juan Castelli y Defensa, CostoOperacion=0.0]|Posicion:\nJuan\nCastelli\ny\nTalcahuano}"]
+nodo565[label="{EO: 565|cost: 95.0|A: Avanzar [nodoDestino=Juan Castelli y Riobamba, CostoOperacion=0.0]|Posicion:\nJuan\nCastelli\ny\nDefensa}"]
+
+nodo522 -> nodo565;
+
+nodo270 -> nodo522;
+
+nodo44 -> nodo270;
+nodo271[label="{EO: 271|cost: 130.0|A: Comprar_producto [costoProducto=50.0, productoComprar=Leche, CostoOperacion=50.0]|Posicion:\nJuan\nCastelli\ny\nTalcahuano}"]
+
+nodo44 -> nodo271;
+nodo272[label="{EO: 272|cost: 80.0|A: Avanzar [nodoDestino=Juan Castelli y Defensa, CostoOperacion=0.0]|Posicion:\nJuan\nCastelli\ny\nTalcahuano}"]
+nodo319[label="{EO: 319|cost: 80.0|A: Avanzar [nodoDestino=Juan Castelli y Riobamba, CostoOperacion=0.0]|Posicion:\nJuan\nCastelli\ny\nDefensa}"]
+
+nodo272 -> nodo319;
+
+nodo44 -> nodo272;
+
+nodo41 -> nodo44;
+nodo45[label="{EO: 45|cost: 30.0|A: Avanzar [nodoDestino=Juan Castelli y Defensa, CostoOperacion=0.0]|Posicion:\nJuan\nCastelli\ny\nTalcahuano}"]
+nodo46[label="{EO: 46|cost: 30.0|A: Avanzar [nodoDestino=Juan Castelli y Riobamba, CostoOperacion=0.0]|Posicion:\nJuan\nCastelli\ny\nDefensa}"]
+
+nodo45 -> nodo46;
+
+nodo41 -> nodo45;
+
+nodo24 -> nodo41;
+
+nodo12 -> nodo24;
+nodo25[label="{EO: 25|cost: 80.0|A: Comprar_producto [costoProducto=50.0, productoComprar=Leche, CostoOperacion=50.0]|Posicion:\nJuan\nCastelli\ny\nCngo.\nEchagüe}"]
+nodo259[label="{EO: 259|cost: 130.0|A: Comprar_producto [costoProducto=50.0, productoComprar=Café, CostoOperacion=50.0]|Posicion:\nJuan\nCastelli\ny\nCngo.\nEchagüe}"]
+
+nodo25 -> nodo259;
+nodo260[label="{EO: 260|cost: 90.0|A: Comprar_producto [costoProducto=15.0, productoComprar=Huevos, CostoOperacion=15.0]|Posicion:\nJuan\nCastelli\ny\nCngo.\nEchagüe}"]
+nodo429[label="{EO: 429|cost: 140.0|A: Comprar_producto [costoProducto=50.0, productoComprar=Café, CostoOperacion=50.0]|Posicion:\nJuan\nCastelli\ny\nCngo.\nEchagüe}"]
+
+nodo260 -> nodo429;
+nodo430[label="{EO: 430|cost: 100.0|A: Comprar_producto [costoProducto=15.0, productoComprar=Huevos, CostoOperacion=15.0]|Posicion:\nJuan\nCastelli\ny\nCngo.\nEchagüe}"]
+nodo641[label="{EO: 641|cost: 150.0|A: Comprar_producto [costoProducto=50.0, productoComprar=Café, CostoOperacion=50.0]|Posicion:\nJuan\nCastelli\ny\nCngo.\nEchagüe}"]
+
+nodo430 -> nodo641;
+nodo642[label="{EO: 642|cost: 110.0|A: Comprar_producto [costoProducto=15.0, productoComprar=Huevos, CostoOperacion=15.0]|Posicion:\nJuan\nCastelli\ny\nCngo.\nEchagüe}"]
+
+nodo430 -> nodo642;
+nodo643[label="{EO: 643|cost: 160.0|A: Comprar_producto [costoProducto=50.0, productoComprar=Leche, CostoOperacion=50.0]|Posicion:\nJuan\nCastelli\ny\nCngo.\nEchagüe}"]
+
+nodo430 -> nodo643;
+nodo644[label="{EO: 644|cost: 100.0|A: Avanzar [nodoDestino=Juan Castelli y Talcahuano, CostoOperacion=0.0]|Posicion:\nJuan\nCastelli\ny\nCngo.\nEchagüe}"]
+nodo702[label="{EO: 702|cost: 115.0|A: Comprar_producto [costoProducto=15.0, productoComprar=Huevos, CostoOperacion=15.0]|Posicion:\nJuan\nCastelli\ny\nTalcahuano}"]
+
+nodo644 -> nodo702;
+nodo703[label="{EO: 703|cost: 150.0|A: Comprar_producto [costoProducto=50.0, productoComprar=Leche, CostoOperacion=50.0]|Posicion:\nJuan\nCastelli\ny\nTalcahuano}"]
+
+nodo644 -> nodo703;
+nodo704[label="{EO: 704|cost: 100.0|A: Avanzar [nodoDestino=Juan Castelli y Defensa, CostoOperacion=0.0]|Posicion:\nJuan\nCastelli\ny\nTalcahuano}"]
+nodo731[label="{EO: 731|cost: 100.0|A: Avanzar [nodoDestino=Juan Castelli y Riobamba, CostoOperacion=0.0]|Posicion:\nJuan\nCastelli\ny\nDefensa}"]
+
+nodo704 -> nodo731;
+
+nodo644 -> nodo704;
+
+nodo430 -> nodo644;
+
+nodo260 -> nodo430;
+nodo431[label="{EO: 431|cost: 150.0|A: Comprar_producto [costoProducto=50.0, productoComprar=Leche, CostoOperacion=50.0]|Posicion:\nJuan\nCastelli\ny\nCngo.\nEchagüe}"]
+
+nodo260 -> nodo431;
+nodo432[label="{EO: 432|cost: 90.0|A: Avanzar [nodoDestino=Juan Castelli y Talcahuano, CostoOperacion=0.0]|Posicion:\nJuan\nCastelli\ny\nCngo.\nEchagüe}"]
+nodo477[label="{EO: 477|cost: 105.0|A: Comprar_producto [costoProducto=15.0, productoComprar=Huevos, CostoOperacion=15.0]|Posicion:\nJuan\nCastelli\ny\nTalcahuano}"]
+nodo781[label="{EO: 781|cost: 120.0|A: Comprar_producto [costoProducto=15.0, productoComprar=Huevos, CostoOperacion=15.0]|Posicion:\nJuan\nCastelli\ny\nTalcahuano}"]
+
+nodo477 -> nodo781;
+nodo782[label="{EO: 782|cost: 155.0|A: Comprar_producto [costoProducto=50.0, productoComprar=Leche, CostoOperacion=50.0]|Posicion:\nJuan\nCastelli\ny\nTalcahuano}"]
+
+nodo477 -> nodo782;
+nodo783[label="{EO: 783|cost: 105.0|A: Avanzar [nodoDestino=Juan Castelli y Defensa, CostoOperacion=0.0]|Posicion:\nJuan\nCastelli\ny\nTalcahuano}"]
+nodo819[label="{EO: 819|cost: 105.0|A: Avanzar [nodoDestino=Juan Castelli y Riobamba, CostoOperacion=0.0]|Posicion:\nJuan\nCastelli\ny\nDefensa}"]
+
+nodo783 -> nodo819;
+
+nodo477 -> nodo783;
+
+nodo432 -> nodo477;
+nodo478[label="{EO: 478|cost: 140.0|A: Comprar_producto [costoProducto=50.0, productoComprar=Leche, CostoOperacion=50.0]|Posicion:\nJuan\nCastelli\ny\nTalcahuano}"]
+
+nodo432 -> nodo478;
+nodo479[label="{EO: 479|cost: 90.0|A: Avanzar [nodoDestino=Juan Castelli y Defensa, CostoOperacion=0.0]|Posicion:\nJuan\nCastelli\ny\nTalcahuano}"]
+nodo503[label="{EO: 503|cost: 90.0|A: Avanzar [nodoDestino=Juan Castelli y Riobamba, CostoOperacion=0.0]|Posicion:\nJuan\nCastelli\ny\nDefensa}"]
+
+nodo479 -> nodo503;
+
+nodo432 -> nodo479;
+
+nodo260 -> nodo432;
+
+nodo25 -> nodo260;
+nodo261[label="{EO: 261|cost: 140.0|A: Comprar_producto [costoProducto=50.0, productoComprar=Leche, CostoOperacion=50.0]|Posicion:\nJuan\nCastelli\ny\nCngo.\nEchagüe}"]
+
+nodo25 -> nodo261;
+nodo262[label="{EO: 262|cost: 80.0|A: Avanzar [nodoDestino=Juan Castelli y Talcahuano, CostoOperacion=0.0]|Posicion:\nJuan\nCastelli\ny\nCngo.\nEchagüe}"]
+nodo312[label="{EO: 312|cost: 95.0|A: Comprar_producto [costoProducto=15.0, productoComprar=Huevos, CostoOperacion=15.0]|Posicion:\nJuan\nCastelli\ny\nTalcahuano}"]
+nodo538[label="{EO: 538|cost: 110.0|A: Comprar_producto [costoProducto=15.0, productoComprar=Huevos, CostoOperacion=15.0]|Posicion:\nJuan\nCastelli\ny\nTalcahuano}"]
+
+nodo312 -> nodo538;
+nodo539[label="{EO: 539|cost: 145.0|A: Comprar_producto [costoProducto=50.0, productoComprar=Leche, CostoOperacion=50.0]|Posicion:\nJuan\nCastelli\ny\nTalcahuano}"]
+
+nodo312 -> nodo539;
+nodo540[label="{EO: 540|cost: 95.0|A: Avanzar [nodoDestino=Juan Castelli y Defensa, CostoOperacion=0.0]|Posicion:\nJuan\nCastelli\ny\nTalcahuano}"]
+nodo571[label="{EO: 571|cost: 95.0|A: Avanzar [nodoDestino=Juan Castelli y Riobamba, CostoOperacion=0.0]|Posicion:\nJuan\nCastelli\ny\nDefensa}"]
+
+nodo540 -> nodo571;
+
+nodo312 -> nodo540;
+
+nodo262 -> nodo312;
+nodo313[label="{EO: 313|cost: 130.0|A: Comprar_producto [costoProducto=50.0, productoComprar=Leche, CostoOperacion=50.0]|Posicion:\nJuan\nCastelli\ny\nTalcahuano}"]
+
+nodo262 -> nodo313;
+nodo314[label="{EO: 314|cost: 80.0|A: Avanzar [nodoDestino=Juan Castelli y Defensa, CostoOperacion=0.0]|Posicion:\nJuan\nCastelli\ny\nTalcahuano}"]
+nodo343[label="{EO: 343|cost: 80.0|A: Avanzar [nodoDestino=Juan Castelli y Riobamba, CostoOperacion=0.0]|Posicion:\nJuan\nCastelli\ny\nDefensa}"]
+
+nodo314 -> nodo343;
+
+nodo262 -> nodo314;
+
+nodo25 -> nodo262;
+
+nodo12 -> nodo25;
+nodo26[label="{EO: 26|cost: 20.0|A: Avanzar [nodoDestino=Juan Castelli y Talcahuano, CostoOperacion=0.0]|Posicion:\nJuan\nCastelli\ny\nCngo.\nEchagüe}"]
+nodo27[label="{EO: 27|cost: 35.0|A: Comprar_producto [costoProducto=15.0, productoComprar=Huevos, CostoOperacion=15.0]|Posicion:\nJuan\nCastelli\ny\nTalcahuano}"]
+nodo47[label="{EO: 47|cost: 50.0|A: Comprar_producto [costoProducto=15.0, productoComprar=Huevos, CostoOperacion=15.0]|Posicion:\nJuan\nCastelli\ny\nTalcahuano}"]
+nodo78[label="{EO: 78|cost: 65.0|A: Comprar_producto [costoProducto=15.0, productoComprar=Huevos, CostoOperacion=15.0]|Posicion:\nJuan\nCastelli\ny\nTalcahuano}"]
+nodo153[label="{EO: 153|cost: 80.0|A: Comprar_producto [costoProducto=15.0, productoComprar=Huevos, CostoOperacion=15.0]|Posicion:\nJuan\nCastelli\ny\nTalcahuano}"]
+nodo279[label="{EO: 279|cost: 95.0|A: Comprar_producto [costoProducto=15.0, productoComprar=Huevos, CostoOperacion=15.0]|Posicion:\nJuan\nCastelli\ny\nTalcahuano}"]
+nodo529[label="{EO: 529|cost: 110.0|A: Comprar_producto [costoProducto=15.0, productoComprar=Huevos, CostoOperacion=15.0]|Posicion:\nJuan\nCastelli\ny\nTalcahuano}"]
+
+nodo279 -> nodo529;
+nodo530[label="{EO: 530|cost: 145.0|A: Comprar_producto [costoProducto=50.0, productoComprar=Leche, CostoOperacion=50.0]|Posicion:\nJuan\nCastelli\ny\nTalcahuano}"]
+
+nodo279 -> nodo530;
+nodo531[label="{EO: 531|cost: 95.0|A: Avanzar [nodoDestino=Juan Castelli y Defensa, CostoOperacion=0.0]|Posicion:\nJuan\nCastelli\ny\nTalcahuano}"]
+nodo568[label="{EO: 568|cost: 95.0|A: Avanzar [nodoDestino=Juan Castelli y Riobamba, CostoOperacion=0.0]|Posicion:\nJuan\nCastelli\ny\nDefensa}"]
+
+nodo531 -> nodo568;
+
+nodo279 -> nodo531;
+
+nodo153 -> nodo279;
+nodo280[label="{EO: 280|cost: 130.0|A: Comprar_producto [costoProducto=50.0, productoComprar=Leche, CostoOperacion=50.0]|Posicion:\nJuan\nCastelli\ny\nTalcahuano}"]
+
+nodo153 -> nodo280;
+nodo281[label="{EO: 281|cost: 80.0|A: Avanzar [nodoDestino=Juan Castelli y Defensa, CostoOperacion=0.0]|Posicion:\nJuan\nCastelli\ny\nTalcahuano}"]
+nodo322[label="{EO: 322|cost: 80.0|A: Avanzar [nodoDestino=Juan Castelli y Riobamba, CostoOperacion=0.0]|Posicion:\nJuan\nCastelli\ny\nDefensa}"]
+
+nodo281 -> nodo322;
+
+nodo153 -> nodo281;
+
+nodo78 -> nodo153;
+nodo154[label="{EO: 154|cost: 115.0|A: Comprar_producto [costoProducto=50.0, productoComprar=Leche, CostoOperacion=50.0]|Posicion:\nJuan\nCastelli\ny\nTalcahuano}"]
+
+nodo78 -> nodo154;
+nodo155[label="{EO: 155|cost: 65.0|A: Avanzar [nodoDestino=Juan Castelli y Defensa, CostoOperacion=0.0]|Posicion:\nJuan\nCastelli\ny\nTalcahuano}"]
+nodo164[label="{EO: 164|cost: 65.0|A: Avanzar [nodoDestino=Juan Castelli y Riobamba, CostoOperacion=0.0]|Posicion:\nJuan\nCastelli\ny\nDefensa}"]
+
+nodo155 -> nodo164;
+
+nodo78 -> nodo155;
+
+nodo47 -> nodo78;
+nodo79[label="{EO: 79|cost: 100.0|A: Comprar_producto [costoProducto=50.0, productoComprar=Leche, CostoOperacion=50.0]|Posicion:\nJuan\nCastelli\ny\nTalcahuano}"]
+nodo590[label="{EO: 590|cost: 115.0|A: Comprar_producto [costoProducto=15.0, productoComprar=Huevos, CostoOperacion=15.0]|Posicion:\nJuan\nCastelli\ny\nTalcahuano}"]
+
+nodo79 -> nodo590;
+nodo591[label="{EO: 591|cost: 150.0|A: Comprar_producto [costoProducto=50.0, productoComprar=Leche, CostoOperacion=50.0]|Posicion:\nJuan\nCastelli\ny\nTalcahuano}"]
+
+nodo79 -> nodo591;
+nodo592[label="{EO: 592|cost: 100.0|A: Avanzar [nodoDestino=Juan Castelli y Defensa, CostoOperacion=0.0]|Posicion:\nJuan\nCastelli\ny\nTalcahuano}"]
+nodo680[label="{EO: 680|cost: 100.0|A: Avanzar [nodoDestino=Juan Castelli y Riobamba, CostoOperacion=0.0]|Posicion:\nJuan\nCastelli\ny\nDefensa}"]
+
+nodo592 -> nodo680;
+
+nodo79 -> nodo592;
+
+nodo47 -> nodo79;
+nodo80[label="{EO: 80|cost: 50.0|A: Avanzar [nodoDestino=Juan Castelli y Defensa, CostoOperacion=0.0]|Posicion:\nJuan\nCastelli\ny\nTalcahuano}"]
+nodo89[label="{EO: 89|cost: 50.0|A: Avanzar [nodoDestino=Juan Castelli y Riobamba, CostoOperacion=0.0]|Posicion:\nJuan\nCastelli\ny\nDefensa}"]
+
+nodo80 -> nodo89;
+
+nodo47 -> nodo80;
+
+nodo27 -> nodo47;
+nodo48[label="{EO: 48|cost: 85.0|A: Comprar_producto [costoProducto=50.0, productoComprar=Leche, CostoOperacion=50.0]|Posicion:\nJuan\nCastelli\ny\nTalcahuano}"]
+nodo351[label="{EO: 351|cost: 100.0|A: Comprar_producto [costoProducto=15.0, productoComprar=Huevos, CostoOperacion=15.0]|Posicion:\nJuan\nCastelli\ny\nTalcahuano}"]
+nodo603[label="{EO: 603|cost: 115.0|A: Comprar_producto [costoProducto=15.0, productoComprar=Huevos, CostoOperacion=15.0]|Posicion:\nJuan\nCastelli\ny\nTalcahuano}"]
+
+nodo351 -> nodo603;
+nodo604[label="{EO: 604|cost: 150.0|A: Comprar_producto [costoProducto=50.0, productoComprar=Leche, CostoOperacion=50.0]|Posicion:\nJuan\nCastelli\ny\nTalcahuano}"]
+
+nodo351 -> nodo604;
+nodo605[label="{EO: 605|cost: 100.0|A: Avanzar [nodoDestino=Juan Castelli y Defensa, CostoOperacion=0.0]|Posicion:\nJuan\nCastelli\ny\nTalcahuano}"]
+nodo686[label="{EO: 686|cost: 100.0|A: Avanzar [nodoDestino=Juan Castelli y Riobamba, CostoOperacion=0.0]|Posicion:\nJuan\nCastelli\ny\nDefensa}"]
+
+nodo605 -> nodo686;
+
+nodo351 -> nodo605;
+
+nodo48 -> nodo351;
+nodo352[label="{EO: 352|cost: 135.0|A: Comprar_producto [costoProducto=50.0, productoComprar=Leche, CostoOperacion=50.0]|Posicion:\nJuan\nCastelli\ny\nTalcahuano}"]
+
+nodo48 -> nodo352;
+nodo353[label="{EO: 353|cost: 85.0|A: Avanzar [nodoDestino=Juan Castelli y Defensa, CostoOperacion=0.0]|Posicion:\nJuan\nCastelli\ny\nTalcahuano}"]
+nodo381[label="{EO: 381|cost: 85.0|A: Avanzar [nodoDestino=Juan Castelli y Riobamba, CostoOperacion=0.0]|Posicion:\nJuan\nCastelli\ny\nDefensa}"]
+
+nodo353 -> nodo381;
+
+nodo48 -> nodo353;
+
+nodo27 -> nodo48;
+nodo49[label="{EO: 49|cost: 35.0|A: Avanzar [nodoDestino=Juan Castelli y Defensa, CostoOperacion=0.0]|Posicion:\nJuan\nCastelli\ny\nTalcahuano}"]
+nodo50[label="{EO: 50|cost: 35.0|A: Avanzar [nodoDestino=Juan Castelli y Riobamba, CostoOperacion=0.0]|Posicion:\nJuan\nCastelli\ny\nDefensa}"]
+
+nodo49 -> nodo50;
+
+nodo27 -> nodo49;
+
+nodo26 -> nodo27;
+nodo28[label="{EO: 28|cost: 70.0|A: Comprar_producto [costoProducto=50.0, productoComprar=Leche, CostoOperacion=50.0]|Posicion:\nJuan\nCastelli\ny\nTalcahuano}"]
+nodo175[label="{EO: 175|cost: 85.0|A: Comprar_producto [costoProducto=15.0, productoComprar=Huevos, CostoOperacion=15.0]|Posicion:\nJuan\nCastelli\ny\nTalcahuano}"]
+nodo354[label="{EO: 354|cost: 100.0|A: Comprar_producto [costoProducto=15.0, productoComprar=Huevos, CostoOperacion=15.0]|Posicion:\nJuan\nCastelli\ny\nTalcahuano}"]
+nodo606[label="{EO: 606|cost: 115.0|A: Comprar_producto [costoProducto=15.0, productoComprar=Huevos, CostoOperacion=15.0]|Posicion:\nJuan\nCastelli\ny\nTalcahuano}"]
+
+nodo354 -> nodo606;
+nodo607[label="{EO: 607|cost: 150.0|A: Comprar_producto [costoProducto=50.0, productoComprar=Leche, CostoOperacion=50.0]|Posicion:\nJuan\nCastelli\ny\nTalcahuano}"]
+
+nodo354 -> nodo607;
+nodo608[label="{EO: 608|cost: 100.0|A: Avanzar [nodoDestino=Juan Castelli y Defensa, CostoOperacion=0.0]|Posicion:\nJuan\nCastelli\ny\nTalcahuano}"]
+nodo687[label="{EO: 687|cost: 100.0|A: Avanzar [nodoDestino=Juan Castelli y Riobamba, CostoOperacion=0.0]|Posicion:\nJuan\nCastelli\ny\nDefensa}"]
+
+nodo608 -> nodo687;
+
+nodo354 -> nodo608;
+
+nodo175 -> nodo354;
+nodo355[label="{EO: 355|cost: 135.0|A: Comprar_producto [costoProducto=50.0, productoComprar=Leche, CostoOperacion=50.0]|Posicion:\nJuan\nCastelli\ny\nTalcahuano}"]
+
+nodo175 -> nodo355;
+nodo356[label="{EO: 356|cost: 85.0|A: Avanzar [nodoDestino=Juan Castelli y Defensa, CostoOperacion=0.0]|Posicion:\nJuan\nCastelli\ny\nTalcahuano}"]
+nodo382[label="{EO: 382|cost: 85.0|A: Avanzar [nodoDestino=Juan Castelli y Riobamba, CostoOperacion=0.0]|Posicion:\nJuan\nCastelli\ny\nDefensa}"]
+
+nodo356 -> nodo382;
+
+nodo175 -> nodo356;
+
+nodo28 -> nodo175;
+nodo176[label="{EO: 176|cost: 120.0|A: Comprar_producto [costoProducto=50.0, productoComprar=Leche, CostoOperacion=50.0]|Posicion:\nJuan\nCastelli\ny\nTalcahuano}"]
+
+nodo28 -> nodo176;
+nodo177[label="{EO: 177|cost: 70.0|A: Avanzar [nodoDestino=Juan Castelli y Defensa, CostoOperacion=0.0]|Posicion:\nJuan\nCastelli\ny\nTalcahuano}"]
+nodo206[label="{EO: 206|cost: 70.0|A: Avanzar [nodoDestino=Juan Castelli y Riobamba, CostoOperacion=0.0]|Posicion:\nJuan\nCastelli\ny\nDefensa}"]
+
+nodo177 -> nodo206;
+
+nodo28 -> nodo177;
+
+nodo26 -> nodo28;
+nodo29[label="{EO: 29|cost: 20.0|A: Avanzar [nodoDestino=Juan Castelli y Defensa, CostoOperacion=0.0]|Posicion:\nJuan\nCastelli\ny\nTalcahuano}"]
+nodo30[label="{EO: 30|cost: 20.0|A: Avanzar [nodoDestino=Juan Castelli y Riobamba, CostoOperacion=0.0]|Posicion:\nJuan\nCastelli\ny\nDefensa}"]
+
+nodo29 -> nodo30;
+
+nodo26 -> nodo29;
+
+nodo12 -> nodo26;
+
+nodo4 -> nodo12;
+nodo13[label="{EO: 13|cost: 70.0|A: Comprar_producto [costoProducto=50.0, productoComprar=Leche, CostoOperacion=50.0]|Posicion:\nJuan\nCastelli\ny\nCngo.\nEchagüe}"]
+nodo167[label="{EO: 167|cost: 120.0|A: Comprar_producto [costoProducto=50.0, productoComprar=Café, CostoOperacion=50.0]|Posicion:\nJuan\nCastelli\ny\nCngo.\nEchagüe}"]
+
+nodo13 -> nodo167;
+nodo168[label="{EO: 168|cost: 80.0|A: Comprar_producto [costoProducto=15.0, productoComprar=Huevos, CostoOperacion=15.0]|Posicion:\nJuan\nCastelli\ny\nCngo.\nEchagüe}"]
+nodo288[label="{EO: 288|cost: 130.0|A: Comprar_producto [costoProducto=50.0, productoComprar=Café, CostoOperacion=50.0]|Posicion:\nJuan\nCastelli\ny\nCngo.\nEchagüe}"]
+
+nodo168 -> nodo288;
+nodo289[label="{EO: 289|cost: 90.0|A: Comprar_producto [costoProducto=15.0, productoComprar=Huevos, CostoOperacion=15.0]|Posicion:\nJuan\nCastelli\ny\nCngo.\nEchagüe}"]
+nodo437[label="{EO: 437|cost: 140.0|A: Comprar_producto [costoProducto=50.0, productoComprar=Café, CostoOperacion=50.0]|Posicion:\nJuan\nCastelli\ny\nCngo.\nEchagüe}"]
+
+nodo289 -> nodo437;
+nodo438[label="{EO: 438|cost: 100.0|A: Comprar_producto [costoProducto=15.0, productoComprar=Huevos, CostoOperacion=15.0]|Posicion:\nJuan\nCastelli\ny\nCngo.\nEchagüe}"]
+nodo649[label="{EO: 649|cost: 150.0|A: Comprar_producto [costoProducto=50.0, productoComprar=Café, CostoOperacion=50.0]|Posicion:\nJuan\nCastelli\ny\nCngo.\nEchagüe}"]
+
+nodo438 -> nodo649;
+nodo650[label="{EO: 650|cost: 110.0|A: Comprar_producto [costoProducto=15.0, productoComprar=Huevos, CostoOperacion=15.0]|Posicion:\nJuan\nCastelli\ny\nCngo.\nEchagüe}"]
+
+nodo438 -> nodo650;
+nodo651[label="{EO: 651|cost: 160.0|A: Comprar_producto [costoProducto=50.0, productoComprar=Leche, CostoOperacion=50.0]|Posicion:\nJuan\nCastelli\ny\nCngo.\nEchagüe}"]
+
+nodo438 -> nodo651;
+nodo652[label="{EO: 652|cost: 100.0|A: Avanzar [nodoDestino=Juan Castelli y Talcahuano, CostoOperacion=0.0]|Posicion:\nJuan\nCastelli\ny\nCngo.\nEchagüe}"]
+nodo708[label="{EO: 708|cost: 115.0|A: Comprar_producto [costoProducto=15.0, productoComprar=Huevos, CostoOperacion=15.0]|Posicion:\nJuan\nCastelli\ny\nTalcahuano}"]
+
+nodo652 -> nodo708;
+nodo709[label="{EO: 709|cost: 150.0|A: Comprar_producto [costoProducto=50.0, productoComprar=Leche, CostoOperacion=50.0]|Posicion:\nJuan\nCastelli\ny\nTalcahuano}"]
+
+nodo652 -> nodo709;
+nodo710[label="{EO: 710|cost: 100.0|A: Avanzar [nodoDestino=Juan Castelli y Defensa, CostoOperacion=0.0]|Posicion:\nJuan\nCastelli\ny\nTalcahuano}"]
+nodo733[label="{EO: 733|cost: 100.0|A: Avanzar [nodoDestino=Juan Castelli y Riobamba, CostoOperacion=0.0]|Posicion:\nJuan\nCastelli\ny\nDefensa}"]
+
+nodo710 -> nodo733;
+
+nodo652 -> nodo710;
+
+nodo438 -> nodo652;
+
+nodo289 -> nodo438;
+nodo439[label="{EO: 439|cost: 150.0|A: Comprar_producto [costoProducto=50.0, productoComprar=Leche, CostoOperacion=50.0]|Posicion:\nJuan\nCastelli\ny\nCngo.\nEchagüe}"]
+
+nodo289 -> nodo439;
+nodo440[label="{EO: 440|cost: 90.0|A: Avanzar [nodoDestino=Juan Castelli y Talcahuano, CostoOperacion=0.0]|Posicion:\nJuan\nCastelli\ny\nCngo.\nEchagüe}"]
+nodo483[label="{EO: 483|cost: 105.0|A: Comprar_producto [costoProducto=15.0, productoComprar=Huevos, CostoOperacion=15.0]|Posicion:\nJuan\nCastelli\ny\nTalcahuano}"]
+nodo787[label="{EO: 787|cost: 120.0|A: Comprar_producto [costoProducto=15.0, productoComprar=Huevos, CostoOperacion=15.0]|Posicion:\nJuan\nCastelli\ny\nTalcahuano}"]
+
+nodo483 -> nodo787;
+nodo788[label="{EO: 788|cost: 155.0|A: Comprar_producto [costoProducto=50.0, productoComprar=Leche, CostoOperacion=50.0]|Posicion:\nJuan\nCastelli\ny\nTalcahuano}"]
+
+nodo483 -> nodo788;
+nodo789[label="{EO: 789|cost: 105.0|A: Avanzar [nodoDestino=Juan Castelli y Defensa, CostoOperacion=0.0]|Posicion:\nJuan\nCastelli\ny\nTalcahuano}"]
+nodo821[label="{EO: 821|cost: 105.0|A: Avanzar [nodoDestino=Juan Castelli y Riobamba, CostoOperacion=0.0]|Posicion:\nJuan\nCastelli\ny\nDefensa}"]
+
+nodo789 -> nodo821;
+
+nodo483 -> nodo789;
+
+nodo440 -> nodo483;
+nodo484[label="{EO: 484|cost: 140.0|A: Comprar_producto [costoProducto=50.0, productoComprar=Leche, CostoOperacion=50.0]|Posicion:\nJuan\nCastelli\ny\nTalcahuano}"]
+
+nodo440 -> nodo484;
+nodo485[label="{EO: 485|cost: 90.0|A: Avanzar [nodoDestino=Juan Castelli y Defensa, CostoOperacion=0.0]|Posicion:\nJuan\nCastelli\ny\nTalcahuano}"]
+nodo505[label="{EO: 505|cost: 90.0|A: Avanzar [nodoDestino=Juan Castelli y Riobamba, CostoOperacion=0.0]|Posicion:\nJuan\nCastelli\ny\nDefensa}"]
+
+nodo485 -> nodo505;
+
+nodo440 -> nodo485;
+
+nodo289 -> nodo440;
+
+nodo168 -> nodo289;
+nodo290[label="{EO: 290|cost: 140.0|A: Comprar_producto [costoProducto=50.0, productoComprar=Leche, CostoOperacion=50.0]|Posicion:\nJuan\nCastelli\ny\nCngo.\nEchagüe}"]
+
+nodo168 -> nodo290;
+nodo291[label="{EO: 291|cost: 80.0|A: Avanzar [nodoDestino=Juan Castelli y Talcahuano, CostoOperacion=0.0]|Posicion:\nJuan\nCastelli\ny\nCngo.\nEchagüe}"]
+nodo325[label="{EO: 325|cost: 95.0|A: Comprar_producto [costoProducto=15.0, productoComprar=Huevos, CostoOperacion=15.0]|Posicion:\nJuan\nCastelli\ny\nTalcahuano}"]
+nodo544[label="{EO: 544|cost: 110.0|A: Comprar_producto [costoProducto=15.0, productoComprar=Huevos, CostoOperacion=15.0]|Posicion:\nJuan\nCastelli\ny\nTalcahuano}"]
+
+nodo325 -> nodo544;
+nodo545[label="{EO: 545|cost: 145.0|A: Comprar_producto [costoProducto=50.0, productoComprar=Leche, CostoOperacion=50.0]|Posicion:\nJuan\nCastelli\ny\nTalcahuano}"]
+
+nodo325 -> nodo545;
+nodo546[label="{EO: 546|cost: 95.0|A: Avanzar [nodoDestino=Juan Castelli y Defensa, CostoOperacion=0.0]|Posicion:\nJuan\nCastelli\ny\nTalcahuano}"]
+nodo573[label="{EO: 573|cost: 95.0|A: Avanzar [nodoDestino=Juan Castelli y Riobamba, CostoOperacion=0.0]|Posicion:\nJuan\nCastelli\ny\nDefensa}"]
+
+nodo546 -> nodo573;
+
+nodo325 -> nodo546;
+
+nodo291 -> nodo325;
+nodo326[label="{EO: 326|cost: 130.0|A: Comprar_producto [costoProducto=50.0, productoComprar=Leche, CostoOperacion=50.0]|Posicion:\nJuan\nCastelli\ny\nTalcahuano}"]
+
+nodo291 -> nodo326;
+nodo327[label="{EO: 327|cost: 80.0|A: Avanzar [nodoDestino=Juan Castelli y Defensa, CostoOperacion=0.0]|Posicion:\nJuan\nCastelli\ny\nTalcahuano}"]
+nodo345[label="{EO: 345|cost: 80.0|A: Avanzar [nodoDestino=Juan Castelli y Riobamba, CostoOperacion=0.0]|Posicion:\nJuan\nCastelli\ny\nDefensa}"]
+
+nodo327 -> nodo345;
+
+nodo291 -> nodo327;
+
+nodo168 -> nodo291;
+
+nodo13 -> nodo168;
+nodo169[label="{EO: 169|cost: 130.0|A: Comprar_producto [costoProducto=50.0, productoComprar=Leche, CostoOperacion=50.0]|Posicion:\nJuan\nCastelli\ny\nCngo.\nEchagüe}"]
+
+nodo13 -> nodo169;
+nodo170[label="{EO: 170|cost: 70.0|A: Avanzar [nodoDestino=Juan Castelli y Talcahuano, CostoOperacion=0.0]|Posicion:\nJuan\nCastelli\ny\nCngo.\nEchagüe}"]
+nodo200[label="{EO: 200|cost: 85.0|A: Comprar_producto [costoProducto=15.0, productoComprar=Huevos, CostoOperacion=15.0]|Posicion:\nJuan\nCastelli\ny\nTalcahuano}"]
+nodo363[label="{EO: 363|cost: 100.0|A: Comprar_producto [costoProducto=15.0, productoComprar=Huevos, CostoOperacion=15.0]|Posicion:\nJuan\nCastelli\ny\nTalcahuano}"]
+nodo615[label="{EO: 615|cost: 115.0|A: Comprar_producto [costoProducto=15.0, productoComprar=Huevos, CostoOperacion=15.0]|Posicion:\nJuan\nCastelli\ny\nTalcahuano}"]
+
+nodo363 -> nodo615;
+nodo616[label="{EO: 616|cost: 150.0|A: Comprar_producto [costoProducto=50.0, productoComprar=Leche, CostoOperacion=50.0]|Posicion:\nJuan\nCastelli\ny\nTalcahuano}"]
+
+nodo363 -> nodo616;
+nodo617[label="{EO: 617|cost: 100.0|A: Avanzar [nodoDestino=Juan Castelli y Defensa, CostoOperacion=0.0]|Posicion:\nJuan\nCastelli\ny\nTalcahuano}"]
+nodo690[label="{EO: 690|cost: 100.0|A: Avanzar [nodoDestino=Juan Castelli y Riobamba, CostoOperacion=0.0]|Posicion:\nJuan\nCastelli\ny\nDefensa}"]
+
+nodo617 -> nodo690;
+
+nodo363 -> nodo617;
+
+nodo200 -> nodo363;
+nodo364[label="{EO: 364|cost: 135.0|A: Comprar_producto [costoProducto=50.0, productoComprar=Leche, CostoOperacion=50.0]|Posicion:\nJuan\nCastelli\ny\nTalcahuano}"]
+
+nodo200 -> nodo364;
+nodo365[label="{EO: 365|cost: 85.0|A: Avanzar [nodoDestino=Juan Castelli y Defensa, CostoOperacion=0.0]|Posicion:\nJuan\nCastelli\ny\nTalcahuano}"]
+nodo385[label="{EO: 385|cost: 85.0|A: Avanzar [nodoDestino=Juan Castelli y Riobamba, CostoOperacion=0.0]|Posicion:\nJuan\nCastelli\ny\nDefensa}"]
+
+nodo365 -> nodo385;
+
+nodo200 -> nodo365;
+
+nodo170 -> nodo200;
+nodo201[label="{EO: 201|cost: 120.0|A: Comprar_producto [costoProducto=50.0, productoComprar=Leche, CostoOperacion=50.0]|Posicion:\nJuan\nCastelli\ny\nTalcahuano}"]
+
+nodo170 -> nodo201;
+nodo202[label="{EO: 202|cost: 70.0|A: Avanzar [nodoDestino=Juan Castelli y Defensa, CostoOperacion=0.0]|Posicion:\nJuan\nCastelli\ny\nTalcahuano}"]
+nodo221[label="{EO: 221|cost: 70.0|A: Avanzar [nodoDestino=Juan Castelli y Riobamba, CostoOperacion=0.0]|Posicion:\nJuan\nCastelli\ny\nDefensa}"]
+
+nodo202 -> nodo221;
+
+nodo170 -> nodo202;
+
+nodo13 -> nodo170;
+
+nodo4 -> nodo13;
+nodo14[label="{EO: 14|cost: 10.0|A: Avanzar [nodoDestino=Juan Castelli y Talcahuano, CostoOperacion=0.0]|Posicion:\nJuan\nCastelli\ny\nCngo.\nEchagüe}"]
+nodo15[label="{EO: 15|cost: 25.0|A: Comprar_producto [costoProducto=15.0, productoComprar=Huevos, CostoOperacion=15.0]|Posicion:\nJuan\nCastelli\ny\nTalcahuano}"]
+nodo31[label="{EO: 31|cost: 40.0|A: Comprar_producto [costoProducto=15.0, productoComprar=Huevos, CostoOperacion=15.0]|Posicion:\nJuan\nCastelli\ny\nTalcahuano}"]
+nodo51[label="{EO: 51|cost: 55.0|A: Comprar_producto [costoProducto=15.0, productoComprar=Huevos, CostoOperacion=15.0]|Posicion:\nJuan\nCastelli\ny\nTalcahuano}"]
+nodo95[label="{EO: 95|cost: 70.0|A: Comprar_producto [costoProducto=15.0, productoComprar=Huevos, CostoOperacion=15.0]|Posicion:\nJuan\nCastelli\ny\nTalcahuano}"]
+nodo178[label="{EO: 178|cost: 85.0|A: Comprar_producto [costoProducto=15.0, productoComprar=Huevos, CostoOperacion=15.0]|Posicion:\nJuan\nCastelli\ny\nTalcahuano}"]
+nodo357[label="{EO: 357|cost: 100.0|A: Comprar_producto [costoProducto=15.0, productoComprar=Huevos, CostoOperacion=15.0]|Posicion:\nJuan\nCastelli\ny\nTalcahuano}"]
+nodo609[label="{EO: 609|cost: 115.0|A: Comprar_producto [costoProducto=15.0, productoComprar=Huevos, CostoOperacion=15.0]|Posicion:\nJuan\nCastelli\ny\nTalcahuano}"]
+
+nodo357 -> nodo609;
+nodo610[label="{EO: 610|cost: 150.0|A: Comprar_producto [costoProducto=50.0, productoComprar=Leche, CostoOperacion=50.0]|Posicion:\nJuan\nCastelli\ny\nTalcahuano}"]
+
+nodo357 -> nodo610;
+nodo611[label="{EO: 611|cost: 100.0|A: Avanzar [nodoDestino=Juan Castelli y Defensa, CostoOperacion=0.0]|Posicion:\nJuan\nCastelli\ny\nTalcahuano}"]
+nodo688[label="{EO: 688|cost: 100.0|A: Avanzar [nodoDestino=Juan Castelli y Riobamba, CostoOperacion=0.0]|Posicion:\nJuan\nCastelli\ny\nDefensa}"]
+
+nodo611 -> nodo688;
+
+nodo357 -> nodo611;
+
+nodo178 -> nodo357;
+nodo358[label="{EO: 358|cost: 135.0|A: Comprar_producto [costoProducto=50.0, productoComprar=Leche, CostoOperacion=50.0]|Posicion:\nJuan\nCastelli\ny\nTalcahuano}"]
+
+nodo178 -> nodo358;
+nodo359[label="{EO: 359|cost: 85.0|A: Avanzar [nodoDestino=Juan Castelli y Defensa, CostoOperacion=0.0]|Posicion:\nJuan\nCastelli\ny\nTalcahuano}"]
+nodo383[label="{EO: 383|cost: 85.0|A: Avanzar [nodoDestino=Juan Castelli y Riobamba, CostoOperacion=0.0]|Posicion:\nJuan\nCastelli\ny\nDefensa}"]
+
+nodo359 -> nodo383;
+
+nodo178 -> nodo359;
+
+nodo95 -> nodo178;
+nodo179[label="{EO: 179|cost: 120.0|A: Comprar_producto [costoProducto=50.0, productoComprar=Leche, CostoOperacion=50.0]|Posicion:\nJuan\nCastelli\ny\nTalcahuano}"]
+
+nodo95 -> nodo179;
+nodo180[label="{EO: 180|cost: 70.0|A: Avanzar [nodoDestino=Juan Castelli y Defensa, CostoOperacion=0.0]|Posicion:\nJuan\nCastelli\ny\nTalcahuano}"]
+nodo207[label="{EO: 207|cost: 70.0|A: Avanzar [nodoDestino=Juan Castelli y Riobamba, CostoOperacion=0.0]|Posicion:\nJuan\nCastelli\ny\nDefensa}"]
+
+nodo180 -> nodo207;
+
+nodo95 -> nodo180;
+
+nodo51 -> nodo95;
+nodo96[label="{EO: 96|cost: 105.0|A: Comprar_producto [costoProducto=50.0, productoComprar=Leche, CostoOperacion=50.0]|Posicion:\nJuan\nCastelli\ny\nTalcahuano}"]
+nodo739[label="{EO: 739|cost: 120.0|A: Comprar_producto [costoProducto=15.0, productoComprar=Huevos, CostoOperacion=15.0]|Posicion:\nJuan\nCastelli\ny\nTalcahuano}"]
+
+nodo96 -> nodo739;
+nodo740[label="{EO: 740|cost: 155.0|A: Comprar_producto [costoProducto=50.0, productoComprar=Leche, CostoOperacion=50.0]|Posicion:\nJuan\nCastelli\ny\nTalcahuano}"]
+
+nodo96 -> nodo740;
+nodo741[label="{EO: 741|cost: 105.0|A: Avanzar [nodoDestino=Juan Castelli y Defensa, CostoOperacion=0.0]|Posicion:\nJuan\nCastelli\ny\nTalcahuano}"]
+nodo805[label="{EO: 805|cost: 105.0|A: Avanzar [nodoDestino=Juan Castelli y Riobamba, CostoOperacion=0.0]|Posicion:\nJuan\nCastelli\ny\nDefensa}"]
+
+nodo741 -> nodo805;
+
+nodo96 -> nodo741;
+
+nodo51 -> nodo96;
+nodo97[label="{EO: 97|cost: 55.0|A: Avanzar [nodoDestino=Juan Castelli y Defensa, CostoOperacion=0.0]|Posicion:\nJuan\nCastelli\ny\nTalcahuano}"]
+nodo101[label="{EO: 101|cost: 55.0|A: Avanzar [nodoDestino=Juan Castelli y Riobamba, CostoOperacion=0.0]|Posicion:\nJuan\nCastelli\ny\nDefensa}"]
+
+nodo97 -> nodo101;
+
+nodo51 -> nodo97;
+
+nodo31 -> nodo51;
+nodo52[label="{EO: 52|cost: 90.0|A: Comprar_producto [costoProducto=50.0, productoComprar=Leche, CostoOperacion=50.0]|Posicion:\nJuan\nCastelli\ny\nTalcahuano}"]
+nodo395[label="{EO: 395|cost: 105.0|A: Comprar_producto [costoProducto=15.0, productoComprar=Huevos, CostoOperacion=15.0]|Posicion:\nJuan\nCastelli\ny\nTalcahuano}"]
+nodo745[label="{EO: 745|cost: 120.0|A: Comprar_producto [costoProducto=15.0, productoComprar=Huevos, CostoOperacion=15.0]|Posicion:\nJuan\nCastelli\ny\nTalcahuano}"]
+
+nodo395 -> nodo745;
+nodo746[label="{EO: 746|cost: 155.0|A: Comprar_producto [costoProducto=50.0, productoComprar=Leche, CostoOperacion=50.0]|Posicion:\nJuan\nCastelli\ny\nTalcahuano}"]
+
+nodo395 -> nodo746;
+nodo747[label="{EO: 747|cost: 105.0|A: Avanzar [nodoDestino=Juan Castelli y Defensa, CostoOperacion=0.0]|Posicion:\nJuan\nCastelli\ny\nTalcahuano}"]
+nodo807[label="{EO: 807|cost: 105.0|A: Avanzar [nodoDestino=Juan Castelli y Riobamba, CostoOperacion=0.0]|Posicion:\nJuan\nCastelli\ny\nDefensa}"]
+
+nodo747 -> nodo807;
+
+nodo395 -> nodo747;
+
+nodo52 -> nodo395;
+nodo396[label="{EO: 396|cost: 140.0|A: Comprar_producto [costoProducto=50.0, productoComprar=Leche, CostoOperacion=50.0]|Posicion:\nJuan\nCastelli\ny\nTalcahuano}"]
+
+nodo52 -> nodo396;
+nodo397[label="{EO: 397|cost: 90.0|A: Avanzar [nodoDestino=Juan Castelli y Defensa, CostoOperacion=0.0]|Posicion:\nJuan\nCastelli\ny\nTalcahuano}"]
+nodo464[label="{EO: 464|cost: 90.0|A: Avanzar [nodoDestino=Juan Castelli y Riobamba, CostoOperacion=0.0]|Posicion:\nJuan\nCastelli\ny\nDefensa}"]
+
+nodo397 -> nodo464;
+
+nodo52 -> nodo397;
+
+nodo31 -> nodo52;
+nodo53[label="{EO: 53|cost: 40.0|A: Avanzar [nodoDestino=Juan Castelli y Defensa, CostoOperacion=0.0]|Posicion:\nJuan\nCastelli\ny\nTalcahuano}"]
+nodo58[label="{EO: 58|cost: 40.0|A: Avanzar [nodoDestino=Juan Castelli y Riobamba, CostoOperacion=0.0]|Posicion:\nJuan\nCastelli\ny\nDefensa}"]
+
+nodo53 -> nodo58;
+
+nodo31 -> nodo53;
+
+nodo15 -> nodo31;
+nodo32[label="{EO: 32|cost: 75.0|A: Comprar_producto [costoProducto=50.0, productoComprar=Leche, CostoOperacion=50.0]|Posicion:\nJuan\nCastelli\ny\nTalcahuano}"]
+nodo227[label="{EO: 227|cost: 90.0|A: Comprar_producto [costoProducto=15.0, productoComprar=Huevos, CostoOperacion=15.0]|Posicion:\nJuan\nCastelli\ny\nTalcahuano}"]
+nodo405[label="{EO: 405|cost: 105.0|A: Comprar_producto [costoProducto=15.0, productoComprar=Huevos, CostoOperacion=15.0]|Posicion:\nJuan\nCastelli\ny\nTalcahuano}"]
+nodo751[label="{EO: 751|cost: 120.0|A: Comprar_producto [costoProducto=15.0, productoComprar=Huevos, CostoOperacion=15.0]|Posicion:\nJuan\nCastelli\ny\nTalcahuano}"]
+
+nodo405 -> nodo751;
+nodo752[label="{EO: 752|cost: 155.0|A: Comprar_producto [costoProducto=50.0, productoComprar=Leche, CostoOperacion=50.0]|Posicion:\nJuan\nCastelli\ny\nTalcahuano}"]
+
+nodo405 -> nodo752;
+nodo753[label="{EO: 753|cost: 105.0|A: Avanzar [nodoDestino=Juan Castelli y Defensa, CostoOperacion=0.0]|Posicion:\nJuan\nCastelli\ny\nTalcahuano}"]
+nodo809[label="{EO: 809|cost: 105.0|A: Avanzar [nodoDestino=Juan Castelli y Riobamba, CostoOperacion=0.0]|Posicion:\nJuan\nCastelli\ny\nDefensa}"]
+
+nodo753 -> nodo809;
+
+nodo405 -> nodo753;
+
+nodo227 -> nodo405;
+nodo406[label="{EO: 406|cost: 140.0|A: Comprar_producto [costoProducto=50.0, productoComprar=Leche, CostoOperacion=50.0]|Posicion:\nJuan\nCastelli\ny\nTalcahuano}"]
+
+nodo227 -> nodo406;
+nodo407[label="{EO: 407|cost: 90.0|A: Avanzar [nodoDestino=Juan Castelli y Defensa, CostoOperacion=0.0]|Posicion:\nJuan\nCastelli\ny\nTalcahuano}"]
+nodo469[label="{EO: 469|cost: 90.0|A: Avanzar [nodoDestino=Juan Castelli y Riobamba, CostoOperacion=0.0]|Posicion:\nJuan\nCastelli\ny\nDefensa}"]
+
+nodo407 -> nodo469;
+
+nodo227 -> nodo407;
+
+nodo32 -> nodo227;
+nodo228[label="{EO: 228|cost: 125.0|A: Comprar_producto [costoProducto=50.0, productoComprar=Leche, CostoOperacion=50.0]|Posicion:\nJuan\nCastelli\ny\nTalcahuano}"]
+
+nodo32 -> nodo228;
+nodo229[label="{EO: 229|cost: 75.0|A: Avanzar [nodoDestino=Juan Castelli y Defensa, CostoOperacion=0.0]|Posicion:\nJuan\nCastelli\ny\nTalcahuano}"]
+nodo251[label="{EO: 251|cost: 75.0|A: Avanzar [nodoDestino=Juan Castelli y Riobamba, CostoOperacion=0.0]|Posicion:\nJuan\nCastelli\ny\nDefensa}"]
+
+nodo229 -> nodo251;
+
+nodo32 -> nodo229;
+
+nodo15 -> nodo32;
+nodo33[label="{EO: 33|cost: 25.0|A: Avanzar [nodoDestino=Juan Castelli y Defensa, CostoOperacion=0.0]|Posicion:\nJuan\nCastelli\ny\nTalcahuano}"]
+nodo34[label="{EO: 34|cost: 25.0|A: Avanzar [nodoDestino=Juan Castelli y Riobamba, CostoOperacion=0.0]|Posicion:\nJuan\nCastelli\ny\nDefensa}"]
+
+nodo33 -> nodo34;
+
+nodo15 -> nodo33;
+
+nodo14 -> nodo15;
+nodo16[label="{EO: 16|cost: 60.0|A: Comprar_producto [costoProducto=50.0, productoComprar=Leche, CostoOperacion=50.0]|Posicion:\nJuan\nCastelli\ny\nTalcahuano}"]
+nodo111[label="{EO: 111|cost: 75.0|A: Comprar_producto [costoProducto=15.0, productoComprar=Huevos, CostoOperacion=15.0]|Posicion:\nJuan\nCastelli\ny\nTalcahuano}"]
+nodo230[label="{EO: 230|cost: 90.0|A: Comprar_producto [costoProducto=15.0, productoComprar=Huevos, CostoOperacion=15.0]|Posicion:\nJuan\nCastelli\ny\nTalcahuano}"]
+nodo408[label="{EO: 408|cost: 105.0|A: Comprar_producto [costoProducto=15.0, productoComprar=Huevos, CostoOperacion=15.0]|Posicion:\nJuan\nCastelli\ny\nTalcahuano}"]
+nodo754[label="{EO: 754|cost: 120.0|A: Comprar_producto [costoProducto=15.0, productoComprar=Huevos, CostoOperacion=15.0]|Posicion:\nJuan\nCastelli\ny\nTalcahuano}"]
+
+nodo408 -> nodo754;
+nodo755[label="{EO: 755|cost: 155.0|A: Comprar_producto [costoProducto=50.0, productoComprar=Leche, CostoOperacion=50.0]|Posicion:\nJuan\nCastelli\ny\nTalcahuano}"]
+
+nodo408 -> nodo755;
+nodo756[label="{EO: 756|cost: 105.0|A: Avanzar [nodoDestino=Juan Castelli y Defensa, CostoOperacion=0.0]|Posicion:\nJuan\nCastelli\ny\nTalcahuano}"]
+nodo810[label="{EO: 810|cost: 105.0|A: Avanzar [nodoDestino=Juan Castelli y Riobamba, CostoOperacion=0.0]|Posicion:\nJuan\nCastelli\ny\nDefensa}"]
+
+nodo756 -> nodo810;
+
+nodo408 -> nodo756;
+
+nodo230 -> nodo408;
+nodo409[label="{EO: 409|cost: 140.0|A: Comprar_producto [costoProducto=50.0, productoComprar=Leche, CostoOperacion=50.0]|Posicion:\nJuan\nCastelli\ny\nTalcahuano}"]
+
+nodo230 -> nodo409;
+nodo410[label="{EO: 410|cost: 90.0|A: Avanzar [nodoDestino=Juan Castelli y Defensa, CostoOperacion=0.0]|Posicion:\nJuan\nCastelli\ny\nTalcahuano}"]
+nodo470[label="{EO: 470|cost: 90.0|A: Avanzar [nodoDestino=Juan Castelli y Riobamba, CostoOperacion=0.0]|Posicion:\nJuan\nCastelli\ny\nDefensa}"]
+
+nodo410 -> nodo470;
+
+nodo230 -> nodo410;
+
+nodo111 -> nodo230;
+nodo231[label="{EO: 231|cost: 125.0|A: Comprar_producto [costoProducto=50.0, productoComprar=Leche, CostoOperacion=50.0]|Posicion:\nJuan\nCastelli\ny\nTalcahuano}"]
+
+nodo111 -> nodo231;
+nodo232[label="{EO: 232|cost: 75.0|A: Avanzar [nodoDestino=Juan Castelli y Defensa, CostoOperacion=0.0]|Posicion:\nJuan\nCastelli\ny\nTalcahuano}"]
+nodo252[label="{EO: 252|cost: 75.0|A: Avanzar [nodoDestino=Juan Castelli y Riobamba, CostoOperacion=0.0]|Posicion:\nJuan\nCastelli\ny\nDefensa}"]
+
+nodo232 -> nodo252;
+
+nodo111 -> nodo232;
+
+nodo16 -> nodo111;
+nodo112[label="{EO: 112|cost: 110.0|A: Comprar_producto [costoProducto=50.0, productoComprar=Leche, CostoOperacion=50.0]|Posicion:\nJuan\nCastelli\ny\nTalcahuano}"]
+nodo843[label="{EO: 843|cost: 125.0|A: Comprar_producto [costoProducto=15.0, productoComprar=Huevos, CostoOperacion=15.0]|Posicion:\nJuan\nCastelli\ny\nTalcahuano}"]
+
+nodo112 -> nodo843;
+nodo844[label="{EO: 844|cost: 160.0|A: Comprar_producto [costoProducto=50.0, productoComprar=Leche, CostoOperacion=50.0]|Posicion:\nJuan\nCastelli\ny\nTalcahuano}"]
+
+nodo112 -> nodo844;
+nodo845[label="{EO: 845|cost: 110.0|A: Avanzar [nodoDestino=Juan Castelli y Defensa, CostoOperacion=0.0]|Posicion:\nJuan\nCastelli\ny\nTalcahuano}"]
+
+nodo112 -> nodo845;
+
+nodo16 -> nodo112;
+nodo113[label="{EO: 113|cost: 60.0|A: Avanzar [nodoDestino=Juan Castelli y Defensa, CostoOperacion=0.0]|Posicion:\nJuan\nCastelli\ny\nTalcahuano}"]
+nodo134[label="{EO: 134|cost: 60.0|A: Avanzar [nodoDestino=Juan Castelli y Riobamba, CostoOperacion=0.0]|Posicion:\nJuan\nCastelli\ny\nDefensa}"]
+
+nodo113 -> nodo134;
+
+nodo16 -> nodo113;
+
+nodo14 -> nodo16;
+nodo17[label="{EO: 17|cost: 10.0|A: Avanzar [nodoDestino=Juan Castelli y Defensa, CostoOperacion=0.0]|Posicion:\nJuan\nCastelli\ny\nTalcahuano}"]
+nodo18[label="{EO: 18|cost: 10.0|A: Avanzar [nodoDestino=Juan Castelli y Riobamba, CostoOperacion=0.0]|Posicion:\nJuan\nCastelli\ny\nDefensa}"]
+
+nodo17 -> nodo18;
+
+nodo14 -> nodo17;
+
+nodo4 -> nodo14;
 
 nodo2 -> nodo4;
+nodo5[label="{EO: 5|cost: 60.0|A: Comprar_producto [costoProducto=50.0, productoComprar=Leche, CostoOperacion=50.0]|Posicion:\nJuan\nCastelli\ny\nCngo.\nEchagüe}"]
+nodo103[label="{EO: 103|cost: 110.0|A: Comprar_producto [costoProducto=50.0, productoComprar=Café, CostoOperacion=50.0]|Posicion:\nJuan\nCastelli\ny\nCngo.\nEchagüe}"]
+nodo835[label="{EO: 835|cost: 160.0|A: Comprar_producto [costoProducto=50.0, productoComprar=Café, CostoOperacion=50.0]|Posicion:\nJuan\nCastelli\ny\nCngo.\nEchagüe}"]
+
+nodo103 -> nodo835;
+nodo836[label="{EO: 836|cost: 120.0|A: Comprar_producto [costoProducto=15.0, productoComprar=Huevos, CostoOperacion=15.0]|Posicion:\nJuan\nCastelli\ny\nCngo.\nEchagüe}"]
+
+nodo103 -> nodo836;
+nodo837[label="{EO: 837|cost: 170.0|A: Comprar_producto [costoProducto=50.0, productoComprar=Leche, CostoOperacion=50.0]|Posicion:\nJuan\nCastelli\ny\nCngo.\nEchagüe}"]
+
+nodo103 -> nodo837;
+nodo838[label="{EO: 838|cost: 110.0|A: Avanzar [nodoDestino=Juan Castelli y Talcahuano, CostoOperacion=0.0]|Posicion:\nJuan\nCastelli\ny\nCngo.\nEchagüe}"]
+
+nodo103 -> nodo838;
+
+nodo5 -> nodo103;
+nodo104[label="{EO: 104|cost: 70.0|A: Comprar_producto [costoProducto=15.0, productoComprar=Huevos, CostoOperacion=15.0]|Posicion:\nJuan\nCastelli\ny\nCngo.\nEchagüe}"]
+nodo184[label="{EO: 184|cost: 120.0|A: Comprar_producto [costoProducto=50.0, productoComprar=Café, CostoOperacion=50.0]|Posicion:\nJuan\nCastelli\ny\nCngo.\nEchagüe}"]
+
+nodo104 -> nodo184;
+nodo185[label="{EO: 185|cost: 80.0|A: Comprar_producto [costoProducto=15.0, productoComprar=Huevos, CostoOperacion=15.0]|Posicion:\nJuan\nCastelli\ny\nCngo.\nEchagüe}"]
+nodo296[label="{EO: 296|cost: 130.0|A: Comprar_producto [costoProducto=50.0, productoComprar=Café, CostoOperacion=50.0]|Posicion:\nJuan\nCastelli\ny\nCngo.\nEchagüe}"]
+
+nodo185 -> nodo296;
+nodo297[label="{EO: 297|cost: 90.0|A: Comprar_producto [costoProducto=15.0, productoComprar=Huevos, CostoOperacion=15.0]|Posicion:\nJuan\nCastelli\ny\nCngo.\nEchagüe}"]
+nodo445[label="{EO: 445|cost: 140.0|A: Comprar_producto [costoProducto=50.0, productoComprar=Café, CostoOperacion=50.0]|Posicion:\nJuan\nCastelli\ny\nCngo.\nEchagüe}"]
+
+nodo297 -> nodo445;
+nodo446[label="{EO: 446|cost: 100.0|A: Comprar_producto [costoProducto=15.0, productoComprar=Huevos, CostoOperacion=15.0]|Posicion:\nJuan\nCastelli\ny\nCngo.\nEchagüe}"]
+nodo657[label="{EO: 657|cost: 150.0|A: Comprar_producto [costoProducto=50.0, productoComprar=Café, CostoOperacion=50.0]|Posicion:\nJuan\nCastelli\ny\nCngo.\nEchagüe}"]
+
+nodo446 -> nodo657;
+nodo658[label="{EO: 658|cost: 110.0|A: Comprar_producto [costoProducto=15.0, productoComprar=Huevos, CostoOperacion=15.0]|Posicion:\nJuan\nCastelli\ny\nCngo.\nEchagüe}"]
+
+nodo446 -> nodo658;
+nodo659[label="{EO: 659|cost: 160.0|A: Comprar_producto [costoProducto=50.0, productoComprar=Leche, CostoOperacion=50.0]|Posicion:\nJuan\nCastelli\ny\nCngo.\nEchagüe}"]
+
+nodo446 -> nodo659;
+nodo660[label="{EO: 660|cost: 100.0|A: Avanzar [nodoDestino=Juan Castelli y Talcahuano, CostoOperacion=0.0]|Posicion:\nJuan\nCastelli\ny\nCngo.\nEchagüe}"]
+nodo714[label="{EO: 714|cost: 115.0|A: Comprar_producto [costoProducto=15.0, productoComprar=Huevos, CostoOperacion=15.0]|Posicion:\nJuan\nCastelli\ny\nTalcahuano}"]
+
+nodo660 -> nodo714;
+nodo715[label="{EO: 715|cost: 150.0|A: Comprar_producto [costoProducto=50.0, productoComprar=Leche, CostoOperacion=50.0]|Posicion:\nJuan\nCastelli\ny\nTalcahuano}"]
+
+nodo660 -> nodo715;
+nodo716[label="{EO: 716|cost: 100.0|A: Avanzar [nodoDestino=Juan Castelli y Defensa, CostoOperacion=0.0]|Posicion:\nJuan\nCastelli\ny\nTalcahuano}"]
+nodo735[label="{EO: 735|cost: 100.0|A: Avanzar [nodoDestino=Juan Castelli y Riobamba, CostoOperacion=0.0]|Posicion:\nJuan\nCastelli\ny\nDefensa}"]
+
+nodo716 -> nodo735;
+
+nodo660 -> nodo716;
+
+nodo446 -> nodo660;
+
+nodo297 -> nodo446;
+nodo447[label="{EO: 447|cost: 150.0|A: Comprar_producto [costoProducto=50.0, productoComprar=Leche, CostoOperacion=50.0]|Posicion:\nJuan\nCastelli\ny\nCngo.\nEchagüe}"]
+
+nodo297 -> nodo447;
+nodo448[label="{EO: 448|cost: 90.0|A: Avanzar [nodoDestino=Juan Castelli y Talcahuano, CostoOperacion=0.0]|Posicion:\nJuan\nCastelli\ny\nCngo.\nEchagüe}"]
+nodo489[label="{EO: 489|cost: 105.0|A: Comprar_producto [costoProducto=15.0, productoComprar=Huevos, CostoOperacion=15.0]|Posicion:\nJuan\nCastelli\ny\nTalcahuano}"]
+nodo793[label="{EO: 793|cost: 120.0|A: Comprar_producto [costoProducto=15.0, productoComprar=Huevos, CostoOperacion=15.0]|Posicion:\nJuan\nCastelli\ny\nTalcahuano}"]
+
+nodo489 -> nodo793;
+nodo794[label="{EO: 794|cost: 155.0|A: Comprar_producto [costoProducto=50.0, productoComprar=Leche, CostoOperacion=50.0]|Posicion:\nJuan\nCastelli\ny\nTalcahuano}"]
+
+nodo489 -> nodo794;
+nodo795[label="{EO: 795|cost: 105.0|A: Avanzar [nodoDestino=Juan Castelli y Defensa, CostoOperacion=0.0]|Posicion:\nJuan\nCastelli\ny\nTalcahuano}"]
+nodo823[label="{EO: 823|cost: 105.0|A: Avanzar [nodoDestino=Juan Castelli y Riobamba, CostoOperacion=0.0]|Posicion:\nJuan\nCastelli\ny\nDefensa}"]
+
+nodo795 -> nodo823;
+
+nodo489 -> nodo795;
+
+nodo448 -> nodo489;
+nodo490[label="{EO: 490|cost: 140.0|A: Comprar_producto [costoProducto=50.0, productoComprar=Leche, CostoOperacion=50.0]|Posicion:\nJuan\nCastelli\ny\nTalcahuano}"]
+
+nodo448 -> nodo490;
+nodo491[label="{EO: 491|cost: 90.0|A: Avanzar [nodoDestino=Juan Castelli y Defensa, CostoOperacion=0.0]|Posicion:\nJuan\nCastelli\ny\nTalcahuano}"]
+nodo507[label="{EO: 507|cost: 90.0|A: Avanzar [nodoDestino=Juan Castelli y Riobamba, CostoOperacion=0.0]|Posicion:\nJuan\nCastelli\ny\nDefensa}"]
+
+nodo491 -> nodo507;
+
+nodo448 -> nodo491;
+
+nodo297 -> nodo448;
+
+nodo185 -> nodo297;
+nodo298[label="{EO: 298|cost: 140.0|A: Comprar_producto [costoProducto=50.0, productoComprar=Leche, CostoOperacion=50.0]|Posicion:\nJuan\nCastelli\ny\nCngo.\nEchagüe}"]
+
+nodo185 -> nodo298;
+nodo299[label="{EO: 299|cost: 80.0|A: Avanzar [nodoDestino=Juan Castelli y Talcahuano, CostoOperacion=0.0]|Posicion:\nJuan\nCastelli\ny\nCngo.\nEchagüe}"]
+nodo331[label="{EO: 331|cost: 95.0|A: Comprar_producto [costoProducto=15.0, productoComprar=Huevos, CostoOperacion=15.0]|Posicion:\nJuan\nCastelli\ny\nTalcahuano}"]
+nodo550[label="{EO: 550|cost: 110.0|A: Comprar_producto [costoProducto=15.0, productoComprar=Huevos, CostoOperacion=15.0]|Posicion:\nJuan\nCastelli\ny\nTalcahuano}"]
+
+nodo331 -> nodo550;
+nodo551[label="{EO: 551|cost: 145.0|A: Comprar_producto [costoProducto=50.0, productoComprar=Leche, CostoOperacion=50.0]|Posicion:\nJuan\nCastelli\ny\nTalcahuano}"]
+
+nodo331 -> nodo551;
+nodo552[label="{EO: 552|cost: 95.0|A: Avanzar [nodoDestino=Juan Castelli y Defensa, CostoOperacion=0.0]|Posicion:\nJuan\nCastelli\ny\nTalcahuano}"]
+nodo575[label="{EO: 575|cost: 95.0|A: Avanzar [nodoDestino=Juan Castelli y Riobamba, CostoOperacion=0.0]|Posicion:\nJuan\nCastelli\ny\nDefensa}"]
+
+nodo552 -> nodo575;
+
+nodo331 -> nodo552;
+
+nodo299 -> nodo331;
+nodo332[label="{EO: 332|cost: 130.0|A: Comprar_producto [costoProducto=50.0, productoComprar=Leche, CostoOperacion=50.0]|Posicion:\nJuan\nCastelli\ny\nTalcahuano}"]
+
+nodo299 -> nodo332;
+nodo333[label="{EO: 333|cost: 80.0|A: Avanzar [nodoDestino=Juan Castelli y Defensa, CostoOperacion=0.0]|Posicion:\nJuan\nCastelli\ny\nTalcahuano}"]
+nodo347[label="{EO: 347|cost: 80.0|A: Avanzar [nodoDestino=Juan Castelli y Riobamba, CostoOperacion=0.0]|Posicion:\nJuan\nCastelli\ny\nDefensa}"]
+
+nodo333 -> nodo347;
+
+nodo299 -> nodo333;
+
+nodo185 -> nodo299;
+
+nodo104 -> nodo185;
+nodo186[label="{EO: 186|cost: 130.0|A: Comprar_producto [costoProducto=50.0, productoComprar=Leche, CostoOperacion=50.0]|Posicion:\nJuan\nCastelli\ny\nCngo.\nEchagüe}"]
+
+nodo104 -> nodo186;
+nodo187[label="{EO: 187|cost: 70.0|A: Avanzar [nodoDestino=Juan Castelli y Talcahuano, CostoOperacion=0.0]|Posicion:\nJuan\nCastelli\ny\nCngo.\nEchagüe}"]
+nodo209[label="{EO: 209|cost: 85.0|A: Comprar_producto [costoProducto=15.0, productoComprar=Huevos, CostoOperacion=15.0]|Posicion:\nJuan\nCastelli\ny\nTalcahuano}"]
+nodo369[label="{EO: 369|cost: 100.0|A: Comprar_producto [costoProducto=15.0, productoComprar=Huevos, CostoOperacion=15.0]|Posicion:\nJuan\nCastelli\ny\nTalcahuano}"]
+nodo621[label="{EO: 621|cost: 115.0|A: Comprar_producto [costoProducto=15.0, productoComprar=Huevos, CostoOperacion=15.0]|Posicion:\nJuan\nCastelli\ny\nTalcahuano}"]
+
+nodo369 -> nodo621;
+nodo622[label="{EO: 622|cost: 150.0|A: Comprar_producto [costoProducto=50.0, productoComprar=Leche, CostoOperacion=50.0]|Posicion:\nJuan\nCastelli\ny\nTalcahuano}"]
+
+nodo369 -> nodo622;
+nodo623[label="{EO: 623|cost: 100.0|A: Avanzar [nodoDestino=Juan Castelli y Defensa, CostoOperacion=0.0]|Posicion:\nJuan\nCastelli\ny\nTalcahuano}"]
+nodo692[label="{EO: 692|cost: 100.0|A: Avanzar [nodoDestino=Juan Castelli y Riobamba, CostoOperacion=0.0]|Posicion:\nJuan\nCastelli\ny\nDefensa}"]
+
+nodo623 -> nodo692;
+
+nodo369 -> nodo623;
+
+nodo209 -> nodo369;
+nodo370[label="{EO: 370|cost: 135.0|A: Comprar_producto [costoProducto=50.0, productoComprar=Leche, CostoOperacion=50.0]|Posicion:\nJuan\nCastelli\ny\nTalcahuano}"]
+
+nodo209 -> nodo370;
+nodo371[label="{EO: 371|cost: 85.0|A: Avanzar [nodoDestino=Juan Castelli y Defensa, CostoOperacion=0.0]|Posicion:\nJuan\nCastelli\ny\nTalcahuano}"]
+nodo387[label="{EO: 387|cost: 85.0|A: Avanzar [nodoDestino=Juan Castelli y Riobamba, CostoOperacion=0.0]|Posicion:\nJuan\nCastelli\ny\nDefensa}"]
+
+nodo371 -> nodo387;
+
+nodo209 -> nodo371;
+
+nodo187 -> nodo209;
+nodo210[label="{EO: 210|cost: 120.0|A: Comprar_producto [costoProducto=50.0, productoComprar=Leche, CostoOperacion=50.0]|Posicion:\nJuan\nCastelli\ny\nTalcahuano}"]
+
+nodo187 -> nodo210;
+nodo211[label="{EO: 211|cost: 70.0|A: Avanzar [nodoDestino=Juan Castelli y Defensa, CostoOperacion=0.0]|Posicion:\nJuan\nCastelli\ny\nTalcahuano}"]
+nodo223[label="{EO: 223|cost: 70.0|A: Avanzar [nodoDestino=Juan Castelli y Riobamba, CostoOperacion=0.0]|Posicion:\nJuan\nCastelli\ny\nDefensa}"]
+
+nodo211 -> nodo223;
+
+nodo187 -> nodo211;
+
+nodo104 -> nodo187;
+
+nodo5 -> nodo104;
+nodo105[label="{EO: 105|cost: 120.0|A: Comprar_producto [costoProducto=50.0, productoComprar=Leche, CostoOperacion=50.0]|Posicion:\nJuan\nCastelli\ny\nCngo.\nEchagüe}"]
+
+nodo5 -> nodo105;
+nodo106[label="{EO: 106|cost: 60.0|A: Avanzar [nodoDestino=Juan Castelli y Talcahuano, CostoOperacion=0.0]|Posicion:\nJuan\nCastelli\ny\nCngo.\nEchagüe}"]
+nodo128[label="{EO: 128|cost: 75.0|A: Comprar_producto [costoProducto=15.0, productoComprar=Huevos, CostoOperacion=15.0]|Posicion:\nJuan\nCastelli\ny\nTalcahuano}"]
+nodo239[label="{EO: 239|cost: 90.0|A: Comprar_producto [costoProducto=15.0, productoComprar=Huevos, CostoOperacion=15.0]|Posicion:\nJuan\nCastelli\ny\nTalcahuano}"]
+nodo417[label="{EO: 417|cost: 105.0|A: Comprar_producto [costoProducto=15.0, productoComprar=Huevos, CostoOperacion=15.0]|Posicion:\nJuan\nCastelli\ny\nTalcahuano}"]
+nodo763[label="{EO: 763|cost: 120.0|A: Comprar_producto [costoProducto=15.0, productoComprar=Huevos, CostoOperacion=15.0]|Posicion:\nJuan\nCastelli\ny\nTalcahuano}"]
+
+nodo417 -> nodo763;
+nodo764[label="{EO: 764|cost: 155.0|A: Comprar_producto [costoProducto=50.0, productoComprar=Leche, CostoOperacion=50.0]|Posicion:\nJuan\nCastelli\ny\nTalcahuano}"]
+
+nodo417 -> nodo764;
+nodo765[label="{EO: 765|cost: 105.0|A: Avanzar [nodoDestino=Juan Castelli y Defensa, CostoOperacion=0.0]|Posicion:\nJuan\nCastelli\ny\nTalcahuano}"]
+nodo813[label="{EO: 813|cost: 105.0|A: Avanzar [nodoDestino=Juan Castelli y Riobamba, CostoOperacion=0.0]|Posicion:\nJuan\nCastelli\ny\nDefensa}"]
+
+nodo765 -> nodo813;
+
+nodo417 -> nodo765;
+
+nodo239 -> nodo417;
+nodo418[label="{EO: 418|cost: 140.0|A: Comprar_producto [costoProducto=50.0, productoComprar=Leche, CostoOperacion=50.0]|Posicion:\nJuan\nCastelli\ny\nTalcahuano}"]
+
+nodo239 -> nodo418;
+nodo419[label="{EO: 419|cost: 90.0|A: Avanzar [nodoDestino=Juan Castelli y Defensa, CostoOperacion=0.0]|Posicion:\nJuan\nCastelli\ny\nTalcahuano}"]
+nodo473[label="{EO: 473|cost: 90.0|A: Avanzar [nodoDestino=Juan Castelli y Riobamba, CostoOperacion=0.0]|Posicion:\nJuan\nCastelli\ny\nDefensa}"]
+
+nodo419 -> nodo473;
+
+nodo239 -> nodo419;
+
+nodo128 -> nodo239;
+nodo240[label="{EO: 240|cost: 125.0|A: Comprar_producto [costoProducto=50.0, productoComprar=Leche, CostoOperacion=50.0]|Posicion:\nJuan\nCastelli\ny\nTalcahuano}"]
+
+nodo128 -> nodo240;
+nodo241[label="{EO: 241|cost: 75.0|A: Avanzar [nodoDestino=Juan Castelli y Defensa, CostoOperacion=0.0]|Posicion:\nJuan\nCastelli\ny\nTalcahuano}"]
+nodo255[label="{EO: 255|cost: 75.0|A: Avanzar [nodoDestino=Juan Castelli y Riobamba, CostoOperacion=0.0]|Posicion:\nJuan\nCastelli\ny\nDefensa}"]
+
+nodo241 -> nodo255;
+
+nodo128 -> nodo241;
+
+nodo106 -> nodo128;
+nodo129[label="{EO: 129|cost: 110.0|A: Comprar_producto [costoProducto=50.0, productoComprar=Leche, CostoOperacion=50.0]|Posicion:\nJuan\nCastelli\ny\nTalcahuano}"]
+nodo860[label="{EO: 860|cost: 125.0|A: Comprar_producto [costoProducto=15.0, productoComprar=Huevos, CostoOperacion=15.0]|Posicion:\nJuan\nCastelli\ny\nTalcahuano}"]
+
+nodo129 -> nodo860;
+nodo861[label="{EO: 861|cost: 160.0|A: Comprar_producto [costoProducto=50.0, productoComprar=Leche, CostoOperacion=50.0]|Posicion:\nJuan\nCastelli\ny\nTalcahuano}"]
+
+nodo129 -> nodo861;
+nodo862[label="{EO: 862|cost: 110.0|A: Avanzar [nodoDestino=Juan Castelli y Defensa, CostoOperacion=0.0]|Posicion:\nJuan\nCastelli\ny\nTalcahuano}"]
+
+nodo129 -> nodo862;
+
+nodo106 -> nodo129;
+nodo130[label="{EO: 130|cost: 60.0|A: Avanzar [nodoDestino=Juan Castelli y Defensa, CostoOperacion=0.0]|Posicion:\nJuan\nCastelli\ny\nTalcahuano}"]
+nodo143[label="{EO: 143|cost: 60.0|A: Avanzar [nodoDestino=Juan Castelli y Riobamba, CostoOperacion=0.0]|Posicion:\nJuan\nCastelli\ny\nDefensa}"]
+
+nodo130 -> nodo143;
+
+nodo106 -> nodo130;
+
+nodo5 -> nodo106;
+
+nodo2 -> nodo5;
+nodo6[label="{EO: 6|cost: 0.0|A: Avanzar [nodoDestino=Juan Castelli y Talcahuano, CostoOperacion=0.0]|Posicion:\nJuan\nCastelli\ny\nCngo.\nEchagüe}"]
+nodo7[label="{EO: 7|cost: 15.0|A: Comprar_producto [costoProducto=15.0, productoComprar=Huevos, CostoOperacion=15.0]|Posicion:\nJuan\nCastelli\ny\nTalcahuano}"]
+nodo19[label="{EO: 19|cost: 30.0|A: Comprar_producto [costoProducto=15.0, productoComprar=Huevos, CostoOperacion=15.0]|Posicion:\nJuan\nCastelli\ny\nTalcahuano}"]
+nodo35[label="{EO: 35|cost: 45.0|A: Comprar_producto [costoProducto=15.0, productoComprar=Huevos, CostoOperacion=15.0]|Posicion:\nJuan\nCastelli\ny\nTalcahuano}"]
+nodo63[label="{EO: 63|cost: 60.0|A: Comprar_producto [costoProducto=15.0, productoComprar=Huevos, CostoOperacion=15.0]|Posicion:\nJuan\nCastelli\ny\nTalcahuano}"]
+nodo114[label="{EO: 114|cost: 75.0|A: Comprar_producto [costoProducto=15.0, productoComprar=Huevos, CostoOperacion=15.0]|Posicion:\nJuan\nCastelli\ny\nTalcahuano}"]
+nodo233[label="{EO: 233|cost: 90.0|A: Comprar_producto [costoProducto=15.0, productoComprar=Huevos, CostoOperacion=15.0]|Posicion:\nJuan\nCastelli\ny\nTalcahuano}"]
+nodo411[label="{EO: 411|cost: 105.0|A: Comprar_producto [costoProducto=15.0, productoComprar=Huevos, CostoOperacion=15.0]|Posicion:\nJuan\nCastelli\ny\nTalcahuano}"]
+nodo757[label="{EO: 757|cost: 120.0|A: Comprar_producto [costoProducto=15.0, productoComprar=Huevos, CostoOperacion=15.0]|Posicion:\nJuan\nCastelli\ny\nTalcahuano}"]
+
+nodo411 -> nodo757;
+nodo758[label="{EO: 758|cost: 155.0|A: Comprar_producto [costoProducto=50.0, productoComprar=Leche, CostoOperacion=50.0]|Posicion:\nJuan\nCastelli\ny\nTalcahuano}"]
+
+nodo411 -> nodo758;
+nodo759[label="{EO: 759|cost: 105.0|A: Avanzar [nodoDestino=Juan Castelli y Defensa, CostoOperacion=0.0]|Posicion:\nJuan\nCastelli\ny\nTalcahuano}"]
+nodo811[label="{EO: 811|cost: 105.0|A: Avanzar [nodoDestino=Juan Castelli y Riobamba, CostoOperacion=0.0]|Posicion:\nJuan\nCastelli\ny\nDefensa}"]
+
+nodo759 -> nodo811;
+
+nodo411 -> nodo759;
+
+nodo233 -> nodo411;
+nodo412[label="{EO: 412|cost: 140.0|A: Comprar_producto [costoProducto=50.0, productoComprar=Leche, CostoOperacion=50.0]|Posicion:\nJuan\nCastelli\ny\nTalcahuano}"]
+
+nodo233 -> nodo412;
+nodo413[label="{EO: 413|cost: 90.0|A: Avanzar [nodoDestino=Juan Castelli y Defensa, CostoOperacion=0.0]|Posicion:\nJuan\nCastelli\ny\nTalcahuano}"]
+nodo471[label="{EO: 471|cost: 90.0|A: Avanzar [nodoDestino=Juan Castelli y Riobamba, CostoOperacion=0.0]|Posicion:\nJuan\nCastelli\ny\nDefensa}"]
+
+nodo413 -> nodo471;
+
+nodo233 -> nodo413;
+
+nodo114 -> nodo233;
+nodo234[label="{EO: 234|cost: 125.0|A: Comprar_producto [costoProducto=50.0, productoComprar=Leche, CostoOperacion=50.0]|Posicion:\nJuan\nCastelli\ny\nTalcahuano}"]
+
+nodo114 -> nodo234;
+nodo235[label="{EO: 235|cost: 75.0|A: Avanzar [nodoDestino=Juan Castelli y Defensa, CostoOperacion=0.0]|Posicion:\nJuan\nCastelli\ny\nTalcahuano}"]
+nodo253[label="{EO: 253|cost: 75.0|A: Avanzar [nodoDestino=Juan Castelli y Riobamba, CostoOperacion=0.0]|Posicion:\nJuan\nCastelli\ny\nDefensa}"]
+
+nodo235 -> nodo253;
+
+nodo114 -> nodo235;
+
+nodo63 -> nodo114;
+nodo115[label="{EO: 115|cost: 110.0|A: Comprar_producto [costoProducto=50.0, productoComprar=Leche, CostoOperacion=50.0]|Posicion:\nJuan\nCastelli\ny\nTalcahuano}"]
+nodo846[label="{EO: 846|cost: 125.0|A: Comprar_producto [costoProducto=15.0, productoComprar=Huevos, CostoOperacion=15.0]|Posicion:\nJuan\nCastelli\ny\nTalcahuano}"]
+
+nodo115 -> nodo846;
+nodo847[label="{EO: 847|cost: 160.0|A: Comprar_producto [costoProducto=50.0, productoComprar=Leche, CostoOperacion=50.0]|Posicion:\nJuan\nCastelli\ny\nTalcahuano}"]
+
+nodo115 -> nodo847;
+nodo848[label="{EO: 848|cost: 110.0|A: Avanzar [nodoDestino=Juan Castelli y Defensa, CostoOperacion=0.0]|Posicion:\nJuan\nCastelli\ny\nTalcahuano}"]
+
+nodo115 -> nodo848;
+
+nodo63 -> nodo115;
+nodo116[label="{EO: 116|cost: 60.0|A: Avanzar [nodoDestino=Juan Castelli y Defensa, CostoOperacion=0.0]|Posicion:\nJuan\nCastelli\ny\nTalcahuano}"]
+nodo135[label="{EO: 135|cost: 60.0|A: Avanzar [nodoDestino=Juan Castelli y Riobamba, CostoOperacion=0.0]|Posicion:\nJuan\nCastelli\ny\nDefensa}"]
+
+nodo116 -> nodo135;
+
+nodo63 -> nodo116;
+
+nodo35 -> nodo63;
+nodo64[label="{EO: 64|cost: 95.0|A: Comprar_producto [costoProducto=50.0, productoComprar=Leche, CostoOperacion=50.0]|Posicion:\nJuan\nCastelli\ny\nTalcahuano}"]
+nodo511[label="{EO: 511|cost: 110.0|A: Comprar_producto [costoProducto=15.0, productoComprar=Huevos, CostoOperacion=15.0]|Posicion:\nJuan\nCastelli\ny\nTalcahuano}"]
+
+nodo64 -> nodo511;
+nodo512[label="{EO: 512|cost: 145.0|A: Comprar_producto [costoProducto=50.0, productoComprar=Leche, CostoOperacion=50.0]|Posicion:\nJuan\nCastelli\ny\nTalcahuano}"]
+
+nodo64 -> nodo512;
+nodo513[label="{EO: 513|cost: 95.0|A: Avanzar [nodoDestino=Juan Castelli y Defensa, CostoOperacion=0.0]|Posicion:\nJuan\nCastelli\ny\nTalcahuano}"]
+nodo562[label="{EO: 562|cost: 95.0|A: Avanzar [nodoDestino=Juan Castelli y Riobamba, CostoOperacion=0.0]|Posicion:\nJuan\nCastelli\ny\nDefensa}"]
+
+nodo513 -> nodo562;
+
+nodo64 -> nodo513;
+
+nodo35 -> nodo64;
+nodo65[label="{EO: 65|cost: 45.0|A: Avanzar [nodoDestino=Juan Castelli y Defensa, CostoOperacion=0.0]|Posicion:\nJuan\nCastelli\ny\nTalcahuano}"]
+nodo69[label="{EO: 69|cost: 45.0|A: Avanzar [nodoDestino=Juan Castelli y Riobamba, CostoOperacion=0.0]|Posicion:\nJuan\nCastelli\ny\nDefensa}"]
+
+nodo65 -> nodo69;
+
+nodo35 -> nodo65;
+
+nodo19 -> nodo35;
+nodo36[label="{EO: 36|cost: 80.0|A: Comprar_producto [costoProducto=50.0, productoComprar=Leche, CostoOperacion=50.0]|Posicion:\nJuan\nCastelli\ny\nTalcahuano}"]
+nodo263[label="{EO: 263|cost: 95.0|A: Comprar_producto [costoProducto=15.0, productoComprar=Huevos, CostoOperacion=15.0]|Posicion:\nJuan\nCastelli\ny\nTalcahuano}"]
+nodo517[label="{EO: 517|cost: 110.0|A: Comprar_producto [costoProducto=15.0, productoComprar=Huevos, CostoOperacion=15.0]|Posicion:\nJuan\nCastelli\ny\nTalcahuano}"]
+
+nodo263 -> nodo517;
+nodo518[label="{EO: 518|cost: 145.0|A: Comprar_producto [costoProducto=50.0, productoComprar=Leche, CostoOperacion=50.0]|Posicion:\nJuan\nCastelli\ny\nTalcahuano}"]
+
+nodo263 -> nodo518;
+nodo519[label="{EO: 519|cost: 95.0|A: Avanzar [nodoDestino=Juan Castelli y Defensa, CostoOperacion=0.0]|Posicion:\nJuan\nCastelli\ny\nTalcahuano}"]
+nodo564[label="{EO: 564|cost: 95.0|A: Avanzar [nodoDestino=Juan Castelli y Riobamba, CostoOperacion=0.0]|Posicion:\nJuan\nCastelli\ny\nDefensa}"]
+
+nodo519 -> nodo564;
+
+nodo263 -> nodo519;
+
+nodo36 -> nodo263;
+nodo264[label="{EO: 264|cost: 130.0|A: Comprar_producto [costoProducto=50.0, productoComprar=Leche, CostoOperacion=50.0]|Posicion:\nJuan\nCastelli\ny\nTalcahuano}"]
+
+nodo36 -> nodo264;
+nodo265[label="{EO: 265|cost: 80.0|A: Avanzar [nodoDestino=Juan Castelli y Defensa, CostoOperacion=0.0]|Posicion:\nJuan\nCastelli\ny\nTalcahuano}"]
+nodo315[label="{EO: 315|cost: 80.0|A: Avanzar [nodoDestino=Juan Castelli y Riobamba, CostoOperacion=0.0]|Posicion:\nJuan\nCastelli\ny\nDefensa}"]
+
+nodo265 -> nodo315;
+
+nodo36 -> nodo265;
+
+nodo19 -> nodo36;
+nodo37[label="{EO: 37|cost: 30.0|A: Avanzar [nodoDestino=Juan Castelli y Defensa, CostoOperacion=0.0]|Posicion:\nJuan\nCastelli\ny\nTalcahuano}"]
+nodo42[label="{EO: 42|cost: 30.0|A: Avanzar [nodoDestino=Juan Castelli y Riobamba, CostoOperacion=0.0]|Posicion:\nJuan\nCastelli\ny\nDefensa}"]
+
+nodo37 -> nodo42;
+
+nodo19 -> nodo37;
+
+nodo7 -> nodo19;
+nodo20[label="{EO: 20|cost: 65.0|A: Comprar_producto [costoProducto=50.0, productoComprar=Leche, CostoOperacion=50.0]|Posicion:\nJuan\nCastelli\ny\nTalcahuano}"]
+nodo147[label="{EO: 147|cost: 80.0|A: Comprar_producto [costoProducto=15.0, productoComprar=Huevos, CostoOperacion=15.0]|Posicion:\nJuan\nCastelli\ny\nTalcahuano}"]
+nodo273[label="{EO: 273|cost: 95.0|A: Comprar_producto [costoProducto=15.0, productoComprar=Huevos, CostoOperacion=15.0]|Posicion:\nJuan\nCastelli\ny\nTalcahuano}"]
+nodo523[label="{EO: 523|cost: 110.0|A: Comprar_producto [costoProducto=15.0, productoComprar=Huevos, CostoOperacion=15.0]|Posicion:\nJuan\nCastelli\ny\nTalcahuano}"]
+
+nodo273 -> nodo523;
+nodo524[label="{EO: 524|cost: 145.0|A: Comprar_producto [costoProducto=50.0, productoComprar=Leche, CostoOperacion=50.0]|Posicion:\nJuan\nCastelli\ny\nTalcahuano}"]
+
+nodo273 -> nodo524;
+nodo525[label="{EO: 525|cost: 95.0|A: Avanzar [nodoDestino=Juan Castelli y Defensa, CostoOperacion=0.0]|Posicion:\nJuan\nCastelli\ny\nTalcahuano}"]
+nodo566[label="{EO: 566|cost: 95.0|A: Avanzar [nodoDestino=Juan Castelli y Riobamba, CostoOperacion=0.0]|Posicion:\nJuan\nCastelli\ny\nDefensa}"]
+
+nodo525 -> nodo566;
+
+nodo273 -> nodo525;
+
+nodo147 -> nodo273;
+nodo274[label="{EO: 274|cost: 130.0|A: Comprar_producto [costoProducto=50.0, productoComprar=Leche, CostoOperacion=50.0]|Posicion:\nJuan\nCastelli\ny\nTalcahuano}"]
+
+nodo147 -> nodo274;
+nodo275[label="{EO: 275|cost: 80.0|A: Avanzar [nodoDestino=Juan Castelli y Defensa, CostoOperacion=0.0]|Posicion:\nJuan\nCastelli\ny\nTalcahuano}"]
+nodo320[label="{EO: 320|cost: 80.0|A: Avanzar [nodoDestino=Juan Castelli y Riobamba, CostoOperacion=0.0]|Posicion:\nJuan\nCastelli\ny\nDefensa}"]
+
+nodo275 -> nodo320;
+
+nodo147 -> nodo275;
+
+nodo20 -> nodo147;
+nodo148[label="{EO: 148|cost: 115.0|A: Comprar_producto [costoProducto=50.0, productoComprar=Leche, CostoOperacion=50.0]|Posicion:\nJuan\nCastelli\ny\nTalcahuano}"]
+
+nodo20 -> nodo148;
+nodo149[label="{EO: 149|cost: 65.0|A: Avanzar [nodoDestino=Juan Castelli y Defensa, CostoOperacion=0.0]|Posicion:\nJuan\nCastelli\ny\nTalcahuano}"]
+nodo162[label="{EO: 162|cost: 65.0|A: Avanzar [nodoDestino=Juan Castelli y Riobamba, CostoOperacion=0.0]|Posicion:\nJuan\nCastelli\ny\nDefensa}"]
+
+nodo149 -> nodo162;
+
+nodo20 -> nodo149;
+
+nodo7 -> nodo20;
+nodo21[label="{EO: 21|cost: 15.0|A: Avanzar [nodoDestino=Juan Castelli y Defensa, CostoOperacion=0.0]|Posicion:\nJuan\nCastelli\ny\nTalcahuano}"]
+nodo22[label="{EO: 22|cost: 15.0|A: Avanzar [nodoDestino=Juan Castelli y Riobamba, CostoOperacion=0.0]|Posicion:\nJuan\nCastelli\ny\nDefensa}"]
+
+nodo21 -> nodo22;
+
+nodo7 -> nodo21;
+
+nodo6 -> nodo7;
+nodo8[label="{EO: 8|cost: 50.0|A: Comprar_producto [costoProducto=50.0, productoComprar=Leche, CostoOperacion=50.0]|Posicion:\nJuan\nCastelli\ny\nTalcahuano}"]
+nodo75[label="{EO: 75|cost: 65.0|A: Comprar_producto [costoProducto=15.0, productoComprar=Huevos, CostoOperacion=15.0]|Posicion:\nJuan\nCastelli\ny\nTalcahuano}"]
+nodo150[label="{EO: 150|cost: 80.0|A: Comprar_producto [costoProducto=15.0, productoComprar=Huevos, CostoOperacion=15.0]|Posicion:\nJuan\nCastelli\ny\nTalcahuano}"]
+nodo276[label="{EO: 276|cost: 95.0|A: Comprar_producto [costoProducto=15.0, productoComprar=Huevos, CostoOperacion=15.0]|Posicion:\nJuan\nCastelli\ny\nTalcahuano}"]
+nodo526[label="{EO: 526|cost: 110.0|A: Comprar_producto [costoProducto=15.0, productoComprar=Huevos, CostoOperacion=15.0]|Posicion:\nJuan\nCastelli\ny\nTalcahuano}"]
+
+nodo276 -> nodo526;
+nodo527[label="{EO: 527|cost: 145.0|A: Comprar_producto [costoProducto=50.0, productoComprar=Leche, CostoOperacion=50.0]|Posicion:\nJuan\nCastelli\ny\nTalcahuano}"]
+
+nodo276 -> nodo527;
+nodo528[label="{EO: 528|cost: 95.0|A: Avanzar [nodoDestino=Juan Castelli y Defensa, CostoOperacion=0.0]|Posicion:\nJuan\nCastelli\ny\nTalcahuano}"]
+nodo567[label="{EO: 567|cost: 95.0|A: Avanzar [nodoDestino=Juan Castelli y Riobamba, CostoOperacion=0.0]|Posicion:\nJuan\nCastelli\ny\nDefensa}"]
+
+nodo528 -> nodo567;
+
+nodo276 -> nodo528;
+
+nodo150 -> nodo276;
+nodo277[label="{EO: 277|cost: 130.0|A: Comprar_producto [costoProducto=50.0, productoComprar=Leche, CostoOperacion=50.0]|Posicion:\nJuan\nCastelli\ny\nTalcahuano}"]
+
+nodo150 -> nodo277;
+nodo278[label="{EO: 278|cost: 80.0|A: Avanzar [nodoDestino=Juan Castelli y Defensa, CostoOperacion=0.0]|Posicion:\nJuan\nCastelli\ny\nTalcahuano}"]
+nodo321[label="{EO: 321|cost: 80.0|A: Avanzar [nodoDestino=Juan Castelli y Riobamba, CostoOperacion=0.0]|Posicion:\nJuan\nCastelli\ny\nDefensa}"]
+
+nodo278 -> nodo321;
+
+nodo150 -> nodo278;
+
+nodo75 -> nodo150;
+nodo151[label="{EO: 151|cost: 115.0|A: Comprar_producto [costoProducto=50.0, productoComprar=Leche, CostoOperacion=50.0]|Posicion:\nJuan\nCastelli\ny\nTalcahuano}"]
+
+nodo75 -> nodo151;
+nodo152[label="{EO: 152|cost: 65.0|A: Avanzar [nodoDestino=Juan Castelli y Defensa, CostoOperacion=0.0]|Posicion:\nJuan\nCastelli\ny\nTalcahuano}"]
+nodo163[label="{EO: 163|cost: 65.0|A: Avanzar [nodoDestino=Juan Castelli y Riobamba, CostoOperacion=0.0]|Posicion:\nJuan\nCastelli\ny\nDefensa}"]
+
+nodo152 -> nodo163;
+
+nodo75 -> nodo152;
+
+nodo8 -> nodo75;
+nodo76[label="{EO: 76|cost: 100.0|A: Comprar_producto [costoProducto=50.0, productoComprar=Leche, CostoOperacion=50.0]|Posicion:\nJuan\nCastelli\ny\nTalcahuano}"]
+nodo587[label="{EO: 587|cost: 115.0|A: Comprar_producto [costoProducto=15.0, productoComprar=Huevos, CostoOperacion=15.0]|Posicion:\nJuan\nCastelli\ny\nTalcahuano}"]
+
+nodo76 -> nodo587;
+nodo588[label="{EO: 588|cost: 150.0|A: Comprar_producto [costoProducto=50.0, productoComprar=Leche, CostoOperacion=50.0]|Posicion:\nJuan\nCastelli\ny\nTalcahuano}"]
+
+nodo76 -> nodo588;
+nodo589[label="{EO: 589|cost: 100.0|A: Avanzar [nodoDestino=Juan Castelli y Defensa, CostoOperacion=0.0]|Posicion:\nJuan\nCastelli\ny\nTalcahuano}"]
+nodo679[label="{EO: 679|cost: 100.0|A: Avanzar [nodoDestino=Juan Castelli y Riobamba, CostoOperacion=0.0]|Posicion:\nJuan\nCastelli\ny\nDefensa}"]
+
+nodo589 -> nodo679;
+
+nodo76 -> nodo589;
+
+nodo8 -> nodo76;
+nodo77[label="{EO: 77|cost: 50.0|A: Avanzar [nodoDestino=Juan Castelli y Defensa, CostoOperacion=0.0]|Posicion:\nJuan\nCastelli\ny\nTalcahuano}"]
+nodo88[label="{EO: 88|cost: 50.0|A: Avanzar [nodoDestino=Juan Castelli y Riobamba, CostoOperacion=0.0]|Posicion:\nJuan\nCastelli\ny\nDefensa}"]
+
+nodo77 -> nodo88;
+
+nodo8 -> nodo77;
+
+nodo6 -> nodo8;
+nodo9[label="{EO: 9|cost: 0.0|A: Avanzar [nodoDestino=Juan Castelli y Defensa, CostoOperacion=0.0]|Posicion:\nJuan\nCastelli\ny\nTalcahuano}"]
+nodo10[label="{EO: 10|cost: 0.0|A: Avanzar [nodoDestino=Juan Castelli y Riobamba, CostoOperacion=0.0]|Posicion:\nJuan\nCastelli\ny\nDefensa}"]
+
+nodo9 -> nodo10;
+
+nodo6 -> nodo9;
+
+nodo2 -> nodo6;
 
 nodo1 -> nodo2;
 

@@ -36,13 +36,13 @@ public class Comprar_producto extends SearchAction {
       * */
         
         if(agState.getPosicionActual().getEnlaceRecorrido() != null){
-        	
 	        for(int i=0; i<agState.getPosicionActual().getEnlaceRecorrido().getNegocios().size(); i++){
 	        	negocio = agState.getPosicionActual().getEnlaceRecorrido().getNegocios().get(i);
 	        	if(negocio.getProductoPrecio().containsKey(this.productoComprar)){
 	        		
 	        		agState.getProductosComprados().add(this.productoComprar);
 	        		agState.getproductosComprar().remove(productoComprar);
+	        		
 	        		this.costoProducto = negocio.getProductoPrecio().get(this.productoComprar);
 	        		return agState;
 	        	}
@@ -87,7 +87,7 @@ public class Comprar_producto extends SearchAction {
     @Override
 	public String toString() {
 		return "Comprar_producto [costoProducto=" + costoProducto
-				+ ", productoComprar=" + productoComprar + ", getCost()="
+				+ ", productoComprar=" + productoComprar + ", CostoOperacion="
 				+ getCost() + "]";
 	}
 }

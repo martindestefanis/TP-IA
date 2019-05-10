@@ -76,11 +76,22 @@ public class GestorEnlace {
 	//Y EL COSTO DEL ENLACE ES EL TIEMPO PROMEDIO QUE LE LLEVA AL AGENTE DE RECORRER UNA CUADRA.
 		double costo = 0;
 		
-		/*for(int i=0; i< enlace.getEventos().size(); i++){
+		//PARA EL CASO DE QUE TRABAJEMOS CON VARIOS EVENTOS POR ENLACE
+		
+		/*
+		for(int i=0; i< enlace.getEventos().size(); i++){
 			costo = costo + enlace.getEventos().get(i).getCosto();
 		}
 		costo = enlace.getCosto() + enlace.getCosto()*costo;
 		*/
+		
+		//PARA EL CASO DE QUE TRABAJEMOS CON UN SOLO EVENTO POR ENLACE
+		
+		costo = enlace.getCosto();
+		if(enlace.getEvento()==2){
+			costo = costo + costo*0.6;
+		}
+		
 		return costo;
 	}
 	

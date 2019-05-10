@@ -15,6 +15,7 @@ import grafo.Nodo;
 public class CarAgentState extends SearchBasedAgentState {
 	
 	//TODO: Setup Variables
+	
     //Posicion posicionInicial;
     Posicion posicionActual;
     
@@ -57,7 +58,7 @@ public class CarAgentState extends SearchBasedAgentState {
          
          //ArrayList<String> productosComprar1 = (ArrayList<String>) productosComprar.clone();
          ArrayList<String> productosComprar1 = new ArrayList<String>(productosComprar);
-         newState.setProductosComprados(productosComprar1);
+         newState.setProductosComprar(productosComprar1);
          
          return newState;
     }
@@ -67,16 +68,18 @@ public class CarAgentState extends SearchBasedAgentState {
      * received by the Simulator.
      * 
      */
+    
     @Override
     public void updateState(Perception p) {
     	
     	CarAgentPerception p1 = (CarAgentPerception) p;
-
     	for(int i=0; i< p1.getSensorEnlaces().size(); i++){
     		for(int j=0; j<posicionActual.getNodoActual().getEnlaces().size();j++){
-    			if(posicionActual.getNodoActual().getEnlaces().get(i).getNodoOrigen().getNombre().equalsIgnoreCase(p1.getSensorEnlaces().get(j).getNodoOrigen().getNombre())
-    					&& posicionActual.getNodoActual().getEnlaces().get(i).getNodoDestino().getNombre().equalsIgnoreCase(p1.getSensorEnlaces().get(j).getNodoDestino().getNombre())){
+    			if(posicionActual.getNodoActual().getEnlaces().get(j).getNodoOrigen().getNombre().equalsIgnoreCase(p1.getSensorEnlaces().get(i).getNodoOrigen().getNombre())
+    					&& posicionActual.getNodoActual().getEnlaces().get(j).getNodoDestino().getNombre().equalsIgnoreCase(p1.getSensorEnlaces().get(i).getNodoDestino().getNombre())){
+    				
     				posicionActual.getNodoActual().getEnlaces().get(j).setEvento(p1.getSensorEnlaces().get(i).getEvento());
+    				
     				if(posicionActual.getNodoActual().getEnlaces().get(j).getEvento()==p1.CORTE_CALLE){
     					posicionActual.getNodoActual().getEnlaces().get(j).setDisponible(false);
     				}
@@ -98,7 +101,8 @@ public class CarAgentState extends SearchBasedAgentState {
 		//posicionInicial = new Posicion(null,GestorNodo.obtenerNodo("Juan Castelli y Antonia Godoy"));
 		
 		productosComprar.add("Café");
-		
+		productosComprar.add("Huevos");
+		productosComprar.add("Leche");
 		posicionActual = new Posicion(null,GestorNodo.obtenerNodo("Juan Castelli y Antonia Godoy"));
 
     }

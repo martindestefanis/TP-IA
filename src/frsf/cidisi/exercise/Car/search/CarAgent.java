@@ -34,8 +34,7 @@ public class CarAgent extends SearchBasedAgent {
         for(int i=0; i<agState.getproductosComprar().size(); i++){
         	operators.addElement(new Comprar_producto(agState.getproductosComprar().get(i)));
         }
-                
-        
+
         for(int i =0; i<GestorNodo.getNodosExistentes().size();i++){
         	operators.addElement(new Avanzar(GestorNodo.getNodosExistentes().get(i)));
         }
@@ -53,13 +52,15 @@ public class CarAgent extends SearchBasedAgent {
     public Action selectAction() {
 
         // Create the search strategy
-        //IStepCostFunction cost = new CostFunction();
+        IStepCostFunction costo = new CostFunction();
+        UniformCostSearch searchStrategy = new UniformCostSearch(costo);
         //IEstimatedCostFunction heuristic = new Heuristic(); 
         //AStarSearch strategy = new AStarSearch(cost, heuristic);
-    	BreathFirstSearch searchStrategy = new BreathFirstSearch();
+    	//BreathFirstSearch searchStrategy = new BreathFirstSearch();
 
         // Create a Search object with the strategy
         Search searchSolver = new Search(searchStrategy);
+
 
         /* Generate an XML file with the search tree. It can also be generated
          * in other formats like PDF with PDF_TREE */

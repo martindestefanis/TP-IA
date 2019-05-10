@@ -27,7 +27,8 @@ public class CityEnviroment extends Environment {
     public  CarAgentPerception getPercept() {
         // Create a new perception to return
          CarAgentPerception perception = new CarAgentPerception();
-
+         
+         //TRAE TODOS LOS ENLACES DEL MUNDO?
          perception.setSensorEnlaces(this.getEnlaces());
         
         // Return the perception

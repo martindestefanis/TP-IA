@@ -47,13 +47,14 @@ public class Avanzar extends SearchAction {
     @Override
     public EnvironmentState execute(AgentState ast, EnvironmentState est) {
     CityState environmentState = (CityState) est;
-        CarAgentState agState = ((CarAgentState) ast);
-               
+       CarAgentState agState = ((CarAgentState) ast);
+                    
        for(int i=0; i<agState.getPosicionActual().getNodoActual().getEnlaces().size(); i++){
         	if(agState.getPosicionActual().getNodoActual().getEnlaces().get(i).isDisponible() && 
         		agState.getPosicionActual().getNodoActual().getEnlaces().get(i).getNodoDestino().getNombre().equalsIgnoreCase(nodoDestino.getNombre())){
         		
         		this.enlace = agState.getPosicionActual().getNodoActual().getEnlaces().get(i);
+        		System.out.println("Calle: " + enlace.getNombre());
         		agState.setPosicionActual(agState.getPosicionActual().getNodoActual().getEnlaces().get(i),nodoDestino);
         		environmentState.setPosicionAgente(agState.getPosicionActual().getNodoActual().getEnlaces().get(i),nodoDestino);
         		return environmentState;
@@ -67,12 +68,13 @@ public class Avanzar extends SearchAction {
      */
     @Override
     public Double getCost() {
-        return new Double(GestorEnlace.calcularCosto(this.enlace));
+        //return new Double(GestorEnlace.calcularCosto(this.enlace));
+    	return new Double(0);
     }
 
     @Override
 	public String toString() {
-		return "Avanzar [nodoDestino=" + nodoDestino.getNombre() + ", getCost()="
+		return "Avanzar [nodoDestino=" + nodoDestino.getNombre() + ", CostoOperacion="
 				+ getCost() + "]";
 	}
 }

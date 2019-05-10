@@ -107,9 +107,11 @@ public class CityState extends EnvironmentState {
     	ArrayList<Evento> listaEventos = new ArrayList<Evento>();
     	try {
 			listaEventos = leerEventos();
+			
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
+		
 		//Coloco cada percepción en el enlace que iría (hay que hacer que las coloque de a una o en cada iteración)
 		
 		for(int i=0; i<mundo.size(); i++){
@@ -118,11 +120,17 @@ public class CityState extends EnvironmentState {
 					if(mundo.get(i).getEnlaces().get(k).getNodoOrigen().getNombre().equalsIgnoreCase(listaEventos.get(z).getEnlace().getNodoOrigen().getNombre())
 							&& mundo.get(i).getEnlaces().get(k).getNodoDestino().getNombre().equalsIgnoreCase(listaEventos.get(z).getEnlace().getNodoDestino().getNombre()))
 					{
-						if(listaEventos.get(z).getNombre().equalsIgnoreCase("Corte calle")){
-							mundo.get(i).getEnlaces().get(k).setEvento(CarAgentPerception.CORTE_CALLE);
+						if(mundo.get(i).getEnlaces().get(k).getEvento() == 0){
+							
+							if(listaEventos.get(z).getNombre().equalsIgnoreCase("Corte calle")){
+								mundo.get(i).getEnlaces().get(k).setEvento(CarAgentPerception.CORTE_CALLE);
+							}
+							else{
+								mundo.get(i).getEnlaces().get(k).setEvento(CarAgentPerception.CONGESTION);
+							}
 						}
 						else{
-							mundo.get(i).getEnlaces().get(k).setEvento(CarAgentPerception.CONGESTION);
+							System.out.println("Ya existe un evento en la calle: " + mundo.get(i).getEnlaces().get(k).getNombre());
 						}
 					}
 				}
@@ -141,6 +149,7 @@ public class CityState extends EnvironmentState {
 	}
 
 	public ArrayList<Evento> leerEventos() throws Exception{
+		
     	ArrayList<Csv> registrosLeidos = null;
     	ArrayList<Evento> eventosLeidos = new ArrayList<Evento>();
     	Csv fila = new Csv();

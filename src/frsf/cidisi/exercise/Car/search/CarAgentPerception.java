@@ -20,6 +20,7 @@ public class CarAgentPerception extends Perception {
 	
 	
 	//TODO: Setup Sensors
+    
     //son los enlaces que tiene el nodo actual, de ahi saco cada evento (percepción)
 	private ArrayList<Enlace> SensorEnlaces = new ArrayList<Enlace>();
 
