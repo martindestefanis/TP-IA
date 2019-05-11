@@ -108,8 +108,8 @@ public class CarAgentState extends SearchBasedAgentState {
 		//posicionInicial = new Posicion(null,GestorNodo.obtenerNodo("Juan Castelli y Antonia Godoy"));
 		
 		productosComprar.add("Café");
-		productosComprar.add("Huevos");
-		productosComprar.add("Leche");
+		//productosComprar.add("Huevos");
+		//productosComprar.add("Leche");
 		productosComprar.add("Maní");
 		posicionActual = new Posicion(null,GestorNodo.obtenerNodo("Juan Castelli y Antonia Godoy"));
 	

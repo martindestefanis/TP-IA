@@ -98,49 +98,6 @@ public class CityState extends EnvironmentState {
     		}
     	}
     	
-    	
-    	/*for(int i=0; i<mundo.size(); i++){
-    		for(int k = 0; k<mundo.get(i).getEnlaces().size(); k++){
-    			mundo.get(i).getEnlaces().get(k).setEvento(CarAgentPerception.EMPTY_PERCEPTION);
-    		}
-    	}*/
-    	
-    	//traigo todos los eventos del excel
-    /*	ArrayList<Evento> listaEventos = new ArrayList<Evento>();
-    	try {
-			listaEventos = leerEventos();
-			
-		} catch (Exception e) {
-			e.printStackTrace();
-		}*/
-		
-		//Coloco cada percepción en el enlace que iría (hay que hacer que las coloque de a una o en cada iteración)
-		
-		/*for(int i=0; i<mundo.size(); i++){
-			for(int k = 0; k<mundo.get(i).getEnlaces().size(); k++){
-				for(int z=0; z<listaEventos.size(); z++){
-					if(mundo.get(i).getEnlaces().get(k).getNodoOrigen().getNombre().equalsIgnoreCase(listaEventos.get(z).getEnlace().getNodoOrigen().getNombre())
-							&& mundo.get(i).getEnlaces().get(k).getNodoDestino().getNombre().equalsIgnoreCase(listaEventos.get(z).getEnlace().getNodoDestino().getNombre()))
-					{
-						if(mundo.get(i).getEnlaces().get(k).getEvento() == 0){
-							
-							if(listaEventos.get(z).getNombre().equalsIgnoreCase("Corte calle")){
-								mundo.get(i).getEnlaces().get(k).setEvento(CarAgentPerception.CORTE_CALLE);
-							}
-							else{
-								mundo.get(i).getEnlaces().get(k).setEvento(CarAgentPerception.CONGESTION);
-							}
-						}
-						else{
-							System.out.println("Ya existe un evento en la calle: " + mundo.get(i).getEnlaces().get(k).getNombre());
-						}
-					}
-				}
-			}
-			
-		}*/
-    	
-        //TODO: Complete Method
     }
     
     @Override
@@ -149,55 +106,6 @@ public class CityState extends EnvironmentState {
 				+ ", posicionAgente=" + posicionAgente
 				+ ", getPosicionAgente()=" + getPosicionAgente() + "]";
 	}
-
-	/*public ArrayList<Evento> leerEventos() throws Exception{
-		
-    	ArrayList<Csv> registrosLeidos = null;
-    	ArrayList<Evento> eventosLeidos = new ArrayList<Evento>();
-    	Csv fila = new Csv();
-    	String csvEventos = "..\\TP-IA\\src\\grafo\\Eventos.csv";
-    	String delimitador = ";";
- 	    
- 	    Nodo nodoOrigen = new Nodo();
- 	    Nodo nodoDestino = new Nodo();
- 	    double costo;
- 	    
- 	    Evento evento = new Evento();
- 	    
- 	    Enlace enlace = new Enlace();
- 	    
- 	    String nombre;
-    	
-    	registrosLeidos = fila.leerEventos(csvEventos,delimitador);
-    	
-    	for(int i=0; i< registrosLeidos.size(); i++){
-    		nombre = registrosLeidos.get(i).getNombreEvento();
-    		nodoOrigen = GestorNodo.crearNodo(registrosLeidos.get(i).getEsquina1());
-    		nodoDestino = GestorNodo.crearNodo(registrosLeidos.get(i).getEsquina2());
-    		costo = registrosLeidos.get(i).getCosto();
-    		
-    		
-    		/*PRIMERO CREO UN ENLACE SUPONIENDO QUE EL SENTIDO DE LAS ESQUINAS ES ORIGEN-DESTINO
-    		 * DESPUES VERIFICO SI EXISTE UN ENLACE CON ESE SENTIDO
-    		 * SI NO EXISTE ES PORQUE LA ORIENTACION ES DESTINO-ORIGEN
-    		 * 
-    		 * */
-//    		enlace = GestorEnlace.crearEnlace(nodoOrigen, nodoDestino);
-    		
-//    		if(!GestorEnlace.existeEnlace(enlace)){
-    			/*CREO UN ENLACE CON EL SENTIDO INVERSO Y SE LO MANDO AL GESTOR PARA QUE
-    			 * A ESE ENLACE LE CAMBIE LA DISPONIBILIDAD.
-    			 * LUEGO CREO EL ENCALE QUE LE CORRESPONDA AL NODO EVENTO
-    			 * */
- /*   			enlace = GestorEnlace.crearEnlace(nodoDestino, nodoOrigen);
-    		}
-    		
-    		evento = Evento.crearEvento(nombre,enlace,costo);
-    		eventosLeidos.add(evento);		
-    	}
-    	return eventosLeidos;
-    	
-    }*/
     
     public Posicion getPosicionAgente() {
 		return posicionAgente;
@@ -212,11 +120,5 @@ public class CityState extends EnvironmentState {
     	 this.posicionAgente.setNodoActual(nodoDestino);
 		
 	}
-
-	//TODO: Complete this section with agent-specific methods
-    // The following methods are agent-specific:
-	
-	
-
 }
 
