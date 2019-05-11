@@ -11,16 +11,21 @@ public class Enlace{
 	private Nodo nodoDestino;
 	private double costoCalle;
 	private boolean disponible;
-	private ArrayList<Negocio> negocios = new ArrayList();
-	private int evento;
+	private ArrayList<Negocio> negocios = new ArrayList<Negocio>();
+	private HashMap<String,Double> eventos = new HashMap<String,Double>();
 	
 	
-	public int getEvento() {
-		return evento;
+	
+	public HashMap<String,Double> getEventos() {
+		return this.eventos;
 	}
-
-	public void setEvento(int evento) {
-		this.evento = evento;
+	
+	public void setEventos(String evento, double costo) {
+		this.eventos.put(evento,costo);
+	}
+	
+	public void setEventos(HashMap<String,Double> eventos){
+		this.eventos = eventos;
 	}
 
 	public String getNombre(){

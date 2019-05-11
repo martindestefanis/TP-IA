@@ -3,6 +3,9 @@ package grafo;
 
 import java.util.ArrayList;
 
+import frsf.cidisi.exercise.car.search.CarAgentPerception;
+import frsf.cidisi.exercise.car.search.CarAgentState;
+
 
 public class GestorEnlace {
 	
@@ -71,26 +74,65 @@ public class GestorEnlace {
 		}
 	}
 
+	public static void agregarEvento(Enlace enlace, String nombre, Double costo){
+	
+		if(nombre.equalsIgnoreCase(CarAgentPerception.CORTE_CALLE)){
+			GestorEnlace.cambiarDisponibilidad(enlace, false);
+		}
+		else{
+			//BUSCO EL ENLACE EN LA LISTA DE ENLACES EXISTENTES Y AGREGO EL EVENTO
+			for(int i=0; i<enlacesExistentes.size(); i++){
+				if(enlacesExistentes.get(i).getNombre().equalsIgnoreCase(enlace.getNombre())){
+				
+					// ME FIJO SI ESE ENLACE CONTIENE LA PERCEPCION EMPTY. SI LA TIENE LA ELIMINO
+					if(enlacesExistentes.get(i).getEventos().containsKey(CarAgentPerception.EMPTY_PERCEPTION)){
+						enlacesExistentes.get(i).getEventos().remove(CarAgentPerception.EMPTY_PERCEPTION);
+					}
+					//ME FIJO SI ESE ENLACE CONTIENE YA UN EVENTO DEL MISMO TIPO DEL QUE QUIERO AGREGAR
+					if(!enlacesExistentes.get(i).getEventos().containsKey(nombre)){
+						enlacesExistentes.get(i).setEventos(nombre, costo);
+					}else{
+						//SI YA EXISTE UN EVENTO DEL MISMO TIPO DEL QUE QUIERO AGREGAR NO LO AGREGO
+						System.out.println("La calle: " + enlacesExistentes.get(i).getNombre() + 
+								" ya contiene un evento de " + nombre);
+					}
+					break;
+				}
+			}
+		}
+		
+		
+		
+	}
+	
+	
 	public static double calcularCosto(Enlace enlace){
 	//CALCULA EL COSTO TOTAL DEL ENLACE. EL COSTO DE LOS EVENTOS SON UN FACTOR DE TIEMPO DE DEMORA.
 	//Y EL COSTO DEL ENLACE ES EL TIEMPO PROMEDIO QUE LE LLEVA AL AGENTE DE RECORRER UNA CUADRA.
-		double costo = 0;
+		double costo = enlace.getCosto();
 		
 		//PARA EL CASO DE QUE TRABAJEMOS CON VARIOS EVENTOS POR ENLACE
 		
-		/*
-		for(int i=0; i< enlace.getEventos().size(); i++){
-			costo = costo + enlace.getEventos().get(i).getCosto();
+		
+		if(CarAgentState.getModalidadSolucion().equalsIgnoreCase("A pie")){
+			//MODALIDAD A PIE
+			if(enlace.getEventos().containsKey(CarAgentPerception.EVENTO_SOCIAL)){
+				costo = costo + costo*(enlace.getEventos().get(CarAgentPerception.EVENTO_SOCIAL)/100);
+			}
 		}
-		costo = enlace.getCosto() + enlace.getCosto()*costo;
-		*/
+		else{
+			//MODALIDAD "AUTOMOVIL". SI SE AGREGAN MAS MODALIDADES SE DEBE AGREGAR SENTENCIAS IF-ELSE
+			if(enlace.getEventos().containsKey(CarAgentPerception.CONGESTION)){
+				costo = costo + costo*(enlace.getEventos().get(CarAgentPerception.CONGESTION)/100);
+			}	
+		}
 		
 		//PARA EL CASO DE QUE TRABAJEMOS CON UN SOLO EVENTO POR ENLACE
 		
-		costo = enlace.getCosto();
+		/*costo = enlace.getCosto();
 		if(enlace.getEvento()==2){
 			costo = costo + costo*0.6;
-		}
+		}*/
 		
 		return costo;
 	}

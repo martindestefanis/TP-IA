@@ -1,6 +1,7 @@
 package frsf.cidisi.exercise.car.search;
 
 import java.util.ArrayList;
+import java.util.Iterator;
 
 import frsf.cidisi.faia.state.EnvironmentState;
 import grafo.Csv;
@@ -77,16 +78,17 @@ public class CityState extends EnvironmentState {
     	
     	System.out.println("\t\t\t\t------- Eventos --------");
     	
- /*   	for(int i=0; i<mundo.size(); i++){
+    	for(int i=0; i<mundo.size(); i++){
     		for(int k = 0; k<mundo.get(i).getEnlaces().size(); k++){
-    			for(int j=0; j<mundo.get(i).getEnlaces().get(k).getEventos().size(); j++){
-    				System.out.println(mundo.get(i).getEnlaces().get(k).getEventos().get(j).getNombre() +
+    			//Iterator iterador = mundo.get(i).getEnlaces().get(k).getEventos().entrySet().iterator();
+    			for(String key : mundo.get(i).getEnlaces().get(k).getEventos().keySet()){
+    				System.out.println(key +
     		    	"----> Calle: " + mundo.get(i).getEnlaces().get(k).getNombre());
     			}
     		}
     		
     	}
-  */  	
+   	
     	System.out.println("\t\t\t\t------- Estados de los enlaces ---------");
     	
     	for(int i=0; i<mundo.size(); i++){
@@ -97,24 +99,24 @@ public class CityState extends EnvironmentState {
     	}
     	
     	
-    	for(int i=0; i<mundo.size(); i++){
+    	/*for(int i=0; i<mundo.size(); i++){
     		for(int k = 0; k<mundo.get(i).getEnlaces().size(); k++){
     			mundo.get(i).getEnlaces().get(k).setEvento(CarAgentPerception.EMPTY_PERCEPTION);
     		}
-    	}
+    	}*/
     	
     	//traigo todos los eventos del excel
-    	ArrayList<Evento> listaEventos = new ArrayList<Evento>();
+    /*	ArrayList<Evento> listaEventos = new ArrayList<Evento>();
     	try {
 			listaEventos = leerEventos();
 			
 		} catch (Exception e) {
 			e.printStackTrace();
-		}
+		}*/
 		
 		//Coloco cada percepción en el enlace que iría (hay que hacer que las coloque de a una o en cada iteración)
 		
-		for(int i=0; i<mundo.size(); i++){
+		/*for(int i=0; i<mundo.size(); i++){
 			for(int k = 0; k<mundo.get(i).getEnlaces().size(); k++){
 				for(int z=0; z<listaEventos.size(); z++){
 					if(mundo.get(i).getEnlaces().get(k).getNodoOrigen().getNombre().equalsIgnoreCase(listaEventos.get(z).getEnlace().getNodoOrigen().getNombre())
@@ -136,7 +138,7 @@ public class CityState extends EnvironmentState {
 				}
 			}
 			
-		}
+		}*/
     	
         //TODO: Complete Method
     }
@@ -148,7 +150,7 @@ public class CityState extends EnvironmentState {
 				+ ", getPosicionAgente()=" + getPosicionAgente() + "]";
 	}
 
-	public ArrayList<Evento> leerEventos() throws Exception{
+	/*public ArrayList<Evento> leerEventos() throws Exception{
 		
     	ArrayList<Csv> registrosLeidos = null;
     	ArrayList<Evento> eventosLeidos = new ArrayList<Evento>();
@@ -180,14 +182,14 @@ public class CityState extends EnvironmentState {
     		 * SI NO EXISTE ES PORQUE LA ORIENTACION ES DESTINO-ORIGEN
     		 * 
     		 * */
-    		enlace = GestorEnlace.crearEnlace(nodoOrigen, nodoDestino);
+//    		enlace = GestorEnlace.crearEnlace(nodoOrigen, nodoDestino);
     		
-    		if(!GestorEnlace.existeEnlace(enlace)){
+//    		if(!GestorEnlace.existeEnlace(enlace)){
     			/*CREO UN ENLACE CON EL SENTIDO INVERSO Y SE LO MANDO AL GESTOR PARA QUE
     			 * A ESE ENLACE LE CAMBIE LA DISPONIBILIDAD.
     			 * LUEGO CREO EL ENCALE QUE LE CORRESPONDA AL NODO EVENTO
     			 * */
-    			enlace = GestorEnlace.crearEnlace(nodoDestino, nodoOrigen);
+ /*   			enlace = GestorEnlace.crearEnlace(nodoDestino, nodoOrigen);
     		}
     		
     		evento = Evento.crearEvento(nombre,enlace,costo);
@@ -195,7 +197,7 @@ public class CityState extends EnvironmentState {
     	}
     	return eventosLeidos;
     	
-    }
+    }*/
     
     public Posicion getPosicionAgente() {
 		return posicionAgente;

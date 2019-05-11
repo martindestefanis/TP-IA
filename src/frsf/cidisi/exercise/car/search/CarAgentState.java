@@ -19,6 +19,9 @@ public class CarAgentState extends SearchBasedAgentState {
     //Posicion posicionInicial;
     Posicion posicionActual;
     
+
+    private static String modalidadSolucion;
+    
     private ArrayList<Nodo> mundo = new ArrayList<Nodo>();
    
 	private ArrayList<String> productosComprar = new ArrayList<String>();
@@ -78,9 +81,9 @@ public class CarAgentState extends SearchBasedAgentState {
     			if(posicionActual.getNodoActual().getEnlaces().get(j).getNodoOrigen().getNombre().equalsIgnoreCase(p1.getSensorEnlaces().get(i).getNodoOrigen().getNombre())
     					&& posicionActual.getNodoActual().getEnlaces().get(j).getNodoDestino().getNombre().equalsIgnoreCase(p1.getSensorEnlaces().get(i).getNodoDestino().getNombre())){
     				
-    				posicionActual.getNodoActual().getEnlaces().get(j).setEvento(p1.getSensorEnlaces().get(i).getEvento());
+    				posicionActual.getNodoActual().getEnlaces().get(j).setEventos(p1.getSensorEnlaces().get(i).getEventos());
     				
-    				if(posicionActual.getNodoActual().getEnlaces().get(j).getEvento()==p1.CORTE_CALLE){
+    				if(posicionActual.getNodoActual().getEnlaces().get(j).getEventos().containsKey(CarAgentPerception.CORTE_CALLE)){
     					posicionActual.getNodoActual().getEnlaces().get(j).setDisponible(false);
     				}
     			}
@@ -94,7 +97,11 @@ public class CarAgentState extends SearchBasedAgentState {
      */
     @Override
     public void initState() {
-        
+        //LA MODALIDAD PUEDE SER O "A PIE" O EN "AUTOMOVIL"
+    	//modalidadSolucion = "A pie";
+    	modalidadSolucion = "Automovil";
+    	
+    	
     	//No se si es necesario el mundo
 		mundo = GestorNodo.getNodosExistentes();
     	
@@ -105,7 +112,7 @@ public class CarAgentState extends SearchBasedAgentState {
 		productosComprar.add("Leche");
 		productosComprar.add("Maní");
 		posicionActual = new Posicion(null,GestorNodo.obtenerNodo("Juan Castelli y Antonia Godoy"));
-
+	
     }
 
     /**
@@ -176,10 +183,20 @@ public class CarAgentState extends SearchBasedAgentState {
       posicionInicial = arg;
      }
  */ 
+	
+	
      public ArrayList<Nodo> getmundo(){
         return mundo;
      }
-     public void setMundo(ArrayList<Nodo> arg){
+     public static String getModalidadSolucion() {
+		return modalidadSolucion;
+	}
+
+	public static void setModalidadSolucion(String modalidad) {
+		modalidadSolucion = modalidad;
+	}
+
+	public void setMundo(ArrayList<Nodo> arg){
         mundo = arg;
      }
      public ArrayList<String> getproductosComprar(){
