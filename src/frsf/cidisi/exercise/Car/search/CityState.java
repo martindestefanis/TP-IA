@@ -103,6 +103,7 @@ public class CityState extends EnvironmentState {
     	}
     	
 
+
     	System.out.println("\t\t\t\t------- MUNDO AGENTE ----------");
     	
     	System.out.println("\t\t\t\t------- Eventos --------");
@@ -168,6 +169,8 @@ public class CityState extends EnvironmentState {
 		}*/
     	
         //TODO: Complete Method
+
+
     }
     
     public void cargarPercepciones(ArrayList<Nodo> mundoAmbiente){
