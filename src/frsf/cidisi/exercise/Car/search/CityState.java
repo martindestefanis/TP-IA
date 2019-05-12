@@ -9,6 +9,7 @@ import grafo.Enlace;
 import grafo.Evento;
 import grafo.GestorEnlace;
 import grafo.GestorNodo;
+import grafo.Grafo;
 import grafo.Negocio;
 import grafo.Nodo;
 
@@ -41,11 +42,15 @@ public class CityState extends EnvironmentState {
     @Override
     public void initState() {
     	
-    	mundo = GestorNodo.getNodosExistentes();
+    	//INICIO EL MUNDO DEL AMBIENTE CON LAS CALLES Y NEGOCIOS
+    	mundo = Grafo.iniciarMundo();
+    	
+    	//CARGO LAS PERCEPCIONES EN BASE A LOS EVENTOS LEIDOS
+    	
     	//MUESTRO TODOS LOS DATOS CARGADOS
-    	posicionAgente = new Posicion(null,GestorNodo.obtenerNodo("Juan Castelli y Antonia Godoy"));
+    	posicionAgente = new Posicion(null,GestorNodo.obtenerNodo(mundo,"Juan Castelli y Antonia Godoy"));
     	
-    	
+    	/*System.out.println("\t\t\t\t------- MUNDO DEL AMBIENTE -------");
     	System.out.println("\t\t\t\t------- Nodos y sus enlaces -------");
     	for(int i=0; i< mundo.size(); i++){
 	    	   for(int j=0; j<mundo.get(i).getEnlaces().size(); j++){
@@ -80,7 +85,6 @@ public class CityState extends EnvironmentState {
     	
     	for(int i=0; i<mundo.size(); i++){
     		for(int k = 0; k<mundo.get(i).getEnlaces().size(); k++){
-    			//Iterator iterador = mundo.get(i).getEnlaces().get(k).getEventos().entrySet().iterator();
     			for(String key : mundo.get(i).getEnlaces().get(k).getEventos().keySet()){
     				System.out.println(key +
     		    	"----> Calle: " + mundo.get(i).getEnlaces().get(k).getNombre());
@@ -97,6 +101,29 @@ public class CityState extends EnvironmentState {
     				String.valueOf(mundo.get(i).getEnlaces().get(j).isDisponible()));
     		}
     	}
+    	
+
+    	System.out.println("\t\t\t\t------- MUNDO AGENTE ----------");
+    	
+    	System.out.println("\t\t\t\t------- Eventos --------");
+    	
+    	for(int i=0; i<agState.getmundo().size(); i++){
+    		for(int k = 0; k<agState.getmundo().get(i).getEnlaces().size(); k++){
+    			for(String key : agState.getmundo().get(i).getEnlaces().get(k).getEventos().keySet()){
+    				System.out.println(key +
+    		    	"----> Calle: " + agState.getmundo().get(i).getEnlaces().get(k).getNombre());
+    			}
+    		}
+    		
+    	}*/
+    	
+    	/*for(int i=0; i<agState.getmundo().size();i++){
+    		for(int j=0; j<agState.getmundo().get(i).getEnlaces().size();j++){
+    			for(String key : agState.getmundo().get(i).getEnlaces().get(j).getEventos().keySet()){
+    				System.out.println(agState.getmundo().get(i).getEnlaces().get(j).getEventos().get(key));
+    			}
+    		}
+    	}*/
     	
     	
     	/*for(int i=0; i<mundo.size(); i++){
@@ -143,61 +170,76 @@ public class CityState extends EnvironmentState {
         //TODO: Complete Method
     }
     
+    public void cargarPercepciones(ArrayList<Nodo> mundoAmbiente){
+    	ArrayList<Evento> listaEventos = new ArrayList<Evento>();
+    	listaEventos = Grafo.leerEventos();
+    	
+    	//SETEO TODOS LOS ENLACES CON PERCEPCIONES EMPTY
+   		for(int i=0; i<mundoAmbiente.size(); i++){
+			for(int j=0; j<mundoAmbiente.get(i).getEnlaces().size(); j++){
+				mundoAmbiente.get(i).getEnlaces().get(j).setEventos(CarAgentPerception.EMPTY_PERCEPTION,0);
+			}
+		}
+   		
+   		for(int i=0; i<listaEventos.size(); i++){
+   			for(int j=0; j<mundoAmbiente.size(); j++){
+   				for(int k=0; k<mundoAmbiente.get(j).getEnlaces().size(); k++){
+   					//ENCUENTRO EL ENLACE AL QUE LE TENGO QUE SETEAR LA PERCEPCION DE EVENTO
+   					if(mundoAmbiente.get(j).getEnlaces().get(k).getNodoOrigen().getNombre().equalsIgnoreCase(listaEventos.get(i).getEnlace().getNodoOrigen().getNombre())
+   						&& mundoAmbiente.get(j).getEnlaces().get(k).getNodoDestino().getNombre().equalsIgnoreCase(listaEventos.get(i).getEnlace().getNodoDestino().getNombre())){
+   						//SI EL ENLACE CONTIENE UNA PERCEPCION DE EMPY LA ELIMINO
+   						if(mundoAmbiente.get(j).getEnlaces().get(k).getEventos().containsKey(CarAgentPerception.EMPTY_PERCEPTION)){
+   							mundoAmbiente.get(j).getEnlaces().get(k).getEventos().remove(CarAgentPerception.EMPTY_PERCEPTION);
+   						
+   						}else{
+   							//SI EL ENLACE NO CONTIENE YA UN EVENTO DEL MISMO TIPO LO AGREGA. CASO CONTRARIO LO IGNORA Y MUESTRA POR PANTALLA
+   							if(!mundoAmbiente.get(j).getEnlaces().get(k).getEventos().containsKey(listaEventos.get(i).getNombre())){
+   								mundoAmbiente.get(j).getEnlaces().get(k).setEventos(listaEventos.get(i).getNombre(),listaEventos.get(i).getCosto());
+   							}
+   							else{
+   								//System.out.println("La calle " + mundoAmbiente.get(j).getEnlaces().get(k).getNombre() +
+   								//" ya contiene un evento de " + mundoAmbiente.get(j).getEnlaces().get(k).getEventos().get(listaEventos.get(i).getNombre()));
+   							}
+   							
+   						}
+   					}
+   				}
+   			}
+   		}
+   		
+   		
+   		/*for(int i=0; i<mundoAmbiente.size(); i++){
+			for(int k = 0; k<mundoAmbiente.get(i).getEnlaces().size(); k++){
+				for(int z=0; z<listaEventos.size(); z++){
+					if(mundoAmbiente.get(i).getEnlaces().get(k).getNodoOrigen().getNombre().equalsIgnoreCase(listaEventos.get(z).getEnlace().getNodoOrigen().getNombre())
+							&& mundoAmbiente.get(i).getEnlaces().get(k).getNodoDestino().getNombre().equalsIgnoreCase(listaEventos.get(z).getEnlace().getNodoDestino().getNombre()))
+					{
+						if(mundoAmbiente.get(i).getEnlaces().get(k).getEvento() == 0){
+							
+							if(listaEventos.get(z).getNombre().equalsIgnoreCase("Corte calle")){
+								mundo.get(i).getEnlaces().get(k).setEvento(CarAgentPerception.CORTE_CALLE);
+							}
+							else{
+								mundo.get(i).getEnlaces().get(k).setEvento(CarAgentPerception.CONGESTION);
+							}
+						}
+						else{
+							System.out.println("Ya existe un evento en la calle: " + mundo.get(i).getEnlaces().get(k).getNombre());
+						}
+					}
+				}
+			}
+			
+		}*/
+   		
+    }
+    
     @Override
 	public String toString() {
 		return "CityState [agState=" + agState + ", mundo=" + mundo
 				+ ", posicionAgente=" + posicionAgente
 				+ ", getPosicionAgente()=" + getPosicionAgente() + "]";
 	}
-
-	/*public ArrayList<Evento> leerEventos() throws Exception{
-		
-    	ArrayList<Csv> registrosLeidos = null;
-    	ArrayList<Evento> eventosLeidos = new ArrayList<Evento>();
-    	Csv fila = new Csv();
-    	String csvEventos = "..\\TP-IA\\src\\grafo\\Eventos.csv";
-    	String delimitador = ";";
- 	    
- 	    Nodo nodoOrigen = new Nodo();
- 	    Nodo nodoDestino = new Nodo();
- 	    double costo;
- 	    
- 	    Evento evento = new Evento();
- 	    
- 	    Enlace enlace = new Enlace();
- 	    
- 	    String nombre;
-    	
-    	registrosLeidos = fila.leerEventos(csvEventos,delimitador);
-    	
-    	for(int i=0; i< registrosLeidos.size(); i++){
-    		nombre = registrosLeidos.get(i).getNombreEvento();
-    		nodoOrigen = GestorNodo.crearNodo(registrosLeidos.get(i).getEsquina1());
-    		nodoDestino = GestorNodo.crearNodo(registrosLeidos.get(i).getEsquina2());
-    		costo = registrosLeidos.get(i).getCosto();
-    		
-    		
-    		/*PRIMERO CREO UN ENLACE SUPONIENDO QUE EL SENTIDO DE LAS ESQUINAS ES ORIGEN-DESTINO
-    		 * DESPUES VERIFICO SI EXISTE UN ENLACE CON ESE SENTIDO
-    		 * SI NO EXISTE ES PORQUE LA ORIENTACION ES DESTINO-ORIGEN
-    		 * 
-    		 * */
-//    		enlace = GestorEnlace.crearEnlace(nodoOrigen, nodoDestino);
-    		
-//    		if(!GestorEnlace.existeEnlace(enlace)){
-    			/*CREO UN ENLACE CON EL SENTIDO INVERSO Y SE LO MANDO AL GESTOR PARA QUE
-    			 * A ESE ENLACE LE CAMBIE LA DISPONIBILIDAD.
-    			 * LUEGO CREO EL ENCALE QUE LE CORRESPONDA AL NODO EVENTO
-    			 * */
- /*   			enlace = GestorEnlace.crearEnlace(nodoDestino, nodoOrigen);
-    		}
-    		
-    		evento = Evento.crearEvento(nombre,enlace,costo);
-    		eventosLeidos.add(evento);		
-    	}
-    	return eventosLeidos;
-    	
-    }*/
     
     public Posicion getPosicionAgente() {
 		return posicionAgente;
@@ -212,11 +254,5 @@ public class CityState extends EnvironmentState {
     	 this.posicionAgente.setNodoActual(nodoDestino);
 		
 	}
-
-	//TODO: Complete this section with agent-specific methods
-    // The following methods are agent-specific:
-	
-	
-
 }
 

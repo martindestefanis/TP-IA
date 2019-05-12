@@ -14,7 +14,7 @@ public class CarAgentPerception extends Perception {
 	Posicion pos= new Posicion(null,null);
 
 	//TODO: Setup Statics   
-    public static String EMPTY_PERCEPTION = new String("Sin percepcion");
+    public static String EMPTY_PERCEPTION = "Sin percepcion";
     public static String CORTE_CALLE = "Corte Calle";
     public static String CONGESTION = "Congestion";
     public static String EVENTO_SOCIAL = "Evento Social";

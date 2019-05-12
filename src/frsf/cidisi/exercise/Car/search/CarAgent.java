@@ -9,8 +9,6 @@ import frsf.cidisi.faia.agent.search.SearchAction;
 import frsf.cidisi.faia.agent.search.SearchBasedAgent;
 import frsf.cidisi.faia.agent.Action;
 import frsf.cidisi.faia.solver.search.*;
-import grafo.GestorNegocio;
-import grafo.GestorNodo;
 
 import java.util.logging.Level;
 import java.util.logging.Logger;
@@ -35,8 +33,8 @@ public class CarAgent extends SearchBasedAgent {
         	operators.addElement(new Comprar_producto(agState.getproductosComprar().get(i)));
         }
 
-        for(int i =0; i<GestorNodo.getNodosExistentes().size();i++){
-        	operators.addElement(new Avanzar(GestorNodo.getNodosExistentes().get(i)));
+        for(int i =0; i<agState.getmundo().size();i++){
+        	operators.addElement(new Avanzar(agState.getmundo().get(i)));
         }
         	
 

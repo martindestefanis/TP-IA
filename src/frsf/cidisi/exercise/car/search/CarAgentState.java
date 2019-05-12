@@ -7,6 +7,7 @@ import frsf.cidisi.faia.agent.Perception;
 import frsf.cidisi.faia.agent.search.SearchBasedAgentState;
 import grafo.Enlace;
 import grafo.GestorNodo;
+import grafo.Grafo;
 import grafo.Nodo;
 
 /**
@@ -23,6 +24,7 @@ public class CarAgentState extends SearchBasedAgentState {
     private static String modalidadSolucion;
     
     private ArrayList<Nodo> mundo = new ArrayList<Nodo>();
+    //private ArrayList<Nodo> mundoReal;
    
 	private ArrayList<String> productosComprar = new ArrayList<String>();
     
@@ -33,6 +35,14 @@ public class CarAgentState extends SearchBasedAgentState {
     
     	//TODO: Complete Method
         this.initState();
+        /*
+        for(int i=0; i<mundo.size(); i++){
+        	for(int j=0; j< mundo.get(i).getEnlaces().size(); j++){
+        		for(String key : mundo.get(i).getEnlaces().get(j).getEventos().keySet()){
+        			System.out.println(mundo.get(i).getEnlaces().get(j).getEventos().get(key));
+        		}
+        	}
+        }*/
     }
 
     /**
@@ -90,6 +100,7 @@ public class CarAgentState extends SearchBasedAgentState {
     		}
     	}
     	
+    	
     }
 
     /**
@@ -101,17 +112,15 @@ public class CarAgentState extends SearchBasedAgentState {
     	//modalidadSolucion = "A pie";
     	modalidadSolucion = "Automovil";
     	
-    	
-    	//No se si es necesario el mundo
-		mundo = GestorNodo.getNodosExistentes();
-    	
+		mundo = Grafo.iniciarMundo();
+		    	
 		//posicionInicial = new Posicion(null,GestorNodo.obtenerNodo("Juan Castelli y Antonia Godoy"));
 		
 		productosComprar.add("Café");
-		productosComprar.add("Huevos");
-		productosComprar.add("Leche");
+		//productosComprar.add("Huevos");
+		//productosComprar.add("Leche");
 		productosComprar.add("Maní");
-		posicionActual = new Posicion(null,GestorNodo.obtenerNodo("Juan Castelli y Antonia Godoy"));
+		posicionActual = new Posicion(null,GestorNodo.obtenerNodo(mundo,"Juan Castelli y Antonia Godoy"));
 	
     }
 

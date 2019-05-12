@@ -93,8 +93,8 @@ public class GestorEnlace {
 						enlacesExistentes.get(i).setEventos(nombre, costo);
 					}else{
 						//SI YA EXISTE UN EVENTO DEL MISMO TIPO DEL QUE QUIERO AGREGAR NO LO AGREGO
-						System.out.println("La calle: " + enlacesExistentes.get(i).getNombre() + 
-								" ya contiene un evento de " + nombre);
+						//System.out.println("La calle: " + enlacesExistentes.get(i).getNombre() + 
+							//	" ya contiene un evento de " + nombre);
 					}
 					break;
 				}

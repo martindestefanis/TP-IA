@@ -68,9 +68,9 @@ public class Comprar_producto extends SearchAction {
 	        		agState.getProductosComprados().add(this.productoComprar);
 	        		agState.getproductosComprar().remove(productoComprar);
 	        		this.costoProducto = negocio.getProductoPrecio().get(this.productoComprar);
-	        		System.out.println(agState.getPosicionActual().getNodoActual().getNombre());
+	        		/*System.out.println(agState.getPosicionActual().getNodoActual().getNombre());
 	        		System.out.println(agState.getProductosComprados().toString());
-	        		System.out.println(costoProducto);
+	        		System.out.println(costoProducto);*/
 	        		return environmentState;
 	        	}
 	        }

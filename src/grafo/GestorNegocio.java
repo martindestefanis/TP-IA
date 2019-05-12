@@ -68,7 +68,7 @@ public class GestorNegocio {
 					negocioExistente.get(i).agregarProductoPrecio(producto, costo);
 				}
 				else{
-					System.out.println("El producto: " + producto + " ya existe en el negocio " + negocioExistente.get(i).getNombre());
+					//System.out.println("El producto: " + producto + " ya existe en el negocio " + negocioExistente.get(i).getNombre());
 					
 				}
 					

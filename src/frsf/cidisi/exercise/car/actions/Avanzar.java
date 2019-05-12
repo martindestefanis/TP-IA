@@ -54,10 +54,10 @@ public class Avanzar extends SearchAction {
         		agState.getPosicionActual().getNodoActual().getEnlaces().get(i).getNodoDestino().getNombre().equalsIgnoreCase(nodoDestino.getNombre())){
         		
         		this.enlace = agState.getPosicionActual().getNodoActual().getEnlaces().get(i);
-        		System.out.println("Calle: " + enlace.getNombre());
+        		//System.out.println("Calle: " + enlace.getNombre());
         		agState.setPosicionActual(agState.getPosicionActual().getNodoActual().getEnlaces().get(i),nodoDestino);
         		environmentState.setPosicionAgente(agState.getPosicionActual().getNodoActual().getEnlaces().get(i),nodoDestino);
-        		System.out.println(agState.getPosicionActual().getNodoActual().getNombre());
+        		//System.out.println(agState.getPosicionActual().getNodoActual().getNombre());
         		return environmentState;
         	}
         }  

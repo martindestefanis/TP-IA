@@ -8,8 +8,6 @@ public class CarAgentMain {
 
     public static void main(String[] args) throws PrologConnectorException {
     	
-    	//LEVANTA TODO EL MUNDO
-    	Grafo.iniciarMundo();
     	
     	CarAgent agent = new CarAgent();
 
