@@ -93,16 +93,13 @@ public class GestorEnlace {
 						enlacesExistentes.get(i).setEventos(nombre, costo);
 					}else{
 						//SI YA EXISTE UN EVENTO DEL MISMO TIPO DEL QUE QUIERO AGREGAR NO LO AGREGO
-						//System.out.println("La calle: " + enlacesExistentes.get(i).getNombre() + 
-							//	" ya contiene un evento de " + nombre);
+						System.out.println("La calle: " + enlacesExistentes.get(i).getNombre() + 
+							" ya contiene un evento de " + nombre);
 					}
 					break;
 				}
 			}
-		}
-		
-		
-		
+		}	
 	}
 	
 	
@@ -112,8 +109,7 @@ public class GestorEnlace {
 		double costo = enlace.getCosto();
 		
 		//PARA EL CASO DE QUE TRABAJEMOS CON VARIOS EVENTOS POR ENLACE
-		
-		
+	
 		if(CarAgentState.getModalidadSolucion().equalsIgnoreCase("A pie")){
 			//MODALIDAD A PIE
 			if(enlace.getEventos().containsKey(CarAgentPerception.EVENTO_SOCIAL)){
@@ -126,13 +122,6 @@ public class GestorEnlace {
 				costo = costo + costo*(enlace.getEventos().get(CarAgentPerception.CONGESTION)/100);
 			}	
 		}
-		
-		//PARA EL CASO DE QUE TRABAJEMOS CON UN SOLO EVENTO POR ENLACE
-		
-		/*costo = enlace.getCosto();
-		if(enlace.getEvento()==2){
-			costo = costo + costo*0.6;
-		}*/
 		
 		return costo;
 	}

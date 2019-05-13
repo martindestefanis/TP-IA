@@ -7,6 +7,7 @@ import frsf.cidisi.faia.agent.search.SearchAction;
 import frsf.cidisi.faia.agent.search.SearchBasedAgentState;
 import frsf.cidisi.faia.state.AgentState;
 import frsf.cidisi.faia.state.EnvironmentState;
+import grafo.Grafo;
 import grafo.Negocio;
 
 public class Comprar_producto extends SearchAction {
@@ -68,9 +69,21 @@ public class Comprar_producto extends SearchAction {
 	        		agState.getProductosComprados().add(this.productoComprar);
 	        		agState.getproductosComprar().remove(productoComprar);
 	        		this.costoProducto = negocio.getProductoPrecio().get(this.productoComprar);
-	        		/*System.out.println(agState.getPosicionActual().getNodoActual().getNombre());
+	        		System.out.println(agState.getPosicionActual().getNodoActual().getNombre());
 	        		System.out.println(agState.getProductosComprados().toString());
-	        		System.out.println(costoProducto);*/
+	        		System.out.println(costoProducto);
+	        		Grafo.percepcionesAleatorias(environmentState.getMundo());
+	        		System.out.println("\t\t\t\t------- PRUEBA Eventos Cambiados ambiente --------");
+	            	
+	            	for(int j=0; j<environmentState.getMundo().size(); j++){
+	            		for(int k = 0; k<environmentState.getMundo().get(j).getEnlaces().size(); k++){
+	            			for(String key : environmentState.getMundo().get(j).getEnlaces().get(k).getEventos().keySet()){
+	            				System.out.println(key +
+	            		    	"----> Calle: " + environmentState.getMundo().get(j).getEnlaces().get(k).getNombre());
+	            			}
+	            		}
+	            		
+	            	}
 	        		return environmentState;
 	        	}
 	        }

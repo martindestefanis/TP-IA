@@ -76,7 +76,7 @@ public class GestorNodo {
 		}
 	}
 	
-	public void agregarProducto(Enlace enlace, Negocio negocio, String producto, double precio){
+	/*public void agregarProducto(Enlace enlace, Negocio negocio, String producto, double precio){
 		//RECORRO LISTA DE NODOS EXISTENTES
 		for(int i=0; i< this.getNodosExistentes().size(); i++){
 			//System.out.println(this.getNodosExistentes().get(i).getNombre());
@@ -102,5 +102,5 @@ public class GestorNodo {
 				
 			}
 		}
-	}
+	}*/
 }

@@ -2,6 +2,7 @@ package grafo;
 
 
 import java.util.ArrayList;
+import java.util.Iterator;
 
 import frsf.cidisi.exercise.car.search.CarAgentPerception;
 
@@ -12,35 +13,24 @@ public class Grafo {
 	public static ArrayList<Nodo> iniciarMundo(){
 		
 		GestorNodo gestor = new GestorNodo();
-		
+		Enlace enlace = new Enlace();
+		ArrayList<Negocio> listaNegocios = new ArrayList<Negocio>();
+				
 		gestor.setNodosExistentes(leerEnlaces());
 		
-		System.out.println("NODOS MUNDO");
-		System.out.println("\t\t\t\t------- Nodos y sus enlaces -------");
-    	for(int i=0; i< gestor.getNodosExistentes().size(); i++){
-	    	   for(int j=0; j<gestor.getNodosExistentes().get(i).getEnlaces().size(); j++){
-	    		   System.out.println(gestor.getNodosExistentes().get(i).getNombre() + " ---> " + gestor.getNodosExistentes().get(i).getEnlaces().get(j).getNombre());
-	    	   }
-	    	   System.out.println("FINALIZAN LOS ENLACES DEL NODO " + gestor.getNodosExistentes().get(i).getNombre());
-	       }
-		//gestor.getNodosExistentes().get(1).getEnlaces().get(2).setNegocios(negocio);
-		
-    	leerNegocios(gestor);
+    	listaNegocios = leerNegocios();
     	
-		System.out.println("NEGOCIOS MUNDO");
-		for(int i=0; i<gestor.getNodosExistentes().size(); i++){
-			for(int j=0; j<gestor.getNodosExistentes().get(i).getEnlaces().size(); j++){
-				//System.out.println("Tamaño: " + gestor.getNodosExistentes().get(i).getEnlaces().size());
-				for(int k=0; k<gestor.getNodosExistentes().get(i).getEnlaces().get(j).getNegocios().size(); k++){
-					if(gestor.getNodosExistentes().get(i).getEnlaces().get(j).getNegocios().size()>0){
-						System.out.println(gestor.getNodosExistentes().get(i).getEnlaces().get(j).getNegocios().get(k).getNombre());
-					}
-					
-				}
-			}
-			
-		}
-		
+    	for(int i=0; i<listaNegocios.size(); i++){
+    		for(int j=0; j<gestor.getNodosExistentes().size(); j++){
+    			for(int k=0; k<gestor.getNodosExistentes().get(j).getEnlaces().size(); k++){
+    				enlace = GestorEnlace.crearEnlace(listaNegocios.get(i).getEsquina1(), listaNegocios.get(i).getEsquina2());
+    				if(enlace.getNombre().equalsIgnoreCase(gestor.getNodosExistentes().get(j).getEnlaces().get(k).getNombre())){
+    					gestor.getNodosExistentes().get(j).getEnlaces().get(k).setNegocios(listaNegocios.get(i));
+    				}
+    			}
+    			
+    		}
+    	}
 		return gestor.getNodosExistentes();
 	}
 	
@@ -102,7 +92,7 @@ public class Grafo {
 		return gestorNodo.getNodosExistentes();
 	}
 	
-	private static void leerNegocios(GestorNodo gestor){
+	private static ArrayList<Negocio> leerNegocios(){
 		//DIRECTORIO DEL FICHERO Y DELIMITADOR DE LECTURA
 	    String csvNegocios = "..\\TP-IA\\src\\grafo\\Negocios.csv";
 	    String delimitador = ";";
@@ -114,8 +104,12 @@ public class Grafo {
 	    
 	    Enlace enlace = new Enlace();
 
+	    ArrayList<Negocio> listaNegocios = new ArrayList<Negocio>();
+	   	    
 	    Negocio negocio = new Negocio();
 	    String nombre;
+	    
+	    boolean existeNegocio;
 		
 	    try{
 			//LEO ARCHIVO DE NEGOCIOS
@@ -123,8 +117,7 @@ public class Grafo {
 	    	String producto;
 	    	Double precio;
 	       	Boolean abierto;
-	       	
-	    	 	    	
+	    	
 	    	for(int i=0; i< registrosLeidos.size(); i++){
 	    		nombre = registrosLeidos.get(i).getNombreNegocio();
 	    		nodoOrigen = GestorNodo.crearNodo(registrosLeidos.get(i).getEsquina1());
@@ -149,31 +142,38 @@ public class Grafo {
 	    		
 	    		negocio = GestorNegocio.crearNegocio(nombre, enlace.getNodoOrigen(), enlace.getNodoDestino(),abierto);
 	    		
-	    		//System.out.println("Negocio: " + negocio.getNombre());
-	    	//VERIFICO QUE NO EXISTA EL NEGOCIO EN ESA CALLE (PROBLEMA CON LAS CALLES DOBLE SENTIDO)
-	    		if(!GestorNegocio.existeNegocio(negocio)){
+	    	//VERIFICO QUE NO EXISTA EL NEGOCIO EN ESA CALLE
+	    		
+	    		existeNegocio = false;
+	    		
+	    		for(int j=0; j<listaNegocios.size(); j++){
+	    			if(listaNegocios.get(j).getNombre().equalsIgnoreCase(negocio.getNombre()) &&
+	    				listaNegocios.get(j).getEsquina1().getNombre().equalsIgnoreCase(enlace.getNodoOrigen().getNombre())
+	    				&& listaNegocios.get(j).getEsquina2().getNombre().equalsIgnoreCase(enlace.getNodoDestino().getNombre())){
+	    				
+	    				negocio = listaNegocios.get(j);
+	    				existeNegocio = true;
+	    				break;
+	    			}
+	    		}
+	
+	    		if(!existeNegocio){
 	       			negocio.agregarProductoPrecio(producto,precio);
-	    			System.out.println("ENTRO");
 	    			GestorNegocio.agregarNegocio(negocio);
 	    			GestorEnlace.agregarNegocio(enlace, negocio);
-	    			gestor.agregarNegocio(enlace, negocio);
-	    			for(int a=0; i<gestor.getNodosExistentes().size(); i++){
-	    				for(int t=0; t<gestor.getNodosExistentes().get(a).getEnlaces().size(); t++){
-	    					System.out.println("Tamaño: " + gestor.getNodosExistentes().get(a).getEnlaces().get(t).getNegocios().size());
-	    				}
-	    			}
-	    			
+	    			listaNegocios.add(negocio);	
 	    		}
 	    		else{
-	    				System.out.println("ENTRO2");
 		    			GestorNegocio.agregarProducto(negocio,producto,precio);
 		    			GestorEnlace.agregarProducto(negocio,producto,precio);
-		    			gestor.agregarProducto(enlace,negocio,producto,precio);
+		    			negocio.getProductoPrecio().put(producto,precio);
 	    		}
 	    	}
 	    } catch (Exception e) {            
 	        e.printStackTrace();
 	    }
+	    
+	    return listaNegocios;
 		
 	}
 	
@@ -223,7 +223,7 @@ public class Grafo {
 		    	
 		    	}
 		    		
-		    evento = Evento.crearEvento(nombre,enlace,costo);
+		    evento = new Evento(nombre,enlace,costo);
 		    listaEventos.add(evento);
 		    
     		GestorEnlace.agregarEvento(enlace,nombre,costo);
@@ -239,39 +239,115 @@ public class Grafo {
 	}
 	
 	public static void percepcionesAleatorias(ArrayList<Nodo> mundo){
+	
 		boolean salir = false;
-		int indiceNodoElegido, indiceEnlaceElegido, indiceAccionElegida;
-		String eventoElegido;
+		boolean elegirOtraAccion = true;
+		
+		int indiceNodoElegido;
+		int indiceEnlaceElegido;
+		int indiceAccionElegida;
+		int indiceNegocioElegido;
+		double costoElegido;
+		
 		listaAcciones[] acciones = listaAcciones.values();
 		
-		indiceNodoElegido = (int) Math.random() * mundo.size();
-		System.out.println("NODO ELEGIDO: " + mundo.get(indiceNodoElegido).getNombre());
-		indiceEnlaceElegido = (int) Math.random() * mundo.get(indiceNodoElegido).getEnlaces().size();
-		System.out.println("ENLACE ELEGIDO: " + mundo.get(indiceNodoElegido).getEnlaces().get(indiceEnlaceElegido).getNombre());
-		indiceAccionElegida = (int) Math.random() * acciones.length;
-		System.out.println("ACCION ELEGIDA: " + acciones[indiceAccionElegida]);
-		/*
-		
-		switch(acciones[indiceAccionElegida]){
-		case "EVENTO_SOCIAL":
+		Negocio negocioAleatorio = new Negocio();
+		System.out.println("PERCEPCIONES ALEATORIAS");
+		while(!salir && elegirOtraAccion){
+			//SELECCIONO UN INDICE PARA ELEGIR UN NODO ALEATORIO
+			indiceNodoElegido = (int) Math.floor(Math.random()*mundo.size());
+			System.out.println("NODO ELEGIDO: " + mundo.get(indiceNodoElegido).getNombre());
 			
-		}
-		
-		
-		if(!mundo.get(indiceNodoElegido).getEnlaces().get(indiceEnlaceElegido).getEventos().containsKey(acciones[indiceAccionElegida])){
-			salir = true;
-		}*/
-		
-		
-		
+			//SELECCIONO UN INDICE PARA ELEGIR UN ENLACE ALEATORIO EN BASE AL NODO ALEATORIO ELEGIDO
+			indiceEnlaceElegido = (int) Math.floor(Math.random()* mundo.get(indiceNodoElegido).getEnlaces().size());
+			System.out.println("ENLACE ELEGIDO: " + mundo.get(indiceNodoElegido).getEnlaces().get(indiceEnlaceElegido).getNombre());
+			
+			/*SELECCIONO UNA ACCION ALEATORIA EN BASE A LA LISTA DE OPCIONES:
+			 * -- AGREGAR/ELIMINAR UN EVENTO SOCIAL
+			 * -- AGREGAR/ELIMINAR UNA CONGESTION
+			 * -- ABRIR/CERRAR UN NEGOCIO
+			 * -- NO CAMBIAR EL MUNDO DEL AMBIENTE
+			 */
+			indiceAccionElegida = (int) Math.floor(Math.random()* acciones.length);
+			System.out.println("ACCION ELEGIDA: " + acciones[indiceAccionElegida]);
+			
+			//SELECCIONO UN COSTO ALEATORIO PARA EL EVENTO. ENTRE 0 Y 100 (PORCENTAJE)
+			costoElegido = Math.floor(Math.random()*100);
+			System.out.println("COSTO ELEGIDO: " + costoElegido);
+			
+			//MODIFICO EL MUNDO DEL AMBIENTE SEGUN LA ACCION SELECCIONADA
+
+			switch(acciones[indiceAccionElegida]){
+				case AGREGAR_EVENTO_SOCIAL:
+					if(!mundo.get(indiceNodoElegido).getEnlaces().get(indiceEnlaceElegido).getEventos().containsKey(CarAgentPerception.EVENTO_SOCIAL)){
+						mundo.get(indiceNodoElegido).getEnlaces().get(indiceEnlaceElegido).getEventos().put(CarAgentPerception.EVENTO_SOCIAL,costoElegido);
+						salir = true;
+						elegirOtraAccion = false;
+					}else{
+						elegirOtraAccion = true;
+					}
+					break;
+				case ELIMINAR_EVENTO_SOCIAL:
+					if(mundo.get(indiceNodoElegido).getEnlaces().get(indiceEnlaceElegido).getEventos().containsKey(CarAgentPerception.EVENTO_SOCIAL)){
+						mundo.get(indiceNodoElegido).getEnlaces().get(indiceEnlaceElegido).getEventos().remove(CarAgentPerception.EVENTO_SOCIAL);
+						salir = true;
+						elegirOtraAccion = false;
+					}else{
+						elegirOtraAccion = true;
+					}
+					break;
+				case AGREGAR_CONGESTION:
+					if(!mundo.get(indiceNodoElegido).getEnlaces().get(indiceEnlaceElegido).getEventos().containsKey(CarAgentPerception.CONGESTION)){
+						mundo.get(indiceNodoElegido).getEnlaces().get(indiceEnlaceElegido).getEventos().put(CarAgentPerception.CONGESTION,costoElegido);
+						salir = true;
+						elegirOtraAccion = false;
+					}else{
+						elegirOtraAccion = true;
+					}
+					break;
+				case ELIMINAR_CONGESTION:
+					if(mundo.get(indiceNodoElegido).getEnlaces().get(indiceEnlaceElegido).getEventos().containsKey(CarAgentPerception.CONGESTION)){
+						mundo.get(indiceNodoElegido).getEnlaces().get(indiceEnlaceElegido).getEventos().remove(CarAgentPerception.CONGESTION);
+						salir = true;
+						elegirOtraAccion = false;
+					}else{
+						elegirOtraAccion = true;
+					}
+					break;
+				case ABRIR_NEGOCIO:
+					if(mundo.get(indiceNodoElegido).getEnlaces().get(indiceEnlaceElegido).getNegocios().size() != 0){
+						indiceNegocioElegido = (int) Math.floor(Math.random()*mundo.get(indiceNodoElegido).getEnlaces().get(indiceEnlaceElegido).getNegocios().size());
+						negocioAleatorio = mundo.get(indiceNodoElegido).getEnlaces().get(indiceEnlaceElegido).getNegocios().get(indiceNegocioElegido);
+						negocioAleatorio.setAbierto(true);
+					}else{
+						elegirOtraAccion = true;
+					}
+					break;
+				case CERRAR_NEGOCIO:
+					if(mundo.get(indiceNodoElegido).getEnlaces().get(indiceEnlaceElegido).getNegocios().size() != 0){
+						indiceNegocioElegido = (int) Math.floor(Math.random()*mundo.get(indiceNodoElegido).getEnlaces().get(indiceEnlaceElegido).getNegocios().size());
+						negocioAleatorio = mundo.get(indiceNodoElegido).getEnlaces().get(indiceEnlaceElegido).getNegocios().get(indiceNegocioElegido);
+						negocioAleatorio.setAbierto(false);
+						salir = true;
+					}else{
+						elegirOtraAccion = true;
+					}
+					break;
+				default:
+					//CASO EN QUE LA ACCION SELECCIONADA SEA NO MODIFICAR EL MUNDO
+					salir = true;
+					elegirOtraAccion = false;
+			}
+		}	
 	}
 	
 	private enum listaAcciones{
-		EVENTO_SOCIAL,
-		CONGESTION,
+		AGREGAR_EVENTO_SOCIAL,
+		AGREGAR_CONGESTION,
+		ELIMINAR_EVENTO_SOCIAL,
+		ELIMINAR_CONGESTION,
 		ABRIR_NEGOCIO,
 		CERRAR_NEGOCIO,
-		ELIMINAR,
 		NADA
 	}
 }

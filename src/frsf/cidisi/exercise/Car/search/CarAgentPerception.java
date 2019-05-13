@@ -18,7 +18,8 @@ public class CarAgentPerception extends Perception {
     public static String CORTE_CALLE = "Corte Calle";
     public static String CONGESTION = "Congestion";
     public static String EVENTO_SOCIAL = "Evento Social";
-    //public static String NEGOCIO_CERRADO;
+    public static Boolean NEGOCIO_CERRADO = false;
+    public static Boolean NEGOCIO_ABIERTO = true;
 	
 	
 	//TODO: Setup Sensors

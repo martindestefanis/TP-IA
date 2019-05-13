@@ -10,14 +10,12 @@ public class Evento {
 		
 	}
 	
-	public static Evento crearEvento(String nombre,Enlace enlace,Double costo){
-		Evento evento = new Evento();
-		evento.setNombre(nombre);
-		evento.setEnlace(enlace);
-		evento.setCosto(costo);
-		
-		return evento;
+	public Evento(String nombre, Enlace enlace, double costo){
+		this.nombre = nombre;
+		this.enlace = enlace;
+		this.costo = costo;
 	}
+	
 	public String getNombre() {
 		return nombre;
 	}

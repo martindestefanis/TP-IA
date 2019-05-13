@@ -1,16 +1,12 @@
 package frsf.cidisi.exercise.car.search;
 
 import java.util.ArrayList;
-import java.util.Iterator;
 
 import frsf.cidisi.faia.state.EnvironmentState;
-import grafo.Csv;
 import grafo.Enlace;
 import grafo.Evento;
-import grafo.GestorEnlace;
 import grafo.GestorNodo;
 import grafo.Grafo;
-import grafo.Negocio;
 import grafo.Nodo;
 
 /**
@@ -46,11 +42,13 @@ public class CityState extends EnvironmentState {
     	mundo = Grafo.iniciarMundo();
     	
     	//CARGO LAS PERCEPCIONES EN BASE A LOS EVENTOS LEIDOS
-    	
-    	//MUESTRO TODOS LOS DATOS CARGADOS
+    	cargarPercepciones(mundo);
+    	    	
+    	//SETEO LA POSICION ACTUAL DEL AGENTE EN EL ESTADO DEL AMBIENTE
     	posicionAgente = new Posicion(null,GestorNodo.obtenerNodo(mundo,"Juan Castelli y Antonia Godoy"));
     	
-    	/*System.out.println("\t\t\t\t------- MUNDO DEL AMBIENTE -------");
+    	//REALIZO UNA MUESTRA DE TODOS LOS DATOS DEL MUNDO DEL AMBIENTE Y DEL AGENTE
+    	System.out.println("\t\t\t\t------- MUNDO DEL AMBIENTE -------");
     	System.out.println("\t\t\t\t------- Nodos y sus enlaces -------");
     	for(int i=0; i< mundo.size(); i++){
 	    	   for(int j=0; j<mundo.get(i).getEnlaces().size(); j++){
@@ -104,7 +102,7 @@ public class CityState extends EnvironmentState {
     	
 
 
-    	System.out.println("\t\t\t\t------- MUNDO AGENTE ----------");
+    	System.out.println("\t\t\t\t------- MUNDO AGENTE INICIAL ----------");
     	
     	System.out.println("\t\t\t\t------- Eventos --------");
     	
@@ -116,68 +114,14 @@ public class CityState extends EnvironmentState {
     			}
     		}
     		
-    	}*/
-    	
-    	/*for(int i=0; i<agState.getmundo().size();i++){
-    		for(int j=0; j<agState.getmundo().get(i).getEnlaces().size();j++){
-    			for(String key : agState.getmundo().get(i).getEnlaces().get(j).getEventos().keySet()){
-    				System.out.println(agState.getmundo().get(i).getEnlaces().get(j).getEventos().get(key));
-    			}
-    		}
-    	}*/
-    	
-    	
-    	/*for(int i=0; i<mundo.size(); i++){
-    		for(int k = 0; k<mundo.get(i).getEnlaces().size(); k++){
-    			mundo.get(i).getEnlaces().get(k).setEvento(CarAgentPerception.EMPTY_PERCEPTION);
-    		}
-    	}*/
-    	
-    	//traigo todos los eventos del excel
-    /*	ArrayList<Evento> listaEventos = new ArrayList<Evento>();
-    	try {
-			listaEventos = leerEventos();
-			
-		} catch (Exception e) {
-			e.printStackTrace();
-		}*/
-		
-		//Coloco cada percepción en el enlace que iría (hay que hacer que las coloque de a una o en cada iteración)
-		
-		/*for(int i=0; i<mundo.size(); i++){
-			for(int k = 0; k<mundo.get(i).getEnlaces().size(); k++){
-				for(int z=0; z<listaEventos.size(); z++){
-					if(mundo.get(i).getEnlaces().get(k).getNodoOrigen().getNombre().equalsIgnoreCase(listaEventos.get(z).getEnlace().getNodoOrigen().getNombre())
-							&& mundo.get(i).getEnlaces().get(k).getNodoDestino().getNombre().equalsIgnoreCase(listaEventos.get(z).getEnlace().getNodoDestino().getNombre()))
-					{
-						if(mundo.get(i).getEnlaces().get(k).getEvento() == 0){
-							
-							if(listaEventos.get(z).getNombre().equalsIgnoreCase("Corte calle")){
-								mundo.get(i).getEnlaces().get(k).setEvento(CarAgentPerception.CORTE_CALLE);
-							}
-							else{
-								mundo.get(i).getEnlaces().get(k).setEvento(CarAgentPerception.CONGESTION);
-							}
-						}
-						else{
-							System.out.println("Ya existe un evento en la calle: " + mundo.get(i).getEnlaces().get(k).getNombre());
-						}
-					}
-				}
-			}
-			
-		}*/
-    	
-        //TODO: Complete Method
-
-
+    	}
     }
     
     public void cargarPercepciones(ArrayList<Nodo> mundoAmbiente){
     	ArrayList<Evento> listaEventos = new ArrayList<Evento>();
     	listaEventos = Grafo.leerEventos();
     	
-    	//SETEO TODOS LOS ENLACES CON PERCEPCIONES EMPTY
+    	//SETEO TODOS LOS ENLACES CON PERCEPCIONES EMPTY Y COSTO 0
    		for(int i=0; i<mundoAmbiente.size(); i++){
 			for(int j=0; j<mundoAmbiente.get(i).getEnlaces().size(); j++){
 				mundoAmbiente.get(i).getEnlaces().get(j).setEventos(CarAgentPerception.EMPTY_PERCEPTION,0);
@@ -194,49 +138,29 @@ public class CityState extends EnvironmentState {
    						if(mundoAmbiente.get(j).getEnlaces().get(k).getEventos().containsKey(CarAgentPerception.EMPTY_PERCEPTION)){
    							mundoAmbiente.get(j).getEnlaces().get(k).getEventos().remove(CarAgentPerception.EMPTY_PERCEPTION);
    						
-   						}else{
-   							//SI EL ENLACE NO CONTIENE YA UN EVENTO DEL MISMO TIPO LO AGREGA. CASO CONTRARIO LO IGNORA Y MUESTRA POR PANTALLA
-   							if(!mundoAmbiente.get(j).getEnlaces().get(k).getEventos().containsKey(listaEventos.get(i).getNombre())){
-   								mundoAmbiente.get(j).getEnlaces().get(k).setEventos(listaEventos.get(i).getNombre(),listaEventos.get(i).getCosto());
+   						}
+   						//SI EL ENLACE NO CONTIENE YA UN EVENTO DEL MISMO TIPO LO AGREGA. CASO CONTRARIO LO IGNORA Y MUESTRA POR PANTALLA
+   						if(!mundoAmbiente.get(j).getEnlaces().get(k).getEventos().containsKey(listaEventos.get(i).getNombre())){
+   							//SI SE TRATA DE UN EVENTO DE CORTE DE CALLE SE CAMBIA LA DISPONIBILIDAD DEL ENLACE
+   							if(listaEventos.get(i).getNombre().equalsIgnoreCase(CarAgentPerception.CONGESTION)){
+   								mundoAmbiente.get(j).getEnlaces().get(k).setDisponible(false);
    							}
-   							else{
-   								//System.out.println("La calle " + mundoAmbiente.get(j).getEnlaces().get(k).getNombre() +
-   								//" ya contiene un evento de " + mundoAmbiente.get(j).getEnlaces().get(k).getEventos().get(listaEventos.get(i).getNombre()));
-   							}
+   							mundoAmbiente.get(j).getEnlaces().get(k).setEventos(listaEventos.get(i).getNombre(),listaEventos.get(i).getCosto());
    							
    						}
+   						else{
+   							System.out.println("La calle " + mundoAmbiente.get(j).getEnlaces().get(k).getNombre() +
+   							" ya contiene un evento de " + mundoAmbiente.get(j).getEnlaces().get(k).getEventos().get(listaEventos.get(i).getNombre()));
+   						}
+   							
+   						
    					}
    				}
    			}
    		}
-   		
-   		
-   		/*for(int i=0; i<mundoAmbiente.size(); i++){
-			for(int k = 0; k<mundoAmbiente.get(i).getEnlaces().size(); k++){
-				for(int z=0; z<listaEventos.size(); z++){
-					if(mundoAmbiente.get(i).getEnlaces().get(k).getNodoOrigen().getNombre().equalsIgnoreCase(listaEventos.get(z).getEnlace().getNodoOrigen().getNombre())
-							&& mundoAmbiente.get(i).getEnlaces().get(k).getNodoDestino().getNombre().equalsIgnoreCase(listaEventos.get(z).getEnlace().getNodoDestino().getNombre()))
-					{
-						if(mundoAmbiente.get(i).getEnlaces().get(k).getEvento() == 0){
-							
-							if(listaEventos.get(z).getNombre().equalsIgnoreCase("Corte calle")){
-								mundo.get(i).getEnlaces().get(k).setEvento(CarAgentPerception.CORTE_CALLE);
-							}
-							else{
-								mundo.get(i).getEnlaces().get(k).setEvento(CarAgentPerception.CONGESTION);
-							}
-						}
-						else{
-							System.out.println("Ya existe un evento en la calle: " + mundo.get(i).getEnlaces().get(k).getNombre());
-						}
-					}
-				}
-			}
-			
-		}*/
-   		
+	
     }
-    
+
     @Override
 	public String toString() {
 		return "CityState [agState=" + agState + ", mundo=" + mundo
@@ -256,6 +180,9 @@ public class CityState extends EnvironmentState {
 		 this.posicionAgente.setEnlaceRecorrido(enlace);
     	 this.posicionAgente.setNodoActual(nodoDestino);
 		
+	}
+	public ArrayList<Nodo> getMundo(){
+		return this.mundo;
 	}
 }
 
