@@ -287,6 +287,24 @@ public class Grafo {
 						elegirOtraAccion = true;
 					}
 					break;
+				case AGREGAR_CORTECALLE:
+					if(!mundo.get(indiceNodoElegido).getEnlaces().get(indiceEnlaceElegido).getEventos().containsKey(CarAgentPerception.CORTE_CALLE)){
+						mundo.get(indiceNodoElegido).getEnlaces().get(indiceEnlaceElegido).setDisponible(false);
+						salir = true;
+						elegirOtraAccion = false;
+					}else{
+						elegirOtraAccion = true;
+					}
+					break;
+				case ELIMINAR_CORTECALLE:
+					if(mundo.get(indiceNodoElegido).getEnlaces().get(indiceEnlaceElegido).getEventos().containsKey(CarAgentPerception.CORTE_CALLE)){
+						mundo.get(indiceNodoElegido).getEnlaces().get(indiceEnlaceElegido).setDisponible(true);
+						salir = true;
+						elegirOtraAccion = false;
+					}else{
+						elegirOtraAccion = true;
+					}
+					break;
 				case ELIMINAR_EVENTO_SOCIAL:
 					if(mundo.get(indiceNodoElegido).getEnlaces().get(indiceEnlaceElegido).getEventos().containsKey(CarAgentPerception.EVENTO_SOCIAL)){
 						mundo.get(indiceNodoElegido).getEnlaces().get(indiceEnlaceElegido).getEventos().remove(CarAgentPerception.EVENTO_SOCIAL);
@@ -344,6 +362,8 @@ public class Grafo {
 	private enum listaAcciones{
 		AGREGAR_EVENTO_SOCIAL,
 		AGREGAR_CONGESTION,
+		AGREGAR_CORTECALLE,
+		ELIMINAR_CORTECALLE,
 		ELIMINAR_EVENTO_SOCIAL,
 		ELIMINAR_CONGESTION,
 		ABRIR_NEGOCIO,

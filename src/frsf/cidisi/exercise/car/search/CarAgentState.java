@@ -78,7 +78,6 @@ public class CarAgentState extends SearchBasedAgentState {
     					mundo.get(i).getEnlaces().get(j).setEventos(p1.getSensorEnlaces().get(k).getEventos());
     				}
     			}
-    			
     		}
     	}
     	/*for(int i=0; i< p1.getSensorEnlaces().size(); i++){
@@ -108,7 +107,6 @@ public class CarAgentState extends SearchBasedAgentState {
     		}
     		
     	}
-    	
     	
     }
 

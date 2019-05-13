@@ -19,8 +19,6 @@ Angel Cassanello y Av. Gral. Paz;Ricardo Aldao y Av. Gral. Paz;100
 Angel Cassanello y Av. Gral. Paz;J. P. López y Av. Gral. Paz;100
 J. P. López y Av. Gral. Paz;Angel Cassanello y Av. Gral. Paz;100
 J. P. López y Av. Gral. Paz;Hernandarias y Av. Gral. Paz;100
-Hernandarias y Av. Gral. Paz;J. P. López y Av. Gral. Paz;100
-Hernandarias y Av. Gral. Paz;Juan Castelli y Av. Gral. Paz;100
 Juan Castelli y Av. Gral. Paz;Hernandarias y Av. Gral. Paz;100
 Juan Castelli y Av. Gral. Paz;Juan Castelli y Velez Sarsfield;100
 Juan Castelli y Velez Sarsfield;Juan Castelli y Tacuarí;100
@@ -32,3 +30,37 @@ Juan Castelli y Cngo. Echagüe;Juan Castelli y Talcahuano;100
 Juan Castelli y Talcahuano;Juan Castelli y Defensa;100
 Juan Castelli y Defensa;Juan Castelli y Riobamba;100
 Juan Castelli y Riobamba;Juan Castelli y Av. Almte. Brown;100
+Hernandarias y Av. Almte. Brown;Hernandarias y Defensa;93
+Hernandarias y Defensa;Hernandarias y Talcahuano;100
+Hernandarias y Talcahuano;Hernandarias y Cngo. Echagüe;100
+Hernandarias y Cngo. Echagüe;Hernandarias y Patricio Cullen;100
+Hernandarias y Patricio Cullen;Hernandarias y Antonia Godoy;100
+Hernandarias y Antonia Godoy;Hernandarias y Piedras;100
+Hernandarias y Piedras;Hernandarias y Tacuarí;100
+Hernandarias y Tacuarí;Hernandarias y Velez Sarsfield;100
+Hernandarias y Velez Sarsfield;Hernandarias y Av. Gral. Paz;100
+Hernandarias y Av. Gral. Paz;J. P. López y Av. Gral. Paz;100
+Hernandarias y Av. Gral. Paz;Juan Castelli y Av. Gral. Paz;100
+J. P. López y Velez Sarsfield;J. P. López y Tacuarí;100
+J. P. López y Tacuarí;J. P. López y Piedras;100
+J. P. López y Piedras;J. P. López y Antonia Godoy;100
+J. P. López y Antonia Godoy;J. P. López y Patricio Cullen;100
+J. P. López y Patricio Cullen;J. P. López y Cngo. Echagüe;100
+J. P. López y Cngo. Echagüe;J. P. López y Talcahuano;100
+J. P. López y Talcahuano;J. P. López y Defensa;100
+J. P. López y Defensa;J. P. López y Av. Almte. Brown;100
+J. P. López y Av. Almte. Brown;Hernandarias y Av. Almte. Brown;100
+Hernandarias y Av. Almte. Brown;J. P. López y Av. Almte. Brown;100
+J. P. López y Av. Almte. Brown;Angel Cassanello y Av. Almte. Brown;100
+Angel Cassanello y Av. Almte. Brown;J. P. López y Av. Almte. Brown;100
+Angel Cassanello y Av. Almte. Brown;Angel Cassanello y Talcahuano;100
+Angel Cassanello y Talcahuano;Angel Cassanello y Cngo. Echagüe;100
+Angel Cassanello y Cngo. Echagüe;Angel Cassanello y Patricio Cullen;100
+Angel Cassanello y Patricio Cullen;Angel Cassanello y Antonia Godoy;100
+Angel Cassanello y Antonia Godoy;Angel Cassanello y Piedras;100
+Angel Cassanello y Piedras;Angel Cassanello y Tacuarí;100
+Angel Cassanello y Tacuarí;Angel Cassanello y Velez Sarsfield;100
+Angel Cassanello y Velez Sarsfield;Angel Cassanello y Dorrego;100
+Angel Cassanello y Dorrego;Angel Cassanello y Av. Gral. Paz;100
+Ricardo Aldao y Tacuarí;Ricardo Aldao y Piedras;100
+Ricardo Aldao y Velez Sarsfield;Ricardo Aldao y Tacuarí;100

@@ -134,7 +134,7 @@ public class CityState extends EnvironmentState {
    					//ENCUENTRO EL ENLACE AL QUE LE TENGO QUE SETEAR LA PERCEPCION DE EVENTO
    					if(mundoAmbiente.get(j).getEnlaces().get(k).getNodoOrigen().getNombre().equalsIgnoreCase(listaEventos.get(i).getEnlace().getNodoOrigen().getNombre())
    						&& mundoAmbiente.get(j).getEnlaces().get(k).getNodoDestino().getNombre().equalsIgnoreCase(listaEventos.get(i).getEnlace().getNodoDestino().getNombre())){
-   						//SI EL ENLACE CONTIENE UNA PERCEPCION DE EMPY LA ELIMINO
+   						//SI EL ENLACE CONTIENE UNA PERCEPCION DE EMPTY LA ELIMINO
    						if(mundoAmbiente.get(j).getEnlaces().get(k).getEventos().containsKey(CarAgentPerception.EMPTY_PERCEPTION)){
    							mundoAmbiente.get(j).getEnlaces().get(k).getEventos().remove(CarAgentPerception.EMPTY_PERCEPTION);
    						
@@ -142,7 +142,7 @@ public class CityState extends EnvironmentState {
    						//SI EL ENLACE NO CONTIENE YA UN EVENTO DEL MISMO TIPO LO AGREGA. CASO CONTRARIO LO IGNORA Y MUESTRA POR PANTALLA
    						if(!mundoAmbiente.get(j).getEnlaces().get(k).getEventos().containsKey(listaEventos.get(i).getNombre())){
    							//SI SE TRATA DE UN EVENTO DE CORTE DE CALLE SE CAMBIA LA DISPONIBILIDAD DEL ENLACE
-   							if(listaEventos.get(i).getNombre().equalsIgnoreCase(CarAgentPerception.CONGESTION)){
+   							if(listaEventos.get(i).getNombre().equalsIgnoreCase(CarAgentPerception.CORTE_CALLE)){
    								mundoAmbiente.get(j).getEnlaces().get(k).setDisponible(false);
    							}
    							mundoAmbiente.get(j).getEnlaces().get(k).setEventos(listaEventos.get(i).getNombre(),listaEventos.get(i).getCosto());
@@ -152,8 +152,6 @@ public class CityState extends EnvironmentState {
    							System.out.println("La calle " + mundoAmbiente.get(j).getEnlaces().get(k).getNombre() +
    							" ya contiene un evento de " + mundoAmbiente.get(j).getEnlaces().get(k).getEventos().get(listaEventos.get(i).getNombre()));
    						}
-   							
-   						
    					}
    				}
    			}
@@ -171,6 +169,16 @@ public class CityState extends EnvironmentState {
     public Posicion getPosicionAgente() {
 		return posicionAgente;
 	}
+    
+    public ArrayList<Enlace> getEnlaces(){
+    	ArrayList<Enlace> listaEnlace = new ArrayList<Enlace>();
+    	for(int i =0; i<mundo.size();i++){
+    		for(int j=0; j<mundo.get(i).getEnlaces().size();j++){
+    			listaEnlace.add(mundo.get(i).getEnlaces().get(j));
+    		}
+    	}
+    	return listaEnlace;
+    }
 
 	public void setPosicionAgente(Posicion posicionAgente) {
 		this.posicionAgente = posicionAgente;

@@ -54,6 +54,7 @@ public class CarAgent extends SearchBasedAgent {
         UniformCostSearch searchStrategy = new UniformCostSearch(costo);
         //IEstimatedCostFunction heuristic = new Heuristic(); 
         //AStarSearch strategy = new AStarSearch(cost, heuristic);
+    	//DepthFirstSearch searchStrategy = new DepthFirstSearch();
     	//BreathFirstSearch searchStrategy = new BreathFirstSearch();
 
         // Create a Search object with the strategy

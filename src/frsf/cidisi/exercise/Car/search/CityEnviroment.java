@@ -53,7 +53,7 @@ public class CityEnviroment extends Environment {
     }
     
     public ArrayList<Enlace> getEnlaces(){
-    	return ((CityState) this.environmentState).getPosicionAgente().getNodoActual().getEnlaces();
+    	return ((CityState) this.environmentState).getEnlaces();
     }
 
 	//TODO: Complete this section with agent-specific methods

@@ -81,9 +81,9 @@ public class Comprar_producto extends SearchAction {
 	            				System.out.println(key +
 	            		    	"----> Calle: " + environmentState.getMundo().get(j).getEnlaces().get(k).getNombre());
 	            			}
-	            		}
-	            		
+	            		}	            		
 	            	}
+
 	        		return environmentState;
 	        	}
 	        }
