@@ -17,7 +17,7 @@ public class CityState extends EnvironmentState {
 	//TODO: Setup Variables
     private ArrayList<Nodo> mundo = new ArrayList<Nodo>();
     private Posicion posicionAgente;
-
+    static Grafo grafo = new Grafo();
 	private CarAgentState agState = new CarAgentState();
     
 	
@@ -39,7 +39,7 @@ public class CityState extends EnvironmentState {
     public void initState() {
     	
     	//INICIO EL MUNDO DEL AMBIENTE CON LAS CALLES Y NEGOCIOS
-    	mundo = Grafo.iniciarMundo();
+    	mundo = grafo.iniciarMundo();
     	
     	//CARGO LAS PERCEPCIONES EN BASE A LOS EVENTOS LEIDOS
     	cargarPercepciones(mundo);
@@ -102,7 +102,7 @@ public class CityState extends EnvironmentState {
     	
 
 
-    	System.out.println("\t\t\t\t------- MUNDO AGENTE INICIAL ----------");
+/*    	System.out.println("\t\t\t\t------- MUNDO AGENTE INICIAL ----------");
     	
     	System.out.println("\t\t\t\t------- Eventos --------");
     	
@@ -115,11 +115,12 @@ public class CityState extends EnvironmentState {
     		}
     		
     	}
+*/    	
     }
     
     public void cargarPercepciones(ArrayList<Nodo> mundoAmbiente){
     	ArrayList<Evento> listaEventos = new ArrayList<Evento>();
-    	listaEventos = Grafo.leerEventos();
+    	listaEventos = grafo.leerEventos();
     	
     	//SETEO TODOS LOS ENLACES CON PERCEPCIONES EMPTY Y COSTO 0
    		for(int i=0; i<mundoAmbiente.size(); i++){
@@ -149,8 +150,9 @@ public class CityState extends EnvironmentState {
    							
    						}
    						else{
-   							System.out.println("La calle " + mundoAmbiente.get(j).getEnlaces().get(k).getNombre() +
+   						/*	System.out.println("La calle " + mundoAmbiente.get(j).getEnlaces().get(k).getNombre() +
    							" ya contiene un evento de " + mundoAmbiente.get(j).getEnlaces().get(k).getEventos().get(listaEventos.get(i).getNombre()));
+   						*/
    						}
    					}
    				}

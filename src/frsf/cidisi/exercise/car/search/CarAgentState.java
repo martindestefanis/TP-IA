@@ -30,7 +30,9 @@ public class CarAgentState extends SearchBasedAgentState {
     
     private ArrayList<String> productosComprados = new ArrayList<String>();
     
-    private static ArrayList<Nodo> mundo = Grafo.iniciarMundo();
+    static Grafo grafo = new Grafo();
+    
+    private static ArrayList<Nodo> mundo = grafo.iniciarMundo();
 	
 
     public CarAgentState() {
@@ -80,25 +82,16 @@ public class CarAgentState extends SearchBasedAgentState {
     			for(int k=0; k< p1.getSensorEnlaces().size(); k++){
     				if(mundo.get(i).getEnlaces().get(j).getNombre().equalsIgnoreCase(p1.getSensorEnlaces().get(k).getNombre())){
     					mundo.get(i).getEnlaces().get(j).setEventos(p1.getSensorEnlaces().get(k).getEventos());
+    					if(!p1.getSensorEnlaces().get(k).isDisponible()){
+    						mundo.get(i).getEnlaces().get(j).setDisponible(false);
+    					}
+    					
     				}
     			}
     		}
     	}
-    	/*for(int i=0; i< p1.getSensorEnlaces().size(); i++){
-    		for(int j=0; j<posicionActual.getNodoActual().getEnlaces().size();j++){
-    			if(posicionActual.getNodoActual().getEnlaces().get(j).getNodoOrigen().getNombre().equalsIgnoreCase(p1.getSensorEnlaces().get(i).getNodoOrigen().getNombre())
-    					&& posicionActual.getNodoActual().getEnlaces().get(j).getNodoDestino().getNombre().equalsIgnoreCase(p1.getSensorEnlaces().get(i).getNodoDestino().getNombre())){
-    				
-    				posicionActual.getNodoActual().getEnlaces().get(j).setEventos(p1.getSensorEnlaces().get(i).getEventos());
-    				
-    				if(posicionActual.getNodoActual().getEnlaces().get(j).getEventos().containsKey(CarAgentPerception.CORTE_CALLE)){
-    					posicionActual.getNodoActual().getEnlaces().get(j).setDisponible(false);
-    				}
-    			}
-    		}
-    	}*/
-    	
-    	System.out.println("\t\t\t\t------- MUNDO AGENTE ----------");
+   
+/*    	System.out.println("\t\t\t\t------- MUNDO AGENTE ----------");
     	
     	System.out.println("\t\t\t\t------- Eventos percibidos --------");
     	
@@ -111,6 +104,7 @@ public class CarAgentState extends SearchBasedAgentState {
     		}
     		
     	}
+ */   	
     	
     }
 
@@ -122,8 +116,6 @@ public class CarAgentState extends SearchBasedAgentState {
         //LA MODALIDAD PUEDE SER O "A PIE" O EN "AUTOMOVIL"
     	//modalidadSolucion = "A pie";
     	modalidadSolucion = "Automovil";
-    	
-		//mundo = Grafo.iniciarMundo();
 		
 		//SETEO TODOS LOS ENLACES CON PERCEPCIONES EMPTY
    		for(int i=0; i<mundo.size(); i++){
@@ -133,8 +125,8 @@ public class CarAgentState extends SearchBasedAgentState {
 		}
 		
 		productosComprar.add("Café");
-		//productosComprar.add("Huevos");
-		//productosComprar.add("Leche");
+	//	productosComprar.add("Huevos");
+	//	productosComprar.add("Leche");
 		productosComprar.add("Maní");
 		posicionActual = new Posicion(null,GestorNodo.obtenerNodo(mundo,"Juan Castelli y Antonia Godoy"));
 	

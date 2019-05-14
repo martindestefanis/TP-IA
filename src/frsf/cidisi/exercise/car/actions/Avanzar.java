@@ -60,7 +60,7 @@ public class Avanzar extends SearchAction {
         		environmentState.setPosicionAgente(agState.getPosicionActual().getNodoActual().getEnlaces().get(i),nodoDestino);
         		System.out.println("Posicion Actual: " + agState.getPosicionActual().getNodoActual().getNombre());
         		Grafo.percepcionesAleatorias(environmentState.getMundo());
-        		System.out.println("\t\t\t\t------- PRUEBA Eventos Cambiados ambiente --------");
+/*        		System.out.println("\t\t\t\t------- PRUEBA Eventos Cambiados ambiente --------");
             	
             	for(int j=0; j<environmentState.getMundo().size(); j++){
             		for(int k = 0; k<environmentState.getMundo().get(j).getEnlaces().size(); k++){
@@ -71,7 +71,7 @@ public class Avanzar extends SearchAction {
             		}
             		
             	}
-            	
+ */           	
         		return environmentState;
         	}
         }  
@@ -83,7 +83,8 @@ public class Avanzar extends SearchAction {
      */
     @Override
     public Double getCost() {
-        return new Double(GestorEnlace.calcularCosto(this.enlace));
+    	GestorEnlace gestorEnlace = new GestorEnlace();
+        return new Double(gestorEnlace.calcularCosto(this.enlace));
     }
 
     @Override

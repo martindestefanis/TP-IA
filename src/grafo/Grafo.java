@@ -8,9 +8,11 @@ import frsf.cidisi.exercise.car.search.CarAgentPerception;
 
 
 public class Grafo {
+	
+	GestorEnlace gestorEnlace = new GestorEnlace();
    	
 	//METODO PARA INICIAR EL MUNDO DEL AMBIENTE Y DEL AGENTE CON LAS CALLES Y NEGOCIOS ASOCIADOS
-	public static ArrayList<Nodo> iniciarMundo(){
+	public ArrayList<Nodo> iniciarMundo(){
 		
 		GestorNodo gestor = new GestorNodo();
 		Enlace enlace = new Enlace();
@@ -23,8 +25,9 @@ public class Grafo {
     	for(int i=0; i<listaNegocios.size(); i++){
     		for(int j=0; j<gestor.getNodosExistentes().size(); j++){
     			for(int k=0; k<gestor.getNodosExistentes().get(j).getEnlaces().size(); k++){
-    				enlace = GestorEnlace.crearEnlace(listaNegocios.get(i).getEsquina1(), listaNegocios.get(i).getEsquina2());
-    				if(enlace.getNombre().equalsIgnoreCase(gestor.getNodosExistentes().get(j).getEnlaces().get(k).getNombre())){
+    				enlace = gestorEnlace.crearEnlace(listaNegocios.get(i).getEsquina1(), listaNegocios.get(i).getEsquina2());
+    				if(enlace.getNombre().equalsIgnoreCase(gestor.getNodosExistentes().get(j).getEnlaces().get(k).getNombre())
+    						&& !GestorNegocio.existeNegocio(listaNegocios.get(i))){
     					gestor.getNodosExistentes().get(j).getEnlaces().get(k).setNegocios(listaNegocios.get(i));
     				}
     			}
@@ -34,7 +37,7 @@ public class Grafo {
 		return gestor.getNodosExistentes();
 	}
 	
-	private static ArrayList<Nodo> leerEnlaces(){
+	private ArrayList<Nodo> leerEnlaces(){
 		
 		GestorNodo gestorNodo = new GestorNodo();
 	
@@ -60,7 +63,7 @@ public class Grafo {
 	    	   nodoDestino = GestorNodo.crearNodo(registrosLeidos.get(i).getNodoDestino());
 	    	   costo = registrosLeidos.get(i).getCosto();
 	    	   
-	    	   enlace = GestorEnlace.crearEnlace(nodoOrigen,nodoDestino);
+	    	   enlace = gestorEnlace.crearEnlace(nodoOrigen,nodoDestino);
 	    	   enlace.setDisponible(true);
 	    	   enlace.setCosto(costo);
 	    
@@ -81,7 +84,7 @@ public class Grafo {
 	    		   gestorNodo.agregarEnlaceANodo(nodoOrigen, enlace);
 	    	   }
 	    	   
-	    	   GestorEnlace.agregarEnlace(enlace); 	   
+	    	   gestorEnlace.agregarEnlace(enlace); 	   
 	    	   
 	       }
     } catch (Exception e) {            
@@ -92,7 +95,7 @@ public class Grafo {
 		return gestorNodo.getNodosExistentes();
 	}
 	
-	private static ArrayList<Negocio> leerNegocios(){
+	private ArrayList<Negocio> leerNegocios(){
 		//DIRECTORIO DEL FICHERO Y DELIMITADOR DE LECTURA
 	    String csvNegocios = "..\\TP-IA\\src\\grafo\\Negocios.csv";
 	    String delimitador = ";";
@@ -130,14 +133,14 @@ public class Grafo {
 	    		 * DESPUES VERIFICO SI EXISTE UN ENLACE CON ESE SENTIDO
 	    		 * SI NO EXISTE ES PORQUE LA ORIENTACION ES DESTINO-ORIGEN
 	    		 * */
-	    		enlace = GestorEnlace.crearEnlace(nodoOrigen, nodoDestino);
+	    		enlace = gestorEnlace.crearEnlace(nodoOrigen, nodoDestino);
 	    		
-	    		if(!GestorEnlace.existeEnlace(enlace)){
+	    		if(!gestorEnlace.existeEnlace(enlace)){
 	    			/*CREO UN ENLACE CON EL SENTIDO INVERSO Y SE LO MANDO AL GESTOR PARA QUE
 	    			 * A ESE ENLACE LE CAMBIE LA DISPONIBILIDAD.
 	    			 * LUEGO CREO EL ENCALE QUE LE CORRESPONDA AL NODO EVENTO
 	    			 * */
-	    			enlace = GestorEnlace.crearEnlace(nodoDestino, nodoOrigen);
+	    			enlace = gestorEnlace.crearEnlace(nodoDestino, nodoOrigen);
 	    		}
 	    		
 	    		negocio = GestorNegocio.crearNegocio(nombre, enlace.getNodoOrigen(), enlace.getNodoDestino(),abierto);
@@ -150,7 +153,6 @@ public class Grafo {
 	    			if(listaNegocios.get(j).getNombre().equalsIgnoreCase(negocio.getNombre()) &&
 	    				listaNegocios.get(j).getEsquina1().getNombre().equalsIgnoreCase(enlace.getNodoOrigen().getNombre())
 	    				&& listaNegocios.get(j).getEsquina2().getNombre().equalsIgnoreCase(enlace.getNodoDestino().getNombre())){
-	    				
 	    				negocio = listaNegocios.get(j);
 	    				existeNegocio = true;
 	    				break;
@@ -160,14 +162,15 @@ public class Grafo {
 	    		if(!existeNegocio){
 	       			negocio.agregarProductoPrecio(producto,precio);
 	    			GestorNegocio.agregarNegocio(negocio);
-	    			GestorEnlace.agregarNegocio(enlace, negocio);
+	    			gestorEnlace.agregarNegocio(enlace, negocio);
 	    			listaNegocios.add(negocio);	
 	    		}
 	    		else{
 		    			GestorNegocio.agregarProducto(negocio,producto,precio);
-		    			GestorEnlace.agregarProducto(negocio,producto,precio);
+		    			gestorEnlace.agregarProducto(negocio,producto,precio);
 		    			negocio.getProductoPrecio().put(producto,precio);
 	    		}
+
 	    	}
 	    } catch (Exception e) {            
 	        e.printStackTrace();
@@ -177,7 +180,7 @@ public class Grafo {
 		
 	}
 	
-	public static ArrayList<Evento> leerEventos(){
+	public ArrayList<Evento> leerEventos(){
 		//DIRECTORIO DEL FICHERO Y DELIMITADOR DE LECTURA
 		String csvEventos = "..\\TP-IA\\src\\grafo\\Eventos.csv";
 		String delimitador = ";";
@@ -212,21 +215,21 @@ public class Grafo {
 		    * SI NO EXISTE ES PORQUE LA ORIENTACION ES DESTINO-ORIGEN
 		    * 
 		    * */
-		    enlace = GestorEnlace.crearEnlace(nodoOrigen, nodoDestino);
+		    enlace = gestorEnlace.crearEnlace(nodoOrigen, nodoDestino);
 		    		
-		    	if(!GestorEnlace.existeEnlace(enlace)){
+		    	if(!gestorEnlace.existeEnlace(enlace)){
 		    	/*CREO UN ENLACE CON EL SENTIDO INVERSO Y SE LO MANDO AL GESTOR PARA QUE
 		    	 * A ESE ENLACE LE CAMBIE LA DISPONIBILIDAD.
 		    	* LUEGO CREO EL ENCALE QUE LE CORRESPONDA AL NODO EVENTO
 		    	* */
-		    	enlace = GestorEnlace.crearEnlace(nodoDestino, nodoOrigen);
+		    	enlace = gestorEnlace.crearEnlace(nodoDestino, nodoOrigen);
 		    	
 		    	}
 		    		
 		    evento = new Evento(nombre,enlace,costo);
 		    listaEventos.add(evento);
 		    
-    		GestorEnlace.agregarEvento(enlace,nombre,costo);
+		    gestorEnlace.agregarEvento(enlace,nombre,costo);
 
 	    	}
 		    

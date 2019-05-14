@@ -9,13 +9,13 @@ import frsf.cidisi.exercise.car.search.CarAgentState;
 
 public class GestorEnlace {
 	
-	private static ArrayList<Enlace> enlacesExistentes = new ArrayList<Enlace>();
+	private  ArrayList<Enlace> enlacesExistentes = new ArrayList<Enlace>();
 
-	public static ArrayList<Enlace> getEnlacesExistentes() {
+	public ArrayList<Enlace> getEnlacesExistentes() {
 		return enlacesExistentes;
 	}
 	
-	public static Enlace crearEnlace(Nodo nodoOrigen, Nodo nodoDestino){
+	public Enlace crearEnlace(Nodo nodoOrigen, Nodo nodoDestino){
 		Enlace enlace = new Enlace();
 		enlace.setNodoOrigen(nodoOrigen);
 		enlace.setNodoDestino(nodoDestino);
@@ -24,12 +24,12 @@ public class GestorEnlace {
 		return enlace;
 	}
 	
-	public static void agregarEnlace(Enlace enlace){
+	public void agregarEnlace(Enlace enlace){
 		//VERIFICAR EXISTENCIA
 		enlacesExistentes.add(enlace);
 	}
 	
-	public static boolean existeEnlace(Enlace enlace){
+	public boolean existeEnlace(Enlace enlace){
 		boolean existe = false;
 		
 		for(int i=0; i<enlacesExistentes.size(); i++){
@@ -42,7 +42,7 @@ public class GestorEnlace {
 		return existe;
 	}
 	
-	public static void agregarNegocio(Enlace enlace, Negocio negocio){
+	public void agregarNegocio(Enlace enlace, Negocio negocio){
 		for(int i=0; i<enlacesExistentes.size();i++){
 			if(enlacesExistentes.get(i).getNombre().equalsIgnoreCase(enlace.getNombre())){
 				enlacesExistentes.get(i).setNegocios(negocio);
@@ -51,7 +51,7 @@ public class GestorEnlace {
 		}
 	}
 		
-	public static void cambiarDisponibilidad(Enlace enlace, Boolean disponibilidad){
+	public void cambiarDisponibilidad(Enlace enlace, Boolean disponibilidad){
 		for(int i=0; i<enlacesExistentes.size(); i++){
 			if(enlacesExistentes.get(i).getNombre().equalsIgnoreCase(enlace.getNombre())){
 				enlacesExistentes.get(i).setDisponible(disponibilidad);
@@ -59,7 +59,7 @@ public class GestorEnlace {
 			}
 		}
 	}		
-	public static void agregarProducto(Negocio negocio, String producto, Double precio){
+	public void agregarProducto(Negocio negocio, String producto, Double precio){
 		for(int i=0; i<enlacesExistentes.size(); i++){
 			for(int j=0; j<enlacesExistentes.get(i).getNegocios().size(); j++){
 				if(enlacesExistentes.get(i).getNegocios().get(j).getNombre().equalsIgnoreCase(negocio.getNombre()) &&
@@ -74,10 +74,10 @@ public class GestorEnlace {
 		}
 	}
 
-	public static void agregarEvento(Enlace enlace, String nombre, Double costo){
+	public void agregarEvento(Enlace enlace, String nombre, Double costo){
 	
 		if(nombre.equalsIgnoreCase(CarAgentPerception.CORTE_CALLE)){
-			GestorEnlace.cambiarDisponibilidad(enlace, false);
+			cambiarDisponibilidad(enlace, false);
 		}
 		else{
 			//BUSCO EL ENLACE EN LA LISTA DE ENLACES EXISTENTES Y AGREGO EL EVENTO
@@ -103,7 +103,7 @@ public class GestorEnlace {
 	}
 	
 	
-	public static double calcularCosto(Enlace enlace){
+	public double calcularCosto(Enlace enlace){
 	//CALCULA EL COSTO TOTAL DEL ENLACE. EL COSTO DE LOS EVENTOS SON UN FACTOR DE TIEMPO DE DEMORA.
 	//Y EL COSTO DEL ENLACE ES EL TIEMPO PROMEDIO QUE LE LLEVA AL AGENTE DE RECORRER UNA CUADRA.
 		double costo = enlace.getCosto();

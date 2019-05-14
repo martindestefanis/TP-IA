@@ -73,7 +73,7 @@ public class Comprar_producto extends SearchAction {
 	        		System.out.println(agState.getProductosComprados().toString());
 	        		System.out.println(costoProducto);
 	        		Grafo.percepcionesAleatorias(environmentState.getMundo());
-	        		System.out.println("\t\t\t\t------- PRUEBA Eventos Cambiados ambiente --------");
+/*	        		System.out.println("\t\t\t\t------- PRUEBA Eventos Cambiados ambiente --------");
 	            	
 	            	for(int j=0; j<environmentState.getMundo().size(); j++){
 	            		for(int k = 0; k<environmentState.getMundo().get(j).getEnlaces().size(); k++){
@@ -83,7 +83,7 @@ public class Comprar_producto extends SearchAction {
 	            			}
 	            		}	            		
 	            	}
-
+*/
 	        		return environmentState;
 	        	}
 	        }
