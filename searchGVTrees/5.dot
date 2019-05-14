@@ -5,47 +5,62 @@ nodo1[label="{EO: 1|cost: 50.0|A: Comprar_producto [costoProducto=50.0, producto
 
 nodo0 -> nodo1;
 nodo2[label="{EO: 2|cost: 10.0|A: Comprar_producto [costoProducto=10.0, productoComprar=Maní, CostoOperacion=10.0]}"]
-nodo4[label="{EO: 4|cost: 60.0|A: Comprar_producto [costoProducto=50.0, productoComprar=Café, CostoOperacion=50.0]|Posicion:\nJuan\nCastelli\ny\nDefensa}"]
-
-nodo2 -> nodo4;
-nodo5[label="{EO: 5|cost: 20.0|A: Comprar_producto [costoProducto=10.0, productoComprar=Maní, CostoOperacion=10.0]|Posicion:\nJuan\nCastelli\ny\nDefensa}"]
-nodo7[label="{EO: 7|cost: 70.0|A: Comprar_producto [costoProducto=50.0, productoComprar=Café, CostoOperacion=50.0]|Posicion:\nJuan\nCastelli\ny\nDefensa}"]
-
-nodo5 -> nodo7;
-nodo8[label="{EO: 8|cost: 30.0|A: Comprar_producto [costoProducto=10.0, productoComprar=Maní, CostoOperacion=10.0]|Posicion:\nJuan\nCastelli\ny\nDefensa}"]
-nodo10[label="{EO: 10|cost: 80.0|A: Comprar_producto [costoProducto=50.0, productoComprar=Café, CostoOperacion=50.0]|Posicion:\nJuan\nCastelli\ny\nDefensa}"]
-
-nodo8 -> nodo10;
-nodo11[label="{EO: 11|cost: 40.0|A: Comprar_producto [costoProducto=10.0, productoComprar=Maní, CostoOperacion=10.0]|Posicion:\nJuan\nCastelli\ny\nDefensa}"]
-nodo13[label="{EO: 13|cost: 90.0|A: Comprar_producto [costoProducto=50.0, productoComprar=Café, CostoOperacion=50.0]|Posicion:\nJuan\nCastelli\ny\nDefensa}"]
-
-nodo11 -> nodo13;
-nodo14[label="{EO: 14|cost: 50.0|A: Comprar_producto [costoProducto=10.0, productoComprar=Maní, CostoOperacion=10.0]|Posicion:\nJuan\nCastelli\ny\nDefensa}"]
-
-nodo11 -> nodo14;
-nodo15[label="{EO: 15|cost: 152.0|A: Avanzar [nodoDestino=Juan Castelli y Riobamba, CostoOperacion=112.0]|Posicion:\nJuan\nCastelli\ny\nDefensa}"]
-
-nodo11 -> nodo15;
-
-nodo8 -> nodo11;
-nodo12[label="{EO: 12|cost: 142.0|A: Avanzar [nodoDestino=Juan Castelli y Riobamba, CostoOperacion=112.0]|Posicion:\nJuan\nCastelli\ny\nDefensa}"]
-
-nodo8 -> nodo12;
-
-nodo5 -> nodo8;
-nodo9[label="{EO: 9|cost: 132.0|A: Avanzar [nodoDestino=Juan Castelli y Riobamba, CostoOperacion=112.0]|Posicion:\nJuan\nCastelli\ny\nDefensa}"]
-
-nodo5 -> nodo9;
+nodo5[label="{EO: 5|cost: 60.0|A: Comprar_producto [costoProducto=50.0, productoComprar=Café, CostoOperacion=50.0]|Posicion:\nJuan\nCastelli\ny\nDefensa}"]
 
 nodo2 -> nodo5;
-nodo6[label="{EO: 6|cost: 122.0|A: Avanzar [nodoDestino=Juan Castelli y Riobamba, CostoOperacion=112.0]|Posicion:\nJuan\nCastelli\ny\nDefensa}"]
+nodo6[label="{EO: 6|cost: 20.0|A: Comprar_producto [costoProducto=10.0, productoComprar=Maní, CostoOperacion=10.0]|Posicion:\nJuan\nCastelli\ny\nDefensa}"]
+nodo9[label="{EO: 9|cost: 70.0|A: Comprar_producto [costoProducto=50.0, productoComprar=Café, CostoOperacion=50.0]|Posicion:\nJuan\nCastelli\ny\nDefensa}"]
+
+nodo6 -> nodo9;
+nodo10[label="{EO: 10|cost: 30.0|A: Comprar_producto [costoProducto=10.0, productoComprar=Maní, CostoOperacion=10.0]|Posicion:\nJuan\nCastelli\ny\nDefensa}"]
+nodo13[label="{EO: 13|cost: 80.0|A: Comprar_producto [costoProducto=50.0, productoComprar=Café, CostoOperacion=50.0]|Posicion:\nJuan\nCastelli\ny\nDefensa}"]
+
+nodo10 -> nodo13;
+nodo14[label="{EO: 14|cost: 40.0|A: Comprar_producto [costoProducto=10.0, productoComprar=Maní, CostoOperacion=10.0]|Posicion:\nJuan\nCastelli\ny\nDefensa}"]
+nodo17[label="{EO: 17|cost: 90.0|A: Comprar_producto [costoProducto=50.0, productoComprar=Café, CostoOperacion=50.0]|Posicion:\nJuan\nCastelli\ny\nDefensa}"]
+
+nodo14 -> nodo17;
+nodo18[label="{EO: 18|cost: 50.0|A: Comprar_producto [costoProducto=10.0, productoComprar=Maní, CostoOperacion=10.0]|Posicion:\nJuan\nCastelli\ny\nDefensa}"]
+
+nodo14 -> nodo18;
+nodo19[label="{EO: 19|cost: 140.0|A: Avanzar [nodoDestino=Juan Castelli y Riobamba, CostoOperacion=100.0]|Posicion:\nJuan\nCastelli\ny\nDefensa}"]
+
+nodo14 -> nodo19;
+nodo20[label="{EO: 20|cost: 140.0|A: Avanzar [nodoDestino=Hernandarias y Defensa, CostoOperacion=100.0]|Posicion:\nJuan\nCastelli\ny\nDefensa}"]
+
+nodo14 -> nodo20;
+
+nodo10 -> nodo14;
+nodo15[label="{EO: 15|cost: 130.0|A: Avanzar [nodoDestino=Juan Castelli y Riobamba, CostoOperacion=100.0]|Posicion:\nJuan\nCastelli\ny\nDefensa}"]
+
+nodo10 -> nodo15;
+nodo16[label="{EO: 16|cost: 130.0|A: Avanzar [nodoDestino=Hernandarias y Defensa, CostoOperacion=100.0]|Posicion:\nJuan\nCastelli\ny\nDefensa}"]
+
+nodo10 -> nodo16;
+
+nodo6 -> nodo10;
+nodo11[label="{EO: 11|cost: 120.0|A: Avanzar [nodoDestino=Juan Castelli y Riobamba, CostoOperacion=100.0]|Posicion:\nJuan\nCastelli\ny\nDefensa}"]
+
+nodo6 -> nodo11;
+nodo12[label="{EO: 12|cost: 120.0|A: Avanzar [nodoDestino=Hernandarias y Defensa, CostoOperacion=100.0]|Posicion:\nJuan\nCastelli\ny\nDefensa}"]
+
+nodo6 -> nodo12;
 
 nodo2 -> nodo6;
+nodo7[label="{EO: 7|cost: 110.0|A: Avanzar [nodoDestino=Juan Castelli y Riobamba, CostoOperacion=100.0]|Posicion:\nJuan\nCastelli\ny\nDefensa}"]
+
+nodo2 -> nodo7;
+nodo8[label="{EO: 8|cost: 110.0|A: Avanzar [nodoDestino=Hernandarias y Defensa, CostoOperacion=100.0]|Posicion:\nJuan\nCastelli\ny\nDefensa}"]
+
+nodo2 -> nodo8;
 
 nodo0 -> nodo2;
-nodo3[label="{EO: 3|cost: 112.0|A: Avanzar [nodoDestino=Juan Castelli y Riobamba, CostoOperacion=112.0]}"]
+nodo3[label="{EO: 3|cost: 100.0|A: Avanzar [nodoDestino=Juan Castelli y Riobamba, CostoOperacion=100.0]}"]
 
 nodo0 -> nodo3;
+nodo4[label="{EO: 4|cost: 100.0|A: Avanzar [nodoDestino=Hernandarias y Defensa, CostoOperacion=100.0]}"]
+
+nodo0 -> nodo4;
 
 
 }

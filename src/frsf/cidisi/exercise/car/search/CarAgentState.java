@@ -23,18 +23,22 @@ public class CarAgentState extends SearchBasedAgentState {
 
     private static String modalidadSolucion;
     
-    private ArrayList<Nodo> mundo = new ArrayList<Nodo>();
+   // private ArrayList<Nodo> mundo = new ArrayList<Nodo>();
     //private ArrayList<Nodo> mundoReal;
    
 	private ArrayList<String> productosComprar = new ArrayList<String>();
     
     private ArrayList<String> productosComprados = new ArrayList<String>();
+    
+    private static ArrayList<Nodo> mundo = Grafo.iniciarMundo();
 	
 
     public CarAgentState() {
     
     	//TODO: Complete Method
-        this.initState();
+    		this.initState();
+        
+   
     }
 
     /**
@@ -119,7 +123,7 @@ public class CarAgentState extends SearchBasedAgentState {
     	//modalidadSolucion = "A pie";
     	modalidadSolucion = "Automovil";
     	
-		mundo = Grafo.iniciarMundo();
+		//mundo = Grafo.iniciarMundo();
 		
 		//SETEO TODOS LOS ENLACES CON PERCEPCIONES EMPTY
    		for(int i=0; i<mundo.size(); i++){
