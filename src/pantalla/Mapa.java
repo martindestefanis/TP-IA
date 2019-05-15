@@ -216,6 +216,8 @@ public class Mapa extends MapView{
 		
 		return latitudLongitud;
 	}
+	
+	
 
 	/*public static void main(String[] args) {
 		// TODO Auto-generated method stub
