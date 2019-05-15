@@ -4,6 +4,10 @@ package grafo;
 import java.util.ArrayList;
 import java.util.Iterator;
 
+import com.teamdev.jxmaps.LatLng;
+
+import pantalla.Mapa;
+
 import frsf.cidisi.exercise.car.search.CarAgentPerception;
 
 
@@ -34,6 +38,7 @@ public class Grafo {
     			
     		}
     	}
+    	
 		return gestor.getNodosExistentes();
 	}
 	
@@ -42,7 +47,7 @@ public class Grafo {
 		GestorNodo gestorNodo = new GestorNodo();
 	
 		//DIRECTORIO DEL FICHERO Y DELIMITADOR DE LECTURA
-	    String csvEnlaces = "..\\TP-IA\\src\\grafo\\Enlaces.csv";
+	    String csvEnlaces = "..\\TP-IA\\src\\grafo\\Enlaces3.csv";
 	    String delimitador = ";";
 		ArrayList<Csv> registrosLeidos = null;
 	    Csv fila = new Csv();
@@ -50,6 +55,7 @@ public class Grafo {
 	    Nodo nodoOrigen = new Nodo();
 	    Nodo nodoDestino = new Nodo();
 	    double costo;
+	    LatLng latitudLongitud;
 	    
 	    Enlace enlace = new Enlace();
 		
@@ -62,6 +68,10 @@ public class Grafo {
 	    	   nodoOrigen = GestorNodo.crearNodo(registrosLeidos.get(i).getNodoOrigen());
 	    	   nodoDestino = GestorNodo.crearNodo(registrosLeidos.get(i).getNodoDestino());
 	    	   costo = registrosLeidos.get(i).getCosto();
+	    	   latitudLongitud = registrosLeidos.get(i).getLatitudLongitud();
+	    	   nodoDestino.setLatitudLongitud(latitudLongitud);
+	    	   nodoOrigen.setLatitudLongitud(latitudLongitud);
+	    	  
 	    	   
 	    	   enlace = gestorEnlace.crearEnlace(nodoOrigen,nodoDestino);
 	    	   enlace.setDisponible(true);

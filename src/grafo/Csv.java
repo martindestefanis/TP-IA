@@ -8,6 +8,7 @@ import java.util.HashMap;
 
 
 import com.csvreader.CsvReader;
+import com.teamdev.jxmaps.LatLng;
 
 
 public class Csv implements Serializable{
@@ -22,6 +23,9 @@ public class Csv implements Serializable{
 	    private String esquina1;
 	    private String esquina2;
 	    private Double costo;
+	    private Double latitud;
+	    private Double longitud;
+	    private LatLng latitudLongitud;
 	    
 	    public String getNodoOrigen() {
 	        return nodoOrigen;
@@ -36,9 +40,7 @@ public class Csv implements Serializable{
 	    public void setNodoDestino(String nodoDestino) {
 	        this.nodoDestino = nodoDestino;
 	    }
-	    	    
-	    
-	    
+
 	    public Double getCosto() {
 			return costo;
 		}
@@ -63,8 +65,7 @@ public class Csv implements Serializable{
 		public void setEsquina2(String esquina2) {
 			this.esquina2 = esquina2;
 		}
-		
-		
+
 		public String getNombreNegocio() {
 			return nombreNegocio;
 		}
@@ -91,8 +92,14 @@ public class Csv implements Serializable{
 		public void setNegocioAbierto(boolean negocioAbierto) {
 			this.negocioAbierto = negocioAbierto;
 		}
-		
-		
+			
+
+		public LatLng getLatitudLongitud() {
+			return latitudLongitud;
+		}
+		public void setLatitudLongitud(LatLng latitudLongitud) {
+			this.latitudLongitud = latitudLongitud;
+		}
 		public ArrayList<Csv> leerEnlaces(String pathFichero, String delimitador) throws Exception {  
 	    
 	       CsvReader cvsReader = null;
@@ -112,6 +119,8 @@ public class Csv implements Serializable{
 	    	   String nodoInicial;
 	    	   String nodoFinal;
 	    	   String costoDistancia;
+	    	   String latitud;
+	    	   String longitud;
 	    	   
 	    	   while(cvsReader.readRecord()) {
 	    		  // Podemos usar get con el nombre de la cabecera o por posición
@@ -120,7 +129,10 @@ public class Csv implements Serializable{
 	    		   nodoInicial = cvsReader.get("Nodo Origen");
 	    		   nodoFinal = cvsReader.get("Nodo Destino");
 	    		   costoDistancia = cvsReader.get("Distancia");
-	    		   
+	    		   latitud = cvsReader.get("Latitud");
+	    		   longitud = cvsReader.get("Longitud");
+	    		   this.latitud = Double.parseDouble(latitud);
+	    		   this.longitud = Double.parseDouble(longitud);
 	    		   
 	    		   Csv fila = new Csv();  		      		   	                                
 	    		 
@@ -128,6 +140,8 @@ public class Csv implements Serializable{
 	               fila.setNodoOrigen(nodoInicial);
 	               fila.setNodoDestino(nodoFinal);
 	               fila.setCosto(Double.parseDouble(costoDistancia));
+	               
+	               fila.setLatitudLongitud(new LatLng(this.latitud,this.longitud));
 	               
 	               listaRegistros.add(fila);
 	         

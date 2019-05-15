@@ -32,6 +32,8 @@ public class CarAgentState extends SearchBasedAgentState {
     
     static Grafo grafo = new Grafo();
     
+    private ArrayList<Nodo> esquinasVisitadas = new ArrayList<Nodo>();
+    
     private static ArrayList<Nodo> mundo = grafo.iniciarMundo();
 	
 
@@ -129,7 +131,7 @@ public class CarAgentState extends SearchBasedAgentState {
 	//	productosComprar.add("Leche");
 		productosComprar.add("Maní");
 		posicionActual = new Posicion(null,GestorNodo.obtenerNodo(mundo,"Juan Castelli y Antonia Godoy"));
-	
+		esquinasVisitadas.add(GestorNodo.obtenerNodo(mundo, "Juan Castelli y Antonia Godoy"));
     }
 
     /**
@@ -231,5 +233,15 @@ public class CarAgentState extends SearchBasedAgentState {
      public void setProductosComprados(ArrayList<String> arg){
         productosComprados = arg;
      }
+
+	public ArrayList<Nodo> getEsquinasVisitadas() {
+		return esquinasVisitadas;
+	}
+
+	public void setEsquinasVisitadas(Nodo esquina) {
+		this.esquinasVisitadas.add(esquina);
+	}
+     
+     
 }
 
