@@ -15,6 +15,7 @@ public class Comprar_producto extends SearchAction {
 	private double costoProducto;
 	private String productoComprar;
 	
+	
 	/**
      * This method updates a tree node state when the search process is running.
      * It does not updates the real world state.
@@ -97,7 +98,12 @@ public class Comprar_producto extends SearchAction {
      */
     @Override
     public Double getCost() {
-        return new Double(this.costoProducto);
+    	//Si es en Bicicleta suponemos que lleva 5 minutos comprar un producto, entonces multiplicamos por 300 segundos
+    	if(CarAgentState.getModalidadSolucion().equalsIgnoreCase("Bicicleta")){
+    		return new Double(300);
+    	}else{
+    		return new Double(this.costoProducto);
+    	}
     }
 
     @Override

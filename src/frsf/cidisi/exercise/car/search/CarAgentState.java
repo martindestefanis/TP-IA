@@ -113,7 +113,7 @@ public class CarAgentState extends SearchBasedAgentState {
     @Override
     public void initState() {
         //LA MODALIDAD PUEDE SER O "A PIE" O EN "AUTOMOVIL"
-    	//modalidadSolucion = "A pie";
+    	//modalidadSolucion = "Bicicleta";
     	modalidadSolucion = "Automovil";
 		
 		//SETEO TODOS LOS ENLACES CON PERCEPCIONES EMPTY
@@ -124,9 +124,9 @@ public class CarAgentState extends SearchBasedAgentState {
 		}
 		
 		productosComprar.add("Café");
-	//	productosComprar.add("Huevos");
+		productosComprar.add("Huevos");
 	//	productosComprar.add("Leche");
-		productosComprar.add("Maní");
+	//	productosComprar.add("Maní");
 		posicionActual = new Posicion(null,GestorNodo.obtenerNodo(mundo,"Juan Castelli y Antonia Godoy"));
 		esquinasVisitadas.add(GestorNodo.obtenerNodo(mundo, "Juan Castelli y Antonia Godoy"));
     }
@@ -145,7 +145,10 @@ public class CarAgentState extends SearchBasedAgentState {
 	public int hashCode() {
 		final int prime = 31;
 		int result = 1;
-		result = prime * result + ((mundo == null) ? 0 : mundo.hashCode());
+		result = prime
+				* result
+				+ ((esquinasVisitadas == null) ? 0 : esquinasVisitadas
+						.hashCode());
 		result = prime * result
 				+ ((posicionActual == null) ? 0 : posicionActual.hashCode());
 		result = prime
@@ -165,10 +168,10 @@ public class CarAgentState extends SearchBasedAgentState {
 		if (getClass() != obj.getClass())
 			return false;
 		CarAgentState other = (CarAgentState) obj;
-		if (mundo == null) {
-			if (other.mundo != null)
+		if (esquinasVisitadas == null) {
+			if (other.esquinasVisitadas != null)
 				return false;
-		} else if (!mundo.equals(other.mundo))
+		} else if (!esquinasVisitadas.equals(other.esquinasVisitadas))
 			return false;
 		if (posicionActual == null) {
 			if (other.posicionActual != null)

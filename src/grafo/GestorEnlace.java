@@ -106,24 +106,36 @@ public class GestorEnlace {
 	public double calcularCosto(Enlace enlace){
 	//CALCULA EL COSTO TOTAL DEL ENLACE. EL COSTO DE LOS EVENTOS SON UN FACTOR DE TIEMPO DE DEMORA.
 	//Y EL COSTO DEL ENLACE ES EL TIEMPO PROMEDIO QUE LE LLEVA AL AGENTE DE RECORRER UNA CUADRA.
+		
+		
+    	
+    	
 		double costo = enlace.getCosto();
 		
 		//PARA EL CASO DE QUE TRABAJEMOS CON VARIOS EVENTOS POR ENLACE
 	
-		if(CarAgentState.getModalidadSolucion().equalsIgnoreCase("A pie")){
+		if(CarAgentState.getModalidadSolucion().equalsIgnoreCase("Bicicleta")){
 			//MODALIDAD A PIE
+			//La cuadra es tiempo, 1 mts en 0.3 seg
+			costo= costo*0.3;
 			if(enlace.getEventos().containsKey(CarAgentPerception.EVENTO_SOCIAL)){
 				costo = costo + costo*(enlace.getEventos().get(CarAgentPerception.EVENTO_SOCIAL)/100);
 			}
+			return costo;
+			
 		}
 		else{
 			//MODALIDAD "AUTOMOVIL". SI SE AGREGAN MAS MODALIDADES SE DEBE AGREGAR SENTENCIAS IF-ELSE
+			//Suponiendo que un auto hace 11[km/l] entonces por metro consume 0.0000909091 [l/m]
+	    	//Suponiendo que la nafta está $50 el litro, entonces: el costo por metro de nafta seria: $0.0045454545
+			//Entra en un bucle con un costo tan chiquito por eso dejo 0.45454545
+			costo= costo*0.45454545;
 			if(enlace.getEventos().containsKey(CarAgentPerception.CONGESTION)){
 				costo = costo + costo*(enlace.getEventos().get(CarAgentPerception.CONGESTION)/100);
-			}	
+			}
+			return costo;
 		}
 		
-		return costo;
 	}
 	
 }

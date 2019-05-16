@@ -56,8 +56,9 @@ public class Avanzar extends SearchAction {
         		
         		this.enlace = agState.getPosicionActual().getNodoActual().getEnlaces().get(i);
         		System.out.println("Calle recorrida: " + enlace.getNombre());
+        		//Enlace enlace = agState.getPosicionActual().getNodoActual().getEnlaces().get(i);
         		agState.setPosicionActual(agState.getPosicionActual().getNodoActual().getEnlaces().get(i),nodoDestino);
-        		environmentState.setPosicionAgente(agState.getPosicionActual().getNodoActual().getEnlaces().get(i),nodoDestino);
+        		environmentState.setPosicionAgente(agState.getPosicionActual().getEnlaceRecorrido(),nodoDestino);
         		System.out.println("Posicion Actual: " + agState.getPosicionActual().getNodoActual().getNombre());
         		agState.setEsquinasVisitadas(agState.getPosicionActual().getNodoActual());
         		Grafo.percepcionesAleatorias(environmentState.getMundo());
@@ -84,8 +85,9 @@ public class Avanzar extends SearchAction {
      */
     @Override
     public Double getCost() {
+       	
     	GestorEnlace gestorEnlace = new GestorEnlace();
-        return new Double(gestorEnlace.calcularCosto(this.enlace));
+        return (new Double(gestorEnlace.calcularCosto(this.enlace)));
     }
 
     @Override
