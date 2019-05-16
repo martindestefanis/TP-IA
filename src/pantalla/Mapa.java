@@ -1,4 +1,4 @@
-/*package pantalla;
+package pantalla;
 
 import java.awt.BorderLayout;
 import java.util.ArrayList;
@@ -7,6 +7,7 @@ import java.util.Collections;
 
 import frsf.cidisi.exercise.car.search.CarAgentPerception;
 import grafo.Enlace;
+import grafo.Grafo;
 import grafo.Nodo;
 
 import javax.swing.JFrame;
@@ -14,6 +15,7 @@ import javax.swing.JFrame;
 import com.teamdev.jxmaps.examples.PlacesSearchExample;
 import com.teamdev.jxmaps.swing.MapView;
 import com.teamdev.jxmaps.*;
+import com.teamdev.jxmaps.LatLng;
 
 public class Mapa extends MapView{
 	
@@ -25,7 +27,7 @@ public class Mapa extends MapView{
 	private ArrayList<ArrayList<LatLng>> listaNegocios = new ArrayList<ArrayList<LatLng>>();
 	private ArrayList<ArrayList<LatLng>> listaEventos = new ArrayList<ArrayList<LatLng>>();
 	
-	public Mapa(ArrayList<Nodo> esquinasVisitadas, ArrayList<Nodo> mundo){
+	public Mapa(MapViewOptions options,ArrayList<Nodo> esquinasVisitadas, ArrayList<Nodo> mundo){
 		
 		this.esquinasVisitadas = esquinasVisitadas;
 		this.mundo = mundo;
@@ -41,13 +43,17 @@ public class Mapa extends MapView{
 				if(status == MapStatus.MAP_STATUS_OK){
 					map = getMap();
 					
+				
+			        
 					MapOptions mapOptions = new MapOptions();
 					MapTypeControlOptions controlOptions = new MapTypeControlOptions();
+					//mapOptions.setMapTypeControlOptions(options);
 					mapOptions.setMapTypeControlOptions(controlOptions);
 					map.setOptions(mapOptions);
 					
-					map.setCenter(new LatLng(-31.610798, -60.674077));
+					map.setCenter(listaPuntos[0]);
 					map.setZoom(15);
+					
 									
 					Polyline linea = new Polyline(map);
 					linea.setPath(listaPuntos);
@@ -131,8 +137,8 @@ public class Mapa extends MapView{
 
 		return posiciones;
 	}
-	public ArrayList<ArrayList<LatLng>> marcadoresNegocios(/*ArrayList<Nodo> mundo){
-	/*	ArrayList<LatLng> listaNegociosCerrados = new ArrayList<LatLng>();
+	public ArrayList<ArrayList<LatLng>> marcadoresNegocios(){
+		ArrayList<LatLng> listaNegociosCerrados = new ArrayList<LatLng>();
 		ArrayList<LatLng> listaNegociosAbiertos = new ArrayList<LatLng>();
 		ArrayList<ArrayList<LatLng>> listaNegocios = new ArrayList<ArrayList<LatLng>>();
 		for(int i=0; i<mundo.size(); i++){
@@ -189,24 +195,19 @@ public class Mapa extends MapView{
 	
 	private LatLng calcularLatitudLongitud(Enlace enlace, int factorMovimiento){
 		LatLng latitudLongitud;
-		LatLng nodoOrigenLatLng = new LatLng(0.0,0.0);
+		
 		double latitudPromedio;
 		double longitudPromedio;
 		double factor = factorMovimiento/8;
 		
-		for(int i=0; i<mundo.size(); i++){
-			for(int j=0; j<mundo.get(i).getEnlaces().size();j++){
-				if(mundo.get(i).getEnlaces().get(j).getNodoDestino().getNombre().equalsIgnoreCase(enlace.getNodoOrigen().getNombre())){
-					nodoOrigenLatLng = mundo.get(i).getEnlaces().get(j).getNodoDestino().getLatitudLongitud();
-				}
-			}
-			
-		}
-		latitudPromedio = nodoOrigenLatLng.getLat()+enlace.getNodoDestino().getLatitudLongitud().getLat();
+		latitudPromedio = enlace.getNodoOrigen().getLatitudLongitud().getLat()
+						+ enlace.getNodoDestino().getLatitudLongitud().getLat();
+		
 		latitudPromedio = latitudPromedio/2;
 		latitudPromedio = latitudPromedio + factor;
 		
-		longitudPromedio = nodoOrigenLatLng.getLng()+enlace.getNodoDestino().getLatitudLongitud().getLng();
+		longitudPromedio = enlace.getNodoOrigen().getLatitudLongitud().getLng()
+						+ enlace.getNodoDestino().getLatitudLongitud().getLng();
 		longitudPromedio = longitudPromedio/2;
 		longitudPromedio = longitudPromedio + factor;
 		
@@ -219,10 +220,17 @@ public class Mapa extends MapView{
 
 	/*public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		Mapa mapa = new Mapa("IA");
+		Grafo grafo = new Grafo();
+		ArrayList<Nodo> listaMundo = grafo.iniciarMundo();
+		ArrayList<Nodo> nodosVisitados = new ArrayList<Nodo>();
+		nodosVisitados.add(listaMundo.get(0));
+		nodosVisitados.add(listaMundo.get(1));
+		nodosVisitados.add(listaMundo.get(2));
+		
+		Mapa mapa = new Mapa(nodosVisitados, listaMundo);
 		
 	}*/
 	
 	
 
-//}
+}

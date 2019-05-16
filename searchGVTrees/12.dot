@@ -1,46 +1,28 @@
 digraph g {
 node [shape = Mrecord];
 nodo0[label="{EO: 0|cost: 0.0|A: null}"]
-nodo1[label="{EO: 1|cost: 45.454545|A: Avanzar [nodoDestino=J. P. López y Patricio Cullen, CostoOperacion=45.454545]}"]
-nodo3[label="{EO: 3|cost: 90.90909|A: Avanzar [nodoDestino=J. P. López y Cngo. Echagüe, CostoOperacion=45.454545]|Posicion:\nJ.\nP.\nLópez\ny\nPatricio\nCullen}"]
-nodo11[label="{EO: 11|cost: 136.36363500000002|A: Avanzar [nodoDestino=J. P. López y Talcahuano, CostoOperacion=45.454545]|Posicion:\nJ.\nP.\nLópez\ny\nCngo.\nEchagüe}"]
-
-nodo3 -> nodo11;
-nodo12[label="{EO: 12|cost: 136.36363500000002|A: Avanzar [nodoDestino=Angel Cassanello y Cngo. Echagüe, CostoOperacion=45.454545]|Posicion:\nJ.\nP.\nLópez\ny\nCngo.\nEchagüe}"]
-
-nodo3 -> nodo12;
+nodo1[label="{EO: 1|cost: 45.454545|A: Avanzar [nodoDestino=J. P. Lopez y Patricio Cullen, CostoOperacion=45.454545]}"]
+nodo3[label="{EO: 3|cost: 90.90909|A: Avanzar [nodoDestino=J. P. Lopez y Cngo. Echague, CostoOperacion=45.454545]|Posicion:\nJ.\nP.\nLopez\ny\nPatricio\nCullen}"]
 
 nodo1 -> nodo3;
-nodo4[label="{EO: 4|cost: 68.18181750000001|A: Avanzar [nodoDestino=Pje. Pujato y Patricio Cullen, CostoOperacion=22.7272725]|Posicion:\nJ.\nP.\nLópez\ny\nPatricio\nCullen}"]
-nodo5[label="{EO: 5|cost: 90.90909|A: Avanzar [nodoDestino=Hernandarias y Patricio Cullen, CostoOperacion=22.7272725]|Posicion:\nPje.\nPujato\ny\nPatricio\nCullen}"]
-nodo13[label="{EO: 13|cost: 136.36363500000002|A: Avanzar [nodoDestino=Juan Castelli y Patricio Cullen, CostoOperacion=45.454545]|Posicion:\nHernandarias\ny\nPatricio\nCullen}"]
-
-nodo5 -> nodo13;
-nodo14[label="{EO: 14|cost: 136.36363500000002|A: Avanzar [nodoDestino=Hernandarias y Antonia Godoy, CostoOperacion=45.454545]|Posicion:\nHernandarias\ny\nPatricio\nCullen}"]
-
-nodo5 -> nodo14;
-
-nodo4 -> nodo5;
-nodo6[label="{EO: 6|cost: 113.63636250000002|A: Avanzar [nodoDestino=Pje. Pujato y Antonia Godoy, CostoOperacion=45.454545]|Posicion:\nPje.\nPujato\ny\nPatricio\nCullen}"]
-
-nodo4 -> nodo6;
+nodo4[label="{EO: 4|cost: 68.18181750000001|A: Avanzar [nodoDestino=Pje. Pujato y Patricio Cullen, CostoOperacion=22.7272725]|Posicion:\nJ.\nP.\nLopez\ny\nPatricio\nCullen}"]
 
 nodo1 -> nodo4;
 
 nodo0 -> nodo1;
-nodo2[label="{EO: 2|cost: 90.45454455000001|A: Avanzar [nodoDestino=Angel Cassanello y Antonia Godoy, CostoOperacion=90.45454455000001]}"]
-nodo7[label="{EO: 7|cost: 110.45454455000001|A: Comprar_producto [costoProducto=20.0, productoComprar=Café, CostoOperacion=20.0]|Posicion:\nAngel\nCassanello\ny\nAntonia\nGodoy}"]
+nodo2[label="{EO: 2|cost: 45.454545|A: Avanzar [nodoDestino=Angel Cassanello y Antonia Godoy, CostoOperacion=45.454545]}"]
+nodo5[label="{EO: 5|cost: 65.454545|A: Comprar_producto [costoProducto=20.0, productoComprar=Café, CostoOperacion=20.0]|Posicion:\nAngel\nCassanello\ny\nAntonia\nGodoy}"]
+
+nodo2 -> nodo5;
+nodo6[label="{EO: 6|cost: 545.454545|A: Comprar_producto [costoProducto=500.0, productoComprar=Huevos, CostoOperacion=500.0]|Posicion:\nAngel\nCassanello\ny\nAntonia\nGodoy}"]
+
+nodo2 -> nodo6;
+nodo7[label="{EO: 7|cost: 90.90909|A: Avanzar [nodoDestino=Angel Cassanello y Piedras, CostoOperacion=45.454545]|Posicion:\nAngel\nCassanello\ny\nAntonia\nGodoy}"]
 
 nodo2 -> nodo7;
-nodo8[label="{EO: 8|cost: 590.45454455|A: Comprar_producto [costoProducto=500.0, productoComprar=Huevos, CostoOperacion=500.0]|Posicion:\nAngel\nCassanello\ny\nAntonia\nGodoy}"]
+nodo8[label="{EO: 8|cost: 90.90909|A: Avanzar [nodoDestino=Ricardo Aldao y Antonia Godoy, CostoOperacion=45.454545]|Posicion:\nAngel\nCassanello\ny\nAntonia\nGodoy}"]
 
 nodo2 -> nodo8;
-nodo9[label="{EO: 9|cost: 135.90908955|A: Avanzar [nodoDestino=Angel Cassanello y Piedras, CostoOperacion=45.454545]|Posicion:\nAngel\nCassanello\ny\nAntonia\nGodoy}"]
-
-nodo2 -> nodo9;
-nodo10[label="{EO: 10|cost: 135.90908955|A: Avanzar [nodoDestino=Ricardo Aldao y Antonia Godoy, CostoOperacion=45.454545]|Posicion:\nAngel\nCassanello\ny\nAntonia\nGodoy}"]
-
-nodo2 -> nodo10;
 
 nodo0 -> nodo2;
 

@@ -6,10 +6,11 @@ import java.util.ArrayList;
 import javax.swing.JFrame;
 import javax.swing.WindowConstants;
 
+import pantalla.Mapa;
+
 import com.teamdev.jxmaps.MapViewOptions;
 
 //import pantalla.Mapa;
-import pantalla.Mapa2;
 //import pantalla.Mapa;
 
 import frsf.cidisi.faia.exceptions.PrologConnectorException;
@@ -30,13 +31,12 @@ public class CarAgentMain {
         
         simulator.start();
         CarAgentState agState = (CarAgentState) agent.getAgentState();
-        /*for(int i=0; i< agState.getEsquinasVisitadas().size(); i++){
-        	System.out.println(agState.getEsquinasVisitadas().get(i).getNombre());
-        	System.out.println(agState.getEsquinasVisitadas().get(i).getLatitudLongitud());
-        }*/
         
-        //Mapa mapa = new Mapa(agState.getEsquinasVisitadas(),agState.getmundo());
-        JFrame pantallaMapa = new JFrame("Mapa");
+    	MapViewOptions options = new MapViewOptions();
+        options.importPlaces();
+        options.setApiKey("AIzaSyDXeR9Z3IqVz25_JKRdKjT7tLKXttLgnj4");
+        Mapa mapa = new Mapa(options,agState.getEsquinasVisitadas(),agState.getmundo());
+        /*JFrame pantallaMapa = new JFrame("Mapa");
         MapViewOptions options = new MapViewOptions();
         options.importPlaces();
         options.setApiKey("AIzaSyDXeR9Z3IqVz25_JKRdKjT7tLKXttLgnj4");

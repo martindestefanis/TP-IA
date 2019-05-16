@@ -40,7 +40,7 @@ public class Comprar_producto extends SearchAction {
         if(agState.getPosicionActual().getEnlaceRecorrido() != null){
 	        for(int i=0; i<agState.getPosicionActual().getEnlaceRecorrido().getNegocios().size(); i++){
 	        	negocio = agState.getPosicionActual().getEnlaceRecorrido().getNegocios().get(i);
-	        	if(negocio.getProductoPrecio().containsKey(this.productoComprar)){
+	        	if(negocio.getProductoPrecio().containsKey(this.productoComprar)&& negocio.isAbierto()){
 	        		
 	        		agState.getProductosComprados().add(this.productoComprar);
 	        		agState.getproductosComprar().remove(productoComprar);
@@ -65,7 +65,7 @@ public class Comprar_producto extends SearchAction {
         	
 	        for(int i=0; i<agState.getPosicionActual().getEnlaceRecorrido().getNegocios().size(); i++){
 	        	negocio = agState.getPosicionActual().getEnlaceRecorrido().getNegocios().get(i);
-	        	if(negocio.getProductoPrecio().containsKey(this.productoComprar)){
+	        	if(negocio.getProductoPrecio().containsKey(this.productoComprar)&& negocio.isAbierto()){
 	        		
 	        		agState.getProductosComprados().add(this.productoComprar);
 	        		agState.getproductosComprar().remove(productoComprar);

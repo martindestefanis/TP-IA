@@ -1,9 +1,12 @@
 package grafo;
 
 
+import java.io.File;
+import java.io.FileWriter;
 import java.util.ArrayList;
 import java.util.Iterator;
 
+import com.csvreader.CsvWriter;
 import com.teamdev.jxmaps.LatLng;
 
 //import pantalla.Mapa;
@@ -42,7 +45,7 @@ public class Grafo {
 		return gestor.getNodosExistentes();
 	}
 	
-	private ArrayList<Nodo> leerEnlaces(){
+	public ArrayList<Nodo> leerEnlaces(){
 		
 		GestorNodo gestorNodo = new GestorNodo();
 	
@@ -68,10 +71,12 @@ public class Grafo {
 	    	   nodoOrigen = GestorNodo.crearNodo(registrosLeidos.get(i).getNodoOrigen());
 	    	   nodoDestino = GestorNodo.crearNodo(registrosLeidos.get(i).getNodoDestino());
 	    	   costo = registrosLeidos.get(i).getCosto();
-	    	   latitudLongitud = registrosLeidos.get(i).getLatitudLongitud();
-	    	   //nodoDestino.setLatitudLongitud(latitudLongitud);
-	    	   //nodoOrigen.setLatitudLongitud(latitudLongitud);
-	    	  
+	    	   
+	    	   latitudLongitud = new LatLng(registrosLeidos.get(i).getLatitudOrigen(),registrosLeidos.get(i).getLongitudOrigen());
+	    	   nodoOrigen.setLatitudLongitud(latitudLongitud);
+	    	   
+	    	   latitudLongitud = new LatLng(registrosLeidos.get(i).getLatitudDestino(),registrosLeidos.get(i).getLongitudDestino());
+	    	   nodoDestino.setLatitudLongitud(latitudLongitud);	    	  
 	    	   
 	    	   enlace = gestorEnlace.crearEnlace(nodoOrigen,nodoDestino);
 	    	   enlace.setDisponible(true);
@@ -251,6 +256,45 @@ public class Grafo {
 
 	}
 	
+	/*public static void escribir(ArrayList<Csv> nodosLeidos, ArrayList<ArrayList<String>> latitudLongitud){
+		String delimitador = ";";  
+		CsvWriter writercsv = null;    
+		  
+		    try {
+		        File fichero = new File("..\\TP-IA\\src\\grafo\\Latitud.csv");
+		        FileWriter fwriter = new FileWriter(fichero);
+		        
+		        // Creamos la clase que nos permite escribir en el fichero CSV.
+		        writercsv = new CsvWriter(fwriter,delimitador.charAt(0));
+		        
+		        // Escribimos las cabeceras.
+		        writercsv.write("Nodo Origen");
+		        writercsv.write("Nodo Destino");
+		        writercsv.write("Latitud");
+		        writercsv.write("Longitud");
+		        writercsv.write("Costo");
+		        writercsv.endRecord();
+		        for(int i=0; i<nodosLeidos.size(); i++){
+		        	writercsv.write(nodosLeidos.get(i).getNodoOrigen());
+		        	writercsv.write(nodosLeidos.get(i).getNodoDestino());
+		        	writercsv.write(latitudLongitud.get(i).get(0));
+		        	writercsv.write(latitudLongitud.get(i).get(1));
+			        writercsv.write(nodosLeidos.get(i).getCosto().toString());
+			        writercsv.endRecord();
+		        }
+		        
+		        
+		        
+		     } catch(Exception e) {
+		            System.out.println("FALLA");
+		    }  finally {
+		        if(writercsv!=null) {
+		            writercsv.close();
+		        }
+		    }
+	}*/
+	
+
 	public static void percepcionesAleatorias(ArrayList<Nodo> mundo){
 	
 		boolean salir = false;

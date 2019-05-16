@@ -1,8 +1,9 @@
 Nombre;Esquina1;Esquina2;Producto;Precio;Abierto
-Alvear;Angel Cassanello y Patricio Cullen;Angel Cassanello y Antonia Godoy;Huevos;500;true
-Alvear;Angel Cassanello y Patricio Cullen;Angel Cassanello y Antonia Godoy;Café;20;true
-Alvear;Angel Cassanello y Patricio Cullen;Angel Cassanello y Antonia Godoy;Maní;20;true
-Alvear;Angel Cassanello y Patricio Cullen;Angel Cassanello y Antonia Godoy;Leche;60;true
-Kilbel;Hernandarias y Cngo. Echagüe;Hernandarias y Patricio Cullen;Leche;50;true
-Kilbel;Hernandarias y Cngo. Echagüe;Hernandarias y Patricio Cullen;Huevos;10;true
-Kilbel;Hernandarias y Cngo. Echagüe;Hernandarias y Patricio Cullen;Maní;10;true
+Alvear;Angel Cassanello y Patricio Cullen;Angel Cassanello y Antonia Godoy;Huevos;500;false
+Alvear;Angel Cassanello y Patricio Cullen;Angel Cassanello y Antonia Godoy;Café;20;false
+Alvear;Angel Cassanello y Patricio Cullen;Angel Cassanello y Antonia Godoy;Maní;20;false
+Alvear;Angel Cassanello y Patricio Cullen;Angel Cassanello y Antonia Godoy;Leche;60;false
+Kilbel;Hernandarias y Cngo. Echague;Hernandarias y Patricio Cullen;Leche;50;true
+Kilbel;Hernandarias y Cngo. Echague;Hernandarias y Patricio Cullen;Huevos;10;true
+Kilbel;Hernandarias y Cngo. Echague;Hernandarias y Patricio Cullen;Maní;10;true
+Kilbel;Hernandarias y Cngo. Echague;Hernandarias y Patricio Cullen;Café;20;true
