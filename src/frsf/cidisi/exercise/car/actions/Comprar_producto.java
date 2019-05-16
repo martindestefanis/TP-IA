@@ -98,11 +98,20 @@ public class Comprar_producto extends SearchAction {
      */
     @Override
     public Double getCost() {
-    	//Si es en Bicicleta suponemos que lleva 5 minutos comprar un producto, entonces multiplicamos por 300 segundos
+    	//Si es en Bicicleta suponemos que lleva 5 minutos comprar un producto
     	if(CarAgentState.getModalidadSolucion().equalsIgnoreCase("Bicicleta")){
-    		return new Double(300);
+    		
+    		return new Double(5);
+    		
     	}else{
-    		return new Double(this.costoProducto);
+    		if(CarAgentState.getModalidadSolucion().equalsIgnoreCase("Mas barato")){
+    			
+    			return new Double(this.costoProducto);
+    			
+    		}else{
+    			return new Double(this.costoProducto);
+    		}
+    		
     	}
     }
 

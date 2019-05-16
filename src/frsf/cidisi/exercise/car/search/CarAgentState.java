@@ -90,7 +90,7 @@ public class CarAgentState extends SearchBasedAgentState {
     		}
     	}
    
-/*    	System.out.println("\t\t\t\t------- MUNDO AGENTE ----------");
+    	System.out.println("\t\t\t\t------- MUNDO AGENTE ----------");
     	
     	System.out.println("\t\t\t\t------- Eventos percibidos --------");
     	
@@ -103,7 +103,7 @@ public class CarAgentState extends SearchBasedAgentState {
     		}
     		
     	}
- */   	
+    	
     	
     }
 
@@ -115,6 +115,7 @@ public class CarAgentState extends SearchBasedAgentState {
         //LA MODALIDAD PUEDE SER O "A PIE" O EN "AUTOMOVIL"
     	//modalidadSolucion = "Bicicleta";
     	modalidadSolucion = "Automovil";
+    	//modalidadSolucion = "Mas barato";
 		
 		//SETEO TODOS LOS ENLACES CON PERCEPCIONES EMPTY
    		for(int i=0; i<mundo.size(); i++){

@@ -95,14 +95,14 @@ public class CityState extends EnvironmentState {
     	
     	for(int i=0; i<mundo.size(); i++){
     		for(int j=0; j<mundo.get(i).getEnlaces().size(); j++){
-    			System.out.println(mundo.get(i).getEnlaces().get(j).getNombre() + "----> " +
+    			System.out.println(mundo.get(i).getEnlaces().get(j).getNombre() + "----> " + 
     				String.valueOf(mundo.get(i).getEnlaces().get(j).isDisponible()));
     		}
     	}
     	
+    
 
-
-/*    	System.out.println("\t\t\t\t------- MUNDO AGENTE INICIAL ----------");
+ /*   	System.out.println("\t\t\t\t------- MUNDO AGENTE INICIAL ----------");
     	
     	System.out.println("\t\t\t\t------- Eventos --------");
     	
@@ -114,8 +114,8 @@ public class CityState extends EnvironmentState {
     			}
     		}
     		
-    	}
-*/    	
+    	}*/
+    	
     }
     
     public void cargarPercepciones(ArrayList<Nodo> mundoAmbiente){
@@ -150,9 +150,9 @@ public class CityState extends EnvironmentState {
    							
    						}
    						else{
-   						/*	System.out.println("La calle " + mundoAmbiente.get(j).getEnlaces().get(k).getNombre() +
+   							System.out.println("La calle " + mundoAmbiente.get(j).getEnlaces().get(k).getNombre() +
    							" ya contiene un evento de " + mundoAmbiente.get(j).getEnlaces().get(k).getEventos().get(listaEventos.get(i).getNombre()));
-   						*/
+   						
    						}
    					}
    				}

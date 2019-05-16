@@ -87,6 +87,7 @@ public class Avanzar extends SearchAction {
     public Double getCost() {
        	
     	GestorEnlace gestorEnlace = new GestorEnlace();
+    	
         return (new Double(gestorEnlace.calcularCosto(this.enlace)));
     }
 

@@ -26,6 +26,7 @@ public class Mapa extends MapView{
 	private ArrayList<Nodo> mundo = new ArrayList<Nodo>();
 	private ArrayList<ArrayList<LatLng>> listaNegocios = new ArrayList<ArrayList<LatLng>>();
 	private ArrayList<ArrayList<LatLng>> listaEventos = new ArrayList<ArrayList<LatLng>>();
+	private ArrayList<Marker> listaMarcadores = new ArrayList<Marker>();
 	
 	public Mapa(MapViewOptions options,ArrayList<Nodo> esquinasVisitadas, ArrayList<Nodo> mundo){
 		
@@ -54,7 +55,8 @@ public class Mapa extends MapView{
 					map.setCenter(listaPuntos[0]);
 					map.setZoom(15);
 					
-									
+					InfoWindow window = new InfoWindow(map);
+                  									
 					Polyline linea = new Polyline(map);
 					linea.setPath(listaPuntos);
 					linea.setVisible(true);
@@ -68,6 +70,8 @@ public class Mapa extends MapView{
 					Marker posicionInicial = new Marker(map);
 			    	posicionInicial.setTitle("Posicion Inicial");
 			    	posicionInicial.setPosition(listaPuntos[0]);
+			    	window.setContent(posicionInicial.getTitle());
+                    window.open(map, posicionInicial);
 			    	
 			    	//MARCADOR PARA LA POSICION FINAL
 			    	Marker posicionFinal = new Marker(map);
@@ -75,7 +79,9 @@ public class Mapa extends MapView{
 					icono.loadFromFile("..\\TP-IA\\src\\pantalla\\iconos\\Posicion Final.png");
 					posicionFinal.setIcon(icono);
 					Collections.reverse(Arrays.asList(listaPuntos));
-					posicionFinal.setPosition(listaPuntos[0]);	
+					posicionFinal.setPosition(listaPuntos[0]);
+					window.setContent(posicionFinal.getTitle());
+                    window.open(map, posicionFinal);
 					
 					//CARGO MARCADORES DE NEGOCIOS ABIERTOS (POSICION 0 DE LA LISTA DE NEGOCIOS)
 					icono.loadFromFile("..\\TP-IA\\src\\pantalla\\iconos\\Negocio.png");
@@ -84,6 +90,8 @@ public class Mapa extends MapView{
 						marcador.setPosition(listaNegocios.get(0).get(i));
 						marcador.setIcon(icono);
 						marcador.setTitle("NEGOCIO ABIERTO");
+						window.setContent(marcador.getTitle());
+	                    window.open(map, marcador);
 					}
 					
 					//CARGO MARCADORES DE NEGOCIOS CERRADOS (POSICION 1 DE LA LISTA DE NEGOCIOS)
@@ -93,6 +101,8 @@ public class Mapa extends MapView{
 						marcador.setPosition(listaNegocios.get(1).get(i));
 						marcador.setIcon(icono);
 						marcador.setTitle("NEGOCIO CERRADO");
+						window.setContent(marcador.getTitle());
+	                    window.open(map, marcador);
 					}
 					
 					//CARGO MARCADORES DE CONGESTION (POSICION O DE LA LISTA DE EVENTOS)
@@ -102,6 +112,8 @@ public class Mapa extends MapView{
 						marcador.setPosition(listaEventos.get(0).get(i));
 						marcador.setIcon(icono);
 						marcador.setTitle("CONGESTION");
+						window.setContent(marcador.getTitle());
+	                    window.open(map, marcador);
 					}
 					//CARGO MARCADORES DE EVENTO SOCIAL (POSICION 1 DE LA LISTA DE EVENTOS)
 					icono.loadFromFile("..\\TP-IA\\src\\pantalla\\iconos\\Evento Social.png");
@@ -110,6 +122,8 @@ public class Mapa extends MapView{
 						marcador.setPosition(listaEventos.get(1).get(i));
 						marcador.setIcon(icono);
 						marcador.setTitle("EVENTO SOCIAL");
+						window.setContent(marcador.getTitle());
+	                    window.open(map, marcador);
 					}
 					//CARGO MARCADORES DE CORTE CALLE (POSICION 2 DE LA LISTA DE EVENTOS)
 					icono.loadFromFile("..\\TP-IA\\src\\pantalla\\iconos\\Corte Calle.png");
@@ -118,6 +132,8 @@ public class Mapa extends MapView{
 						marcador.setPosition(listaEventos.get(2).get(i));
 						marcador.setIcon(icono);
 						marcador.setTitle("CORTE DE CALLE");
+						window.setContent(marcador.getTitle());
+	                    window.open(map, marcador);
 					}
 				}
 			}
@@ -173,14 +189,19 @@ public class Mapa extends MapView{
 				for(int k=0; k<eventos.size();k++){
 						if(eventos.get(k).equalsIgnoreCase("Congestion") && mundo.get(i).getEnlaces().get(j).getEventos().containsKey(eventos.get(k))){
 							listaCongestion.add(calcularLatitudLongitud(mundo.get(i).getEnlaces().get(j),2));
+					
 						}else{
 							if(eventos.get(k).equalsIgnoreCase("Evento Social") && mundo.get(i).getEnlaces().get(j).getEventos().containsKey(eventos.get(k))){
 								listaEventoSocial.add(calcularLatitudLongitud(mundo.get(i).getEnlaces().get(j),3));
+								
 							}
 							else{
-								if(eventos.get(k).equalsIgnoreCase("Corte Calle") && mundo.get(i).getEnlaces().get(j).getEventos().containsKey(eventos.get(k))){
+								if(eventos.get(k).equalsIgnoreCase("Corte Calle") && !mundo.get(i).getEnlaces().get(j).isDisponible()){
 									listaCorteCalle.add(calcularLatitudLongitud(mundo.get(i).getEnlaces().get(j),4));
 								}
+								
+									
+								
 							}
 						}
 					
