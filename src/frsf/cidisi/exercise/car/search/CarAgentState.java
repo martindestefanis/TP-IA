@@ -22,10 +22,7 @@ public class CarAgentState extends SearchBasedAgentState {
     
 
     private static String modalidadSolucion;
-    
-   // private ArrayList<Nodo> mundo = new ArrayList<Nodo>();
-    //private ArrayList<Nodo> mundoReal;
-   
+      
 	private ArrayList<String> productosComprar = new ArrayList<String>();
     
     private ArrayList<String> productosComprados = new ArrayList<String>();

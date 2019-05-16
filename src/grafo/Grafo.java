@@ -6,7 +6,7 @@ import java.util.Iterator;
 
 import com.teamdev.jxmaps.LatLng;
 
-import pantalla.Mapa;
+//import pantalla.Mapa;
 
 import frsf.cidisi.exercise.car.search.CarAgentPerception;
 
@@ -47,7 +47,7 @@ public class Grafo {
 		GestorNodo gestorNodo = new GestorNodo();
 	
 		//DIRECTORIO DEL FICHERO Y DELIMITADOR DE LECTURA
-	    String csvEnlaces = "..\\TP-IA\\src\\grafo\\Enlaces3.csv";
+	    String csvEnlaces = "..\\TP-IA\\src\\grafo\\Enlaces.csv";
 	    String delimitador = ";";
 		ArrayList<Csv> registrosLeidos = null;
 	    Csv fila = new Csv();
@@ -69,8 +69,8 @@ public class Grafo {
 	    	   nodoDestino = GestorNodo.crearNodo(registrosLeidos.get(i).getNodoDestino());
 	    	   costo = registrosLeidos.get(i).getCosto();
 	    	   latitudLongitud = registrosLeidos.get(i).getLatitudLongitud();
-	    	   nodoDestino.setLatitudLongitud(latitudLongitud);
-	    	   nodoOrigen.setLatitudLongitud(latitudLongitud);
+	    	   //nodoDestino.setLatitudLongitud(latitudLongitud);
+	    	   //nodoOrigen.setLatitudLongitud(latitudLongitud);
 	    	  
 	    	   
 	    	   enlace = gestorEnlace.crearEnlace(nodoOrigen,nodoDestino);
@@ -105,7 +105,7 @@ public class Grafo {
 		return gestorNodo.getNodosExistentes();
 	}
 	
-	private ArrayList<Negocio> leerNegocios(){
+	public ArrayList<Negocio> leerNegocios(){
 		//DIRECTORIO DEL FICHERO Y DELIMITADOR DE LECTURA
 	    String csvNegocios = "..\\TP-IA\\src\\grafo\\Negocios.csv";
 	    String delimitador = ";";

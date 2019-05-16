@@ -1,4 +1,4 @@
-package pantalla;
+/*package pantalla;
 
 import java.awt.BorderLayout;
 import java.util.ArrayList;
@@ -131,9 +131,8 @@ public class Mapa extends MapView{
 
 		return posiciones;
 	}
-
-	public ArrayList<ArrayList<LatLng>> marcadoresNegocios(/*ArrayList<Nodo> mundo*/){
-		ArrayList<LatLng> listaNegociosCerrados = new ArrayList<LatLng>();
+	public ArrayList<ArrayList<LatLng>> marcadoresNegocios(/*ArrayList<Nodo> mundo){
+	/*	ArrayList<LatLng> listaNegociosCerrados = new ArrayList<LatLng>();
 		ArrayList<LatLng> listaNegociosAbiertos = new ArrayList<LatLng>();
 		ArrayList<ArrayList<LatLng>> listaNegocios = new ArrayList<ArrayList<LatLng>>();
 		for(int i=0; i<mundo.size(); i++){
@@ -182,7 +181,6 @@ public class Mapa extends MapView{
     			}
 			}
 		}
-		
 		listaEventos.add(listaCongestion);
 		listaEventos.add(listaEventoSocial);
 		listaEventos.add(listaCorteCalle);
@@ -206,11 +204,11 @@ public class Mapa extends MapView{
 		}
 		latitudPromedio = nodoOrigenLatLng.getLat()+enlace.getNodoDestino().getLatitudLongitud().getLat();
 		latitudPromedio = latitudPromedio/2;
-		//latitudPromedio = latitudPromedio + factor;
+		latitudPromedio = latitudPromedio + factor;
 		
 		longitudPromedio = nodoOrigenLatLng.getLng()+enlace.getNodoDestino().getLatitudLongitud().getLng();
 		longitudPromedio = longitudPromedio/2;
-		//longitudPromedio = longitudPromedio + factor;
+		longitudPromedio = longitudPromedio + factor;
 		
 		latitudLongitud = new LatLng(latitudPromedio,longitudPromedio);
 		
@@ -227,4 +225,4 @@ public class Mapa extends MapView{
 	
 	
 
-}
+//}

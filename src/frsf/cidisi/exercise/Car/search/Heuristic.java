@@ -18,6 +18,7 @@ public class Heuristic implements IEstimatedCostFunction {
 	
 		//Method: Complete Method
 		
+        //return agState.getproductosComprar().size();
         return 0;
     }
 }

@@ -131,8 +131,8 @@ public class Csv implements Serializable{
 	    		   costoDistancia = cvsReader.get("Distancia");
 	    		   latitud = cvsReader.get("Latitud");
 	    		   longitud = cvsReader.get("Longitud");
-	    		   this.latitud = Double.parseDouble(latitud);
-	    		   this.longitud = Double.parseDouble(longitud);
+	    		   //this.latitud = Double.parseDouble(latitud);
+	    		   //this.longitud = Double.parseDouble(longitud);
 	    		   
 	    		   Csv fila = new Csv();  		      		   	                                
 	    		 
@@ -141,7 +141,7 @@ public class Csv implements Serializable{
 	               fila.setNodoDestino(nodoFinal);
 	               fila.setCosto(Double.parseDouble(costoDistancia));
 	               
-	               fila.setLatitudLongitud(new LatLng(this.latitud,this.longitud));
+	               //fila.setLatitudLongitud(new LatLng(this.latitud,this.longitud));
 	               
 	               listaRegistros.add(fila);
 	         
