@@ -4,7 +4,9 @@ package grafo;
 import java.io.File;
 import java.io.FileWriter;
 import java.util.ArrayList;
+import java.util.HashSet;
 import java.util.Iterator;
+import java.util.Set;
 
 import com.csvreader.CsvWriter;
 import com.teamdev.jxmaps.LatLng;
@@ -256,69 +258,33 @@ public class Grafo {
 
 	}
 	
-	/*public static void escribir(ArrayList<Csv> nodosLeidos, ArrayList<ArrayList<String>> latitudLongitud){
-		String delimitador = ";";  
-		CsvWriter writercsv = null;    
-		  
-		    try {
-		        File fichero = new File("..\\TP-IA\\src\\grafo\\Latitud.csv");
-		        FileWriter fwriter = new FileWriter(fichero);
-		        
-		        // Creamos la clase que nos permite escribir en el fichero CSV.
-		        writercsv = new CsvWriter(fwriter,delimitador.charAt(0));
-		        
-		        // Escribimos las cabeceras.
-		        writercsv.write("Nodo Origen");
-		        writercsv.write("Nodo Destino");
-		        writercsv.write("Latitud");
-		        writercsv.write("Longitud");
-		        writercsv.write("Costo");
-		        writercsv.endRecord();
-		        for(int i=0; i<nodosLeidos.size(); i++){
-		        	writercsv.write(nodosLeidos.get(i).getNodoOrigen());
-		        	writercsv.write(nodosLeidos.get(i).getNodoDestino());
-		        	writercsv.write(latitudLongitud.get(i).get(0));
-		        	writercsv.write(latitudLongitud.get(i).get(1));
-			        writercsv.write(nodosLeidos.get(i).getCosto().toString());
-			        writercsv.endRecord();
-		        }
-		        
-		        
-		        
-		     } catch(Exception e) {
-		            System.out.println("FALLA");
-		    }  finally {
-		        if(writercsv!=null) {
-		            writercsv.close();
-		        }
-		    }
-	}*/
-	
 
 	public static void percepcionesAleatorias(ArrayList<Nodo> mundo){
 	
 		boolean salir = false;
 		boolean elegirOtraAccion = true;
 		
-		int indiceNodoElegido;
-		int indiceEnlaceElegido;
-		int indiceAccionElegida;
-		int indiceNegocioElegido;
-		double costoElegido;
+		int indiceNodoElegido = 1000;
+		int indiceEnlaceElegido = 1000;
+		int indiceAccionElegida = 1000;
+		int indiceNegocioElegido = 1000;
+		//int indiceProductoElegido = 1000;
+		double costoElegido = 1000.0;
 		
 		listaAcciones[] acciones = listaAcciones.values();
 		
 		Negocio negocioAleatorio = new Negocio();
+		
+		//Set<String> productos = new HashSet<String>();
+		
 		System.out.println("PERCEPCIONES ALEATORIAS");
 		while(!salir && elegirOtraAccion){
 			//SELECCIONO UN INDICE PARA ELEGIR UN NODO ALEATORIO
 			indiceNodoElegido = (int) Math.floor(Math.random()*mundo.size());
-			System.out.println("NODO ELEGIDO: " + mundo.get(indiceNodoElegido).getNombre());
-			
+						
 			//SELECCIONO UN INDICE PARA ELEGIR UN ENLACE ALEATORIO EN BASE AL NODO ALEATORIO ELEGIDO
 			indiceEnlaceElegido = (int) Math.floor(Math.random()* mundo.get(indiceNodoElegido).getEnlaces().size());
-			System.out.println("ENLACE ELEGIDO: " + mundo.get(indiceNodoElegido).getEnlaces().get(indiceEnlaceElegido).getNombre());
-			
+						
 			/*SELECCIONO UNA ACCION ALEATORIA EN BASE A LA LISTA DE OPCIONES:
 			 * -- AGREGAR/ELIMINAR UN EVENTO SOCIAL
 			 * -- AGREGAR/ELIMINAR UNA CONGESTION
@@ -326,12 +292,10 @@ public class Grafo {
 			 * -- NO CAMBIAR EL MUNDO DEL AMBIENTE
 			 */
 			indiceAccionElegida = (int) Math.floor(Math.random()* acciones.length);
-			System.out.println("ACCION ELEGIDA: " + acciones[indiceAccionElegida]);
 			
-			//SELECCIONO UN COSTO ALEATORIO PARA EL EVENTO. ENTRE 0 Y 100 (PORCENTAJE)
-			costoElegido = Math.floor(Math.random()*100);
-			System.out.println("COSTO ELEGIDO: " + costoElegido);
-			
+			//SELECCIONO UN COSTO ALEATORIO PARA EL EVENTO. ENTRE 1 Y 100 (PORCENTAJE)
+			costoElegido = Math.floor(Math.random()*100+1);
+					
 			//MODIFICO EL MUNDO DEL AMBIENTE SEGUN LA ACCION SELECCIONADA
 
 			switch(acciones[indiceAccionElegida]){
@@ -408,12 +372,24 @@ public class Grafo {
 						elegirOtraAccion = true;
 					}
 					break;
+				/*case CAMBIAR_PRECIO_PRODUCTO:
+					if(mundo.get(indiceNodoElegido).getEnlaces().get(indiceEnlaceElegido).getNegocios().size() != 0){
+						negocioAleatorio = mundo.get(indiceNodoElegido).getEnlaces().get(indiceEnlaceElegido).getNegocios().get(indiceNegocioElegido);
+						indiceProductoElegido = (int) Math.floor(Math.random() * negocioAleatorio.getProductoPrecio().size());
+						productos = negocioAleatorio.getProductoPrecio().keySet();
+						negocioAleatorio.getProductoPrecio().remove(productos.)
+					}*/
 				default:
 					//CASO EN QUE LA ACCION SELECCIONADA SEA NO MODIFICAR EL MUNDO
 					salir = true;
 					elegirOtraAccion = false;
 			}
-		}	
+		}
+		System.out.println("NODO ELEGIDO: " + mundo.get(indiceNodoElegido).getNombre());
+		System.out.println("ENLACE ELEGIDO: " + mundo.get(indiceNodoElegido).getEnlaces().get(indiceEnlaceElegido).getNombre());
+		System.out.println("ACCION ELEGIDA: " + acciones[indiceAccionElegida]);
+		System.out.println("COSTO ELEGIDO: " + costoElegido);
+		
 	}
 	
 	private enum listaAcciones{
@@ -425,6 +401,7 @@ public class Grafo {
 		ELIMINAR_CONGESTION,
 		ABRIR_NEGOCIO,
 		CERRAR_NEGOCIO,
+		//CAMBIAR_PRECIO_PRODUCTO,
 		NADA
 	}
 }

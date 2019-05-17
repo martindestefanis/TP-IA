@@ -217,10 +217,10 @@ public class LatitudLongitud{
 
     public static void main(String args[])
     {
-        LatitudLongitud c = new LatitudLongitud();
-        c.escribirCoordenadas();
-        //String direccion = "https://maps.googleapis.com/maps/api/geocode/json?address=Pedro+de+Vega+y+Cngo.+Echague,+Santa+Fe,+Argentina&key=AIzaSyDXeR9Z3IqVz25_JKRdKjT7tLKXttLgnj4";
+        LatitudLongitud latLng = new LatitudLongitud();
+        latLng.escribirCoordenadas();
+        //String direccion = "https://maps.googleapis.com/maps/api/geocode/json?address=Juan+Castelli+y+Tacuari,+Santa+Fe,+Argentina&key=AIzaSyDXeR9Z3IqVz25_JKRdKjT7tLKXttLgnj4";
         //String direccion =  "http://maps.googleapis.com/maps/api/geocode/json?address=Santa+Fe&key=AIzaSyDXeR9Z3IqVz25_JKRdKjT7tLKXttLgnj4";
-        //System.out.println(c.getCoordenadasDeEstaDireccion(direccion));
+        //System.out.println(latLng.getCoordenadasDeEstaDireccion(direccion));
     }
 }

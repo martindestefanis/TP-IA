@@ -38,8 +38,6 @@ public class CarAgentState extends SearchBasedAgentState {
     
     	//TODO: Complete Method
     		this.initState();
-        
-   
     }
 
     /**
@@ -96,10 +94,18 @@ public class CarAgentState extends SearchBasedAgentState {
     	
     	for(int i=0; i<mundo.size(); i++){
     		for(int k = 0; k<mundo.get(i).getEnlaces().size(); k++){
-    			for(String key : mundo.get(i).getEnlaces().get(k).getEventos().keySet()){
-    				System.out.println(key +
-    		    	"----> Calle: " + mundo.get(i).getEnlaces().get(k).getNombre());
-    			}
+    				for(String key : mundo.get(i).getEnlaces().get(k).getEventos().keySet()){
+    					if(!key.equalsIgnoreCase("Sin percepcion")){
+    						System.out.println(key +
+        		    		    	"----> Calle: " + mundo.get(i).getEnlaces().get(k).getNombre());
+    					}else{
+    						if(!mundo.get(i).getEnlaces().get(k).isDisponible()){
+            					System.out.println("Corte Calle" +
+            		    		    	"----> Calle: " + mundo.get(i).getEnlaces().get(k).getNombre());
+            				}
+    					}
+        				
+        			}
     		}
     		
     	}
@@ -114,8 +120,8 @@ public class CarAgentState extends SearchBasedAgentState {
     public void initState() {
         //LA MODALIDAD PUEDE SER O "A PIE" O EN "AUTOMOVIL"
     	//modalidadSolucion = "Bicicleta";
-    	//modalidadSolucion = "Automovil";
-    	modalidadSolucion = "Mas barato";
+    	modalidadSolucion = "Automovil";
+    	//modalidadSolucion = "Mas barato";
 		
 		//SETEO TODOS LOS ENLACES CON PERCEPCIONES EMPTY
    		for(int i=0; i<mundo.size(); i++){
@@ -142,13 +148,7 @@ public class CarAgentState extends SearchBasedAgentState {
         return str;
     }
 
-    
-    
-
-    //TODO: Complete this section with agent-specific methods
-    // The following methods are agent-specific:
-	
-     @Override
+    @Override
 	public int hashCode() {
 		final int prime = 31;
 		int result = 1;
@@ -197,8 +197,12 @@ public class CarAgentState extends SearchBasedAgentState {
 			return false;
 		return true;
 	}
+    
 
-	public ArrayList<Nodo> getmundo(){
+    //TODO: Complete this section with agent-specific methods
+    // The following methods are agent-specific:
+	
+     public ArrayList<Nodo> getmundo(){
         return mundo;
      }
      public static String getModalidadSolucion() {

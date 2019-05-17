@@ -5,8 +5,8 @@ Pedro de Vega y Patricio Cullen;Ricardo Aldao y Patricio Cullen;100;-31.6156152;
 Pedro de Vega y Patricio Cullen;Pedro de Vega y Antonia Godoy;100;-31.6156152;-60.674319;-31.6153848;-60.6753506
 Pedro de Vega y Antonia Godoy;Pedro de Vega y Piedras;100;-31.6153848;-60.6753506;-31.6151467;-60.6764065
 Pedro de Vega y Piedras;Ricardo Aldao y Piedras;100;-31.6151467;-60.6764065;-31.6142445;-60.6761471
-Pedro de Vega y Piedras;Pedro de Vega y Tacuri;100;-31.6151467;-60.6764065;-31.6117323;-60.6924748
-Pedro de Vega y Tacuri;Pedro de Vega y Velez Sarsfield;100;-31.6117323;-60.6924748;-31.6147126;-60.6785485
+Pedro de Vega y Piedras;Pedro de Vega y Tacuari;100;-31.6151467;-60.6764065;-31.6117323;-60.6924748
+Pedro de Vega y Tacuari;Pedro de Vega y Velez Sarsfield;100;-31.6117323;-60.6924748;-31.6147126;-60.6785485
 Pedro de Vega y Velez Sarsfield;Ricardo Aldao y Velez Sarsfield;100;-31.6147126;-60.6785485;-31.613778;-60.6783124
 Pedro de Vega y Calle R. M. Pizzorno;Pedro de Vega y Dorrego;100;-31.6146556;-60.6788482;-31.6144656;-60.6797317
 Pedro de Vega y Dorrego;Pedro de Vega y Av. Gral. Paz;100;-31.6144656;-60.6797317;-31.6141276;-60.6812265
@@ -21,8 +21,8 @@ J. P. Lopez y Av. Gral. Paz;Angel Cassanello y Av. Gral. Paz;100;-31.6116613;-60
 J. P. Lopez y Av. Gral. Paz;Hernandarias y Av. Gral. Paz;100;-31.6116613;-60.6792653;-31.6108556;-60.6785739
 Juan Castelli y Av. Gral. Paz;Hernandarias y Av. Gral. Paz;100;-31.6099822;-60.6780847;-31.6108556;-60.6785739
 Juan Castelli y Av. Gral. Paz;Juan Castelli y Velez Sarsfield;100;-31.6099822;-60.6780847;-31.6101699;-60.67727
-Juan Castelli y Velez Sarsfield;Juan Castelli y Tacuri;100;-31.6101699;-60.67727;-31.6106578;-60.697294
-Juan Castelli y Tacuri;Juan Castelli y Piedras;100;-31.6106578;-60.697294;-31.610619;-60.6751584
+Juan Castelli y Velez Sarsfield;Juan Castelli y Tacuari;100;-31.6101699;-60.67727;-31.6106578;-60.697294
+Juan Castelli y Tacuari;Juan Castelli y Piedras;100;-31.6106578;-60.697294;-31.610619;-60.6751584
 Juan Castelli y Piedras;Juan Castelli y Antonia Godoy;100;-31.610619;-60.6751584;-31.6108439;-60.6740875
 Juan Castelli y Antonia Godoy;Juan Castelli y Patricio Cullen;100;-31.6108439;-60.6740875;-31.6110878;-60.6730112
 Juan Castelli y Patricio Cullen;Juan Castelli y Cngo. Echague;100;-31.6110878;-60.6730112;-31.6112953;-60.6719666
@@ -36,13 +36,13 @@ Hernandarias y Talcahuano;Hernandarias y Cngo. Echague;100;-31.6124245;-60.67114
 Hernandarias y Cngo. Echague;Hernandarias y Patricio Cullen;100;-31.6122095;-60.6722123;-31.6119807;-60.6732749
 Hernandarias y Patricio Cullen;Hernandarias y Antonia Godoy;100;-31.6119807;-60.6732749;-31.6117591;-60.6743556
 Hernandarias y Antonia Godoy;Hernandarias y Piedras;100;-31.6117591;-60.6743556;-31.6115282;-60.6754073
-Hernandarias y Piedras;Hernandarias y Tacuri;100;-31.6115282;-60.6754073;-31.611301;-60.6764759
-Hernandarias y Tacuri;Hernandarias y Velez Sarsfield;100;-31.611301;-60.6764759;-31.6110693;-60.6775305
+Hernandarias y Piedras;Hernandarias y Tacuari;100;-31.6115282;-60.6754073;-31.611301;-60.6764759
+Hernandarias y Tacuari;Hernandarias y Velez Sarsfield;100;-31.611301;-60.6764759;-31.6110693;-60.6775305
 Hernandarias y Velez Sarsfield;Hernandarias y Av. Gral. Paz;100;-31.6110693;-60.6775305;-31.6108556;-60.6785739
 Hernandarias y Av. Gral. Paz;J. P. Lopez y Av. Gral. Paz;100;-31.6108556;-60.6785739;-31.6116613;-60.6792653
 Hernandarias y Av. Gral. Paz;Juan Castelli y Av. Gral. Paz;100;-31.6108556;-60.6785739;-31.6099822;-60.6780847
-J. P. Lopez y Velez Sarsfield;J. P. Lopez y Tacuri;100;-31.6119517;-60.6777794;-31.6122072;-60.6767246
-J. P. Lopez y Tacuri;J. P. Lopez y Piedras;100;-31.6122072;-60.6767246;-31.6124416;-60.675649
+J. P. Lopez y Velez Sarsfield;J. P. Lopez y Tacuari;100;-31.6119517;-60.6777794;-31.6122072;-60.6767246
+J. P. Lopez y Tacuari;J. P. Lopez y Piedras;100;-31.6122072;-60.6767246;-31.6124416;-60.675649
 J. P. Lopez y Piedras;J. P. Lopez y Antonia Godoy;100;-31.6124416;-60.675649;-31.6126631;-60.6745994
 J. P. Lopez y Antonia Godoy;J. P. Lopez y Patricio Cullen;100;-31.6126631;-60.6745994;-31.6129006;-60.6735308
 J. P. Lopez y Patricio Cullen;J. P. Lopez y Cngo. Echague;100;-31.6129006;-60.6735308;-31.6131273;-60.6724506
@@ -58,12 +58,12 @@ Angel Cassanello y Talcahuano;Angel Cassanello y Cngo. Echague;100;-31.6142669;-
 Angel Cassanello y Cngo. Echague;Angel Cassanello y Patricio Cullen;100;-31.6140365;-60.672713;-31.6138074;-60.6737783
 Angel Cassanello y Patricio Cullen;Angel Cassanello y Antonia Godoy;100;-31.6138074;-60.6737783;-31.6135865;-60.6748439
 Angel Cassanello y Antonia Godoy;Angel Cassanello y Piedras;100;-31.6135865;-60.6748439;-31.6133462;-60.6759021
-Angel Cassanello y Piedras;Angel Cassanello y Tacuri;100;-31.6133462;-60.6759021;-31.6131196;-60.6769778
-Angel Cassanello y Tacuri;Angel Cassanello y Velez Sarsfield;100;-31.6131196;-60.6769778;-31.6128784;-60.6780448
+Angel Cassanello y Piedras;Angel Cassanello y Tacuari;100;-31.6133462;-60.6759021;-31.6131196;-60.6769778
+Angel Cassanello y Tacuari;Angel Cassanello y Velez Sarsfield;100;-31.6131196;-60.6769778;-31.6128784;-60.6780448
 Angel Cassanello y Velez Sarsfield;Angel Cassanello y Dorrego;100;-31.6128784;-60.6780448;-31.6126277;-60.6791884
 Angel Cassanello y Dorrego;Angel Cassanello y Av. Gral. Paz;100;-31.6126277;-60.6791884;-31.6124829;-60.6799154
-Ricardo Aldao y Tacuri;Ricardo Aldao y Piedras;100;-31.612637;-60.683728;-31.6142445;-60.6761471
-Ricardo Aldao y Velez Sarsfield;Ricardo Aldao y Tacuri;100;-31.613778;-60.6783124;-31.612637;-60.683728
+Ricardo Aldao y Tacuari;Ricardo Aldao y Piedras;100;-31.612637;-60.683728;-31.6142445;-60.6761471
+Ricardo Aldao y Velez Sarsfield;Ricardo Aldao y Tacuari;100;-31.613778;-60.6783124;-31.612637;-60.683728
 Ricardo Aldao y Antonia Godoy;Ricardo Aldao y Patricio Cullen;100;-31.6144871;-60.6751062;-31.6147178;-60.6740569
 Ricardo Aldao y Piedras;Ricardo Aldao y Antonia Godoy;100;-31.6142445;-60.6761471;-31.6144871;-60.6751062
 Ricardo Aldao y Patricio Cullen;Ricardo Aldao y Cngo. Echague;100;-31.6147178;-60.6740569;-31.6149378;-60.672977
@@ -95,23 +95,23 @@ Pedro de Vega y Piedras;Ricardo Aldao y Piedras;100;-31.6151467;-60.6764065;-31.
 Ricardo Aldao y Piedras;Angel Cassanello y Piedras;100;-31.6142445;-60.6761471;-31.6133462;-60.6759021
 Angel Cassanello y Piedras;J. P. Lopez y Piedras;100;-31.6133462;-60.6759021;-31.6124416;-60.675649
 Hernandarias y Piedras;Juan Castelli y Piedras;100;-31.6115282;-60.6754073;-31.610619;-60.6751584
-Juan Castelli y Tacuri;Hernandarias y Tacuri;100;-31.6106578;-60.697294;-31.611301;-60.6764759
+Juan Castelli y Tacuari;Hernandarias y Tacuari;100;-31.6106578;-60.697294;-31.611301;-60.6764759
 Hernandarias y Patricio Cullen;Juan Castelli y Patricio Cullen;100;-31.6119807;-60.6732749;-31.6110878;-60.6730112
-Pedro de Vega y Piedras;Pedro de Vega y Tacuri;100;-31.6151467;-60.6764065;-31.6117323;-60.6924748
-J. P. Lopez y Tacuri;Angel Cassanello y Tacuri;100;-31.6122072;-60.6767246;-31.6131196;-60.6769778
-Angel Cassanello y Tacuri;Ricardo Aldao y Tacuri;100;-31.6131196;-60.6769778;-31.612637;-60.683728
-Ricardo Aldao y Tacuri;Pedro de Vega y Tacuri;100;-31.612637;-60.683728;-31.6117323;-60.6924748
+Pedro de Vega y Piedras;Pedro de Vega y Tacuari;100;-31.6151467;-60.6764065;-31.6117323;-60.6924748
+J. P. Lopez y Tacuari;Angel Cassanello y Tacuari;100;-31.6122072;-60.6767246;-31.6131196;-60.6769778
+Angel Cassanello y Tacuari;Ricardo Aldao y Tacuari;100;-31.6131196;-60.6769778;-31.612637;-60.683728
+Ricardo Aldao y Tacuari;Pedro de Vega y Tacuari;100;-31.612637;-60.683728;-31.6117323;-60.6924748
 Ricardo Aldao y Velez Sarsfield;Angel Cassanello y Velez Sarsfield;100;-31.613778;-60.6783124;-31.6128784;-60.6780448
 Angel Cassanello y Velez Sarsfield;J. P. Lopez y Velez Sarsfield;100;-31.6128784;-60.6780448;-31.6119517;-60.6777794
 J. P. Lopez y Velez Sarsfield;Hernandarias y Velez Sarsfield;100;-31.6119517;-60.6777794;-31.6110693;-60.6775305
 Hernandarias y Velez Sarsfield;Juan Castelli y Velez Sarsfield;100;-31.6110693;-60.6775305;-31.6101699;-60.67727
 Angel Cassanello y Dorrego;Ricardo Aldao y Dorrego;100;-31.6126277;-60.6791884;-31.6135555;-60.6794559
 Ricardo Aldao y Dorrego;Pedro de Vega y Dorrego;100;-31.6135555;-60.6794559;-31.6144656;-60.6797317
-Hernandarias y Tacuri;Pje. Pujato y Tacuri;50;-31.611301;-60.6764759;-31.612187;-60.6744644
-Pje. Pujato y Tacuri;J. P. Lopez y Tacuri;50;-31.612187;-60.6744644;-31.6122072;-60.6767246
+Hernandarias y Tacuari;Pje. Pujato y Tacuari;50;-31.611301;-60.6764759;-31.612187;-60.6744644
+Pje. Pujato y Tacuari;J. P. Lopez y Tacuari;50;-31.612187;-60.6744644;-31.6122072;-60.6767246
 J. P. Lopez y Piedras;Pje. Pujato y Piedras;50;-31.6124416;-60.675649;-31.6119447;-60.6755162
 Pje. Pujato y Piedras;Hernandarias y Piedras;50;-31.6119447;-60.6755162;-31.6115282;-60.6754073
-Pje. Pujato y Tacuri;Pje. Pujato y Piedras;100;-31.612187;-60.6744644;-31.6119447;-60.6755162
+Pje. Pujato y Tacuari;Pje. Pujato y Piedras;100;-31.612187;-60.6744644;-31.6119447;-60.6755162
 Hernandarias y Antonia Godoy;Pje. Pujato y Antonia Godoy;50;-31.6117591;-60.6743556;-31.612187;-60.6744644
 Pje. Pujato y Antonia Godoy;J. P. Lopez y Antonia Godoy;50;-31.612187;-60.6744644;-31.6126631;-60.6745994
 J. P. Lopez y Patricio Cullen;Pje. Pujato y Patricio Cullen;50;-31.6129006;-60.6735308;-31.6124102;-60.6733922

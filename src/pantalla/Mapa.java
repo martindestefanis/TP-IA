@@ -27,13 +27,15 @@ public class Mapa extends MapView{
 	private ArrayList<ArrayList<LatLng>> listaNegocios = new ArrayList<ArrayList<LatLng>>();
 	private ArrayList<ArrayList<LatLng>> listaEventos = new ArrayList<ArrayList<LatLng>>();
 	private ArrayList<Marker> listaMarcadores = new ArrayList<Marker>();
+	private ArrayList<String> listaNombreNegociosAbiertos = new ArrayList<String>();
+	private ArrayList<String> listaNombreNegociosCerrados = new ArrayList<String>();
 	
 	public Mapa(MapViewOptions options,ArrayList<Nodo> esquinasVisitadas, ArrayList<Nodo> mundo){
-		
+		super(options);
 		this.esquinasVisitadas = esquinasVisitadas;
 		this.mundo = mundo;
 		
-		JFrame frame = new JFrame("Mapa");
+		//JFrame frame = new JFrame("Mapa");
 	
 		listaPuntos = cargarPuntosMapa(esquinasVisitadas);
 		listaNegocios = marcadoresNegocios();
@@ -43,9 +45,7 @@ public class Mapa extends MapView{
 			public void onMapReady(MapStatus status){
 				if(status == MapStatus.MAP_STATUS_OK){
 					map = getMap();
-					
-				
-			        
+
 					MapOptions mapOptions = new MapOptions();
 					MapTypeControlOptions controlOptions = new MapTypeControlOptions();
 					//mapOptions.setMapTypeControlOptions(options);
@@ -55,8 +55,14 @@ public class Mapa extends MapView{
 					map.setCenter(listaPuntos[0]);
 					map.setZoom(15);
 					
-					InfoWindow window = new InfoWindow(map);
-                  									
+					InfoWindow windowPosInicial = new InfoWindow(map);
+					InfoWindow windowPosFinal = new InfoWindow(map);
+					InfoWindow windowNegocio = new InfoWindow(map);
+					InfoWindow windowCongestion = new InfoWindow(map);
+					InfoWindow windowCorteCalle = new InfoWindow(map);
+					InfoWindow windowEventoSocial = new InfoWindow(map);
+					InfoWindow window;
+					
 					Polyline linea = new Polyline(map);
 					linea.setPath(listaPuntos);
 					linea.setVisible(true);
@@ -65,11 +71,12 @@ public class Mapa extends MapView{
 					opciones.setStrokeOpacity(0.7);
 					linea.setOptions(opciones);
 					
-					
+					//label.setText("DALE");
 					//MARCADOR PARA LA POSICION INICIAL
 					Marker posicionInicial = new Marker(map);
 			    	posicionInicial.setTitle("Posicion Inicial");
 			    	posicionInicial.setPosition(listaPuntos[0]);
+			    	window = new InfoWindow(map);
 			    	window.setContent(posicionInicial.getTitle());
                     window.open(map, posicionInicial);
 			    	
@@ -80,6 +87,7 @@ public class Mapa extends MapView{
 					posicionFinal.setIcon(icono);
 					Collections.reverse(Arrays.asList(listaPuntos));
 					posicionFinal.setPosition(listaPuntos[0]);
+					window = new InfoWindow(map);
 					window.setContent(posicionFinal.getTitle());
                     window.open(map, posicionFinal);
 					
@@ -90,7 +98,8 @@ public class Mapa extends MapView{
 						marcador.setPosition(listaNegocios.get(0).get(i));
 						marcador.setIcon(icono);
 						marcador.setTitle("NEGOCIO ABIERTO");
-						window.setContent(marcador.getTitle());
+						window = new InfoWindow(map);
+						window.setContent(listaNombreNegociosAbiertos.get(i));
 	                    window.open(map, marcador);
 					}
 					
@@ -101,7 +110,8 @@ public class Mapa extends MapView{
 						marcador.setPosition(listaNegocios.get(1).get(i));
 						marcador.setIcon(icono);
 						marcador.setTitle("NEGOCIO CERRADO");
-						window.setContent(marcador.getTitle());
+						window = new InfoWindow(map);
+						window.setContent(listaNombreNegociosCerrados.get(i));
 	                    window.open(map, marcador);
 					}
 					
@@ -112,6 +122,7 @@ public class Mapa extends MapView{
 						marcador.setPosition(listaEventos.get(0).get(i));
 						marcador.setIcon(icono);
 						marcador.setTitle("CONGESTION");
+						window = new InfoWindow(map);
 						window.setContent(marcador.getTitle());
 	                    window.open(map, marcador);
 					}
@@ -122,6 +133,7 @@ public class Mapa extends MapView{
 						marcador.setPosition(listaEventos.get(1).get(i));
 						marcador.setIcon(icono);
 						marcador.setTitle("EVENTO SOCIAL");
+						window = new InfoWindow(map);
 						window.setContent(marcador.getTitle());
 	                    window.open(map, marcador);
 					}
@@ -132,6 +144,7 @@ public class Mapa extends MapView{
 						marcador.setPosition(listaEventos.get(2).get(i));
 						marcador.setIcon(icono);
 						marcador.setTitle("CORTE DE CALLE");
+						window = new InfoWindow(map);
 						window.setContent(marcador.getTitle());
 	                    window.open(map, marcador);
 					}
@@ -139,9 +152,9 @@ public class Mapa extends MapView{
 			}
 		});
 		
-		frame.add(this,BorderLayout.CENTER);
-		frame.setSize(700, 500);
-		frame.setVisible(true);
+		//frame.add(this,BorderLayout.CENTER);
+		//frame.setSize(700, 500);
+	//	frame.setVisible(true);
 	}
 
 	public LatLng[] cargarPuntosMapa(ArrayList<Nodo> nodosVisitados){
@@ -157,15 +170,19 @@ public class Mapa extends MapView{
 		ArrayList<LatLng> listaNegociosCerrados = new ArrayList<LatLng>();
 		ArrayList<LatLng> listaNegociosAbiertos = new ArrayList<LatLng>();
 		ArrayList<ArrayList<LatLng>> listaNegocios = new ArrayList<ArrayList<LatLng>>();
+		
 		for(int i=0; i<mundo.size(); i++){
 			for(int j=0; j<mundo.get(i).getEnlaces().size();j++){
 				for(int k=0; k< mundo.get(i).getEnlaces().get(j).getNegocios().size();k++){
 					if(!mundo.get(i).getEnlaces().get(j).getNegocios().get(k).isAbierto()){
 						listaNegociosCerrados.add(calcularLatitudLongitud(mundo.get(i).getEnlaces().get(j),k));
+						listaNombreNegociosCerrados.add(mundo.get(i).getEnlaces().get(j).getNegocios().get(k).getNombre());
 					}
 					else{
 						listaNegociosAbiertos.add(calcularLatitudLongitud(mundo.get(i).getEnlaces().get(j),k));
+						listaNombreNegociosAbiertos.add(mundo.get(i).getEnlaces().get(j).getNegocios().get(k).getNombre());
 					}
+					
 				}
 			}
 		}

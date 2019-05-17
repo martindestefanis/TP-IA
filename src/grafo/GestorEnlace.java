@@ -108,13 +108,12 @@ public class GestorEnlace {
 	//Y EL COSTO DEL ENLACE ES EL TIEMPO PROMEDIO QUE LE LLEVA AL AGENTE DE RECORRER UNA CUADRA.
 
 		double costo = enlace.getCosto();
-		
-		//PARA EL CASO DE QUE TRABAJEMOS CON VARIOS EVENTOS POR ENLACE
 	
 		if(CarAgentState.getModalidadSolucion().equalsIgnoreCase("Bicicleta")){
-			//MODALIDAD A PIE
-			//Cada cuadra le lleva 1 minuto recorrerla al agente
-			costo= 1;
+			//MODALIDAD A BICICLETA
+			//AL AGENTE LE LLEVA 1 MINUTO RECORRER UN CUADRA
+			
+			costo= 1; //1 MINUTO
 			if(enlace.getEventos().containsKey(CarAgentPerception.EVENTO_SOCIAL)){
 				costo = costo + costo*(enlace.getEventos().get(CarAgentPerception.EVENTO_SOCIAL)/100);
 			}
@@ -124,7 +123,7 @@ public class GestorEnlace {
 		else{
 			if(CarAgentState.getModalidadSolucion().equalsIgnoreCase("Mas barato")){
 				//La idea es que el avanzar no cueste osea que retorne 0 pero no funcionaba, el minimo numero que le gustó fue 5
-				return new Double(5);
+				return new Double(0.0);
 				
 			}else{
 				//MODALIDAD "AUTOMOVIL". SI SE AGREGAN MAS MODALIDADES SE DEBE AGREGAR SENTENCIAS IF-ELSE

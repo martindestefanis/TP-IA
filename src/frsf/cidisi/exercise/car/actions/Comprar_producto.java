@@ -74,7 +74,7 @@ public class Comprar_producto extends SearchAction {
 	        		System.out.println(agState.getProductosComprados().toString());
 	        		System.out.println(costoProducto);
 	        		Grafo.percepcionesAleatorias(environmentState.getMundo());
-/*	        		System.out.println("\t\t\t\t------- PRUEBA Eventos Cambiados ambiente --------");
+/*	        		System.out.println("\t\t\t\t------- Eventos Cambiados ambiente --------");
 	            	
 	            	for(int j=0; j<environmentState.getMundo().size(); j++){
 	            		for(int k = 0; k<environmentState.getMundo().get(j).getEnlaces().size(); k++){
@@ -101,7 +101,7 @@ public class Comprar_producto extends SearchAction {
     	//Si es en Bicicleta suponemos que lleva 5 minutos comprar un producto
     	if(CarAgentState.getModalidadSolucion().equalsIgnoreCase("Bicicleta")){
     		
-    		return new Double(5);
+    		return new Double(5.0);
     		
     	}else{
     		if(CarAgentState.getModalidadSolucion().equalsIgnoreCase("Mas barato")){
