@@ -2,16 +2,16 @@ digraph g {
 node [shape = Mrecord];
 nodo0[label="{EO: 0|cost: 0.0|A: null}"]
 nodo1[label="{EO: 1|cost: 20.0|A: Comprar_producto [costoProducto=20.0, productoComprar=Café, CostoOperacion=20.0]}"]
-nodo5[label="{EO: 5|cost: 40.0|A: Comprar_producto [costoProducto=20.0, productoComprar=Café, CostoOperacion=20.0]|Posicion:\nAngel\nCassanello\ny\nAntonia\nGodoy}"]
+nodo5[label="{EO: 5|cost: 40.0|A: Comprar_producto [costoProducto=20.0, productoComprar=Café, CostoOperacion=20.0]|Posicion:\nRicardo\nAldao\ny\nPiedras}"]
 
 nodo1 -> nodo5;
-nodo6[label="{EO: 6|cost: 40.0|A: Comprar_producto [costoProducto=20.0, productoComprar=Huevos, CostoOperacion=20.0]|Posicion:\nAngel\nCassanello\ny\nAntonia\nGodoy}"]
+nodo6[label="{EO: 6|cost: 40.0|A: Comprar_producto [costoProducto=20.0, productoComprar=Huevos, CostoOperacion=20.0]|Posicion:\nRicardo\nAldao\ny\nPiedras}"]
 
 nodo1 -> nodo6;
-nodo7[label="{EO: 7|cost: 65.454545|A: Avanzar [nodoDestino=Angel Cassanello y Piedras, CostoOperacion=45.454545]|Posicion:\nAngel\nCassanello\ny\nAntonia\nGodoy}"]
+nodo7[label="{EO: 7|cost: 65.454545|A: Avanzar [nodoDestino=Angel Cassanello y Piedras, CostoOperacion=45.454545]|Posicion:\nRicardo\nAldao\ny\nPiedras}"]
 
 nodo1 -> nodo7;
-nodo8[label="{EO: 8|cost: 65.454545|A: Avanzar [nodoDestino=Ricardo Aldao y Antonia Godoy, CostoOperacion=45.454545]|Posicion:\nAngel\nCassanello\ny\nAntonia\nGodoy}"]
+nodo8[label="{EO: 8|cost: 65.454545|A: Avanzar [nodoDestino=Ricardo Aldao y Antonia Godoy, CostoOperacion=45.454545]|Posicion:\nRicardo\nAldao\ny\nPiedras}"]
 
 nodo1 -> nodo8;
 
