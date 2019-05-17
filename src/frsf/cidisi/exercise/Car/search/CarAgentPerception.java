@@ -75,7 +75,7 @@ public class CarAgentPerception extends Perception {
 	public String toString() {
 		return "";
 	}
-	
+
 	@Override
 	public int hashCode() {
 		final int prime = 31;
@@ -107,4 +107,6 @@ public class CarAgentPerception extends Perception {
 			return false;
 		return true;
 	}
+	
+
 }

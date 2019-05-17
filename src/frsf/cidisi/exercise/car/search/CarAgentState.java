@@ -114,8 +114,8 @@ public class CarAgentState extends SearchBasedAgentState {
     public void initState() {
         //LA MODALIDAD PUEDE SER O "A PIE" O EN "AUTOMOVIL"
     	//modalidadSolucion = "Bicicleta";
-    	modalidadSolucion = "Automovil";
-    	//modalidadSolucion = "Mas barato";
+    	//modalidadSolucion = "Automovil";
+    	modalidadSolucion = "Mas barato";
 		
 		//SETEO TODOS LOS ENLACES CON PERCEPCIONES EMPTY
    		for(int i=0; i<mundo.size(); i++){
@@ -142,7 +142,13 @@ public class CarAgentState extends SearchBasedAgentState {
         return str;
     }
 
-    @Override
+    
+    
+
+    //TODO: Complete this section with agent-specific methods
+    // The following methods are agent-specific:
+	
+     @Override
 	public int hashCode() {
 		final int prime = 31;
 		int result = 1;
@@ -191,12 +197,8 @@ public class CarAgentState extends SearchBasedAgentState {
 			return false;
 		return true;
 	}
-    
 
-    //TODO: Complete this section with agent-specific methods
-    // The following methods are agent-specific:
-	
-     public ArrayList<Nodo> getmundo(){
+	public ArrayList<Nodo> getmundo(){
         return mundo;
      }
      public static String getModalidadSolucion() {

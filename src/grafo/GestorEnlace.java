@@ -123,8 +123,8 @@ public class GestorEnlace {
 		}
 		else{
 			if(CarAgentState.getModalidadSolucion().equalsIgnoreCase("Mas barato")){
-				
-				return new Double(1.0);
+				//La idea es que el avanzar no cueste osea que retorne 0 pero no funcionaba, el minimo numero que le gustó fue 5
+				return new Double(5);
 				
 			}else{
 				//MODALIDAD "AUTOMOVIL". SI SE AGREGAN MAS MODALIDADES SE DEBE AGREGAR SENTENCIAS IF-ELSE

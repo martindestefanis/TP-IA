@@ -1,213 +1,150 @@
 digraph g {
 node [shape = Mrecord];
 nodo0[label="{EO: 0|cost: 0.0|A: null}"]
-nodo1[label="{EO: 1|cost: 45.454545|A: Avanzar [nodoDestino=J. P. Lopez y Cngo. Echague, CostoOperacion=45.454545]}"]
-nodo5[label="{EO: 5|cost: 90.90909|A: Avanzar [nodoDestino=J. P. Lopez y Talcahuano, CostoOperacion=45.454545]|Posicion:\nJ.\nP.\nLopez\ny\nCngo.\nEchague}"]
-nodo10[label="{EO: 10|cost: 136.36363500000002|A: Avanzar [nodoDestino=Hernandarias y Talcahuano, CostoOperacion=45.454545]|Posicion:\nJ.\nP.\nLopez\ny\nTalcahuano}"]
-nodo20[label="{EO: 20|cost: 181.81818|A: Avanzar [nodoDestino=Juan Castelli y Talcahuano, CostoOperacion=45.454545]|Posicion:\nHernandarias\ny\nTalcahuano}"]
-nodo39[label="{EO: 39|cost: 227.272725|A: Avanzar [nodoDestino=Juan Castelli y Defensa, CostoOperacion=45.454545]|Posicion:\nJuan\nCastelli\ny\nTalcahuano}"]
+nodo1[label="{EO: 1|cost: 21.0|A: Comprar_producto [costoProducto=20.0, productoComprar=Café, CostoOperacion=20.0]}"]
+nodo16[label="{EO: 16|cost: 42.0|A: Comprar_producto [costoProducto=20.0, productoComprar=Café, CostoOperacion=20.0]|Posicion:\nHernandarias\ny\nPatricio\nCullen}"]
 
-nodo20 -> nodo39;
+nodo1 -> nodo16;
+nodo17[label="{EO: 17|cost: 31.0|A: Comprar_producto [costoProducto=10.0, productoComprar=Huevos, CostoOperacion=10.0]|Posicion:\nHernandarias\ny\nPatricio\nCullen}"]
 
-nodo10 -> nodo20;
-nodo21[label="{EO: 21|cost: 181.81818|A: Avanzar [nodoDestino=Hernandarias y Cngo. Echague, CostoOperacion=45.454545]|Posicion:\nHernandarias\ny\nTalcahuano}"]
-nodo40[label="{EO: 40|cost: 227.272725|A: Avanzar [nodoDestino=Hernandarias y Patricio Cullen, CostoOperacion=45.454545]|Posicion:\nHernandarias\ny\nCngo.\nEchague}"]
+nodo1 -> nodo17;
+nodo18[label="{EO: 18|cost: 27.0|A: Avanzar [nodoDestino=Juan Castelli y Patricio Cullen, CostoOperacion=5.0]|Posicion:\nHernandarias\ny\nPatricio\nCullen}"]
 
-nodo21 -> nodo40;
-nodo41[label="{EO: 41|cost: 204.5454525|A: Avanzar [nodoDestino=Pje. Pujato y Cngo. Echague, CostoOperacion=22.7272725]|Posicion:\nHernandarias\ny\nCngo.\nEchague}"]
+nodo1 -> nodo18;
+nodo19[label="{EO: 19|cost: 27.0|A: Avanzar [nodoDestino=Hernandarias y Antonia Godoy, CostoOperacion=5.0]|Posicion:\nHernandarias\ny\nPatricio\nCullen}"]
+nodo32[label="{EO: 32|cost: 33.0|A: Avanzar [nodoDestino=Hernandarias y Piedras, CostoOperacion=5.0]|Posicion:\nHernandarias\ny\nAntonia\nGodoy}"]
 
-nodo21 -> nodo41;
+nodo19 -> nodo32;
+nodo33[label="{EO: 33|cost: 33.0|A: Avanzar [nodoDestino=Pje. Pujato y Antonia Godoy, CostoOperacion=5.0]|Posicion:\nHernandarias\ny\nAntonia\nGodoy}"]
 
-nodo10 -> nodo21;
+nodo19 -> nodo33;
 
-nodo5 -> nodo10;
-nodo11[label="{EO: 11|cost: 136.36363500000002|A: Avanzar [nodoDestino=J. P. Lopez y Defensa, CostoOperacion=45.454545]|Posicion:\nJ.\nP.\nLopez\ny\nTalcahuano}"]
-nodo22[label="{EO: 22|cost: 181.81818|A: Avanzar [nodoDestino=J. P. Lopez y Av. Almte. Brown, CostoOperacion=45.454545]|Posicion:\nJ.\nP.\nLopez\ny\nDefensa}"]
-nodo42[label="{EO: 42|cost: 227.272725|A: Avanzar [nodoDestino=Hernandarias y Av. Almte. Brown, CostoOperacion=45.454545]|Posicion:\nJ.\nP.\nLopez\ny\nAv.\nAlmte.\nBrown}"]
+nodo1 -> nodo19;
 
-nodo22 -> nodo42;
-nodo43[label="{EO: 43|cost: 227.272725|A: Avanzar [nodoDestino=Angel Cassanello y Av. Almte. Brown, CostoOperacion=45.454545]|Posicion:\nJ.\nP.\nLopez\ny\nAv.\nAlmte.\nBrown}"]
+nodo0 -> nodo1;
+nodo2[label="{EO: 2|cost: 11.0|A: Comprar_producto [costoProducto=10.0, productoComprar=Huevos, CostoOperacion=10.0]}"]
+nodo7[label="{EO: 7|cost: 31.0|A: Comprar_producto [costoProducto=20.0, productoComprar=Café, CostoOperacion=20.0]|Posicion:\nHernandarias\ny\nPatricio\nCullen}"]
 
-nodo22 -> nodo43;
+nodo2 -> nodo7;
+nodo8[label="{EO: 8|cost: 22.0|A: Comprar_producto [costoProducto=10.0, productoComprar=Huevos, CostoOperacion=10.0]|Posicion:\nHernandarias\ny\nPatricio\nCullen}"]
+nodo25[label="{EO: 25|cost: 42.0|A: Comprar_producto [costoProducto=20.0, productoComprar=Café, CostoOperacion=20.0]|Posicion:\nHernandarias\ny\nPatricio\nCullen}"]
 
-nodo11 -> nodo22;
+nodo8 -> nodo25;
+nodo26[label="{EO: 26|cost: 33.0|A: Comprar_producto [costoProducto=10.0, productoComprar=Huevos, CostoOperacion=10.0]|Posicion:\nHernandarias\ny\nPatricio\nCullen}"]
+
+nodo8 -> nodo26;
+nodo27[label="{EO: 27|cost: 28.0|A: Avanzar [nodoDestino=Juan Castelli y Patricio Cullen, CostoOperacion=5.0]|Posicion:\nHernandarias\ny\nPatricio\nCullen}"]
+
+nodo8 -> nodo27;
+nodo28[label="{EO: 28|cost: 28.0|A: Avanzar [nodoDestino=Hernandarias y Antonia Godoy, CostoOperacion=5.0]|Posicion:\nHernandarias\ny\nPatricio\nCullen}"]
+nodo42[label="{EO: 42|cost: 34.0|A: Avanzar [nodoDestino=Hernandarias y Piedras, CostoOperacion=5.0]|Posicion:\nHernandarias\ny\nAntonia\nGodoy}"]
+
+nodo28 -> nodo42;
+nodo43[label="{EO: 43|cost: 34.0|A: Avanzar [nodoDestino=Pje. Pujato y Antonia Godoy, CostoOperacion=5.0]|Posicion:\nHernandarias\ny\nAntonia\nGodoy}"]
+
+nodo28 -> nodo43;
+
+nodo8 -> nodo28;
+
+nodo2 -> nodo8;
+nodo9[label="{EO: 9|cost: 17.0|A: Avanzar [nodoDestino=Juan Castelli y Patricio Cullen, CostoOperacion=5.0]|Posicion:\nHernandarias\ny\nPatricio\nCullen}"]
+
+nodo2 -> nodo9;
+nodo10[label="{EO: 10|cost: 17.0|A: Avanzar [nodoDestino=Hernandarias y Antonia Godoy, CostoOperacion=5.0]|Posicion:\nHernandarias\ny\nPatricio\nCullen}"]
+nodo14[label="{EO: 14|cost: 23.0|A: Avanzar [nodoDestino=Hernandarias y Piedras, CostoOperacion=5.0]|Posicion:\nHernandarias\ny\nAntonia\nGodoy}"]
+nodo29[label="{EO: 29|cost: 29.0|A: Avanzar [nodoDestino=Juan Castelli y Piedras, CostoOperacion=5.0]|Posicion:\nHernandarias\ny\nPiedras}"]
+nodo44[label="{EO: 44|cost: 35.0|A: Avanzar [nodoDestino=Juan Castelli y Antonia Godoy, CostoOperacion=5.0]|Posicion:\nJuan\nCastelli\ny\nPiedras}"]
+
+nodo29 -> nodo44;
+
+nodo14 -> nodo29;
+nodo30[label="{EO: 30|cost: 29.0|A: Avanzar [nodoDestino=Hernandarias y Tacuri, CostoOperacion=5.0]|Posicion:\nHernandarias\ny\nPiedras}"]
+nodo45[label="{EO: 45|cost: 35.0|A: Avanzar [nodoDestino=Hernandarias y Velez Sarsfield, CostoOperacion=5.0]|Posicion:\nHernandarias\ny\nTacuri}"]
+
+nodo30 -> nodo45;
+nodo46[label="{EO: 46|cost: 35.0|A: Avanzar [nodoDestino=Pje. Pujato y Tacuri, CostoOperacion=5.0]|Posicion:\nHernandarias\ny\nTacuri}"]
+
+nodo30 -> nodo46;
+
+nodo14 -> nodo30;
+
+nodo10 -> nodo14;
+nodo15[label="{EO: 15|cost: 23.0|A: Avanzar [nodoDestino=Pje. Pujato y Antonia Godoy, CostoOperacion=5.0]|Posicion:\nHernandarias\ny\nAntonia\nGodoy}"]
+nodo31[label="{EO: 31|cost: 29.0|A: Avanzar [nodoDestino=J. P. Lopez y Antonia Godoy, CostoOperacion=5.0]|Posicion:\nPje.\nPujato\ny\nAntonia\nGodoy}"]
+nodo47[label="{EO: 47|cost: 35.0|A: Avanzar [nodoDestino=J. P. Lopez y Patricio Cullen, CostoOperacion=5.0]|Posicion:\nJ.\nP.\nLopez\ny\nAntonia\nGodoy}"]
+
+nodo31 -> nodo47;
+nodo48[label="{EO: 48|cost: 35.0|A: Avanzar [nodoDestino=Angel Cassanello y Antonia Godoy, CostoOperacion=5.0]|Posicion:\nJ.\nP.\nLopez\ny\nAntonia\nGodoy}"]
+
+nodo31 -> nodo48;
+
+nodo15 -> nodo31;
+
+nodo10 -> nodo15;
+
+nodo2 -> nodo10;
+
+nodo0 -> nodo2;
+nodo3[label="{EO: 3|cost: 7.0|A: Avanzar [nodoDestino=Juan Castelli y Patricio Cullen, CostoOperacion=5.0]}"]
+
+nodo0 -> nodo3;
+nodo4[label="{EO: 4|cost: 7.0|A: Avanzar [nodoDestino=Hernandarias y Antonia Godoy, CostoOperacion=5.0]}"]
+nodo5[label="{EO: 5|cost: 14.0|A: Avanzar [nodoDestino=Hernandarias y Piedras, CostoOperacion=5.0]|Posicion:\nHernandarias\ny\nAntonia\nGodoy}"]
+nodo11[label="{EO: 11|cost: 21.0|A: Avanzar [nodoDestino=Juan Castelli y Piedras, CostoOperacion=5.0]|Posicion:\nHernandarias\ny\nPiedras}"]
+nodo20[label="{EO: 20|cost: 28.0|A: Avanzar [nodoDestino=Juan Castelli y Antonia Godoy, CostoOperacion=5.0]|Posicion:\nJuan\nCastelli\ny\nPiedras}"]
+nodo34[label="{EO: 34|cost: 35.0|A: Avanzar [nodoDestino=Juan Castelli y Patricio Cullen, CostoOperacion=5.0]|Posicion:\nJuan\nCastelli\ny\nAntonia\nGodoy}"]
+
+nodo20 -> nodo34;
+nodo35[label="{EO: 35|cost: 35.0|A: Avanzar [nodoDestino=Hernandarias y Antonia Godoy, CostoOperacion=5.0]|Posicion:\nJuan\nCastelli\ny\nAntonia\nGodoy}"]
+
+nodo20 -> nodo35;
+
+nodo11 -> nodo20;
 
 nodo5 -> nodo11;
+nodo12[label="{EO: 12|cost: 21.0|A: Avanzar [nodoDestino=Hernandarias y Tacuri, CostoOperacion=5.0]|Posicion:\nHernandarias\ny\nPiedras}"]
+nodo21[label="{EO: 21|cost: 28.0|A: Avanzar [nodoDestino=Hernandarias y Velez Sarsfield, CostoOperacion=5.0]|Posicion:\nHernandarias\ny\nTacuri}"]
+nodo36[label="{EO: 36|cost: 35.0|A: Avanzar [nodoDestino=Juan Castelli y Velez Sarsfield, CostoOperacion=5.0]|Posicion:\nHernandarias\ny\nVelez\nSarsfield}"]
 
-nodo1 -> nodo5;
-nodo6[label="{EO: 6|cost: 90.90909|A: Avanzar [nodoDestino=Angel Cassanello y Cngo. Echague, CostoOperacion=45.454545]|Posicion:\nJ.\nP.\nLopez\ny\nCngo.\nEchague}"]
-nodo12[label="{EO: 12|cost: 136.36363500000002|A: Avanzar [nodoDestino=Angel Cassanello y Patricio Cullen, CostoOperacion=45.454545]|Posicion:\nAngel\nCassanello\ny\nCngo.\nEchague}"]
-nodo23[label="{EO: 23|cost: 181.81818|A: Avanzar [nodoDestino=J. P. Lopez y Patricio Cullen, CostoOperacion=45.454545]|Posicion:\nAngel\nCassanello\ny\nPatricio\nCullen}"]
-nodo44[label="{EO: 44|cost: 227.272725|A: Avanzar [nodoDestino=J. P. Lopez y Cngo. Echague, CostoOperacion=45.454545]|Posicion:\nJ.\nP.\nLopez\ny\nPatricio\nCullen}"]
+nodo21 -> nodo36;
+nodo37[label="{EO: 37|cost: 35.0|A: Avanzar [nodoDestino=Hernandarias y Av. Gral. Paz, CostoOperacion=5.0]|Posicion:\nHernandarias\ny\nVelez\nSarsfield}"]
 
-nodo23 -> nodo44;
-nodo45[label="{EO: 45|cost: 204.5454525|A: Avanzar [nodoDestino=Pje. Pujato y Patricio Cullen, CostoOperacion=22.7272725]|Posicion:\nJ.\nP.\nLopez\ny\nPatricio\nCullen}"]
+nodo21 -> nodo37;
 
-nodo23 -> nodo45;
+nodo12 -> nodo21;
+nodo22[label="{EO: 22|cost: 28.0|A: Avanzar [nodoDestino=Pje. Pujato y Tacuri, CostoOperacion=5.0]|Posicion:\nHernandarias\ny\nTacuri}"]
+nodo38[label="{EO: 38|cost: 35.0|A: Avanzar [nodoDestino=J. P. Lopez y Tacuri, CostoOperacion=5.0]|Posicion:\nPje.\nPujato\ny\nTacuri}"]
 
-nodo12 -> nodo23;
-nodo24[label="{EO: 24|cost: 181.81818|A: Avanzar [nodoDestino=Angel Cassanello y Antonia Godoy, CostoOperacion=45.454545]|Posicion:\nAngel\nCassanello\ny\nPatricio\nCullen}"]
-nodo46[label="{EO: 46|cost: 201.81818|A: Comprar_producto [costoProducto=20.0, productoComprar=Café, CostoOperacion=20.0]|Posicion:\nAngel\nCassanello\ny\nAntonia\nGodoy}"]
+nodo22 -> nodo38;
 
-nodo24 -> nodo46;
-nodo47[label="{EO: 47|cost: 681.81818|A: Comprar_producto [costoProducto=500.0, productoComprar=Huevos, CostoOperacion=500.0]|Posicion:\nAngel\nCassanello\ny\nAntonia\nGodoy}"]
+nodo12 -> nodo22;
 
-nodo24 -> nodo47;
-nodo48[label="{EO: 48|cost: 227.272725|A: Avanzar [nodoDestino=Angel Cassanello y Piedras, CostoOperacion=45.454545]|Posicion:\nAngel\nCassanello\ny\nAntonia\nGodoy}"]
+nodo5 -> nodo12;
 
-nodo24 -> nodo48;
-nodo49[label="{EO: 49|cost: 227.272725|A: Avanzar [nodoDestino=Ricardo Aldao y Antonia Godoy, CostoOperacion=45.454545]|Posicion:\nAngel\nCassanello\ny\nAntonia\nGodoy}"]
+nodo4 -> nodo5;
+nodo6[label="{EO: 6|cost: 14.0|A: Avanzar [nodoDestino=Pje. Pujato y Antonia Godoy, CostoOperacion=5.0]|Posicion:\nHernandarias\ny\nAntonia\nGodoy}"]
+nodo13[label="{EO: 13|cost: 21.0|A: Avanzar [nodoDestino=J. P. Lopez y Antonia Godoy, CostoOperacion=5.0]|Posicion:\nPje.\nPujato\ny\nAntonia\nGodoy}"]
+nodo23[label="{EO: 23|cost: 28.0|A: Avanzar [nodoDestino=J. P. Lopez y Patricio Cullen, CostoOperacion=5.0]|Posicion:\nJ.\nP.\nLopez\ny\nAntonia\nGodoy}"]
+nodo39[label="{EO: 39|cost: 35.0|A: Avanzar [nodoDestino=J. P. Lopez y Cngo. Echague, CostoOperacion=5.0]|Posicion:\nJ.\nP.\nLopez\ny\nPatricio\nCullen}"]
 
-nodo24 -> nodo49;
+nodo23 -> nodo39;
+nodo40[label="{EO: 40|cost: 35.0|A: Avanzar [nodoDestino=Pje. Pujato y Patricio Cullen, CostoOperacion=5.0]|Posicion:\nJ.\nP.\nLopez\ny\nPatricio\nCullen}"]
 
-nodo12 -> nodo24;
+nodo23 -> nodo40;
 
-nodo6 -> nodo12;
-nodo13[label="{EO: 13|cost: 136.36363500000002|A: Avanzar [nodoDestino=Ricardo Aldao y Cngo. Echague, CostoOperacion=45.454545]|Posicion:\nAngel\nCassanello\ny\nCngo.\nEchague}"]
-nodo25[label="{EO: 25|cost: 181.81818|A: Avanzar [nodoDestino=Pedro de Vega y Cngo. Echague, CostoOperacion=45.454545]|Posicion:\nRicardo\nAldao\ny\nCngo.\nEchague}"]
+nodo13 -> nodo23;
+nodo24[label="{EO: 24|cost: 28.0|A: Avanzar [nodoDestino=Angel Cassanello y Antonia Godoy, CostoOperacion=5.0]|Posicion:\nJ.\nP.\nLopez\ny\nAntonia\nGodoy}"]
+nodo41[label="{EO: 41|cost: 35.0|A: Avanzar [nodoDestino=Angel Cassanello y Piedras, CostoOperacion=5.0]|Posicion:\nAngel\nCassanello\ny\nAntonia\nGodoy}"]
 
-nodo13 -> nodo25;
-nodo26[label="{EO: 26|cost: 181.81818|A: Avanzar [nodoDestino=Ricardo Aldao y Av. Almte. Brown, CostoOperacion=45.454545]|Posicion:\nRicardo\nAldao\ny\nCngo.\nEchague}"]
-nodo50[label="{EO: 50|cost: 227.272725|A: Avanzar [nodoDestino=Pedro de Vega y Av. Almte. Brown, CostoOperacion=45.454545]|Posicion:\nRicardo\nAldao\ny\nAv.\nAlmte.\nBrown}"]
+nodo24 -> nodo41;
 
-nodo26 -> nodo50;
-nodo51[label="{EO: 51|cost: 227.272725|A: Avanzar [nodoDestino=Angel Cassanello y Av. Almte. Brown, CostoOperacion=45.454545]|Posicion:\nRicardo\nAldao\ny\nAv.\nAlmte.\nBrown}"]
-
-nodo26 -> nodo51;
-
-nodo13 -> nodo26;
+nodo13 -> nodo24;
 
 nodo6 -> nodo13;
 
-nodo1 -> nodo6;
+nodo4 -> nodo6;
 
-nodo0 -> nodo1;
-nodo2[label="{EO: 2|cost: 22.7272725|A: Avanzar [nodoDestino=Pje. Pujato y Patricio Cullen, CostoOperacion=22.7272725]}"]
-nodo3[label="{EO: 3|cost: 45.454545|A: Avanzar [nodoDestino=Hernandarias y Patricio Cullen, CostoOperacion=45.454545]|Posicion:\nPje.\nPujato\ny\nPatricio\nCullen}"]
-nodo7[label="{EO: 7|cost: 90.90909|A: Avanzar [nodoDestino=Juan Castelli y Patricio Cullen, CostoOperacion=45.454545]|Posicion:\nHernandarias\ny\nPatricio\nCullen}"]
-nodo14[label="{EO: 14|cost: 136.36363500000002|A: Avanzar [nodoDestino=Juan Castelli y Cngo. Echague, CostoOperacion=45.454545]|Posicion:\nJuan\nCastelli\ny\nPatricio\nCullen}"]
-nodo27[label="{EO: 27|cost: 181.81818|A: Avanzar [nodoDestino=Juan Castelli y Talcahuano, CostoOperacion=45.454545]|Posicion:\nJuan\nCastelli\ny\nCngo.\nEchague}"]
-nodo52[label="{EO: 52|cost: 227.272725|A: Avanzar [nodoDestino=Juan Castelli y Defensa, CostoOperacion=45.454545]|Posicion:\nJuan\nCastelli\ny\nTalcahuano}"]
-
-nodo27 -> nodo52;
-
-nodo14 -> nodo27;
-nodo28[label="{EO: 28|cost: 181.81818|A: Avanzar [nodoDestino=Hernandarias y Cngo. Echague, CostoOperacion=45.454545]|Posicion:\nJuan\nCastelli\ny\nCngo.\nEchague}"]
-nodo53[label="{EO: 53|cost: 227.272725|A: Avanzar [nodoDestino=Hernandarias y Patricio Cullen, CostoOperacion=45.454545]|Posicion:\nHernandarias\ny\nCngo.\nEchague}"]
-
-nodo28 -> nodo53;
-nodo54[label="{EO: 54|cost: 204.5454525|A: Avanzar [nodoDestino=Pje. Pujato y Cngo. Echague, CostoOperacion=22.7272725]|Posicion:\nHernandarias\ny\nCngo.\nEchague}"]
-
-nodo28 -> nodo54;
-
-nodo14 -> nodo28;
-
-nodo7 -> nodo14;
-
-nodo3 -> nodo7;
-nodo8[label="{EO: 8|cost: 90.90909|A: Avanzar [nodoDestino=Hernandarias y Antonia Godoy, CostoOperacion=45.454545]|Posicion:\nHernandarias\ny\nPatricio\nCullen}"]
-nodo15[label="{EO: 15|cost: 136.36363500000002|A: Avanzar [nodoDestino=Hernandarias y Piedras, CostoOperacion=45.454545]|Posicion:\nHernandarias\ny\nAntonia\nGodoy}"]
-nodo29[label="{EO: 29|cost: 181.81818|A: Avanzar [nodoDestino=Juan Castelli y Piedras, CostoOperacion=45.454545]|Posicion:\nHernandarias\ny\nPiedras}"]
-nodo55[label="{EO: 55|cost: 227.272725|A: Avanzar [nodoDestino=Juan Castelli y Antonia Godoy, CostoOperacion=45.454545]|Posicion:\nJuan\nCastelli\ny\nPiedras}"]
-
-nodo29 -> nodo55;
-
-nodo15 -> nodo29;
-nodo30[label="{EO: 30|cost: 181.81818|A: Avanzar [nodoDestino=Hernandarias y Tacuri, CostoOperacion=45.454545]|Posicion:\nHernandarias\ny\nPiedras}"]
-nodo56[label="{EO: 56|cost: 227.272725|A: Avanzar [nodoDestino=Hernandarias y Velez Sarsfield, CostoOperacion=45.454545]|Posicion:\nHernandarias\ny\nTacuri}"]
-
-nodo30 -> nodo56;
-nodo57[label="{EO: 57|cost: 204.5454525|A: Avanzar [nodoDestino=Pje. Pujato y Tacuri, CostoOperacion=22.7272725]|Posicion:\nHernandarias\ny\nTacuri}"]
-
-nodo30 -> nodo57;
-
-nodo15 -> nodo30;
-
-nodo8 -> nodo15;
-nodo16[label="{EO: 16|cost: 113.6363625|A: Avanzar [nodoDestino=Pje. Pujato y Antonia Godoy, CostoOperacion=45.454545]|Posicion:\nHernandarias\ny\nAntonia\nGodoy}"]
-nodo19[label="{EO: 19|cost: 136.36363500000002|A: Avanzar [nodoDestino=J. P. Lopez y Antonia Godoy, CostoOperacion=22.7272725]|Posicion:\nPje.\nPujato\ny\nAntonia\nGodoy}"]
-nodo35[label="{EO: 35|cost: 181.81818|A: Avanzar [nodoDestino=J. P. Lopez y Patricio Cullen, CostoOperacion=45.454545]|Posicion:\nJ.\nP.\nLopez\ny\nAntonia\nGodoy}"]
-nodo64[label="{EO: 64|cost: 227.272725|A: Avanzar [nodoDestino=J. P. Lopez y Cngo. Echague, CostoOperacion=45.454545]|Posicion:\nJ.\nP.\nLopez\ny\nPatricio\nCullen}"]
-
-nodo35 -> nodo64;
-nodo65[label="{EO: 65|cost: 204.5454525|A: Avanzar [nodoDestino=Pje. Pujato y Patricio Cullen, CostoOperacion=22.7272725]|Posicion:\nJ.\nP.\nLopez\ny\nPatricio\nCullen}"]
-
-nodo35 -> nodo65;
-
-nodo19 -> nodo35;
-nodo36[label="{EO: 36|cost: 181.81818|A: Avanzar [nodoDestino=Angel Cassanello y Antonia Godoy, CostoOperacion=45.454545]|Posicion:\nJ.\nP.\nLopez\ny\nAntonia\nGodoy}"]
-nodo66[label="{EO: 66|cost: 227.272725|A: Avanzar [nodoDestino=Angel Cassanello y Piedras, CostoOperacion=45.454545]|Posicion:\nAngel\nCassanello\ny\nAntonia\nGodoy}"]
-
-nodo36 -> nodo66;
-nodo67[label="{EO: 67|cost: 227.272725|A: Avanzar [nodoDestino=Ricardo Aldao y Antonia Godoy, CostoOperacion=45.454545]|Posicion:\nAngel\nCassanello\ny\nAntonia\nGodoy}"]
-
-nodo36 -> nodo67;
-
-nodo19 -> nodo36;
-
-nodo16 -> nodo19;
-
-nodo8 -> nodo16;
-
-nodo3 -> nodo8;
-
-nodo2 -> nodo3;
-nodo4[label="{EO: 4|cost: 68.18181750000001|A: Avanzar [nodoDestino=Pje. Pujato y Antonia Godoy, CostoOperacion=45.454545]|Posicion:\nPje.\nPujato\ny\nPatricio\nCullen}"]
-nodo9[label="{EO: 9|cost: 90.90909|A: Avanzar [nodoDestino=J. P. Lopez y Antonia Godoy, CostoOperacion=22.7272725]|Posicion:\nPje.\nPujato\ny\nAntonia\nGodoy}"]
-nodo17[label="{EO: 17|cost: 136.36363500000002|A: Avanzar [nodoDestino=J. P. Lopez y Patricio Cullen, CostoOperacion=45.454545]|Posicion:\nJ.\nP.\nLopez\ny\nAntonia\nGodoy}"]
-nodo31[label="{EO: 31|cost: 181.81818|A: Avanzar [nodoDestino=J. P. Lopez y Cngo. Echague, CostoOperacion=45.454545]|Posicion:\nJ.\nP.\nLopez\ny\nPatricio\nCullen}"]
-nodo58[label="{EO: 58|cost: 227.272725|A: Avanzar [nodoDestino=J. P. Lopez y Talcahuano, CostoOperacion=45.454545]|Posicion:\nJ.\nP.\nLopez\ny\nCngo.\nEchague}"]
-
-nodo31 -> nodo58;
-nodo59[label="{EO: 59|cost: 227.272725|A: Avanzar [nodoDestino=Angel Cassanello y Cngo. Echague, CostoOperacion=45.454545]|Posicion:\nJ.\nP.\nLopez\ny\nCngo.\nEchague}"]
-
-nodo31 -> nodo59;
-
-nodo17 -> nodo31;
-nodo32[label="{EO: 32|cost: 159.09090750000001|A: Avanzar [nodoDestino=Pje. Pujato y Patricio Cullen, CostoOperacion=22.7272725]|Posicion:\nJ.\nP.\nLopez\ny\nPatricio\nCullen}"]
-nodo37[label="{EO: 37|cost: 181.81818|A: Avanzar [nodoDestino=Hernandarias y Patricio Cullen, CostoOperacion=45.454545]|Posicion:\nPje.\nPujato\ny\nPatricio\nCullen}"]
-nodo68[label="{EO: 68|cost: 227.272725|A: Avanzar [nodoDestino=Juan Castelli y Patricio Cullen, CostoOperacion=45.454545]|Posicion:\nHernandarias\ny\nPatricio\nCullen}"]
-
-nodo37 -> nodo68;
-nodo69[label="{EO: 69|cost: 227.272725|A: Avanzar [nodoDestino=Hernandarias y Antonia Godoy, CostoOperacion=45.454545]|Posicion:\nHernandarias\ny\nPatricio\nCullen}"]
-
-nodo37 -> nodo69;
-
-nodo32 -> nodo37;
-nodo38[label="{EO: 38|cost: 204.5454525|A: Avanzar [nodoDestino=Pje. Pujato y Antonia Godoy, CostoOperacion=45.454545]|Posicion:\nPje.\nPujato\ny\nPatricio\nCullen}"]
-
-nodo32 -> nodo38;
-
-nodo17 -> nodo32;
-
-nodo9 -> nodo17;
-nodo18[label="{EO: 18|cost: 136.36363500000002|A: Avanzar [nodoDestino=Angel Cassanello y Antonia Godoy, CostoOperacion=45.454545]|Posicion:\nJ.\nP.\nLopez\ny\nAntonia\nGodoy}"]
-nodo33[label="{EO: 33|cost: 181.81818|A: Avanzar [nodoDestino=Angel Cassanello y Piedras, CostoOperacion=45.454545]|Posicion:\nAngel\nCassanello\ny\nAntonia\nGodoy}"]
-nodo60[label="{EO: 60|cost: 227.272725|A: Avanzar [nodoDestino=J. P. Lopez y Piedras, CostoOperacion=45.454545]|Posicion:\nAngel\nCassanello\ny\nPiedras}"]
-
-nodo33 -> nodo60;
-nodo61[label="{EO: 61|cost: 227.272725|A: Avanzar [nodoDestino=Angel Cassanello y Tacuri, CostoOperacion=45.454545]|Posicion:\nAngel\nCassanello\ny\nPiedras}"]
-
-nodo33 -> nodo61;
-
-nodo18 -> nodo33;
-nodo34[label="{EO: 34|cost: 181.81818|A: Avanzar [nodoDestino=Ricardo Aldao y Antonia Godoy, CostoOperacion=45.454545]|Posicion:\nAngel\nCassanello\ny\nAntonia\nGodoy}"]
-nodo62[label="{EO: 62|cost: 227.272725|A: Avanzar [nodoDestino=Pedro de Vega y Antonia Godoy, CostoOperacion=45.454545]|Posicion:\nRicardo\nAldao\ny\nAntonia\nGodoy}"]
-
-nodo34 -> nodo62;
-nodo63[label="{EO: 63|cost: 227.272725|A: Avanzar [nodoDestino=Ricardo Aldao y Patricio Cullen, CostoOperacion=45.454545]|Posicion:\nRicardo\nAldao\ny\nAntonia\nGodoy}"]
-
-nodo34 -> nodo63;
-
-nodo18 -> nodo34;
-
-nodo9 -> nodo18;
-
-nodo4 -> nodo9;
-
-nodo2 -> nodo4;
-
-nodo0 -> nodo2;
+nodo0 -> nodo4;
 
 
 }

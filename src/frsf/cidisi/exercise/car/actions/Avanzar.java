@@ -62,8 +62,8 @@ public class Avanzar extends SearchAction {
         		System.out.println("Posicion Actual: " + agState.getPosicionActual().getNodoActual().getNombre());
         		agState.setEsquinasVisitadas(agState.getPosicionActual().getNodoActual());
         		Grafo.percepcionesAleatorias(environmentState.getMundo());
+        		
 /*        		System.out.println("\t\t\t\t------- PRUEBA Eventos Cambiados ambiente --------");
-            	
             	for(int j=0; j<environmentState.getMundo().size(); j++){
             		for(int k = 0; k<environmentState.getMundo().get(j).getEnlaces().size(); k++){
             			for(String key : environmentState.getMundo().get(j).getEnlaces().get(k).getEventos().keySet()){
