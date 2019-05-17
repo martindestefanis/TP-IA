@@ -22,15 +22,14 @@ public class CarAgentState extends SearchBasedAgentState {
     
 
     private static String modalidadSolucion;
-    
-   // private ArrayList<Nodo> mundo = new ArrayList<Nodo>();
-    //private ArrayList<Nodo> mundoReal;
-   
+      
 	private ArrayList<String> productosComprar = new ArrayList<String>();
     
     private ArrayList<String> productosComprados = new ArrayList<String>();
     
     static Grafo grafo = new Grafo();
+    
+    private ArrayList<Nodo> esquinasVisitadas = new ArrayList<Nodo>();
     
     private static ArrayList<Nodo> mundo = grafo.iniciarMundo();
 	
@@ -39,8 +38,6 @@ public class CarAgentState extends SearchBasedAgentState {
     
     	//TODO: Complete Method
     		this.initState();
-        
-   
     }
 
     /**
@@ -91,20 +88,28 @@ public class CarAgentState extends SearchBasedAgentState {
     		}
     	}
    
-/*    	System.out.println("\t\t\t\t------- MUNDO AGENTE ----------");
+    	System.out.println("\t\t\t\t------- MUNDO AGENTE ----------");
     	
     	System.out.println("\t\t\t\t------- Eventos percibidos --------");
     	
     	for(int i=0; i<mundo.size(); i++){
     		for(int k = 0; k<mundo.get(i).getEnlaces().size(); k++){
-    			for(String key : mundo.get(i).getEnlaces().get(k).getEventos().keySet()){
-    				System.out.println(key +
-    		    	"----> Calle: " + mundo.get(i).getEnlaces().get(k).getNombre());
-    			}
+    				for(String key : mundo.get(i).getEnlaces().get(k).getEventos().keySet()){
+    					if(!key.equalsIgnoreCase("Sin percepcion")){
+    						System.out.println(key +
+        		    		    	"----> Calle: " + mundo.get(i).getEnlaces().get(k).getNombre());
+    					}else{
+    						if(!mundo.get(i).getEnlaces().get(k).isDisponible()){
+            					System.out.println("Corte Calle" +
+            		    		    	"----> Calle: " + mundo.get(i).getEnlaces().get(k).getNombre());
+            				}
+    					}
+        				
+        			}
     		}
     		
     	}
- */   	
+    	
     	
     }
 
@@ -114,8 +119,9 @@ public class CarAgentState extends SearchBasedAgentState {
     @Override
     public void initState() {
         //LA MODALIDAD PUEDE SER O "A PIE" O EN "AUTOMOVIL"
-    	//modalidadSolucion = "A pie";
+    	//modalidadSolucion = "Bicicleta";
     	modalidadSolucion = "Automovil";
+    	//modalidadSolucion = "Mas barato";
 		
 		//SETEO TODOS LOS ENLACES CON PERCEPCIONES EMPTY
    		for(int i=0; i<mundo.size(); i++){
@@ -125,11 +131,11 @@ public class CarAgentState extends SearchBasedAgentState {
 		}
 		
 		productosComprar.add("Café");
-	//	productosComprar.add("Huevos");
+		productosComprar.add("Huevos");
 	//	productosComprar.add("Leche");
-		productosComprar.add("Maní");
+	//	productosComprar.add("Maní");
 		posicionActual = new Posicion(null,GestorNodo.obtenerNodo(mundo,"Juan Castelli y Antonia Godoy"));
-	
+		esquinasVisitadas.add(GestorNodo.obtenerNodo(mundo, "Juan Castelli y Antonia Godoy"));
     }
 
     /**
@@ -146,7 +152,10 @@ public class CarAgentState extends SearchBasedAgentState {
 	public int hashCode() {
 		final int prime = 31;
 		int result = 1;
-		result = prime * result + ((mundo == null) ? 0 : mundo.hashCode());
+		result = prime
+				* result
+				+ ((esquinasVisitadas == null) ? 0 : esquinasVisitadas
+						.hashCode());
 		result = prime * result
 				+ ((posicionActual == null) ? 0 : posicionActual.hashCode());
 		result = prime
@@ -166,10 +175,10 @@ public class CarAgentState extends SearchBasedAgentState {
 		if (getClass() != obj.getClass())
 			return false;
 		CarAgentState other = (CarAgentState) obj;
-		if (mundo == null) {
-			if (other.mundo != null)
+		if (esquinasVisitadas == null) {
+			if (other.esquinasVisitadas != null)
 				return false;
-		} else if (!mundo.equals(other.mundo))
+		} else if (!esquinasVisitadas.equals(other.esquinasVisitadas))
 			return false;
 		if (posicionActual == null) {
 			if (other.posicionActual != null)
@@ -231,5 +240,15 @@ public class CarAgentState extends SearchBasedAgentState {
      public void setProductosComprados(ArrayList<String> arg){
         productosComprados = arg;
      }
+
+	public ArrayList<Nodo> getEsquinasVisitadas() {
+		return esquinasVisitadas;
+	}
+
+	public void setEsquinasVisitadas(Nodo esquina) {
+		this.esquinasVisitadas.add(esquina);
+	}
+     
+     
 }
 

@@ -1,91 +1,122 @@
-Nodo Origen;Nodo Destino;Distancia
-Pedro de Vega y Av. Almte. Brown;Pedro de Vega y Cngo. Echagüe;100
-Pedro de Vega y Cngo. Echagüe;Pedro de Vega y Patrio Cullen;100
-Pedro de Vega y Patricio Cullen;Ricardo Aldao y Patricio Cullen;100
-Pedro de Vega y Patricio Cullen;Pedro de Vega y Antonia Godoy;100
-Pedro de Vega y Antonia Godoy;Pedro de Vega y Piedras;100
-Pedro de Vega y Piedras;Ricardo Aldao y Piedras;100
-Pedro de Vega y Piedras;Pedro de Vega y Tacuarí;100
-Pedro de Vega y Tacuarí;Pedro de Vega y Velez Sarsfield;100
-Pedro de Vega y Velez Sarsfield;Ricardo Aldao y Velez Sarsfield;100
-Pedro de Vega y Calle R. M. Pizzorno;Pedro de Vega y Dorrego;100
-Pedro de Vega y Dorrego;Pedro de Vega y Av. Gral. Paz;100
-Pedro de Vega y Av. Gral. Paz;Ricardo Aldao y Av. Gral. Paz;100
-Ricardo Aldao y Av. Gral. Paz;Pedro de Vega y Av. Gral. Paz;100
-Ricardo Aldao y Av. Gral. Paz;Ricardo Aldao y Dorrego;100
-Ricardo Aldao y Dorrego;Pedro de Vega y Dorrego;100
-Ricardo Aldao y Av. Gral. Paz;Angel Cassanello y Av. Gral. Paz;100
-Angel Cassanello y Av. Gral. Paz;Ricardo Aldao y Av. Gral. Paz;100
-Angel Cassanello y Av. Gral. Paz;J. P. López y Av. Gral. Paz;100
-J. P. López y Av. Gral. Paz;Angel Cassanello y Av. Gral. Paz;100
-J. P. López y Av. Gral. Paz;Hernandarias y Av. Gral. Paz;100
-Juan Castelli y Av. Gral. Paz;Hernandarias y Av. Gral. Paz;100
-Juan Castelli y Av. Gral. Paz;Juan Castelli y Velez Sarsfield;100
-Juan Castelli y Velez Sarsfield;Juan Castelli y Tacuarí;100
-Juan Castelli y Tacuarí;Juan Castelli y Piedras;100
-Juan Castelli y Piedras;Juan Castelli y Antonia Godoy;100
-Juan Castelli y Antonia Godoy;Juan Castelli y Patricio Cullen;100
-Juan Castelli y Patricio Cullen;Juan Castelli y Cngo. Echagüe;100
-Juan Castelli y Cngo. Echagüe;Juan Castelli y Talcahuano;100
-Juan Castelli y Talcahuano;Juan Castelli y Defensa;100
-Juan Castelli y Defensa;Juan Castelli y Riobamba;100
-Juan Castelli y Riobamba;Juan Castelli y Av. Almte. Brown;100
-Hernandarias y Av. Almte. Brown;Hernandarias y Defensa;93
-Hernandarias y Defensa;Hernandarias y Talcahuano;100
-Hernandarias y Talcahuano;Hernandarias y Cngo. Echagüe;100
-Hernandarias y Cngo. Echagüe;Hernandarias y Patricio Cullen;100
-Hernandarias y Patricio Cullen;Hernandarias y Antonia Godoy;100
-Hernandarias y Antonia Godoy;Hernandarias y Piedras;100
-Hernandarias y Piedras;Hernandarias y Tacuarí;100
-Hernandarias y Tacuarí;Hernandarias y Velez Sarsfield;100
-Hernandarias y Velez Sarsfield;Hernandarias y Av. Gral. Paz;100
-Hernandarias y Av. Gral. Paz;J. P. López y Av. Gral. Paz;100
-Hernandarias y Av. Gral. Paz;Juan Castelli y Av. Gral. Paz;100
-J. P. López y Velez Sarsfield;J. P. López y Tacuarí;100
-J. P. López y Tacuarí;J. P. López y Piedras;100
-J. P. López y Piedras;J. P. López y Antonia Godoy;100
-J. P. López y Antonia Godoy;J. P. López y Patricio Cullen;100
-J. P. López y Patricio Cullen;J. P. López y Cngo. Echagüe;100
-J. P. López y Cngo. Echagüe;J. P. López y Talcahuano;100
-J. P. López y Talcahuano;J. P. López y Defensa;100
-J. P. López y Defensa;J. P. López y Av. Almte. Brown;100
-J. P. López y Av. Almte. Brown;Hernandarias y Av. Almte. Brown;100
-Hernandarias y Av. Almte. Brown;J. P. López y Av. Almte. Brown;100
-J. P. López y Av. Almte. Brown;Angel Cassanello y Av. Almte. Brown;100
-Angel Cassanello y Av. Almte. Brown;J. P. López y Av. Almte. Brown;100
-Angel Cassanello y Av. Almte. Brown;Angel Cassanello y Talcahuano;100
-Angel Cassanello y Talcahuano;Angel Cassanello y Cngo. Echagüe;100
-Angel Cassanello y Cngo. Echagüe;Angel Cassanello y Patricio Cullen;100
-Angel Cassanello y Patricio Cullen;Angel Cassanello y Antonia Godoy;100
-Angel Cassanello y Antonia Godoy;Angel Cassanello y Piedras;100
-Angel Cassanello y Piedras;Angel Cassanello y Tacuarí;100
-Angel Cassanello y Tacuarí;Angel Cassanello y Velez Sarsfield;100
-Angel Cassanello y Velez Sarsfield;Angel Cassanello y Dorrego;100
-Angel Cassanello y Dorrego;Angel Cassanello y Av. Gral. Paz;100
-Ricardo Aldao y Tacuarí;Ricardo Aldao y Piedras;100
-Ricardo Aldao y Velez Sarsfield;Ricardo Aldao y Tacuarí;100
-Ricardo Aldao y Antonia Godoy;Ricardo Aldao y Patricio Cullen;100
-Ricardo Aldao y Piedras;Ricardo Aldao y Antonia Godoy;100
-Ricardo Aldao y Patricio Cullen;Ricardo Aldao y Cngo. Echagüe;100
-Ricardo Aldao y Cngo. Echagüe;Ricardo Aldao y Av. Almte. Brown;100
-Ricardo Aldao y Av. Almte. Brown;Angel Cassanello y Av. Almte. Brown;100
-Angel Cassanello y Av. Almte. Brown;Ricardo Aldao y Av. Almte. Brown;100
-Ricardo Aldao y Av. Almte. Brown;Pedro de Vega y Av. Almte. Brown;100
-Pedro de Vega y Av. Almte. Brown;Ricardo Aldao y Av. Almte. Brown;100
-Hernandarias y Av. Almte. Brown ;Riobamba y Av. Almte. Brown;30
-Juan Castelli y Av. Almte. Brown;Riobamba y Av. Almte. Brown;80
-Riobamba y Av. Almte. Brown;Juan Castelli y Riobamba;74
-Juan Castelli y Defensa;Hernandarias y Defensa;100
-Hernandarias y Defensa;J. P. López y Defensa;100
-Angel Cassanello y Talcahuano;J. P. López y Talcahuano;100
-J. P. López y Talcahuano;Hernandarias y Talcahuano;100
-Hernandarias y Talcahuano;Juan Castelli y Talcahuano;100
-Juan Castelli y Cngo. Echagüe;Hernandarias y Cngo. Echagüe;100
-Hernandarias y Cngo. Echagüe;J. P. López y Cngo. Echagüe;100
-J. P. López y Cngo. Echagüe;Angel Cassanello y Cngo. Echagüe;100
-Angel Cassanello y Cngo. Echagüe;Ricardo Aldao y Cngo. Echagüe;100
-Ricardo Aldao y Cngo. Echagüe;Pedro de Vega y Cngo. Echagüe;100
-Ricardo Aldao y Patricio Cullen;Angel Cassanello y Patricio Cullen;100
-Angel Cassanello y Patricio Cullen;J. P. López y Patricio Cullen;100
-J. P. López y Patricio Cullen;Hernandarias y Patricio Cullen;100
-Hernandarias y Patricio Cullen;Juan Castelli y Patricio Cullen;100
+Nodo Origen;Nodo Destino;Distancia;Latitud Origen;Longitud Origen;Latitud Destino;Longitud Destino
+Pedro de Vega y Av. Almte. Brown;Pedro de Vega y Cngo. Echague;100.0;-31.6160133;-60.6728363;-31.6158331;-60.673229
+Pedro de Vega y Cngo. Echague;Pedro de Vega y Patrio Cullen;100.0;-31.6158331;-60.673229;-31.6156152;-60.674319
+Pedro de Vega y Patricio Cullen;Ricardo Aldao y Patricio Cullen;100.0;-31.6156152;-60.674319;-31.61471779999999;-60.67405689999999
+Pedro de Vega y Patricio Cullen;Pedro de Vega y Antonia Godoy;100.0;-31.6156152;-60.674319;-31.6153848;-60.6753506
+Pedro de Vega y Antonia Godoy;Pedro de Vega y Piedras;100.0;-31.6153848;-60.6753506;-31.6151467;-60.67640650000001
+Pedro de Vega y Piedras;Ricardo Aldao y Piedras;100.0;-31.6151467;-60.67640650000001;-31.6142445;-60.67614709999999
+Pedro de Vega y Piedras;Pedro de Vega y Tacuari;100.0;-31.6151467;-60.67640650000001;-31.61493359999999;-60.6774984
+Pedro de Vega y Tacuari;Pedro de Vega y Velez Sarsfield;100.0;-31.61493359999999;-60.6774984;-31.6147126;-60.67854850000001
+Pedro de Vega y Velez Sarsfield;Ricardo Aldao y Velez Sarsfield;100.0;-31.6147126;-60.67854850000001;-31.613778;-60.6783124
+Pedro de Vega y Calle R. M. Pizzorno;Pedro de Vega y Dorrego;100.0;-31.6146556;-60.6788482;-31.6144656;-60.67973169999999
+Pedro de Vega y Dorrego;Pedro de Vega y Av. Gral. Paz;100.0;-31.6144656;-60.67973169999999;-31.6141276;-60.68122649999999
+Pedro de Vega y Av. Gral. Paz;Ricardo Aldao y Av. Gral. Paz;100.0;-31.6141276;-60.68122649999999;-31.6133246;-60.6805933
+Ricardo Aldao y Av. Gral. Paz;Pedro de Vega y Av. Gral. Paz;100.0;-31.6133246;-60.6805933;-31.6141276;-60.68122649999999
+Ricardo Aldao y Av. Gral. Paz;Ricardo Aldao y Dorrego;100.0;-31.6133246;-60.6805933;-31.6135555;-60.67945590000001
+Ricardo Aldao y Dorrego;Pedro de Vega y Dorrego;100.0;-31.6135555;-60.67945590000001;-31.6144656;-60.67973169999999
+Ricardo Aldao y Av. Gral. Paz;Angel Cassanello y Av. Gral. Paz;100.0;-31.6133246;-60.6805933;-31.6124829;-60.67991540000001
+Angel Cassanello y Av. Gral. Paz;Ricardo Aldao y Av. Gral. Paz;100.0;-31.6124829;-60.67991540000001;-31.6133246;-60.6805933
+Angel Cassanello y Av. Gral. Paz;J. P. Lopez y Av. Gral. Paz;100.0;-31.6124829;-60.67991540000001;-31.61166129999999;-60.67926529999999
+J. P. Lopez y Av. Gral. Paz;Angel Cassanello y Av. Gral. Paz;100.0;-31.61166129999999;-60.67926529999999;-31.6124829;-60.67991540000001
+J. P. Lopez y Av. Gral. Paz;Hernandarias y Av. Gral. Paz;100.0;-31.61166129999999;-60.67926529999999;-31.6108556;-60.6785739
+Juan Castelli y Av. Gral. Paz;Hernandarias y Av. Gral. Paz;100.0;-31.6099822;-60.67808469999999;-31.6108556;-60.6785739
+Juan Castelli y Av. Gral. Paz;Juan Castelli y Velez Sarsfield;100.0;-31.6099822;-60.67808469999999;-31.6101699;-60.67727
+Juan Castelli y Velez Sarsfield;Juan Castelli y Tacuari;100.0;-31.6101699;-60.67727;-31.6104103;-60.67621430000001
+Juan Castelli y Tacuari;Juan Castelli y Piedras;100.0;-31.6104103;-60.67621430000001;-31.610619;-60.67515839999999
+Juan Castelli y Piedras;Juan Castelli y Antonia Godoy;100.0;-31.610619;-60.67515839999999;-31.6108439;-60.6740875
+Juan Castelli y Antonia Godoy;Juan Castelli y Patricio Cullen;100.0;-31.6108439;-60.6740875;-31.6110878;-60.6730112
+Juan Castelli y Patricio Cullen;Juan Castelli y Cngo. Echague;100.0;-31.6110878;-60.6730112;-31.6112953;-60.6719666
+Juan Castelli y Cngo. Echague;Juan Castelli y Talcahuano;100.0;-31.6112953;-60.6719666;-31.6115191;-60.6708916
+Juan Castelli y Talcahuano;Juan Castelli y Defensa;100.0;-31.6115191;-60.6708916;-31.6117412;-60.6698291
+Juan Castelli y Defensa;Juan Castelli y Riobamba;100.0;-31.6117412;-60.6698291;-31.6119433;-60.668769
+Juan Castelli y Riobamba;Juan Castelli y Av. Almte. Brown;100.0;-31.6119433;-60.668769;-31.61207539999999;-60.6683177
+Hernandarias y Av. Almte. Brown;Hernandarias y Defensa;93.0;-31.6128418;-60.66911949999999;-31.6126226;-60.6700892
+Hernandarias y Defensa;Hernandarias y Talcahuano;100.0;-31.6126226;-60.6700892;-31.6124245;-60.671145
+Hernandarias y Talcahuano;Hernandarias y Cngo. Echague;100.0;-31.6124245;-60.671145;-31.6122095;-60.67221230000001
+Hernandarias y Cngo. Echague;Hernandarias y Patricio Cullen;100.0;-31.6122095;-60.67221230000001;-31.6119807;-60.6732749
+Hernandarias y Patricio Cullen;Hernandarias y Antonia Godoy;100.0;-31.6119807;-60.6732749;-31.6117591;-60.6743556
+Hernandarias y Antonia Godoy;Hernandarias y Piedras;100.0;-31.6117591;-60.6743556;-31.6115282;-60.67540729999999
+Hernandarias y Piedras;Hernandarias y Tacuari;100.0;-31.6115282;-60.67540729999999;-31.611301;-60.6764759
+Hernandarias y Tacuari;Hernandarias y Velez Sarsfield;100.0;-31.611301;-60.6764759;-31.6110693;-60.6775305
+Hernandarias y Velez Sarsfield;Hernandarias y Av. Gral. Paz;100.0;-31.6110693;-60.6775305;-31.6108556;-60.6785739
+Hernandarias y Av. Gral. Paz;J. P. Lopez y Av. Gral. Paz;100.0;-31.6108556;-60.6785739;-31.61166129999999;-60.67926529999999
+Hernandarias y Av. Gral. Paz;Juan Castelli y Av. Gral. Paz;100.0;-31.6108556;-60.6785739;-31.6099822;-60.67808469999999
+J. P. Lopez y Velez Sarsfield;J. P. Lopez y Tacuari;100.0;-31.6119517;-60.67777940000001;-31.6122072;-60.6767246
+J. P. Lopez y Tacuari;J. P. Lopez y Piedras;100.0;-31.6122072;-60.6767246;-31.61244159999999;-60.675649
+J. P. Lopez y Piedras;J. P. Lopez y Antonia Godoy;100.0;-31.61244159999999;-60.675649;-31.6126631;-60.6745994
+J. P. Lopez y Antonia Godoy;J. P. Lopez y Patricio Cullen;100.0;-31.6126631;-60.6745994;-31.6129006;-60.6735308
+J. P. Lopez y Patricio Cullen;J. P. Lopez y Cngo. Echague;100.0;-31.6129006;-60.6735308;-31.6131273;-60.6724506
+J. P. Lopez y Cngo. Echague;J. P. Lopez y Talcahuano;100.0;-31.6131273;-60.6724506;-31.61334969999999;-60.6714028
+J. P. Lopez y Talcahuano;J. P. Lopez y Defensa;100.0;-31.61334969999999;-60.6714028;-31.6135296;-60.67034090000001
+J. P. Lopez y Defensa;J. P. Lopez y Av. Almte. Brown;100.0;-31.6135296;-60.67034090000001;-31.61364;-60.6700804
+J. P. Lopez y Av. Almte. Brown;Hernandarias y Av. Almte. Brown;100.0;-31.61364;-60.6700804;-31.6128418;-60.66911949999999
+Hernandarias y Av. Almte. Brown;J. P. Lopez y Av. Almte. Brown;100.0;-31.6128418;-60.66911949999999;-31.61364;-60.6700804
+J. P. Lopez y Av. Almte. Brown;Angel Cassanello y Av. Almte. Brown;100.0;-31.61364;-60.6700804;-31.6145167;-60.6709367
+Angel Cassanello y Av. Almte. Brown;J. P. Lopez y Av. Almte. Brown;100.0;-31.6145167;-60.6709367;-31.61364;-60.6700804
+Angel Cassanello y Av. Almte. Brown;Angel Cassanello y Talcahuano;100.0;-31.6145167;-60.6709367;-31.6142669;-60.67165579999999
+Angel Cassanello y Talcahuano;Angel Cassanello y Cngo. Echague;100.0;-31.6142669;-60.67165579999999;-31.6140365;-60.67271299999999
+Angel Cassanello y Cngo. Echague;Angel Cassanello y Patricio Cullen;100.0;-31.6140365;-60.67271299999999;-31.6138074;-60.6737783
+Angel Cassanello y Patricio Cullen;Angel Cassanello y Antonia Godoy;100.0;-31.6138074;-60.6737783;-31.6135865;-60.6748439
+Angel Cassanello y Antonia Godoy;Angel Cassanello y Piedras;100.0;-31.6135865;-60.6748439;-31.6133462;-60.67590209999999
+Angel Cassanello y Piedras;Angel Cassanello y Tacuari;100.0;-31.6133462;-60.67590209999999;-31.6131196;-60.6769778
+Angel Cassanello y Tacuari;Angel Cassanello y Velez Sarsfield;100.0;-31.6131196;-60.6769778;-31.6128784;-60.6780448
+Angel Cassanello y Velez Sarsfield;Angel Cassanello y Dorrego;100.0;-31.6128784;-60.6780448;-31.6126277;-60.67918839999999
+Angel Cassanello y Dorrego;Angel Cassanello y Av. Gral. Paz;100.0;-31.6126277;-60.67918839999999;-31.6124829;-60.67991540000001
+Ricardo Aldao y Tacuari;Ricardo Aldao y Piedras;100.0;-31.6140267;-60.677228;-31.6142445;-60.67614709999999
+Ricardo Aldao y Velez Sarsfield;Ricardo Aldao y Tacuari;100.0;-31.613778;-60.6783124;-31.6140267;-60.677228
+Ricardo Aldao y Antonia Godoy;Ricardo Aldao y Patricio Cullen;100.0;-31.6144871;-60.6751062;-31.61471779999999;-60.67405689999999
+Ricardo Aldao y Piedras;Ricardo Aldao y Antonia Godoy;100.0;-31.6142445;-60.67614709999999;-31.6144871;-60.6751062
+Ricardo Aldao y Patricio Cullen;Ricardo Aldao y Cngo. Echague;100.0;-31.61471779999999;-60.67405689999999;-31.6149378;-60.672977
+Ricardo Aldao y Cngo. Echague;Ricardo Aldao y Av. Almte. Brown;100.0;-31.6149378;-60.672977;-31.6151689;-60.67197960000001
+Ricardo Aldao y Av. Almte. Brown;Angel Cassanello y Av. Almte. Brown;100.0;-31.6151689;-60.67197960000001;-31.6145167;-60.6709367
+Angel Cassanello y Av. Almte. Brown;Ricardo Aldao y Av. Almte. Brown;100.0;-31.6145167;-60.6709367;-31.6151689;-60.67197960000001
+Ricardo Aldao y Av. Almte. Brown;Pedro de Vega y Av. Almte. Brown;100.0;-31.6151689;-60.67197960000001;-31.6160133;-60.6728363
+Pedro de Vega y Av. Almte. Brown;Ricardo Aldao y Av. Almte. Brown;100.0;-31.6160133;-60.6728363;-31.6151689;-60.67197960000001
+Hernandarias y Av. Almte. Brown;Riobamba y Av. Almte. Brown;30.0;-31.6128418;-60.66911949999999;-31.6127428;-60.66882200000001
+Juan Castelli y Av. Almte. Brown;Riobamba y Av. Almte. Brown;80.0;-31.61207539999999;-60.6683177;-31.6127428;-60.66882200000001
+Riobamba y Av. Almte. Brown;Juan Castelli y Riobamba;74.0;-31.6127428;-60.66882200000001;-31.6119433;-60.668769
+Juan Castelli y Defensa;Hernandarias y Defensa;100.0;-31.6117412;-60.6698291;-31.6126226;-60.6700892
+Hernandarias y Defensa;J. P. Lopez y Defensa;100.0;-31.6126226;-60.6700892;-31.6135296;-60.67034090000001
+Angel Cassanello y Talcahuano;J. P. Lopez y Talcahuano;100.0;-31.6142669;-60.67165579999999;-31.61334969999999;-60.6714028
+J. P. Lopez y Talcahuano;Hernandarias y Talcahuano;100.0;-31.61334969999999;-60.6714028;-31.6124245;-60.671145
+Hernandarias y Talcahuano;Juan Castelli y Talcahuano;100.0;-31.6124245;-60.671145;-31.6115191;-60.6708916
+Juan Castelli y Cngo. Echague;Hernandarias y Cngo. Echague;100.0;-31.6112953;-60.6719666;-31.6122095;-60.67221230000001
+J. P. Lopez y Cngo. Echague;Angel Cassanello y Cngo. Echague;100.0;-31.6131273;-60.6724506;-31.6140365;-60.67271299999999
+Angel Cassanello y Cngo. Echague;Ricardo Aldao y Cngo. Echague;100.0;-31.6140365;-60.67271299999999;-31.6149378;-60.672977
+Ricardo Aldao y Cngo. Echague;Pedro de Vega y Cngo. Echague;100.0;-31.6149378;-60.672977;-31.6158331;-60.673229
+Ricardo Aldao y Patricio Cullen;Angel Cassanello y Patricio Cullen;100.0;-31.61471779999999;-60.67405689999999;-31.6138074;-60.6737783
+Angel Cassanello y Patricio Cullen;J. P. Lopez y Patricio Cullen;100.0;-31.6138074;-60.6737783;-31.6129006;-60.6735308
+Juan Castelli y Antonia Godoy;Hernandarias y Antonia Godoy;100.0;-31.6108439;-60.6740875;-31.6117591;-60.6743556
+J. P. Lopez y Antonia Godoy;Angel Cassanello y Antonia Godoy;100.0;-31.6126631;-60.6745994;-31.6135865;-60.6748439
+Angel Cassanello y Antonia Godoy;Ricardo Aldao y Antonia Godoy;100.0;-31.6135865;-60.6748439;-31.6144871;-60.6751062
+Ricardo Aldao y Antonia Godoy;Pedro de Vega y Antonia Godoy;100.0;-31.6144871;-60.6751062;-31.6153848;-60.6753506
+Pedro de Vega y Antonia Godoy;Pedro de Vega y Piedras;100.0;-31.6153848;-60.6753506;-31.6151467;-60.67640650000001
+Pedro de Vega y Piedras;Ricardo Aldao y Piedras;100.0;-31.6151467;-60.67640650000001;-31.6142445;-60.67614709999999
+Ricardo Aldao y Piedras;Angel Cassanello y Piedras;100.0;-31.6142445;-60.67614709999999;-31.6133462;-60.67590209999999
+Angel Cassanello y Piedras;J. P. Lopez y Piedras;100.0;-31.6133462;-60.67590209999999;-31.61244159999999;-60.675649
+Hernandarias y Piedras;Juan Castelli y Piedras;100.0;-31.6115282;-60.67540729999999;-31.610619;-60.67515839999999
+Juan Castelli y Tacuari;Hernandarias y Tacuari;100.0;-31.6104103;-60.67621430000001;-31.611301;-60.6764759
+Hernandarias y Patricio Cullen;Juan Castelli y Patricio Cullen;100.0;-31.6119807;-60.6732749;-31.6110878;-60.6730112
+Pedro de Vega y Piedras;Pedro de Vega y Tacuari;100.0;-31.6151467;-60.67640650000001;-31.61493359999999;-60.6774984
+J. P. Lopez y Tacuari;Angel Cassanello y Tacuari;100.0;-31.6122072;-60.6767246;-31.6131196;-60.6769778
+Angel Cassanello y Tacuari;Ricardo Aldao y Tacuari;100.0;-31.6131196;-60.6769778;-31.6140267;-60.677228
+Ricardo Aldao y Tacuari;Pedro de Vega y Tacuari;100.0;-31.6140267;-60.677228;-31.61493359999999;-60.6774984
+Ricardo Aldao y Velez Sarsfield;Angel Cassanello y Velez Sarsfield;100.0;-31.613778;-60.6783124;-31.6128784;-60.6780448
+Angel Cassanello y Velez Sarsfield;J. P. Lopez y Velez Sarsfield;100.0;-31.6128784;-60.6780448;-31.6119517;-60.67777940000001
+J. P. Lopez y Velez Sarsfield;Hernandarias y Velez Sarsfield;100.0;-31.6119517;-60.67777940000001;-31.6110693;-60.6775305
+Hernandarias y Velez Sarsfield;Juan Castelli y Velez Sarsfield;100.0;-31.6110693;-60.6775305;-31.6101699;-60.67727
+Angel Cassanello y Dorrego;Ricardo Aldao y Dorrego;100.0;-31.6126277;-60.67918839999999;-31.6135555;-60.67945590000001
+Ricardo Aldao y Dorrego;Pedro de Vega y Dorrego;100.0;-31.6135555;-60.67945590000001;-31.6144656;-60.67973169999999
+Hernandarias y Tacuari;Pje. Pujato y Tacuari;50.0;-31.611301;-60.6764759;-31.6117173;-60.67659779999999
+Pje. Pujato y Tacuari;J. P. Lopez y Tacuari;50.0;-31.6117173;-60.67659779999999;-31.6122072;-60.6767246
+J. P. Lopez y Piedras;Pje. Pujato y Piedras;50.0;-31.61244159999999;-60.675649;-31.6119447;-60.67551619999999
+Pje. Pujato y Piedras;Hernandarias y Piedras;50.0;-31.6119447;-60.67551619999999;-31.6115282;-60.67540729999999
+Pje. Pujato y Tacuari;Pje. Pujato y Piedras;100.0;-31.6117173;-60.67659779999999;-31.6119447;-60.67551619999999
+Hernandarias y Antonia Godoy;Pje. Pujato y Antonia Godoy;50.0;-31.6117591;-60.6743556;-31.612187;-60.6744644
+Pje. Pujato y Antonia Godoy;J. P. Lopez y Antonia Godoy;50.0;-31.612187;-60.6744644;-31.6126631;-60.6745994
+J. P. Lopez y Patricio Cullen;Pje. Pujato y Patricio Cullen;50.0;-31.6129006;-60.6735308;-31.6124102;-60.67339219999999
+Pje. Pujato y Patricio Cullen;Hernandarias y Patricio Cullen;50.0;-31.6124102;-60.67339219999999;-31.6119807;-60.6732749
+Pje. Pujato y Patricio Cullen;Pje. Pujato y Antonia Godoy;100.0;-31.6124102;-60.67339219999999;-31.612187;-60.6744644
+Hernandarias y Cngo. Echague;Pje. Pujato y Cngo. Echague;50.0;-31.6122095;-60.67221230000001;-31.6126283;-60.6723187
+Pje. Pujato y Cngo. Echague;J. P. Lopez y Cngo. Echague;50.0;-31.6126283;-60.6723187;-31.6131273;-60.6724506
+Pje. Pujato y Cngo. Echague;Pje. Pujato y Patricio Cullen;50.0;-31.6126283;-60.6723187;-31.6124102;-60.67339219999999

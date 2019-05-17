@@ -106,24 +106,39 @@ public class GestorEnlace {
 	public double calcularCosto(Enlace enlace){
 	//CALCULA EL COSTO TOTAL DEL ENLACE. EL COSTO DE LOS EVENTOS SON UN FACTOR DE TIEMPO DE DEMORA.
 	//Y EL COSTO DEL ENLACE ES EL TIEMPO PROMEDIO QUE LE LLEVA AL AGENTE DE RECORRER UNA CUADRA.
+
 		double costo = enlace.getCosto();
-		
-		//PARA EL CASO DE QUE TRABAJEMOS CON VARIOS EVENTOS POR ENLACE
 	
-		if(CarAgentState.getModalidadSolucion().equalsIgnoreCase("A pie")){
-			//MODALIDAD A PIE
+		if(CarAgentState.getModalidadSolucion().equalsIgnoreCase("Bicicleta")){
+			//MODALIDAD A BICICLETA
+			//AL AGENTE LE LLEVA 1 MINUTO RECORRER UN CUADRA
+			
+			costo= 1; //1 MINUTO
 			if(enlace.getEventos().containsKey(CarAgentPerception.EVENTO_SOCIAL)){
 				costo = costo + costo*(enlace.getEventos().get(CarAgentPerception.EVENTO_SOCIAL)/100);
 			}
+			return costo;
+			
 		}
 		else{
-			//MODALIDAD "AUTOMOVIL". SI SE AGREGAN MAS MODALIDADES SE DEBE AGREGAR SENTENCIAS IF-ELSE
-			if(enlace.getEventos().containsKey(CarAgentPerception.CONGESTION)){
-				costo = costo + costo*(enlace.getEventos().get(CarAgentPerception.CONGESTION)/100);
-			}	
+			if(CarAgentState.getModalidadSolucion().equalsIgnoreCase("Mas barato")){
+				//La idea es que el avanzar no cueste osea que retorne 0 pero no funcionaba, el minimo numero que le gustó fue 5
+				return new Double(0.0);
+				
+			}else{
+				//MODALIDAD "AUTOMOVIL". SI SE AGREGAN MAS MODALIDADES SE DEBE AGREGAR SENTENCIAS IF-ELSE
+				//Suponiendo que un auto hace 11[km/litro] entonces por metro consume 0.0000909091 [litro/m]
+		    	//Suponiendo que la nafta está $50 el litro, entonces: el costo por metro de nafta seria: $0.0045454545
+				//Entra en un bucle con un costo tan chiquito por eso dejo 0.45454545
+				costo= costo*0.45454545;
+				if(enlace.getEventos().containsKey(CarAgentPerception.CONGESTION)){
+					costo = costo + costo*(enlace.getEventos().get(CarAgentPerception.CONGESTION)/100);
+				}
+				return costo;
+			}
+			
 		}
 		
-		return costo;
 	}
 	
 }

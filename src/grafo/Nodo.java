@@ -3,12 +3,14 @@ package grafo;
 
 import java.util.ArrayList;
 
+import com.teamdev.jxmaps.LatLng;
+
 public class Nodo {
 
 	private String nombre;
 	private ArrayList<Enlace> enlaces = new ArrayList<Enlace>();
-	
-	
+	private LatLng latitudLongitud = new LatLng();
+
 	public String getNombre() {
 		return nombre;
 	}
@@ -27,6 +29,14 @@ public class Nodo {
 	
 	public void setEnlaces(ArrayList<Enlace> enlaces){
 		this.enlaces = enlaces;
+	}
+
+	public LatLng getLatitudLongitud() {
+		return latitudLongitud;
+	}
+
+	public void setLatitudLongitud(LatLng latitudLongitud) {
+		this.latitudLongitud = latitudLongitud;
 	}
 	
 	

@@ -48,7 +48,7 @@ public class CityState extends EnvironmentState {
     	posicionAgente = new Posicion(null,GestorNodo.obtenerNodo(mundo,"Juan Castelli y Antonia Godoy"));
     	
     	//REALIZO UNA MUESTRA DE TODOS LOS DATOS DEL MUNDO DEL AMBIENTE Y DEL AGENTE
-    	System.out.println("\t\t\t\t------- MUNDO DEL AMBIENTE -------");
+  /*  	System.out.println("\t\t\t\t------- MUNDO DEL AMBIENTE -------");
     	System.out.println("\t\t\t\t------- Nodos y sus enlaces -------");
     	for(int i=0; i< mundo.size(); i++){
 	    	   for(int j=0; j<mundo.get(i).getEnlaces().size(); j++){
@@ -78,7 +78,7 @@ public class CityState extends EnvironmentState {
     			}
     		}
     	}
-    	
+ */   	
     	System.out.println("\t\t\t\t------- Eventos --------");
     	
     	for(int i=0; i<mundo.size(); i++){
@@ -90,32 +90,35 @@ public class CityState extends EnvironmentState {
     		}
     		
     	}
-   	
+  /* 	
     	System.out.println("\t\t\t\t------- Estados de los enlaces ---------");
     	
     	for(int i=0; i<mundo.size(); i++){
     		for(int j=0; j<mundo.get(i).getEnlaces().size(); j++){
-    			System.out.println(mundo.get(i).getEnlaces().get(j).getNombre() + "----> " +
+    			System.out.println(mundo.get(i).getEnlaces().get(j).getNombre() + "----> " + 
     				String.valueOf(mundo.get(i).getEnlaces().get(j).isDisponible()));
     		}
     	}
-    	
+   */ 	
+    
 
-
-/*    	System.out.println("\t\t\t\t------- MUNDO AGENTE INICIAL ----------");
+    	System.out.println("\t\t\t\t------- MUNDO AGENTE INICIAL ----------");
     	
     	System.out.println("\t\t\t\t------- Eventos --------");
     	
     	for(int i=0; i<agState.getmundo().size(); i++){
     		for(int k = 0; k<agState.getmundo().get(i).getEnlaces().size(); k++){
     			for(String key : agState.getmundo().get(i).getEnlaces().get(k).getEventos().keySet()){
-    				System.out.println(key +
-    		    	"----> Calle: " + agState.getmundo().get(i).getEnlaces().get(k).getNombre());
-    			}
+        			if(!key.equalsIgnoreCase("Sin percepcion")){
+        				System.out.println(key +
+        	        		    "----> Calle: " + agState.getmundo().get(i).getEnlaces().get(k).getNombre());
+        			}
+    				
+        		}
     		}
     		
     	}
-*/    	
+    	
     }
     
     public void cargarPercepciones(ArrayList<Nodo> mundoAmbiente){
@@ -150,9 +153,9 @@ public class CityState extends EnvironmentState {
    							
    						}
    						else{
-   						/*	System.out.println("La calle " + mundoAmbiente.get(j).getEnlaces().get(k).getNombre() +
+   							System.out.println("La calle " + mundoAmbiente.get(j).getEnlaces().get(k).getNombre() +
    							" ya contiene un evento de " + mundoAmbiente.get(j).getEnlaces().get(k).getEventos().get(listaEventos.get(i).getNombre()));
-   						*/
+   						
    						}
    					}
    				}

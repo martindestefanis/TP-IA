@@ -75,15 +75,14 @@ public class CarAgentPerception extends Perception {
 	public String toString() {
 		return "";
 	}
-	
+
 	@Override
 	public int hashCode() {
 		final int prime = 31;
 		int result = 1;
-		result = prime * result + ((pos == null) ? 0 : pos.hashCode());
-		result = prime
-				* result
+		result = prime * result
 				+ ((SensorEnlaces == null) ? 0 : SensorEnlaces.hashCode());
+		result = prime * result + ((pos == null) ? 0 : pos.hashCode());
 		return result;
 	}
 
@@ -96,16 +95,18 @@ public class CarAgentPerception extends Perception {
 		if (getClass() != obj.getClass())
 			return false;
 		CarAgentPerception other = (CarAgentPerception) obj;
-		if (pos == null) {
-			if (other.pos != null)
-				return false;
-		} else if (!pos.equals(other.pos))
-			return false;
 		if (SensorEnlaces == null) {
 			if (other.SensorEnlaces != null)
 				return false;
 		} else if (!SensorEnlaces.equals(other.SensorEnlaces))
 			return false;
+		if (pos == null) {
+			if (other.pos != null)
+				return false;
+		} else if (!pos.equals(other.pos))
+			return false;
 		return true;
 	}
+	
+
 }

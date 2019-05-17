@@ -15,6 +15,7 @@ public class Comprar_producto extends SearchAction {
 	private double costoProducto;
 	private String productoComprar;
 	
+	
 	/**
      * This method updates a tree node state when the search process is running.
      * It does not updates the real world state.
@@ -39,7 +40,7 @@ public class Comprar_producto extends SearchAction {
         if(agState.getPosicionActual().getEnlaceRecorrido() != null){
 	        for(int i=0; i<agState.getPosicionActual().getEnlaceRecorrido().getNegocios().size(); i++){
 	        	negocio = agState.getPosicionActual().getEnlaceRecorrido().getNegocios().get(i);
-	        	if(negocio.getProductoPrecio().containsKey(this.productoComprar)){
+	        	if(negocio.getProductoPrecio().containsKey(this.productoComprar)&& negocio.isAbierto()){
 	        		
 	        		agState.getProductosComprados().add(this.productoComprar);
 	        		agState.getproductosComprar().remove(productoComprar);
@@ -64,7 +65,7 @@ public class Comprar_producto extends SearchAction {
         	
 	        for(int i=0; i<agState.getPosicionActual().getEnlaceRecorrido().getNegocios().size(); i++){
 	        	negocio = agState.getPosicionActual().getEnlaceRecorrido().getNegocios().get(i);
-	        	if(negocio.getProductoPrecio().containsKey(this.productoComprar)){
+	        	if(negocio.getProductoPrecio().containsKey(this.productoComprar)&& negocio.isAbierto()){
 	        		
 	        		agState.getProductosComprados().add(this.productoComprar);
 	        		agState.getproductosComprar().remove(productoComprar);
@@ -73,7 +74,7 @@ public class Comprar_producto extends SearchAction {
 	        		System.out.println(agState.getProductosComprados().toString());
 	        		System.out.println(costoProducto);
 	        		Grafo.percepcionesAleatorias(environmentState.getMundo());
-/*	        		System.out.println("\t\t\t\t------- PRUEBA Eventos Cambiados ambiente --------");
+/*	        		System.out.println("\t\t\t\t------- Eventos Cambiados ambiente --------");
 	            	
 	            	for(int j=0; j<environmentState.getMundo().size(); j++){
 	            		for(int k = 0; k<environmentState.getMundo().get(j).getEnlaces().size(); k++){
@@ -97,7 +98,21 @@ public class Comprar_producto extends SearchAction {
      */
     @Override
     public Double getCost() {
-        return new Double(this.costoProducto);
+    	//Si es en Bicicleta suponemos que lleva 5 minutos comprar un producto
+    	if(CarAgentState.getModalidadSolucion().equalsIgnoreCase("Bicicleta")){
+    		
+    		return new Double(5.0);
+    		
+    	}else{
+    		if(CarAgentState.getModalidadSolucion().equalsIgnoreCase("Mas barato")){
+    			
+    			return new Double(this.costoProducto);
+    			
+    		}else{
+    			return new Double(this.costoProducto);
+    		}
+    		
+    	}
     }
 
     @Override

@@ -35,7 +35,7 @@ public class Avanzar extends SearchAction {
         		
         		this.enlace = agState.getPosicionActual().getNodoActual().getEnlaces().get(i);
         		agState.setPosicionActual(agState.getPosicionActual().getNodoActual().getEnlaces().get(i),nodoDestino);
-        		return agState;
+           		return agState;
         	}
         }       		
         
@@ -56,12 +56,14 @@ public class Avanzar extends SearchAction {
         		
         		this.enlace = agState.getPosicionActual().getNodoActual().getEnlaces().get(i);
         		System.out.println("Calle recorrida: " + enlace.getNombre());
+        		//Enlace enlace = agState.getPosicionActual().getNodoActual().getEnlaces().get(i);
         		agState.setPosicionActual(agState.getPosicionActual().getNodoActual().getEnlaces().get(i),nodoDestino);
-        		environmentState.setPosicionAgente(agState.getPosicionActual().getNodoActual().getEnlaces().get(i),nodoDestino);
+        		environmentState.setPosicionAgente(agState.getPosicionActual().getEnlaceRecorrido(),nodoDestino);
         		System.out.println("Posicion Actual: " + agState.getPosicionActual().getNodoActual().getNombre());
+        		agState.setEsquinasVisitadas(agState.getPosicionActual().getNodoActual());
         		Grafo.percepcionesAleatorias(environmentState.getMundo());
-/*        		System.out.println("\t\t\t\t------- PRUEBA Eventos Cambiados ambiente --------");
-            	
+        		
+/*        		System.out.println("\t\t\t\t------- Eventos Cambiados ambiente --------");
             	for(int j=0; j<environmentState.getMundo().size(); j++){
             		for(int k = 0; k<environmentState.getMundo().get(j).getEnlaces().size(); k++){
             			for(String key : environmentState.getMundo().get(j).getEnlaces().get(k).getEventos().keySet()){
@@ -83,8 +85,10 @@ public class Avanzar extends SearchAction {
      */
     @Override
     public Double getCost() {
+       	
     	GestorEnlace gestorEnlace = new GestorEnlace();
-        return new Double(gestorEnlace.calcularCosto(this.enlace));
+    	
+        return (new Double(gestorEnlace.calcularCosto(this.enlace)));
     }
 
     @Override

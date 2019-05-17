@@ -17,10 +17,8 @@ public class CostFunction implements IStepCostFunction {
      */
     @Override
     public double calculateCost(NTree node) {
-        
-        //TODO: Complete Method
+    	
     	double costoAccion = node.getAction().getCost();
-    	//System.out.println("Costo nodo: " + node.getCost());
     	//System.out.println("Costo accion: " + costoAccion);
         
         return costoAccion;
