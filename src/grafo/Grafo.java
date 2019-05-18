@@ -19,7 +19,10 @@ import frsf.cidisi.exercise.car.search.CarAgentPerception;
 public class Grafo {
 	
 	GestorEnlace gestorEnlace = new GestorEnlace();
-   	
+	static String selectedAction = new String();
+	static String enlacePercepcionAgregada = new String();
+	static String eventoAgregado = new String();
+
 	//METODO PARA INICIAR EL MUNDO DEL AMBIENTE Y DEL AGENTE CON LAS CALLES Y NEGOCIOS ASOCIADOS
 	public ArrayList<Nodo> iniciarMundo(){
 		
@@ -390,7 +393,26 @@ public class Grafo {
 		System.out.println("ACCION ELEGIDA: " + acciones[indiceAccionElegida]);
 		System.out.println("COSTO ELEGIDO: " + costoElegido);
 		
+		enlacePercepcionAgregada = mundo.get(indiceNodoElegido).getEnlaces().get(indiceEnlaceElegido).getNombre();
+		eventoAgregado = acciones[indiceAccionElegida].toString();
+		
+		
 	}
+	public String getSelectedAction() {
+		return selectedAction;
+	}
+
+	public void setSelectedAction(String selectedAction) {
+		this.selectedAction = selectedAction;
+	}
+	public String getEnlacePercepcionAgregada() {
+		return enlacePercepcionAgregada;
+	}
+
+	public String getEventoAgregado() {
+		return eventoAgregado;
+	}
+
 	
 	private enum listaAcciones{
 		AGREGAR_EVENTO_SOCIAL,

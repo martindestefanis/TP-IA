@@ -1,18 +1,25 @@
 package frsf.cidisi.exercise.car.search;
 
 import java.awt.BorderLayout;
+import java.awt.Color;
+import java.awt.Font;
 import java.awt.Label;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 import java.util.ArrayList;
 import java.util.Vector;
-
+import javax.swing.JButton;
 import javax.swing.JFrame;
+import javax.swing.JLabel;
 import javax.swing.JPanel;
 import javax.swing.WindowConstants;
-
 import pantalla.Mapa;
-
+import javax.swing.*;
+import javax.swing.border.Border;
+import javax.swing.border.CompoundBorder;
+import javax.swing.border.EmptyBorder;
+import javax.swing.border.LineBorder;
 import com.teamdev.jxmaps.MapViewOptions;
-
 import frsf.cidisi.faia.agent.Perception;
 import frsf.cidisi.faia.agent.search.SearchBasedAgentState;
 import grafo.Enlace;
@@ -23,13 +30,13 @@ import grafo.Nodo;
 /**
  * Represent the internal state of the Agent.
  */
-public class CarAgentState extends SearchBasedAgentState {
+public class CarAgentState extends SearchBasedAgentState{
 	
 	//TODO: Setup Variables
 	
     //Posicion posicionInicial;
     Posicion posicionActual;
-    
+    private boolean seguir =false;
 
     private static String modalidadSolucion;
       
@@ -97,18 +104,65 @@ public class CarAgentState extends SearchBasedAgentState {
     			}
     		}
     	}
-    	
-    	JFrame pantallaMapa = new JFrame("Iteracion " + iteracion);
-        MapViewOptions options = new MapViewOptions();
-        options.importPlaces();
-        options.setApiKey("AIzaSyDXeR9Z3IqVz25_JKRdKjT7tLKXttLgnj4");
-        Mapa mapa = new Mapa(options,esquinasVisitadas,mundo);
-        pantallaMapa.setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
-        pantallaMapa.add(mapa, BorderLayout.CENTER);
-        pantallaMapa.setSize(700, 500);
-        pantallaMapa.setLocationRelativeTo(null);
-        pantallaMapa.setVisible(true);
-      	iteracion++;
+		final JButton boton = new JButton("Siguiente");
+		boton.setFocusPainted(false);
+		boton.setForeground(Color.BLACK);
+		boton.setBackground(Color.WHITE);
+		Border line = new LineBorder(Color.BLACK);
+		Border margin = new EmptyBorder(5, 15, 5, 15);
+		Border compound = new CompoundBorder(line, margin);
+		boton.setBorder(compound);
+		boton.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+			    	  if(e.getSource()==boton){
+			  			seguir = true;
+			  		}
+			     }
+			});
+		JPanel toolBar = new JPanel();
+		toolBar.setBackground(Color.WHITE);
+		toolBar.setSize(100,100);
+		 
+		JLabel accion = new JLabel("Acción: " + grafo.getSelectedAction() + " || ");
+		accion.setFont(new java.awt.Font("Tahoma", Font.BOLD, 15));
+		accion.setForeground(new java.awt.Color(0, 0, 0));
+		JLabel prodAComprar = new JLabel("Productos a comprar: " + this.getproductosComprar().toString() + " || "); 
+		prodAComprar.setFont(new java.awt.Font("Tahoma", Font.BOLD, 15));
+		prodAComprar.setForeground(new java.awt.Color(0, 0, 0));
+		JLabel eventoAgregado = new JLabel("Evento agregado: " + grafo.getEventoAgregado());
+		eventoAgregado.setFont(new java.awt.Font("Tahoma", Font.BOLD, 15));
+		eventoAgregado.setForeground(new java.awt.Color(0, 0, 0));
+		JLabel enlacePercepcionAgregada = new JLabel(" en el enlace: " + grafo.getEnlacePercepcionAgregada()); 
+		enlacePercepcionAgregada.setFont(new java.awt.Font("Tahoma", Font.BOLD, 15));
+		enlacePercepcionAgregada.setForeground(new java.awt.Color(0, 0, 0));
+		   
+		JFrame pantallaMapa = new JFrame("Iteracion " + iteracion);
+		MapViewOptions options = new MapViewOptions();
+		options.importPlaces();
+		options.setApiKey("AIzaSyDXeR9Z3IqVz25_JKRdKjT7tLKXttLgnj4");
+		Mapa mapa = new Mapa(options,esquinasVisitadas,mundo);
+		
+		toolBar.add(prodAComprar);
+		toolBar.add(accion);
+		toolBar.add(eventoAgregado);
+		toolBar.add(eventoAgregado);
+		toolBar.add(enlacePercepcionAgregada);
+		toolBar.add(boton);
+		
+		pantallaMapa.add(toolBar, BorderLayout.NORTH);
+		pantallaMapa.add(mapa, BorderLayout.CENTER);
+		pantallaMapa.setExtendedState(JFrame.MAXIMIZED_BOTH);
+		//pantallaMapa.setSize(1650,1080);
+		pantallaMapa.setLocationRelativeTo(null);
+		pantallaMapa.setVisible(true);
+		
+		
+		while(!seguir){
+		}
+		iteracion++;
+		pantallaMapa.setVisible(false);
+		seguir=false;
+	    
        	
     	System.out.println("\t\t\t\t------- MUNDO AGENTE ----------");
     	
@@ -128,11 +182,8 @@ public class CarAgentState extends SearchBasedAgentState {
     					}
         				
         			}
-    		}
-    		
+    		}	
     	}
-    	
-    	
     }
 
     /**

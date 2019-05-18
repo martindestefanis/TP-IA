@@ -34,8 +34,6 @@ public class Mapa extends MapView{
 		super(options);
 		this.esquinasVisitadas = esquinasVisitadas;
 		this.mundo = mundo;
-		
-		//JFrame frame = new JFrame("Mapa");
 	
 		listaPuntos = cargarPuntosMapa(esquinasVisitadas);
 		listaNegocios = marcadoresNegocios();

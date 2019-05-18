@@ -104,8 +104,8 @@ public class GestorEnlace {
 	
 	
 	public double calcularCosto(Enlace enlace){
-	//CALCULA EL COSTO TOTAL DEL ENLACE. EL COSTO DE LOS EVENTOS SON UN FACTOR DE TIEMPO DE DEMORA.
-	//Y EL COSTO DEL ENLACE ES EL TIEMPO PROMEDIO QUE LE LLEVA AL AGENTE DE RECORRER UNA CUADRA.
+	//CALCULA EL COSTO TOTAL DEL ENLACE. EL COSTO DE LOS EVENTOS SON UN FACTOR DE COSTO EXTRA.
+	//Y EL COSTO DEL ENLACE LA DISTANCIA EN METROS DE UNA CUADRA.
 
 		double costo = enlace.getCosto();
 	
@@ -122,11 +122,12 @@ public class GestorEnlace {
 		}
 		else{
 			if(CarAgentState.getModalidadSolucion().equalsIgnoreCase("Mas barato")){
-				//La idea es que el avanzar no cueste osea que retorne 0 pero no funcionaba, el minimo numero que le gustó fue 5
+				//La idea es que el avanzar no cueste nada, pero en uniforme si el costo sería 0 de avanzar siempre eligiría esta
+				//acción y nunca intentaría comprar. Por lo que hay que usar amplitud aquí
 				return new Double(0.0);
 				
 			}else{
-				//MODALIDAD "AUTOMOVIL". SI SE AGREGAN MAS MODALIDADES SE DEBE AGREGAR SENTENCIAS IF-ELSE
+				//MODALIDAD "AUTOMOVIL".
 				//Suponiendo que un auto hace 11[km/litro] entonces por metro consume 0.0000909091 [litro/m]
 		    	//Suponiendo que la nafta está $50 el litro, entonces: el costo por metro de nafta seria: $0.0045454545
 				//Entra en un bucle con un costo tan chiquito por eso dejo 0.45454545

@@ -88,6 +88,8 @@ public class Comprar_producto extends SearchAction {
 	        		return environmentState;
 	        	}
 	        }
+	       Grafo grafo = new Grafo();
+	       grafo.setSelectedAction("Comprar " + this.productoComprar);   
         }
 
        return null;
