@@ -55,12 +55,6 @@ public class Mapa extends MapView{
 					map.setCenter(listaPuntos[0]);
 					map.setZoom(15);
 					
-					InfoWindow windowPosInicial = new InfoWindow(map);
-					InfoWindow windowPosFinal = new InfoWindow(map);
-					InfoWindow windowNegocio = new InfoWindow(map);
-					InfoWindow windowCongestion = new InfoWindow(map);
-					InfoWindow windowCorteCalle = new InfoWindow(map);
-					InfoWindow windowEventoSocial = new InfoWindow(map);
 					InfoWindow window;
 					
 					Polyline linea = new Polyline(map);
