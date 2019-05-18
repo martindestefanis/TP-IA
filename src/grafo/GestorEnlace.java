@@ -124,8 +124,10 @@ public class GestorEnlace {
 			if(CarAgentState.getModalidadSolucion().equalsIgnoreCase("Mas barato")){
 				//La idea es que el avanzar no cueste nada, pero en uniforme si el costo sería 0 de avanzar siempre eligiría esta
 				//acción y nunca intentaría comprar. Por lo que hay que usar amplitud aquí
+				if(enlace.getEventos().containsKey(CarAgentPerception.CONGESTION)){
+					costo = costo + costo*(enlace.getEventos().get(CarAgentPerception.CONGESTION)/100);
+				}
 				return new Double(0.0);
-				
 			}else{
 				//MODALIDAD "AUTOMOVIL".
 				//Suponiendo que un auto hace 11[km/litro] entonces por metro consume 0.0000909091 [litro/m]

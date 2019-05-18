@@ -1,9 +1,5 @@
 Nombre;Esquina1;Esquina2;Producto;Precio;Abierto
-Alvear;Ricardo Aldao y Tacuari;Ricardo Aldao y Piedras;Huevos;20;true
-Alvear;Ricardo Aldao y Tacuari;Ricardo Aldao y Piedras;Café;20;true
-Alvear;Ricardo Aldao y Tacuari;Ricardo Aldao y Piedras;Maní;20;true
-Alvear;Ricardo Aldao y Tacuari;Ricardo Aldao y Piedras;Leche;60;true
-Kilbel;Hernandarias y Cngo. Echague;Hernandarias y Patricio Cullen;Leche;50;true
-Kilbel;Hernandarias y Cngo. Echague;Hernandarias y Patricio Cullen;Huevos;10;true
-Kilbel;Hernandarias y Cngo. Echague;Hernandarias y Patricio Cullen;Maní;10;true
-Kilbel;Hernandarias y Cngo. Echague;Hernandarias y Patricio Cullen;Café;500;true
+Alvear;Ricardo Aldao y Tacuari;Ricardo Aldao y Piedras;Huevos;1000;true
+Alvear;Ricardo Aldao y Tacuari;Ricardo Aldao y Piedras;Café;100;true
+Kilbel;Hernandarias y Cngo. Echague;Hernandarias y Patricio Cullen;Huevos;20;true
+Kilbel;Hernandarias y Cngo. Echague;Hernandarias y Patricio Cullen;Café;1000;true
