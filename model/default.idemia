@@ -7,18 +7,19 @@
     </EnvironmentState>
   </Environment>
   <Agent name="CarAgent">
-    <Strategy xsi:type="idemia:Search" searchStrategy="AStarSearch"/>
+    <Strategy xsi:type="idemia:Search" searchStrategy="UniformCostSearch"/>
     <Goal name="CarGoal" value=" ProductosComprar.isEmpty()==true"/>
-    <AgentState name="CarState">
-      <DataStructure name="posicionInicial" type="Other"/>
-      <DataStructure name="mundo" type="Other"/>
+    <AgentState name="CarAgent State">
+      <DataStructure name="modalidad" type="String"/>
       <DataStructure name="productosComprar" type="Other"/>
-      <DataStructure name="posicionActual" type="Other"/>
       <DataStructure name="productosComprados" type="Other"/>
+      <DataStructure name="esquinasVisitadas" type="Other"/>
+      <DataStructure name="mundo" type="Other"/>
     </AgentState>
   </Agent>
   <Actions execute_by="//@Agent" executed_on="//@Environment" name="Comprar_producto"/>
   <Actions execute_by="//@Agent" executed_on="//@Environment" name="Avanzar"/>
   <Perceptions perceived_on="//@Environment" perceived_by="//@Agent" name="cortes_calles"/>
   <Perceptions perceived_on="//@Environment" perceived_by="//@Agent" name="congestion_transito"/>
+  <Perceptions perceived_on="//@Environment" perceived_by="//@Agent" name="evento_social"/>
 </idemia:AgentModel>
