@@ -52,7 +52,7 @@ public class Grafo {
 		GestorNodo gestorNodo = new GestorNodo();
 	
 		//DIRECTORIO DEL FICHERO Y DELIMITADOR DE LECTURA
-	    String csvEnlaces = "..\\TP-IA\\src\\grafo\\Enlaces.csv";
+	    String csvEnlaces = "..\\TP-IA\\src\\grafo\\Enlaces - copia.csv";
 	    String delimitador = ";";
 		ArrayList<Csv> registrosLeidos = null;
 	    Csv fila = new Csv();

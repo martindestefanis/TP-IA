@@ -1,7 +1,17 @@
 package frsf.cidisi.exercise.car.search;
 
+import java.awt.BorderLayout;
+import java.awt.Label;
 import java.util.ArrayList;
 import java.util.Vector;
+
+import javax.swing.JFrame;
+import javax.swing.JPanel;
+import javax.swing.WindowConstants;
+
+import pantalla.Mapa;
+
+import com.teamdev.jxmaps.MapViewOptions;
 
 import frsf.cidisi.faia.agent.Perception;
 import frsf.cidisi.faia.agent.search.SearchBasedAgentState;
@@ -32,7 +42,7 @@ public class CarAgentState extends SearchBasedAgentState {
     private ArrayList<Nodo> esquinasVisitadas = new ArrayList<Nodo>();
     
     private static ArrayList<Nodo> mundo = grafo.iniciarMundo();
-	
+	private int iteracion = 0;
 
     public CarAgentState() {
     
@@ -87,7 +97,19 @@ public class CarAgentState extends SearchBasedAgentState {
     			}
     		}
     	}
-   
+    	
+    	JFrame pantallaMapa = new JFrame("Iteracion " + iteracion);
+        MapViewOptions options = new MapViewOptions();
+        options.importPlaces();
+        options.setApiKey("AIzaSyDXeR9Z3IqVz25_JKRdKjT7tLKXttLgnj4");
+        Mapa mapa = new Mapa(options,esquinasVisitadas,mundo);
+        pantallaMapa.setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
+        pantallaMapa.add(mapa, BorderLayout.CENTER);
+        pantallaMapa.setSize(700, 500);
+        pantallaMapa.setLocationRelativeTo(null);
+        pantallaMapa.setVisible(true);
+      	iteracion++;
+       	
     	System.out.println("\t\t\t\t------- MUNDO AGENTE ----------");
     	
     	System.out.println("\t\t\t\t------- Eventos percibidos --------");
