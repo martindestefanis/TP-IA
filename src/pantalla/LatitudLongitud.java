@@ -23,7 +23,7 @@ import com.google.gson.internal.LinkedTreeMap;
 public class LatitudLongitud{
 	
 	public void escribirCoordenadas(){
-		String path = "..\\TP-IA\\src\\grafo\\Enlaces.csv";
+		String path = "..\\TP-IA\\src\\grafo\\termina.csv";
 		String delimitador = ";";
 		
 		String nodoOrigenLeido;

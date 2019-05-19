@@ -28,7 +28,7 @@ nodo9[label="{EO: 9|cost: 136.36363500000002|A: Avanzar [nodoDestino=J. P. Lopez
 nodo15[label="{EO: 15|cost: 181.81818|A: Avanzar [nodoDestino=J. P. Lopez y Antonia Godoy, CostoOperacion=45.454545]|Posicion:\nJ.\nP.\nLopez\ny\nPiedras}"]
 
 nodo9 -> nodo15;
-nodo16[label="{EO: 16|cost: 165.68181652500002|A: Avanzar [nodoDestino=Pje. Pujato y Piedras, CostoOperacion=29.318181525]|Posicion:\nJ.\nP.\nLopez\ny\nPiedras}"]
+nodo16[label="{EO: 16|cost: 159.09090750000001|A: Avanzar [nodoDestino=Pje. Pujato y Piedras, CostoOperacion=22.7272725]|Posicion:\nJ.\nP.\nLopez\ny\nPiedras}"]
 
 nodo9 -> nodo16;
 
