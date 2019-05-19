@@ -121,25 +121,17 @@ public class GestorEnlace {
 			
 		}
 		else{
-			if(CarAgentState.getModalidadSolucion().equalsIgnoreCase("Mas barato")){
-				//La idea es que el avanzar no cueste nada, pero en uniforme si el costo sería 0 de avanzar siempre eligiría esta
-				//acción y nunca intentaría comprar. Por lo que hay que usar amplitud aquí
-				if(enlace.getEventos().containsKey(CarAgentPerception.CONGESTION)){
-					costo = costo + costo*(enlace.getEventos().get(CarAgentPerception.CONGESTION)/100);
-				}
-				return new Double(0.0);
-			}else{
-				//MODALIDAD "AUTOMOVIL".
-				//Suponiendo que un auto hace 11[km/litro] entonces por metro consume 0.0000909091 [litro/m]
-		    	//Suponiendo que la nafta está $50 el litro, entonces: el costo por metro de nafta seria: $0.0045454545
-				//Entra en un bucle con un costo tan chiquito por eso dejo 0.45454545
-				costo= costo*0.45454545;
-				if(enlace.getEventos().containsKey(CarAgentPerception.CONGESTION)){
-					costo = costo + costo*(enlace.getEventos().get(CarAgentPerception.CONGESTION)/100);
-				}
-				return costo;
-			}
+			//MODALIDAD "AUTOMOVIL".
+			//Suponiendo que un auto hace 11[km/litro] entonces por metro consume 0.0000909091 [litro/m]
+	    	//Suponiendo que la nafta está $50 el litro, entonces: el costo por metro de nafta seria: $0.0045454545
+			//Entra en un bucle con un costo tan chiquito por eso dejo 0.45454545
+			costo= costo*0.45454545;
+			if(enlace.getEventos().containsKey(CarAgentPerception.CONGESTION)){
+
+				costo = costo + costo*(enlace.getEventos().get(CarAgentPerception.CONGESTION)/100);
 			
+			}
+			return costo;			
 		}
 		
 	}

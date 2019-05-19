@@ -50,7 +50,7 @@ public class CarAgentState extends SearchBasedAgentState{
     
     private static ArrayList<Nodo> mundo = grafo.iniciarMundo();
 	private int iteracion = 0;
-
+	private ArrayList<JFrame> listaMapas = new ArrayList<JFrame>();
     public CarAgentState() {
     
     	//TODO: Complete Method
@@ -95,6 +95,7 @@ public class CarAgentState extends SearchBasedAgentState{
     		for(int j=0; j<mundo.get(i).getEnlaces().size();j++){
     			for(int k=0; k< p1.getSensorEnlaces().size(); k++){
     				if(mundo.get(i).getEnlaces().get(j).getNombre().equalsIgnoreCase(p1.getSensorEnlaces().get(k).getNombre())){
+    					
     					mundo.get(i).getEnlaces().get(j).setEventos(p1.getSensorEnlaces().get(k).getEventos());
     					if(!p1.getSensorEnlaces().get(k).isDisponible()){
     						mundo.get(i).getEnlaces().get(j).setDisponible(false);
@@ -128,7 +129,7 @@ public class CarAgentState extends SearchBasedAgentState{
         			}
     		}	
     	}
-    	generarMapaIteración();
+    	//generarMapaIteración();
     }
 
     /**
@@ -139,7 +140,6 @@ public class CarAgentState extends SearchBasedAgentState{
         //LA MODALIDAD PUEDE SER O "A PIE" O EN "AUTOMOVIL"
     	//modalidadSolucion = "Bicicleta";
     	modalidadSolucion = "Automovil";
-    	//modalidadSolucion = "Mas barato";
 		
 		//SETEO TODOS LOS ENLACES CON PERCEPCIONES EMPTY
    		for(int i=0; i<mundo.size(); i++){
@@ -147,13 +147,14 @@ public class CarAgentState extends SearchBasedAgentState{
 				mundo.get(i).getEnlaces().get(j).setEventos(CarAgentPerception.EMPTY_PERCEPTION,0);
 			}
 		}
-		
+   		
 		productosComprar.add("Café");
 		productosComprar.add("Huevos");
-	//	productosComprar.add("Leche");
-	//	productosComprar.add("Maní");
+		//productosComprar.add("Leche");
+		//productosComprar.add("Maní");
 		posicionActual = new Posicion(null,GestorNodo.obtenerNodo(mundo,"Juan Castelli y Antonia Godoy"));
 		esquinasVisitadas.add(GestorNodo.obtenerNodo(mundo, "Juan Castelli y Antonia Godoy"));
+		
     }
 
     /**
@@ -267,7 +268,18 @@ public class CarAgentState extends SearchBasedAgentState{
 		this.esquinasVisitadas.add(esquina);
 	}
 	
+	public ArrayList<JFrame> getListaMapas() {
+		return listaMapas;
+	}
 	
+	public boolean isSeguir() {
+		return seguir;
+	}
+
+	public void setSeguir(boolean seguir) {
+		this.seguir = seguir;
+	}
+
 	public void generarMapaIteración(){
 		final JButton boton = new JButton("Siguiente");
 		boton.setFocusPainted(false);
@@ -316,19 +328,12 @@ public class CarAgentState extends SearchBasedAgentState{
 		toolBar.add(enlacePercepcionAgregada);
 		toolBar.add(boton);
 		
-		pantallaMapa.add(toolBar, BorderLayout.NORTH);
-		pantallaMapa.add(mapa, BorderLayout.CENTER);
+		pantallaMapa.add(mapa, BorderLayout.NORTH);
+		pantallaMapa.add(toolBar, BorderLayout.CENTER);
 		pantallaMapa.setExtendedState(JFrame.MAXIMIZED_BOTH);
-		//pantallaMapa.setSize(1650,1080);
 		pantallaMapa.setLocationRelativeTo(null);
-		pantallaMapa.setVisible(true);
-		
-		
-		while(!seguir){
-		}
+		listaMapas.add(pantallaMapa);
 		iteracion++;
-		pantallaMapa.setVisible(false);
-		seguir=false;
 	}
 	
 	

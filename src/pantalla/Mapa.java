@@ -245,22 +245,5 @@ public class Mapa extends MapView{
 		
 		return latitudLongitud;
 	}
-	
-	
-
-	/*public static void main(String[] args) {
-		// TODO Auto-generated method stub
-		Grafo grafo = new Grafo();
-		ArrayList<Nodo> listaMundo = grafo.iniciarMundo();
-		ArrayList<Nodo> nodosVisitados = new ArrayList<Nodo>();
-		nodosVisitados.add(listaMundo.get(0));
-		nodosVisitados.add(listaMundo.get(1));
-		nodosVisitados.add(listaMundo.get(2));
-		
-		Mapa mapa = new Mapa(nodosVisitados, listaMundo);
-		
-	}*/
-	
-	
 
 }

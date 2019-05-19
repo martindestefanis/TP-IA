@@ -22,4 +22,5 @@
   <Perceptions perceived_on="//@Environment" perceived_by="//@Agent" name="cortes_calles"/>
   <Perceptions perceived_on="//@Environment" perceived_by="//@Agent" name="congestion_transito"/>
   <Perceptions perceived_on="//@Environment" perceived_by="//@Agent" name="evento_social"/>
+  <Perceptions perceived_on="//@Environment" perceived_by="//@Agent" name="negocio_cerrado"/>
 </idemia:AgentModel>

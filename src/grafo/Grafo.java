@@ -398,6 +398,7 @@ public class Grafo {
 		
 		
 	}
+	
 	public String getSelectedAction() {
 		return selectedAction;
 	}
@@ -424,6 +425,6 @@ public class Grafo {
 		ABRIR_NEGOCIO,
 		CERRAR_NEGOCIO,
 		//CAMBIAR_PRECIO_PRODUCTO,
-		NADA
+		SIN_CAMBIOS
 	}
 }

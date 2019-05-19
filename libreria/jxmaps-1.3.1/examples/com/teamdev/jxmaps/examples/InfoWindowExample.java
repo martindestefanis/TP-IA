@@ -95,7 +95,7 @@ public class InfoWindowExample extends MapView {
 
     }
 
-    public static void main(String[] args) {
+    public static int main(String[] args) {
         final InfoWindowExample sample = new InfoWindowExample();
 
         JFrame frame = new JFrame("Info window");

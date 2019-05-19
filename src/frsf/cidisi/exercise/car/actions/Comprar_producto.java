@@ -106,14 +106,7 @@ public class Comprar_producto extends SearchAction {
     		return new Double(5.0);
     		
     	}else{
-    		if(CarAgentState.getModalidadSolucion().equalsIgnoreCase("Mas barato")){
-    			
-    			return new Double(this.costoProducto);
-    			
-    		}else{
-    			return new Double(this.costoProducto);
-    		}
-    		
+			return new Double(this.costoProducto);
     	}
     }
 
