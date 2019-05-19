@@ -1,8 +1,8 @@
 digraph g {
 node [shape = Mrecord];
 nodo0[label="{EO: 0|cost: 0.0|A: null}"]
-nodo1[label="{EO: 1|cost: 1.0|A: Comprar_producto [costoProducto=100.0, productoComprar=Café, CostoOperacion=100.0]}"]
-nodo5[label="{EO: 5|cost: 2.0|A: Comprar_producto [costoProducto=100.0, productoComprar=Café, CostoOperacion=100.0]|Posicion:\nRicardo\nAldao\ny\nPiedras}"]
+nodo1[label="{EO: 1|cost: 1.0|A: Comprar_producto [costoProducto=100.0, productoComprar=CafÃ©, CostoOperacion=100.0]}"]
+nodo5[label="{EO: 5|cost: 2.0|A: Comprar_producto [costoProducto=100.0, productoComprar=CafÃ©, CostoOperacion=100.0]|Posicion:\nRicardo\nAldao\ny\nPiedras}"]
 
 nodo1 -> nodo5;
 nodo6[label="{EO: 6|cost: 2.0|A: Comprar_producto [costoProducto=1000.0, productoComprar=Huevos, CostoOperacion=1000.0]|Posicion:\nRicardo\nAldao\ny\nPiedras}"]

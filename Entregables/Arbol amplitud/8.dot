@@ -1,9 +1,9 @@
 digraph g {
 node [shape = Mrecord];
 nodo0[label="{EO: 0|cost: 0.0|A: null}"]
-nodo1[label="{EO: 1|cost: 1.0|A: Comprar_producto [costoProducto=100.0, productoComprar=Café, CostoOperacion=100.0]}"]
-nodo5[label="{EO: 5|cost: 2.0|A: Comprar_producto [costoProducto=100.0, productoComprar=Café, CostoOperacion=100.0]|Posicion:\nRicardo\nAldao\ny\nPiedras}"]
-nodo17[label="{EO: 17|cost: 3.0|A: Comprar_producto [costoProducto=100.0, productoComprar=Café, CostoOperacion=100.0]|Posicion:\nRicardo\nAldao\ny\nPiedras}"]
+nodo1[label="{EO: 1|cost: 1.0|A: Comprar_producto [costoProducto=100.0, productoComprar=CafÃ©, CostoOperacion=100.0]}"]
+nodo5[label="{EO: 5|cost: 2.0|A: Comprar_producto [costoProducto=100.0, productoComprar=CafÃ©, CostoOperacion=100.0]|Posicion:\nRicardo\nAldao\ny\nPiedras}"]
+nodo17[label="{EO: 17|cost: 3.0|A: Comprar_producto [costoProducto=100.0, productoComprar=CafÃ©, CostoOperacion=100.0]|Posicion:\nRicardo\nAldao\ny\nPiedras}"]
 
 nodo5 -> nodo17;
 nodo18[label="{EO: 18|cost: 3.0|A: Comprar_producto [costoProducto=1000.0, productoComprar=Huevos, CostoOperacion=1000.0]|Posicion:\nRicardo\nAldao\ny\nPiedras}"]
@@ -29,7 +29,7 @@ nodo1 -> nodo8;
 
 nodo0 -> nodo1;
 nodo2[label="{EO: 2|cost: 1.0|A: Comprar_producto [costoProducto=1000.0, productoComprar=Huevos, CostoOperacion=1000.0]}"]
-nodo9[label="{EO: 9|cost: 2.0|A: Comprar_producto [costoProducto=100.0, productoComprar=Café, CostoOperacion=100.0]|Posicion:\nRicardo\nAldao\ny\nPiedras}"]
+nodo9[label="{EO: 9|cost: 2.0|A: Comprar_producto [costoProducto=100.0, productoComprar=CafÃ©, CostoOperacion=100.0]|Posicion:\nRicardo\nAldao\ny\nPiedras}"]
 
 nodo2 -> nodo9;
 nodo10[label="{EO: 10|cost: 2.0|A: Comprar_producto [costoProducto=1000.0, productoComprar=Huevos, CostoOperacion=1000.0]|Posicion:\nRicardo\nAldao\ny\nPiedras}"]

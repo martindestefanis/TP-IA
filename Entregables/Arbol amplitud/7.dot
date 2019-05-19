@@ -1,7 +1,7 @@
 digraph g {
 node [shape = Mrecord];
 nodo0[label="{EO: 0|cost: 0.0|A: null}"]
-nodo1[label="{EO: 1|cost: 1.0|A: Avanzar [nodoDestino=Pedro de Vega y Tacuari, CostoOperacion=45.454545]}"]
+nodo1[label="{EO: 1|cost: 1.0|A: Avanzar [nodoDestino=Pedro de Vega y Tacuari, CostoOperacion=88.63636275]}"]
 nodo3[label="{EO: 3|cost: 2.0|A: Avanzar [nodoDestino=Pedro de Vega y Velez Sarsfield, CostoOperacion=45.454545]|Posicion:\nPedro\nde\nVega\ny\nTacuari}"]
 nodo8[label="{EO: 8|cost: 3.0|A: Avanzar [nodoDestino=Ricardo Aldao y Velez Sarsfield, CostoOperacion=45.454545]|Posicion:\nPedro\nde\nVega\ny\nVelez\nSarsfield}"]
 nodo21[label="{EO: 21|cost: 4.0|A: Avanzar [nodoDestino=Angel Cassanello y Velez Sarsfield, CostoOperacion=45.454545]|Posicion:\nRicardo\nAldao\ny\nVelez\nSarsfield}"]
