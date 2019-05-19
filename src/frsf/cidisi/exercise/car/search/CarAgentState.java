@@ -104,64 +104,8 @@ public class CarAgentState extends SearchBasedAgentState{
     			}
     		}
     	}
-		final JButton boton = new JButton("Siguiente");
-		boton.setFocusPainted(false);
-		boton.setForeground(Color.BLACK);
-		boton.setBackground(Color.WHITE);
-		Border line = new LineBorder(Color.BLACK);
-		Border margin = new EmptyBorder(5, 15, 5, 15);
-		Border compound = new CompoundBorder(line, margin);
-		boton.setBorder(compound);
-		boton.addActionListener(new ActionListener() {
-			public void actionPerformed(ActionEvent e) {
-			    	  if(e.getSource()==boton){
-			  			seguir = true;
-			  		}
-			     }
-			});
-		JPanel toolBar = new JPanel();
-		toolBar.setBackground(Color.WHITE);
-		toolBar.setSize(100,100);
-		 
-		JLabel accion = new JLabel("Acción: " + grafo.getSelectedAction() + " || ");
-		accion.setFont(new java.awt.Font("Tahoma", Font.BOLD, 15));
-		accion.setForeground(new java.awt.Color(0, 0, 0));
-		JLabel prodAComprar = new JLabel("Productos a comprar: " + this.getproductosComprar().toString() + " || "); 
-		prodAComprar.setFont(new java.awt.Font("Tahoma", Font.BOLD, 15));
-		prodAComprar.setForeground(new java.awt.Color(0, 0, 0));
-		JLabel eventoAgregado = new JLabel("Evento agregado: " + grafo.getEventoAgregado());
-		eventoAgregado.setFont(new java.awt.Font("Tahoma", Font.BOLD, 15));
-		eventoAgregado.setForeground(new java.awt.Color(0, 0, 0));
-		JLabel enlacePercepcionAgregada = new JLabel(" en el enlace: " + grafo.getEnlacePercepcionAgregada()); 
-		enlacePercepcionAgregada.setFont(new java.awt.Font("Tahoma", Font.BOLD, 15));
-		enlacePercepcionAgregada.setForeground(new java.awt.Color(0, 0, 0));
-		   
-		JFrame pantallaMapa = new JFrame("Iteracion " + iteracion);
-		MapViewOptions options = new MapViewOptions();
-		options.importPlaces();
-		options.setApiKey("AIzaSyDXeR9Z3IqVz25_JKRdKjT7tLKXttLgnj4");
-		Mapa mapa = new Mapa(options,esquinasVisitadas,mundo);
-		
-		toolBar.add(prodAComprar);
-		toolBar.add(accion);
-		toolBar.add(eventoAgregado);
-		toolBar.add(eventoAgregado);
-		toolBar.add(enlacePercepcionAgregada);
-		toolBar.add(boton);
-		
-		pantallaMapa.add(toolBar, BorderLayout.NORTH);
-		pantallaMapa.add(mapa, BorderLayout.CENTER);
-		pantallaMapa.setExtendedState(JFrame.MAXIMIZED_BOTH);
-		//pantallaMapa.setSize(1650,1080);
-		pantallaMapa.setLocationRelativeTo(null);
-		pantallaMapa.setVisible(true);
-		
-		
-		while(!seguir){
-		}
-		iteracion++;
-		pantallaMapa.setVisible(false);
-		seguir=false;
+    	
+	
 	    
        	
     	System.out.println("\t\t\t\t------- MUNDO AGENTE ----------");
@@ -184,6 +128,7 @@ public class CarAgentState extends SearchBasedAgentState{
         			}
     		}	
     	}
+    	generarMapaIteración();
     }
 
     /**
@@ -321,7 +266,72 @@ public class CarAgentState extends SearchBasedAgentState{
 	public void setEsquinasVisitadas(Nodo esquina) {
 		this.esquinasVisitadas.add(esquina);
 	}
-     
+	
+	
+	public void generarMapaIteración(){
+		final JButton boton = new JButton("Siguiente");
+		boton.setFocusPainted(false);
+		boton.setForeground(Color.BLACK);
+		boton.setBackground(Color.WHITE);
+		Border line = new LineBorder(Color.BLACK);
+		Border margin = new EmptyBorder(5, 15, 5, 15);
+		Border compound = new CompoundBorder(line, margin);
+		boton.setBorder(compound);
+		boton.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+			    	  if(e.getSource()==boton){
+			  			seguir = true;
+			  		}
+			     }
+			});
+		JPanel toolBar = new JPanel();
+		toolBar.setBackground(Color.WHITE);
+		toolBar.setSize(500,500);
+		 
+		JLabel prodAComprar = new JLabel("Productos a comprar: " + this.getproductosComprar().toString() + " || "); 
+		prodAComprar.setFont(new java.awt.Font("Tahoma", Font.BOLD, 15));
+		prodAComprar.setForeground(new java.awt.Color(0, 0, 0));
+		JLabel accion = new JLabel("Acción: " + grafo.getSelectedAction() + " || ");
+		accion.setFont(new java.awt.Font("Tahoma", Font.BOLD, 15));
+		accion.setForeground(new java.awt.Color(0, 0, 0));
+		accion.setBounds(675, 50, 300, 20);
+		JLabel eventoAgregado = new JLabel("Evento agregado: " + grafo.getEventoAgregado());
+		eventoAgregado.setFont(new java.awt.Font("Tahoma", Font.BOLD, 15));
+		eventoAgregado.setForeground(new java.awt.Color(0, 0, 0));
+		JLabel enlacePercepcionAgregada = new JLabel(" en el enlace: " + grafo.getEnlacePercepcionAgregada()); 
+		enlacePercepcionAgregada.setFont(new java.awt.Font("Tahoma", Font.BOLD, 15));
+		enlacePercepcionAgregada.setForeground(new java.awt.Color(0, 0, 0));
+		   
+		JFrame pantallaMapa = new JFrame("Iteracion " + iteracion);
+		pantallaMapa.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		MapViewOptions options = new MapViewOptions();
+		options.importPlaces();
+		options.setApiKey("AIzaSyDXeR9Z3IqVz25_JKRdKjT7tLKXttLgnj4");
+		Mapa mapa = new Mapa(options,esquinasVisitadas,mundo);
+		
+		toolBar.add(prodAComprar);
+		toolBar.add(accion);
+		toolBar.add(eventoAgregado);
+		toolBar.add(eventoAgregado);
+		toolBar.add(enlacePercepcionAgregada);
+		toolBar.add(boton);
+		
+		pantallaMapa.add(toolBar, BorderLayout.NORTH);
+		pantallaMapa.add(mapa, BorderLayout.CENTER);
+		pantallaMapa.setExtendedState(JFrame.MAXIMIZED_BOTH);
+		//pantallaMapa.setSize(1650,1080);
+		pantallaMapa.setLocationRelativeTo(null);
+		pantallaMapa.setVisible(true);
+		
+		
+		while(!seguir){
+		}
+		iteracion++;
+		pantallaMapa.setVisible(false);
+		seguir=false;
+	}
+	
+	
      
 }
 
