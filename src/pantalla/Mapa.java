@@ -51,7 +51,7 @@ public class Mapa extends MapView{
 					map.setOptions(mapOptions);
 					
 					map.setCenter(listaPuntos[0]);
-					map.setZoom(15);
+					map.setZoom(16);
 					
 					InfoWindow window;
 					

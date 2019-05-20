@@ -2,12 +2,15 @@ package frsf.cidisi.exercise.car.search;
 
 import java.awt.BorderLayout;
 import java.awt.Color;
+import java.awt.Component;
 import java.awt.Font;
 import java.awt.Label;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.util.ArrayList;
 import java.util.Vector;
+
+import javax.swing.BoxLayout;
 import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
@@ -37,6 +40,8 @@ public class CarAgentState extends SearchBasedAgentState{
     //Posicion posicionInicial;
     Posicion posicionActual;
     private boolean seguir =false;
+    private boolean atras = false;
+    private boolean esSolucionFinal = false;
 
     private static String modalidadSolucion;
       
@@ -51,6 +56,7 @@ public class CarAgentState extends SearchBasedAgentState{
     private static ArrayList<Nodo> mundo = grafo.iniciarMundo();
 	private int iteracion = 0;
 	private ArrayList<JFrame> listaMapas = new ArrayList<JFrame>();
+
     public CarAgentState() {
     
     	//TODO: Complete Method
@@ -106,9 +112,6 @@ public class CarAgentState extends SearchBasedAgentState{
     		}
     	}
     	
-	
-	    
-       	
     	System.out.println("\t\t\t\t------- MUNDO AGENTE ----------");
     	
     	System.out.println("\t\t\t\t------- Eventos percibidos --------");
@@ -129,7 +132,7 @@ public class CarAgentState extends SearchBasedAgentState{
         			}
     		}	
     	}
-    	//generarMapaIteración();
+    	generarMapaIteración();
     }
 
     /**
@@ -149,7 +152,7 @@ public class CarAgentState extends SearchBasedAgentState{
 		}
    		
 		productosComprar.add("Café");
-		productosComprar.add("Huevos");
+		//productosComprar.add("Huevos");
 		//productosComprar.add("Leche");
 		//productosComprar.add("Maní");
 		posicionActual = new Posicion(null,GestorNodo.obtenerNodo(mundo,"Juan Castelli y Antonia Godoy"));
@@ -279,60 +282,161 @@ public class CarAgentState extends SearchBasedAgentState{
 	public void setSeguir(boolean seguir) {
 		this.seguir = seguir;
 	}
+	
+	public boolean isAtras() {
+		return atras;
+	}
+
+	public void setAtras(boolean atras) {
+		this.atras = atras;
+	}
+	
+	public boolean isEsSolucionFinal() {
+		return esSolucionFinal;
+	}
+
+	public void setEsSolucionFinal(boolean esSolucionFinal) {
+		this.esSolucionFinal = esSolucionFinal;
+	}
+	
+	public static Grafo getGrafo() {
+		return grafo;
+	}
 
 	public void generarMapaIteración(){
-		final JButton boton = new JButton("Siguiente");
-		boton.setFocusPainted(false);
-		boton.setForeground(Color.BLACK);
-		boton.setBackground(Color.WHITE);
+		
+		JPanel info = new JPanel();
+        info.setLayout(new BoxLayout(info,BoxLayout.Y_AXIS));
+		
+        JLabel tituloEventoAleatorio = new JLabel();
+        tituloEventoAleatorio.setText("------------------------------------ Evento Aleatorio ------------------------------------");
+       	tituloEventoAleatorio.setFont(new java.awt.Font("Tahoma", Font.BOLD, 12));
+        JLabel eventoAleatorio = new JLabel();
+        eventoAleatorio.setText(grafo.getEventoAgregado() + " ------> Calle: " + grafo.getEnlacePercepcionAgregada());
+        
+        JLabel tituloEventosAmbiente = new JLabel();
+        tituloEventosAmbiente.setText("------------------------------------ Eventos Ambiente ------------------------------------");
+        tituloEventosAmbiente.setFont(new java.awt.Font("Tahoma", Font.BOLD, 12));
+
+        JLabel tituloEventosAgente = new JLabel();
+        tituloEventosAgente.setText("------------------------------------ Eventos Agente ------------------------------------");
+        tituloEventosAgente.setFont(new java.awt.Font("Tahoma", Font.BOLD, 12));
+        
+        JLabel tituloAccionRealizada = new JLabel();
+        tituloAccionRealizada.setText("------------------------------------ Accion Realizada ------------------------------------");
+        tituloAccionRealizada.setFont(new java.awt.Font("Tahoma", Font.BOLD, 12));
+        JLabel accionRealizada = new JLabel(grafo.getSelectedAction());
+        
+        JLabel tituloProductosAComprar = new JLabel();
+        tituloProductosAComprar.setText("------------------------------------ Productos a Comprar ------------------------------------");
+        tituloProductosAComprar.setFont(new java.awt.Font("Tahoma", Font.BOLD, 12));
+        JLabel productosAComprar = new JLabel();
+        productosAComprar.setText(this.getproductosComprar().toString());
+        
+        info.add(tituloEventoAleatorio);
+        info.add(eventoAleatorio);
+        info.add(tituloEventosAmbiente);
+        for(int i=0; i<mundo.size(); i++){
+    		for(int k = 0; k<mundo.get(i).getEnlaces().size(); k++){
+    				for(String key : mundo.get(i).getEnlaces().get(k).getEventos().keySet()){
+    					if(!key.equalsIgnoreCase("Sin percepcion")){
+    						JLabel evento = new JLabel();
+    						evento.setText(key +"----> Calle: " + mundo.get(i).getEnlaces().get(k).getNombre());
+    						info.add(evento);
+    					}else{
+    						if(!mundo.get(i).getEnlaces().get(k).isDisponible()){
+	    						JLabel evento = new JLabel();
+	    						evento.setText("Corte de Calle ----> Calle: " + mundo.get(i).getEnlaces().get(k).getNombre());
+	    						info.add(evento);
+            				}
+    					}
+        				
+        			}
+    		}	
+    	}
+        info.add(tituloEventosAgente);
+        for(int i=0; i<mundo.size(); i++){
+    		for(int k = 0; k<mundo.get(i).getEnlaces().size(); k++){
+    				for(String key : mundo.get(i).getEnlaces().get(k).getEventos().keySet()){
+    					if(!key.equalsIgnoreCase("Sin percepcion")){
+    						JLabel eventoA = new JLabel();
+    						eventoA.setText(key +"----> Calle: " + mundo.get(i).getEnlaces().get(k).getNombre());
+    						info.add(eventoA);
+    					}else{
+    						if(!mundo.get(i).getEnlaces().get(k).isDisponible()){
+	    						JLabel eventoA = new JLabel();
+	    						eventoA.setText("Corte de Calle ----> Calle: " + mundo.get(i).getEnlaces().get(k).getNombre());
+	    						info.add(eventoA);
+            				}
+    					}
+        				
+        			}
+    		}	
+    	}
+        info.add(tituloAccionRealizada);
+        info.add(accionRealizada);
+        info.add(tituloProductosAComprar);
+        info.add(productosAComprar);
+		
+		JPanel botones = new JPanel();
+		botones.setLayout(new BoxLayout(botones,BoxLayout.X_AXIS));
+		
+		final JButton botonSiguiente = new JButton("Siguiente");
+		botonSiguiente.setFocusPainted(false);
+		botonSiguiente.setForeground(Color.BLACK);
+		botonSiguiente.setBackground(Color.WHITE);
 		Border line = new LineBorder(Color.BLACK);
 		Border margin = new EmptyBorder(5, 15, 5, 15);
 		Border compound = new CompoundBorder(line, margin);
-		boton.setBorder(compound);
-		boton.addActionListener(new ActionListener() {
+		botonSiguiente.setBorder(compound);
+		botonSiguiente.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-			    	  if(e.getSource()==boton){
+			    	  if(e.getSource()==botonSiguiente){
 			  			seguir = true;
 			  		}
 			     }
 			});
-		JPanel toolBar = new JPanel();
-		toolBar.setBackground(Color.WHITE);
-		toolBar.setSize(500,500);
-		 
-		JLabel prodAComprar = new JLabel("Productos a comprar: " + this.getproductosComprar().toString() + " || "); 
-		prodAComprar.setFont(new java.awt.Font("Tahoma", Font.BOLD, 15));
-		prodAComprar.setForeground(new java.awt.Color(0, 0, 0));
-		JLabel accion = new JLabel("Acción: " + grafo.getSelectedAction() + " || ");
-		accion.setFont(new java.awt.Font("Tahoma", Font.BOLD, 15));
-		accion.setForeground(new java.awt.Color(0, 0, 0));
-		accion.setBounds(675, 50, 300, 20);
-		JLabel eventoAgregado = new JLabel("Evento agregado: " + grafo.getEventoAgregado());
-		eventoAgregado.setFont(new java.awt.Font("Tahoma", Font.BOLD, 15));
-		eventoAgregado.setForeground(new java.awt.Color(0, 0, 0));
-		JLabel enlacePercepcionAgregada = new JLabel(" en el enlace: " + grafo.getEnlacePercepcionAgregada()); 
-		enlacePercepcionAgregada.setFont(new java.awt.Font("Tahoma", Font.BOLD, 15));
-		enlacePercepcionAgregada.setForeground(new java.awt.Color(0, 0, 0));
-		   
+		
+		final JButton botonAtras = new JButton("Atras");
+		botonAtras.setFocusPainted(false);
+		botonAtras.setForeground(Color.BLACK);
+		botonAtras.setBackground(Color.WHITE);
+		botonAtras.setBorder(compound);
+		
+		botonAtras.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+			    	  if(e.getSource()==botonAtras){
+			  			atras = true;
+			  		}
+			     }
+			});
+		
+		botones.add(botonSiguiente);
+		botones.add(botonAtras);
+		info.add(botones);
 		JFrame pantallaMapa = new JFrame("Iteracion " + iteracion);
+		
 		pantallaMapa.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		MapViewOptions options = new MapViewOptions();
 		options.importPlaces();
 		options.setApiKey("AIzaSyDXeR9Z3IqVz25_JKRdKjT7tLKXttLgnj4");
 		Mapa mapa = new Mapa(options,esquinasVisitadas,mundo);
 		
-		toolBar.add(prodAComprar);
-		toolBar.add(accion);
-		toolBar.add(eventoAgregado);
-		toolBar.add(eventoAgregado);
-		toolBar.add(enlacePercepcionAgregada);
-		toolBar.add(boton);
-		
-		pantallaMapa.add(mapa, BorderLayout.NORTH);
-		pantallaMapa.add(toolBar, BorderLayout.CENTER);
-		pantallaMapa.setExtendedState(JFrame.MAXIMIZED_BOTH);
-		pantallaMapa.setLocationRelativeTo(null);
-		listaMapas.add(pantallaMapa);
+		JPanel contenedor = new JPanel();
+	        
+        contenedor.setLayout(new BoxLayout(contenedor, BoxLayout.X_AXIS));
+        
+      	pantallaMapa.setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
+      	
+      	contenedor.add(mapa);
+      	contenedor.add(info);
+      	
+      	pantallaMapa.add(contenedor);
+       	pantallaMapa.setExtendedState(JFrame.MAXIMIZED_BOTH);
+       	pantallaMapa.setLocationRelativeTo(null);
+
+       	listaMapas.add(pantallaMapa);
+
 		iteracion++;
 	}
 	

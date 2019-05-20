@@ -84,12 +84,12 @@ public class Comprar_producto extends SearchAction {
 	            			}
 	            		}	            		
 	            	}
-*/
+*/					Grafo grafo = new Grafo();
+					grafo.setSelectedAction("Comprar " + this.productoComprar);  
 	        		return environmentState;
 	        	}
 	        }
-	       Grafo grafo = new Grafo();
-	       grafo.setSelectedAction("Comprar " + this.productoComprar);   
+	        
         }
 
        return null;

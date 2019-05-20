@@ -375,13 +375,6 @@ public class Grafo {
 						elegirOtraAccion = true;
 					}
 					break;
-				/*case CAMBIAR_PRECIO_PRODUCTO:
-					if(mundo.get(indiceNodoElegido).getEnlaces().get(indiceEnlaceElegido).getNegocios().size() != 0){
-						negocioAleatorio = mundo.get(indiceNodoElegido).getEnlaces().get(indiceEnlaceElegido).getNegocios().get(indiceNegocioElegido);
-						indiceProductoElegido = (int) Math.floor(Math.random() * negocioAleatorio.getProductoPrecio().size());
-						productos = negocioAleatorio.getProductoPrecio().keySet();
-						negocioAleatorio.getProductoPrecio().remove(productos.)
-					}*/
 				default:
 					//CASO EN QUE LA ACCION SELECCIONADA SEA NO MODIFICAR EL MUNDO
 					salir = true;
@@ -395,8 +388,7 @@ public class Grafo {
 		
 		enlacePercepcionAgregada = mundo.get(indiceNodoElegido).getEnlaces().get(indiceEnlaceElegido).getNombre();
 		eventoAgregado = acciones[indiceAccionElegida].toString();
-		
-		
+
 	}
 	
 	public String getSelectedAction() {
