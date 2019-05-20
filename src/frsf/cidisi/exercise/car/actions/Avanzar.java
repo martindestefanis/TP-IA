@@ -49,6 +49,7 @@ public class Avanzar extends SearchAction {
     public EnvironmentState execute(AgentState ast, EnvironmentState est) {
     CityState environmentState = (CityState) est;
        CarAgentState agState = ((CarAgentState) ast);
+       Grafo grafo = new Grafo(); 
        
  
        for(int i=0; i<agState.getPosicionActual().getNodoActual().getEnlaces().size(); i++){
@@ -62,9 +63,9 @@ public class Avanzar extends SearchAction {
         		environmentState.setPosicionAgente(agState.getPosicionActual().getEnlaceRecorrido(),nodoDestino);
         		System.out.println("Posicion Actual: " + agState.getPosicionActual().getNodoActual().getNombre());
         		agState.setEsquinasVisitadas(agState.getPosicionActual().getNodoActual());
-        		Grafo.percepcionesAleatorias(environmentState.getMundo());
+        		grafo.percepcionesAleatorias(environmentState.getMundo());
         		
-/*        		System.out.println("\t\t\t\t------- Eventos Cambiados ambiente --------");
+        		System.out.println("\t\t\t\t------- Eventos Cambiados ambiente --------");
             	for(int j=0; j<environmentState.getMundo().size(); j++){
             		for(int k = 0; k<environmentState.getMundo().get(j).getEnlaces().size(); k++){
             			for(String key : environmentState.getMundo().get(j).getEnlaces().get(k).getEventos().keySet()){
@@ -74,8 +75,18 @@ public class Avanzar extends SearchAction {
             		}
             		
             	}
-    */         	
-            	Grafo grafo = new Grafo();  
+        		System.out.println("\t\t\t\t------- Eventos Cambiados agente --------");
+            	for(int j=0; j<agState.getmundo().size(); j++){
+            		for(int k = 0; k<agState.getmundo().get(j).getEnlaces().size(); k++){
+            			for(String key : agState.getmundo().get(j).getEnlaces().get(k).getEventos().keySet()){
+            				System.out.println(key +
+            		    	"----> Calle: " + agState.getmundo().get(j).getEnlaces().get(k).getNombre());
+            			}
+            		}
+            		
+            	}
+          	
+            	 
             	grafo.setSelectedAction("Avanzar a " + nodoDestino.getNombre());
         		return environmentState;
         	}

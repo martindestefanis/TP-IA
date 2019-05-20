@@ -60,6 +60,7 @@ public class Comprar_producto extends SearchAction {
     public EnvironmentState execute(AgentState ast, EnvironmentState est) {
         CityState environmentState = (CityState) est;
         CarAgentState agState = ((CarAgentState) ast);
+        Grafo grafo = new Grafo(); 
         Negocio negocio = new Negocio();
         if(agState.getPosicionActual().getEnlaceRecorrido() != null){
         	
@@ -73,18 +74,29 @@ public class Comprar_producto extends SearchAction {
 	        		System.out.println(agState.getPosicionActual().getNodoActual().getNombre());
 	        		System.out.println(agState.getProductosComprados().toString());
 	        		System.out.println(costoProducto);
-	        		Grafo.percepcionesAleatorias(environmentState.getMundo());
-/*	        		System.out.println("\t\t\t\t------- Eventos Cambiados ambiente --------");
-	            	
+	        		grafo.percepcionesAleatorias(environmentState.getMundo());
+	        		
+	        		System.out.println("\t\t\t\t------- Eventos Cambiados ambiente --------");
 	            	for(int j=0; j<environmentState.getMundo().size(); j++){
 	            		for(int k = 0; k<environmentState.getMundo().get(j).getEnlaces().size(); k++){
 	            			for(String key : environmentState.getMundo().get(j).getEnlaces().get(k).getEventos().keySet()){
 	            				System.out.println(key +
 	            		    	"----> Calle: " + environmentState.getMundo().get(j).getEnlaces().get(k).getNombre());
 	            			}
-	            		}	            		
+	            		}
+	            		
 	            	}
-*/					Grafo grafo = new Grafo();
+	        		System.out.println("\t\t\t\t------- Eventos Cambiados agente --------");
+	            	for(int j=0; j<agState.getmundo().size(); j++){
+	            		for(int k = 0; k<agState.getmundo().get(j).getEnlaces().size(); k++){
+	            			for(String key : agState.getmundo().get(j).getEnlaces().get(k).getEventos().keySet()){
+	            				System.out.println(key +
+	            		    	"----> Calle: " + agState.getmundo().get(j).getEnlaces().get(k).getNombre());
+	            			}
+	            		}
+	            		
+	            	}
+	            	
 					grafo.setSelectedAction("Comprar " + this.productoComprar);  
 	        		return environmentState;
 	        	}

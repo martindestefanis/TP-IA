@@ -15,9 +15,9 @@ import grafo.Nodo;
 public class CityState extends EnvironmentState {
 	
 	//TODO: Setup Variables
-    private ArrayList<Nodo> mundo = new ArrayList<Nodo>();
+    public static ArrayList<Nodo> mundo = new ArrayList<Nodo>();
     private Posicion posicionAgente;
-    static Grafo grafo = new Grafo();
+    private static Grafo grafo = new Grafo();
 	private CarAgentState agState = new CarAgentState();
     
 	
@@ -25,12 +25,6 @@ public class CityState extends EnvironmentState {
         this.initState();
     }
     
-    public CityState clone() {
-    	CityState aux = new CityState();
-    	aux.mundo = (ArrayList<Nodo>) mundo.clone();
-    	aux.posicionAgente = posicionAgente.Clone();
-        return aux;
-    }
 
     /**
      * This method is used to setup the initial real world.
@@ -40,7 +34,6 @@ public class CityState extends EnvironmentState {
     	
     	//INICIO EL MUNDO DEL AMBIENTE CON LAS CALLES Y NEGOCIOS
     	mundo = grafo.iniciarMundo();
-    	
     	//CARGO LAS PERCEPCIONES EN BASE A LOS EVENTOS LEIDOS
     	cargarPercepciones(mundo);
     	    	
@@ -166,9 +159,8 @@ public class CityState extends EnvironmentState {
 
     @Override
 	public String toString() {
-		return "CityState [agState=" + agState + ", mundo=" + mundo
-				+ ", posicionAgente=" + posicionAgente
-				+ ", getPosicionAgente()=" + getPosicionAgente() + "]";
+		return "CityState [mundo=" + mundo + ", posicionAgente="
+				+ posicionAgente + "]";
 	}
     
     public Posicion getPosicionAgente() {

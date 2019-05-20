@@ -152,7 +152,7 @@ public class CarAgentState extends SearchBasedAgentState{
 		}
    		
 		productosComprar.add("Café");
-		//productosComprar.add("Huevos");
+		productosComprar.add("Huevos");
 		//productosComprar.add("Leche");
 		//productosComprar.add("Maní");
 		posicionActual = new Posicion(null,GestorNodo.obtenerNodo(mundo,"Juan Castelli y Antonia Godoy"));
@@ -336,17 +336,19 @@ public class CarAgentState extends SearchBasedAgentState{
         info.add(tituloEventoAleatorio);
         info.add(eventoAleatorio);
         info.add(tituloEventosAmbiente);
-        for(int i=0; i<mundo.size(); i++){
-    		for(int k = 0; k<mundo.get(i).getEnlaces().size(); k++){
-    				for(String key : mundo.get(i).getEnlaces().get(k).getEventos().keySet()){
+        
+        
+        for(int i=0; i<CityState.mundo.size(); i++){
+    		for(int k = 0; k<CityState.mundo.get(i).getEnlaces().size(); k++){
+    				for(String key : CityState.mundo.get(i).getEnlaces().get(k).getEventos().keySet()){
     					if(!key.equalsIgnoreCase("Sin percepcion")){
     						JLabel evento = new JLabel();
-    						evento.setText(key +"----> Calle: " + mundo.get(i).getEnlaces().get(k).getNombre());
+    						evento.setText(key +"----> Calle: " + CityState.mundo.get(i).getEnlaces().get(k).getNombre());
     						info.add(evento);
     					}else{
-    						if(!mundo.get(i).getEnlaces().get(k).isDisponible()){
+    						if(!CityState.mundo.get(i).getEnlaces().get(k).isDisponible()){
 	    						JLabel evento = new JLabel();
-	    						evento.setText("Corte de Calle ----> Calle: " + mundo.get(i).getEnlaces().get(k).getNombre());
+	    						evento.setText("Corte de Calle ----> Calle: " + CityState.mundo.get(i).getEnlaces().get(k).getNombre());
 	    						info.add(evento);
             				}
     					}
