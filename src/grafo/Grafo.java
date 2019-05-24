@@ -262,7 +262,7 @@ public class Grafo {
 	}
 	
 
-	public static void percepcionesAleatorias(ArrayList<Nodo> mundo){
+	public void percepcionesAleatorias(ArrayList<Nodo> mundo){
 	
 		boolean salir = false;
 		boolean elegirOtraAccion = true;
