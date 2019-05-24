@@ -100,8 +100,7 @@ public class CarAgentState extends SearchBasedAgentState{
     	for(int i = 0; i<mundo.size(); i++){
     		for(int j=0; j<mundo.get(i).getEnlaces().size();j++){
     			for(int k=0; k< p1.getSensorEnlaces().size(); k++){
-    				if(mundo.get(i).getEnlaces().get(j).getNombre().equalsIgnoreCase(p1.getSensorEnlaces().get(k).getNombre())){
-    					
+    				if(mundo.get(i).getEnlaces().get(j).getNombre().equalsIgnoreCase(p1.getSensorEnlaces().get(k).getNombre())){  					
     					mundo.get(i).getEnlaces().get(j).setEventos(p1.getSensorEnlaces().get(k).getEventos());
     					if(!p1.getSensorEnlaces().get(k).isDisponible()){
     						mundo.get(i).getEnlaces().get(j).setDisponible(false);
@@ -151,10 +150,10 @@ public class CarAgentState extends SearchBasedAgentState{
 			}
 		}
    		
-		productosComprar.add("Café");
-		productosComprar.add("Huevos");
+   		productosComprar.add("Huevos");
+   		productosComprar.add("Café");
 		//productosComprar.add("Leche");
-		//productosComprar.add("Maní");
+		//productosComprar.add("Mani");
 		posicionActual = new Posicion(null,GestorNodo.obtenerNodo(mundo,"Juan Castelli y Antonia Godoy"));
 		esquinasVisitadas.add(GestorNodo.obtenerNodo(mundo, "Juan Castelli y Antonia Godoy"));
 		
@@ -370,8 +369,7 @@ public class CarAgentState extends SearchBasedAgentState{
 	    						eventoA.setText("Corte de Calle ----> Calle: " + mundo.get(i).getEnlaces().get(k).getNombre());
 	    						info.add(eventoA);
             				}
-    					}
-        				
+    					}       				
         			}
     		}	
     	}

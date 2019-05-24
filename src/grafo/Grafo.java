@@ -20,7 +20,7 @@ public class Grafo {
 	
 	GestorEnlace gestorEnlace = new GestorEnlace();
 	static String selectedAction = new String();
-	static String enlacePercepcionAgregada = new String();
+	public static String enlacePercepcionAgregada = new String();
 	static String eventoAgregado = new String();
 
 	//METODO PARA INICIAR EL MUNDO DEL AMBIENTE Y DEL AGENTE CON LAS CALLES Y NEGOCIOS ASOCIADOS
@@ -262,7 +262,7 @@ public class Grafo {
 	}
 	
 
-	public void percepcionesAleatorias(ArrayList<Nodo> mundo){
+	public static void percepcionesAleatorias(ArrayList<Nodo> mundo){
 	
 		boolean salir = false;
 		boolean elegirOtraAccion = true;
